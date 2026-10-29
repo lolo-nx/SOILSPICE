@@ -1,0 +1,16 @@
+site,R_H_mm_event,completed_events,washing_events,transfer_events,unique_actions,physical_closure_times_match
+Neuchâtel,5.0,2414,670,631,True,True
+Neuchâtel,10.0,2414,391,910,True,True
+Neuchâtel,15.0,2414,252,1049,True,True
+Neuchâtel,20.0,2414,155,1146,True,True
+Neuchâtel,25.0,2414,98,1203,True,True
+Almería,5.0,845,127,243,True,True
+Almería,10.0,845,67,303,True,True
+Almería,15.0,845,42,328,True,True
+Almería,20.0,845,27,343,True,True
+Almería,25.0,845,18,352,True,True
+Doha,5.0,309,39,80,True,True
+Doha,10.0,309,18,101,True,True
+Doha,15.0,309,14,105,True,True
+Doha,20.0,309,8,111,True,True
+Doha,25.0,309,5,114,True,True

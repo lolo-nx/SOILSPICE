@@ -1,0 +1,71 @@
+{
+  "washing_family": "total",
+  "scenario_role": "reference plus sensitivity",
+  "washing_rule": "P_e >= P_H only",
+  "washing_assumption": "Complete washing is assumed; thresholds are not calibrated for bottom-edge bands.",
+  "thresholds": [
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0
+  ],
+  "threshold_units": "mm/event",
+  "selected_reference_threshold": 15.0,
+  "transfer_event_rain_mm": 1.0,
+  "event_definition": "3 consecutive zero-rain hours separate events",
+  "dry_hours": 3,
+  "intensity_definition": "max(hourly precipitation in mm / 1 hour); not event mean intensity",
+  "event_action_priority": [
+    "assumed full washing from event total",
+    "otherwise transfer if P_e >= 1 mm",
+    "otherwise no effect"
+  ],
+  "event_action_time": "once, at closure after 3 dry hours; incomplete events have no action",
+  "years": [
+    2016,
+    2025
+  ],
+  "timezone": "UTC",
+  "h_mm": 60.0,
+  "f": 0.1,
+  "manual_cleaning": "none for scenario comparison",
+  "tau_weight": "clean hourly production",
+  "loss_denominator": "clean hourly production; positive loss; annual percentages are yield weighted",
+  "summary_aggregation": "median and range of 4 modules x 2 orientations, detailed values exported",
+  "gap_definition": "closure to next closure, across years; incomplete boundary intervals separately censored",
+  "annualization": "2016–2025; event counts divided by 10; energy loss weighted over available hourly yields",
+  "source_coverage_note": "The source files lack the hour ending 2026-01-01 00:00 UTC; no synthetic weather added.",
+  "climate_csvs": {
+    "Neuchâtel": "open-meteo-46.92N7.00E519m.csv",
+    "Almería": "open-meteo-36.87N2.49W32m.csv",
+    "Doha": "open-meteo-25.34N51.43E20m.csv"
+  },
+  "source_sha256": {
+    "Neuchâtel": "4744d289d60dca58c53134a69d683f4f8800625b2e9a2bde0a9e253866d61457",
+    "Almería": "bb9dbe7ce195cfab949f7495752ad4b6be4dfd9c400b1454ccc95f718714364d",
+    "Doha": "3eb399fe985059cd70cd8dc7ea9a612438ab580e66b2946fc5c15f74c4161d0f"
+  },
+  "deposition_g_m2_day": {
+    "Neuchâtel": 0.02439024390243903,
+    "Almería": 0.06829268292682929,
+    "Doha": 0.1
+  },
+  "alpha": 0.041,
+  "spice_sweep": "results/2_simulation/data/equal_height/equal_height_sweep.csv",
+  "spice_sweep_sha256": "6b8893d263007c2cff8ac82c9400bcc39d30a703c60892821c703040e37c51f1",
+  "hourly_time_convention": "Open-Meteo hour ends shifted -1 h after PV calculation; interval starts in UTC",
+  "daily_cleaning_boundaries": "UTC midnight",
+  "simulation_source_sha256": {
+    "energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+    "rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7"
+  },
+  "economics_scenarios_fully_generated": [
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0
+  ],
+  "economics_outputs": "total_scenarios/; illustrative reference PH15mm/"
+}

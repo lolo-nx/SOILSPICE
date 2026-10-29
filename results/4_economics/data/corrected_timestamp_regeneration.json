@@ -1,0 +1,732 @@
+{
+  "reference_R_H_mm_event": 15,
+  "sensitivity_R_H_mm_event": [
+    5,
+    10,
+    20,
+    25
+  ],
+  "timestamps": "Open-Meteo hour ends converted to interval starts after PV calculation",
+  "source_coverage_stop_utc": "2025-12-31 23:00:00+00:00",
+  "no_synthetic_weather": true,
+  "model_source_sha256": {
+    "energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+    "rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7"
+  },
+  "scenarios": [
+    {
+      "R_H_mm_event": 5.0,
+      "rows": 67392,
+      "reference": false,
+      "model_runs_sha256": "2bdd34eb747374aeb3b925b385f896ad1f55ff90488c98b262be1d6d19addd13",
+      "maps_series_tables_and_numbers_reconcile": true,
+      "robot_investment_added_once": true
+    },
+    {
+      "R_H_mm_event": 10.0,
+      "rows": 67392,
+      "reference": false,
+      "model_runs_sha256": "19799b2430d3068736e7e5c9f98d529976c79ea47f744e094e7095d30311e7e5",
+      "maps_series_tables_and_numbers_reconcile": true,
+      "robot_investment_added_once": true
+    },
+    {
+      "R_H_mm_event": 15.0,
+      "rows": 67392,
+      "reference": true,
+      "model_runs_sha256": "27cd2056cd8509d2eb0316ec7496dabe470b8b38e7b3ee376866eab767f8a2dc",
+      "maps_series_tables_and_numbers_reconcile": true,
+      "robot_investment_added_once": true
+    },
+    {
+      "R_H_mm_event": 20.0,
+      "rows": 67392,
+      "reference": false,
+      "model_runs_sha256": "deb8702c989a8f02ef354ff49f5ec08054d85889cfb7a892bad216849ae259f5",
+      "maps_series_tables_and_numbers_reconcile": true,
+      "robot_investment_added_once": true
+    },
+    {
+      "R_H_mm_event": 25.0,
+      "rows": 67392,
+      "reference": false,
+      "model_runs_sha256": "ba2f98b755b10d407d35a43d31a504b8d38640a643944ce79ec96bad746e3d4d",
+      "maps_series_tables_and_numbers_reconcile": true,
+      "robot_investment_added_once": true
+    }
+  ],
+  "climate_source_sha256": {
+    "Neuchâtel": "4744d289d60dca58c53134a69d683f4f8800625b2e9a2bde0a9e253866d61457",
+    "Almería": "bb9dbe7ce195cfab949f7495752ad4b6be4dfd9c400b1454ccc95f718714364d",
+    "Doha": "3eb399fe985059cd70cd8dc7ea9a612438ab580e66b2946fc5c15f74c4161d0f"
+  },
+  "spice_sweep_sha256": "6b8893d263007c2cff8ac82c9400bcc39d30a703c60892821c703040e37c51f1",
+  "total_model_run_rows": 336960,
+  "sensitivity_reference_rows": 240,
+  "sensitivity_all_configuration_rows": 8640,
+  "figures": [
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_band_growth",
+      "width_mm": 171.06665776570637,
+      "height_mm": 116.4736829969618,
+      "pdf_sha256": "5180d0085682817b7c239759cc01abb476cc28e801b8c1e83be459c2c3bb3f35",
+      "png_sha256": "17b7361e307fda298f6ca4ab26e479ce4460d26667493f4783b4c8dbf0b0e797"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_energy_maps",
+      "width_mm": 158.4702044169108,
+      "height_mm": 125.53191562228731,
+      "pdf_sha256": "4156f12df8c39842e9664df69cb66acdfcfd27909386ae19c5164c6b76e46a8c",
+      "png_sha256": "f6efdb525e999dc89a5e974cd32df9632c8300b7fa6195c2a7b6c642118823b8"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_design_levers",
+      "width_mm": 161.29903691609698,
+      "height_mm": 72.9004275004069,
+      "pdf_sha256": "f20f16883e2f2f6d67d05a2c5ec098c22e6fcc0112c9c179cf437d10ce684ef2",
+      "png_sha256": "0bff2deeb33c5b7d32f78e71f6566cfec088dc176f7a1d0f185e707bba810a67"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_design_height",
+      "width_mm": 160.34267840915254,
+      "height_mm": 77.85470627678765,
+      "pdf_sha256": "fd6461c2d2b98aa5e511c32a3615f0f75ba654078ae70ac72f093d70e8dfedb6",
+      "png_sha256": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_sensitivity",
+      "width_mm": 184.78148600260414,
+      "height_mm": 120.70754386054143,
+      "pdf_sha256": "51865d4d6ea99ff74ac0cf3a05d57679978de4094b3da571641b950d4360d171",
+      "png_sha256": "83ec1ba719e9ab3c75b28972e3051e65aefe3a77a1f4dcb6f5517a199522a175"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_cleaning",
+      "width_mm": 156.7834856669108,
+      "height_mm": 70.71818559434678,
+      "pdf_sha256": "dcff1f148bb4fb8acd155be0a9d649d1325c7afa1944fb90093dc3f509dfb2ce",
+      "png_sha256": "468cc7692fe3c2aea78cda192e5a29bc226e81b0a81e4a3a5f528a2daa071859"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_band_shape",
+      "width_mm": 161.199818166097,
+      "height_mm": 70.69613698323568,
+      "pdf_sha256": "738555a71e7cb2ebac9986a363d60bd19459808609a093bf05bffc3f12c083e1",
+      "png_sha256": "ce79bd337b80ede437f446f133cdfc448f391c2022636360f06052d26ffc2dde"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_inverse_chain",
+      "width_mm": 354.1120417277018,
+      "height_mm": 99.39028345743814,
+      "pdf_sha256": "9d2cdd1574afe16a417685ced400d603d8d483ee1f736eab78ea39e862c0dd69",
+      "png_sha256": "6cda18e0514c264e272b0dc55dd1caad856b4dc02f073f6900c29d8c907a64cd"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/fig_pan_h_maps_SI",
+      "width_mm": 159.59357469346787,
+      "height_mm": 104.91279305352106,
+      "pdf_sha256": "98f0ed74b4bae380be6cd5651568c0810ca9055558a6f01b5342d6aa04642150",
+      "png_sha256": "4d6d2192f628a1789cb1a1123efb8a65c2b5b89d59bef61b836472e5a4d2c007"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_band_growth",
+      "width_mm": 171.06665776570637,
+      "height_mm": 116.4736829969618,
+      "pdf_sha256": "c55184f6d9a6eddd5ed729cf43d2463603132f6a3ee3bc75bb43f3071731d40a",
+      "png_sha256": "6c020a7f53c182ed253af7ab24a27b8e071924bfc757c5696b297888ad5d190b"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_energy_maps",
+      "width_mm": 161.199818166097,
+      "height_mm": 125.53191562228731,
+      "pdf_sha256": "3e70a2e4b1bbd80a4ecb41667ea8fd061dec42b9568e32f74d7e57cc3bcd1ce8",
+      "png_sha256": "9e86a847221653865252127f2cda098f321f828d8c6da847e340458e7b688b93"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_design_levers",
+      "width_mm": 161.29903691609698,
+      "height_mm": 72.9004275004069,
+      "pdf_sha256": "bdc0b0390fe15aaad65d876f72455a6dd8fa6e67fb987ae8acca0294bcceed30",
+      "png_sha256": "39d0afe1135a26c172a2b618c48dbd3a2b23a7c3e660be127ebf7b6c788d3162"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_design_height",
+      "width_mm": 160.34267840915254,
+      "height_mm": 77.85470627678765,
+      "pdf_sha256": "d5865c02c6ceaec9a84a260e89232ab5a2a18393f154788420b4acc7ed977366",
+      "png_sha256": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_sensitivity",
+      "width_mm": 186.21731567382812,
+      "height_mm": 120.70754386054143,
+      "pdf_sha256": "8e92a9d33b22d035bb3c4d7fdef06594fec719a50fa1ff0bceedac0774005a64",
+      "png_sha256": "f634f7e0e48b6e943e3fa30986df3de072eb670544b8824c21efaeaabe60d95a"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_cleaning",
+      "width_mm": 156.7834856669108,
+      "height_mm": 70.71818559434678,
+      "pdf_sha256": "dde3f782129e17b426814f7168f568286b185a411bc0f2d7b30e00dbfd6db193",
+      "png_sha256": "c6d866d78cae0a547f943692b6a90e5a3733c4ab77311b3b52064dc081cd31ad"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_band_shape",
+      "width_mm": 161.199818166097,
+      "height_mm": 70.69613698323568,
+      "pdf_sha256": "ed4540235011ef8bfdd3db9f8a00cf765b886cf64a807090f50821fb9872be4b",
+      "png_sha256": "74e33073c7289ceda77458422e0c9c13a9bddf589a8365daf198c9ce52fe8782"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_inverse_chain",
+      "width_mm": 354.1120417277018,
+      "height_mm": 99.39028345743814,
+      "pdf_sha256": "2278f886190ff8e80c0437699ed5e81d2289ebf02e1f65f156f077f731b3bef0",
+      "png_sha256": "b8401726a9ed09f895c4ec31cd1922279d696a89dff3fbad1e09c287e225fec8"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/fig_pan_h_maps_SI",
+      "width_mm": 159.59357469346787,
+      "height_mm": 104.91279305352106,
+      "pdf_sha256": "9aaf40f090f8675e4748bb5a1e46c8ef35d6e9185d99156459f7744c5a6bbd60",
+      "png_sha256": "fc864f652045a485b178f78498e618efae181456607c464f4ddcb86a50da0977"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_band_growth",
+      "width_mm": 171.06665776570637,
+      "height_mm": 110.14722807142469,
+      "pdf_sha256": "82bb34f839519b21e083f21f164129a4894a5b0b46910b554ec117607f4a057d",
+      "png_sha256": "ee3baa4da181527e5b69fc887bd6408c7006068b265693b0deacaf42875ca515"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_energy_maps",
+      "width_mm": 161.199818166097,
+      "height_mm": 125.53191562228731,
+      "pdf_sha256": "811e10257a656f037bd83bd90c774e59670e192e51654fadf0bcdbb44f2aa33d",
+      "png_sha256": "cf778a96309d8b9be15a98ac9b96e11889c51ebf99e545fab3085b99e9fbc627"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_design_levers",
+      "width_mm": 161.29903691609698,
+      "height_mm": 72.9004275004069,
+      "pdf_sha256": "9500ceca660b2313e46a4ae7fdd48089811ba82646652ab598a1974202953a14",
+      "png_sha256": "2ba1aa4130c5337be44296722448d623919233fdf1b47baab16ad515a76863bb"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_design_height",
+      "width_mm": 160.34267840915254,
+      "height_mm": 77.85470627678765,
+      "pdf_sha256": "77d685e034d34728e6d3a36eee34fb564d8b3e7d032a62a32522fe20ae1f93b9",
+      "png_sha256": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_sensitivity",
+      "width_mm": 184.76867455376518,
+      "height_mm": 120.70754386054143,
+      "pdf_sha256": "70eeebefe8692b92f1a7a3f25231b75960e2ce19f2d7f59c37699d716f5980d6",
+      "png_sha256": "021564ea3adfae4f3428682c5cd731b2abc60804a8c8801d4109d1937f12ee42"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_cleaning",
+      "width_mm": 156.7834856669108,
+      "height_mm": 70.69613698323568,
+      "pdf_sha256": "35a2855f94d3910dc5cad1f3ef2ba1d1b5a736d434c6bfbb5e8f5d8ac1afeabb",
+      "png_sha256": "ba277b8d71ed373857c241f7949d70145630e9ba01718102b698662801e52823"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_band_shape",
+      "width_mm": 161.199818166097,
+      "height_mm": 70.69613698323568,
+      "pdf_sha256": "11ea29fd5788436832f1ee805193b22565c537ddfd74ce30dc6d5092b6cc9121",
+      "png_sha256": "09223cfb8ffe9f07a4e690ed60bacf2f161364a247aff00127b5a52631894229"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_inverse_chain",
+      "width_mm": 354.1120417277018,
+      "height_mm": 99.39028345743814,
+      "pdf_sha256": "90ca1c1b46aa389bce5d53f727d54036ca230776efa1246734e7e119cc255446",
+      "png_sha256": "d5ba1b5c3dfa87b738c9499fae855ce6a9931bd5ea2309d387caf5c8e3119ef9"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/fig_pan_h_maps_SI",
+      "width_mm": 159.59357469346787,
+      "height_mm": 104.91279305352106,
+      "pdf_sha256": "9682edd6bdabec3d957ca5d3edf213e4fc1c210422e508fed8dc822a91b31ea5",
+      "png_sha256": "a0299c44327316b2369c709a51cec484c297a61a8d471affab3ba4338fc1ba71"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_band_growth",
+      "width_mm": 171.06665776570637,
+      "height_mm": 116.4736829969618,
+      "pdf_sha256": "5c7c8b2db1a59883822bf9f476b1bf9c4b85032f3392252bf88e682bae29f19e",
+      "png_sha256": "f6e181559655f167ff19d42dae3c8944b6124d6819edf16760746a1a75e1dd83"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_energy_maps",
+      "width_mm": 159.43041712443033,
+      "height_mm": 125.53191562228731,
+      "pdf_sha256": "5793a30dd63f92631845d655cd08eaee56694973aeceea5d74114cbafbfdc375",
+      "png_sha256": "b613e4d611bcba0b3cf9c08a3528269ab5db1905f59e0141ae83cc51d5beede3"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_design_levers",
+      "width_mm": 161.29903691609698,
+      "height_mm": 72.9004275004069,
+      "pdf_sha256": "2771232364f50c77b8f165e3690b444c17838040375a9d317519d8c0f92666b5",
+      "png_sha256": "7c67ee9a098c22a09de14758955b950b539231c15b40cf694f15d43c23ccb8b8"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_design_height",
+      "width_mm": 160.34267840915254,
+      "height_mm": 77.85470627678765,
+      "pdf_sha256": "df02d3308015cfbe6b7bcdfc44c04405a97b7c86fa1df66299773357d6f4ce84",
+      "png_sha256": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_sensitivity",
+      "width_mm": 185.70823822021484,
+      "height_mm": 120.70754386054143,
+      "pdf_sha256": "822f1ab64404f35d2a6f704d7aaeba79446d13093d7e3f6ffcd13ee177d2e88a",
+      "png_sha256": "d3eed82aad073e646a0afa1a0a3aca75478e6029f18af3fef47dbd0b21b8a30a"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_cleaning",
+      "width_mm": 156.7834856669108,
+      "height_mm": 70.71818559434678,
+      "pdf_sha256": "1714590d9947a917e69795c12a919c08d40b4ea970d93668d849db00db0efded",
+      "png_sha256": "15cf25c0cd373f288c18e849b6add43583bb97290c0cb11a8e628b540ea0694f"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_band_shape",
+      "width_mm": 160.02021747165256,
+      "height_mm": 70.69613698323568,
+      "pdf_sha256": "fac9aae4898db33ddf13766c5656b7384af330a82667472290be1ab10f6eb0e6",
+      "png_sha256": "0d09f64fbdfee66a0eeb0e8db25753ddbf86aeeda1e970d1e03fa065c9f2218d"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_inverse_chain",
+      "width_mm": 354.1120417277018,
+      "height_mm": 99.39028345743814,
+      "pdf_sha256": "850664053e255660f2251d2a1cd727298e1075ea4ea1b9b41617c3e3cd8bf749",
+      "png_sha256": "6c2da11517b2427eed5b428c9ed5aa8cca633586c2fd87103741374707f9e36d"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/fig_pan_h_maps_SI",
+      "width_mm": 159.59357469346787,
+      "height_mm": 104.91279305352106,
+      "pdf_sha256": "4d9c3886201ae129408fbbaa5bff48c8ba3d7623060629fbf90e596be79c792e",
+      "png_sha256": "e506233c055a48a6d43c531a6edb033c7317a7bfbb5915ed2b02c700d267baac"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_band_growth",
+      "width_mm": 171.06665776570637,
+      "height_mm": 116.4736829969618,
+      "pdf_sha256": "8dbcdc53f27f3532aea8b77618eb8920492ae4f62074a4fdf5e04b008a1d7cfb",
+      "png_sha256": "67b09dbe9ee6a34b329567a6e617a4237c06cb6070518fc94070ae2f85f2e310"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_energy_maps",
+      "width_mm": 159.43041712443033,
+      "height_mm": 125.53191562228731,
+      "pdf_sha256": "56c74900daae1718225c3a3f9c8b0637098399d49040032181956aa7e8c2ba1c",
+      "png_sha256": "0b081ca32ead393e87156486802f2844ae502f72ed9209107928e392e72b9d29"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_design_levers",
+      "width_mm": 161.29903691609698,
+      "height_mm": 72.9004275004069,
+      "pdf_sha256": "4a2bcf0bd4c7f5ab9202a1fe4a91e2249997df9d724353934fad443346f12851",
+      "png_sha256": "181efe64209dd876e0ced6650c8d90a8b1360a10448161d1aa1cd41d2b3542b9"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_design_height",
+      "width_mm": 160.34267840915254,
+      "height_mm": 77.85470627678765,
+      "pdf_sha256": "beb4495a70b091ae81cce52c04394736ccc09ee3062c7e9a3311660f8610013c",
+      "png_sha256": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_sensitivity",
+      "width_mm": 184.76867455376518,
+      "height_mm": 120.70754386054143,
+      "pdf_sha256": "c06a306a841cb8f326fdbf747b3bc2b91ac32cdfbc1e2e0533a9c710678e7918",
+      "png_sha256": "52514143a933130742de47267e6122f3f4fac79b34572b0eafa1f080134d7e6a"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_cleaning",
+      "width_mm": 156.7834856669108,
+      "height_mm": 70.71818559434678,
+      "pdf_sha256": "67896cab59345fb511c7030e3b870e91500c307b35e2566e15c97c88248a3c9b",
+      "png_sha256": "cb61e092c7a849857b4818283003fa295bdcb9591b888c47a0df19a0eb98eb60"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_band_shape",
+      "width_mm": 160.02021747165256,
+      "height_mm": 70.69613698323568,
+      "pdf_sha256": "46dd4d26a4038d45e17c760f7b3d0780641a4b43ed25fe2a0ed9f20ddcd7c4d7",
+      "png_sha256": "09c51ecc4def43ee33f25c2fa03c7be119f7168509aed00925f2795314bc9dc6"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_inverse_chain",
+      "width_mm": 354.1120417277018,
+      "height_mm": 99.39028345743814,
+      "pdf_sha256": "552469061bc6148f4c6a9da9535abc7add0f04b03a3d269c94381563e8d156ea",
+      "png_sha256": "d7ac800f0f6a279db839bacd4cf9539d705b57f254d83f8d227a4a4f6123f4f6"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/fig_pan_h_maps_SI",
+      "width_mm": 159.59357469346787,
+      "height_mm": 104.91279305352106,
+      "pdf_sha256": "91755a26eff80ef36e53029495239d17da4614bf53bc8201434d0fdfccff462e",
+      "png_sha256": "ffa6425e59eea998ee01e236166507dcdb20ea19e3c39f2c9d61d200530256ae"
+    },
+    {
+      "path": "results/4_economics/fig_rain_total_comparison",
+      "width_mm": 182.23334265814887,
+      "height_mm": 126.17648222181532,
+      "pdf_sha256": "24c277c1244c0d80ddc40eb859a20534e6c46b8070a5b824e7184d5ec03bca6c",
+      "png_sha256": "ab7a49d69da8185b5fc92f1f48a1b46698552663ac707d56328d8042963ebe81"
+    },
+    {
+      "path": "results/4_economics/fig_band_growth_total_comparison",
+      "width_mm": 182.20578189425999,
+      "height_mm": 117.69288075764975,
+      "pdf_sha256": "d4ac749e3f0156d0d7bed71ca4c32c2289c918e4fa443d74203f416e595e4316",
+      "png_sha256": "9f32e67d997a03ea1cbc6b3d2f48704f92db0137cc5711ad3f702a615cb1e690"
+    },
+    {
+      "path": "results/4_economics/fig_energy_economics_threshold_sensitivity",
+      "width_mm": 178.0816042582194,
+      "height_mm": 124.35989413791233,
+      "pdf_sha256": "49de3bcb342f7bb3b5819ea5a9fa08c9626019a094a287f3ca61ca7588a5f105",
+      "png_sha256": "3499733b9c7e3a064fe4fcace7ea3e75a9ddfdd3cb921d4bbaf25c1abe91ba98"
+    },
+    {
+      "path": "results/4_economics/fig_energy_economics_threshold_sensitivity_rooftop",
+      "width_mm": 178.02648273044161,
+      "height_mm": 124.35989413791233,
+      "pdf_sha256": "a782d1186ad0f2fa2ca45c494d720b4bdee576aadc49e2a0fa7e1a560b39c9a7",
+      "png_sha256": "4d38c5efb0d6265dc24191235310717d9a393de9a68e1ab7d75bab13645d03b8"
+    },
+    {
+      "path": "results/4_economics/fig_washing_threshold_sensitivity_ground",
+      "width_mm": 183.00000559488933,
+      "height_mm": 170.00000237358938,
+      "pdf_sha256": "deae00ea149dc755e15c1097858e07d278db9d7518f94a5c2b44b061e89a174b",
+      "png_sha256": "1a0992d85fb0669e5a7a358718c5e7659acd76ad2bd86dd71c02068cd0a075d3"
+    },
+    {
+      "path": "results/4_economics/fig_washing_threshold_sensitivity_rooftop",
+      "width_mm": 183.00000559488933,
+      "height_mm": 170.00000237358938,
+      "pdf_sha256": "38c9b8e3cbba08db0938e8656bd287a131dddb0f92359c2a1aa3f2b4a881e0f8",
+      "png_sha256": "de310cb18690bcac6b242bf52929556fb0943188b86e7551b3bcc5d28b1d91ed"
+    }
+  ],
+  "figure_pairs": 51,
+  "tests_passed": 30,
+  "independent_optimisation_preserved": true,
+  "signed_manual_gains_preserved": true,
+  "all_reported_values_reconcile_with_corrected_simulations": true,
+  "reference_matches_independent_corrected_review": true,
+  "other_chapter_files_unchanged": 254,
+  "source_inputs_unchanged": true,
+  "manual_policies_and_economic_parameters_unchanged": true,
+  "completed_at_utc": "2026-10-27T15:26:15.870129+00:00",
+  "commands": [
+    "python chapters/4_economics.py --all-thresholds",
+    "refresh existing daily_series_reference.csv compatibility files from growth_series_reference.csv",
+    "python chapters/summarize_economics.py",
+    "python chapters/rain_event_audit.py",
+    "python chapters/fig_washing_threshold_sensitivity.py",
+    "python -m unittest discover -s tests"
+  ],
+  "pipeline_source_sha256": {
+    "chapters/4_economics.py": "7df953a44e7b156705829792ccd4b0b19d587718bd4495a7ffaa05990515c346",
+    "chapters/summarize_economics.py": "f820f6191374c8184a1042473b96ffc4a3191344f1b8b7780f009dca30f8db86",
+    "chapters/fig_washing_threshold_sensitivity.py": "8cf6ed1b66d2b166be7d2d48027272b479e6efec120fc22445997abd54eece0a",
+    "chapters/rain_event_audit.py": "d52fd83ae434adcbe835cdaf1fa2021484423e6f67d722396ba1192a4a571609",
+    "soilspice/energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+    "soilspice/rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7",
+    "soilspice/rain_scenarios.py": "3bd1b0f386b6da54c8732c882d8b6e178ce5b02357addf8e0709865523f60aa3",
+    "soilspice/fig_energy.py": "3b31c75c70f40d9cdb7dd2642bd005a1ec7d54b0c26e7a28491ea95e28db5185",
+    "soilspice/energy_sensitivity.py": "3345d9a726441f873c8ae2fabc58377d115268c7424103e4de07b794790705e4",
+    "soilspice/fig_threshold_sensitivity.py": "11a75e5426500b94400aa9ebce9c29c7b233201d8ba2440d1908381186f7a25d",
+    "soilspice/tables.py": "a5564ff36b7118d2887076867e9d4375670a0d8ea3ef8fee9cd8a232ffd9f1d3"
+  },
+  "visual_inspection": [
+    "PH15mm/fig_cleaning.pdf",
+    "fig_washing_threshold_sensitivity_ground.pdf",
+    "fig_washing_threshold_sensitivity_rooftop.pdf"
+  ],
+  "previous_numeric_and_table_exports_refreshed": 218,
+  "stale_previous_publication_exports": [],
+  "export_sha256": {
+    "results/4_economics/fig_washing_threshold_sensitivity_ground.png": "1a0992d85fb0669e5a7a358718c5e7659acd76ad2bd86dd71c02068cd0a075d3",
+    "results/4_economics/fig_rain_total_comparison.png": "ab7a49d69da8185b5fc92f1f48a1b46698552663ac707d56328d8042963ebe81",
+    "results/4_economics/fig_washing_threshold_sensitivity_rooftop.pdf": "38c9b8e3cbba08db0938e8656bd287a131dddb0f92359c2a1aa3f2b4a881e0f8",
+    "results/4_economics/fig_washing_threshold_sensitivity_rooftop.png": "de310cb18690bcac6b242bf52929556fb0943188b86e7551b3bcc5d28b1d91ed",
+    "results/4_economics/fig_washing_threshold_sensitivity_ground.pdf": "deae00ea149dc755e15c1097858e07d278db9d7518f94a5c2b44b061e89a174b",
+    "results/4_economics/fig_rain_total_comparison.pdf": "24c277c1244c0d80ddc40eb859a20534e6c46b8070a5b824e7184d5ec03bca6c",
+    "results/4_economics/fig_energy_economics_threshold_sensitivity_rooftop.png": "4d38c5efb0d6265dc24191235310717d9a393de9a68e1ab7d75bab13645d03b8",
+    "results/4_economics/fig_energy_economics_threshold_sensitivity_rooftop.pdf": "a782d1186ad0f2fa2ca45c494d720b4bdee576aadc49e2a0fa7e1a560b39c9a7",
+    "results/4_economics/fig_band_growth_total_comparison.pdf": "d4ac749e3f0156d0d7bed71ca4c32c2289c918e4fa443d74203f416e595e4316",
+    "results/4_economics/fig_energy_economics_threshold_sensitivity.png": "3499733b9c7e3a064fe4fcace7ea3e75a9ddfdd3cb921d4bbaf25c1abe91ba98",
+    "results/4_economics/fig_energy_economics_threshold_sensitivity.pdf": "49de3bcb342f7bb3b5819ea5a9fa08c9626019a094a287f3ca61ca7588a5f105",
+    "results/4_economics/fig_band_growth_total_comparison.png": "9f32e67d997a03ea1cbc6b3d2f48704f92db0137cc5711ad3f702a615cb1e690",
+    "results/4_economics/total_scenarios/PH15mm/table_sites.tex": "115b7bab600f08ecc74e23d471c97441bfc125c61e33b115e81add12e6af2096",
+    "results/4_economics/total_scenarios/PH15mm/fig_energy_maps.pdf": "811e10257a656f037bd83bd90c774e59670e192e51654fadf0bcdbb44f2aa33d",
+    "results/4_economics/total_scenarios/PH15mm/fig_energy_maps.png": "cf778a96309d8b9be15a98ac9b96e11889c51ebf99e545fab3085b99e9fbc627",
+    "results/4_economics/total_scenarios/PH15mm/fig_sensitivity.pdf": "70eeebefe8692b92f1a7a3f25231b75960e2ce19f2d7f59c37699d716f5980d6",
+    "results/4_economics/total_scenarios/PH15mm/fig_design_height.pdf": "77d685e034d34728e6d3a36eee34fb564d8b3e7d032a62a32522fe20ae1f93b9",
+    "results/4_economics/total_scenarios/PH15mm/fig_sensitivity.png": "021564ea3adfae4f3428682c5cd731b2abc60804a8c8801d4109d1937f12ee42",
+    "results/4_economics/total_scenarios/PH15mm/fig_design_height.png": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e",
+    "results/4_economics/total_scenarios/PH15mm/table_band_parameters.tex": "231008499a6881ea1a019246b8e52190bb9297fc4401d58d32bcd345a986dfeb",
+    "results/4_economics/total_scenarios/PH15mm/table_clean_bound.csv": "3b2280cde50693dd3c941c418bca9d461acd1e2e59f8782fc642516945873ccd",
+    "results/4_economics/total_scenarios/PH15mm/fig_band_growth.png": "ee3baa4da181527e5b69fc887bd6408c7006068b265693b0deacaf42875ca515",
+    "results/4_economics/total_scenarios/PH15mm/numbers_in_text.csv": "060e859f2b17176240fb9816a6856d00d76e00a2447325b03cbb648084aa7ba2",
+    "results/4_economics/total_scenarios/PH15mm/fig_band_growth.pdf": "82bb34f839519b21e083f21f164129a4894a5b0b46910b554ec117607f4a057d",
+    "results/4_economics/total_scenarios/PH15mm/fig_pan_h_maps_SI.pdf": "9682edd6bdabec3d957ca5d3edf213e4fc1c210422e508fed8dc822a91b31ea5",
+    "results/4_economics/total_scenarios/PH15mm/fig_pan_h_maps_SI.png": "a0299c44327316b2369c709a51cec484c297a61a8d471affab3ba4338fc1ba71",
+    "results/4_economics/total_scenarios/PH15mm/fig_cleaning.pdf": "35a2855f94d3910dc5cad1f3ef2ba1d1b5a736d434c6bfbb5e8f5d8ac1afeabb",
+    "results/4_economics/total_scenarios/PH15mm/fig_cleaning.png": "ba277b8d71ed373857c241f7949d70145630e9ba01718102b698662801e52823",
+    "results/4_economics/total_scenarios/PH15mm/table_sites.csv": "98bd186a703186abaa415060f0de5451a4156c5175b99f657b024948ae72b2d6",
+    "results/4_economics/total_scenarios/PH15mm/fig_inverse_chain.pdf": "90ca1c1b46aa389bce5d53f727d54036ca230776efa1246734e7e119cc255446",
+    "results/4_economics/total_scenarios/PH15mm/fig_inverse_chain.png": "d5ba1b5c3dfa87b738c9499fae855ce6a9931bd5ea2309d387caf5c8e3119ef9",
+    "results/4_economics/total_scenarios/PH15mm/fig_band_shape.png": "09223cfb8ffe9f07a4e690ed60bacf2f161364a247aff00127b5a52631894229",
+    "results/4_economics/total_scenarios/PH15mm/fig_design_levers.pdf": "9500ceca660b2313e46a4ae7fdd48089811ba82646652ab598a1974202953a14",
+    "results/4_economics/total_scenarios/PH15mm/fig_band_shape.pdf": "11ea29fd5788436832f1ee805193b22565c537ddfd74ce30dc6d5092b6cc9121",
+    "results/4_economics/total_scenarios/PH15mm/fig_design_levers.png": "2ba1aa4130c5337be44296722448d623919233fdf1b47baab16ad515a76863bb",
+    "results/4_economics/total_scenarios/PH15mm/data/washing_intervals.csv": "a807f71743ffd5fcdc1c43c9418467ebc6d08e3da4719766f62821459d71842a",
+    "results/4_economics/total_scenarios/PH15mm/data/reference_metrics.csv": "f0ea191cbbd7a6686b1ba3dfd3e81211c0c4973eb8746d10c6eeaff38de6eb2f",
+    "results/4_economics/total_scenarios/PH15mm/data/pan_h.csv": "97743d8b6d5ca533c56011c0965e2967fa08eb76c4c60f7b4d2f3122a5f48ee3",
+    "results/4_economics/total_scenarios/PH15mm/data/annual_reference_metrics.csv": "686b22bfa8974264af550b1518d0def99d6e7544c37991a08fb54c6dd6784db3",
+    "results/4_economics/total_scenarios/PH15mm/data/growth_series_reference.csv": "c5d785c99e01089ca1bf84be9bdf93a243d666fa3c38522fb6129f300aacc72a",
+    "results/4_economics/total_scenarios/PH15mm/data/best_strategy.csv": "eba41ddd98bf4ceb73b797b6a3b44d68e284508c8be8d356c21345c44b64befd",
+    "results/4_economics/total_scenarios/PH15mm/data/model_runs.csv": "27cd2056cd8509d2eb0316ec7496dabe470b8b38e7b3ee376866eab767f8a2dc",
+    "results/4_economics/total_scenarios/PH15mm/data/energy_triangle_f0.1.csv": "d7469333c7e294e4baab1ce8401cdb5ad60d19165d43540ff7a2f6091401744d",
+    "results/4_economics/total_scenarios/PH15mm/data/design_h1.csv": "298d686664b46b767b85d5464ae6ddaa77b14c97829265236164ae4f94f21148",
+    "results/4_economics/total_scenarios/PH15mm/data/daily_series_reference.csv": "c5d785c99e01089ca1bf84be9bdf93a243d666fa3c38522fb6129f300aacc72a",
+    "results/4_economics/total_scenarios/PH15mm/data/sensitivity.csv": "78f828e32e87c273b6c8f92174581cab4019166ebc429f32d65b36535e18aedc",
+    "results/4_economics/total_scenarios/PH15mm/data/energy_maps.csv": "7a02f1fe8c79eb516311104315ce3cbcc2dd3056dfdab3d9b85a22de781fd674",
+    "results/4_economics/total_scenarios/PH20mm/table_sites.tex": "61cbb426ec574c4d3fdd1e258c257c04f76d08a559cc03b6b64c1b8d6b2f4c29",
+    "results/4_economics/total_scenarios/PH20mm/fig_energy_maps.pdf": "5793a30dd63f92631845d655cd08eaee56694973aeceea5d74114cbafbfdc375",
+    "results/4_economics/total_scenarios/PH20mm/fig_energy_maps.png": "b613e4d611bcba0b3cf9c08a3528269ab5db1905f59e0141ae83cc51d5beede3",
+    "results/4_economics/total_scenarios/PH20mm/fig_sensitivity.pdf": "822f1ab64404f35d2a6f704d7aaeba79446d13093d7e3f6ffcd13ee177d2e88a",
+    "results/4_economics/total_scenarios/PH20mm/fig_design_height.pdf": "df02d3308015cfbe6b7bcdfc44c04405a97b7c86fa1df66299773357d6f4ce84",
+    "results/4_economics/total_scenarios/PH20mm/fig_sensitivity.png": "d3eed82aad073e646a0afa1a0a3aca75478e6029f18af3fef47dbd0b21b8a30a",
+    "results/4_economics/total_scenarios/PH20mm/fig_design_height.png": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e",
+    "results/4_economics/total_scenarios/PH20mm/table_band_parameters.tex": "9846b631a3d8d08d19724a570147eff4591ecedcdade12eed0254341e5e5bfc1",
+    "results/4_economics/total_scenarios/PH20mm/table_clean_bound.csv": "34652a5bd1f838c579109c9996fe872f448ff571110fc222e331d995a4e01982",
+    "results/4_economics/total_scenarios/PH20mm/fig_band_growth.png": "f6e181559655f167ff19d42dae3c8944b6124d6819edf16760746a1a75e1dd83",
+    "results/4_economics/total_scenarios/PH20mm/numbers_in_text.csv": "922189960a2b6d4b98e905453b5c03a4e9af228531c676231516280a12f38d8c",
+    "results/4_economics/total_scenarios/PH20mm/fig_band_growth.pdf": "5c7c8b2db1a59883822bf9f476b1bf9c4b85032f3392252bf88e682bae29f19e",
+    "results/4_economics/total_scenarios/PH20mm/fig_pan_h_maps_SI.pdf": "4d9c3886201ae129408fbbaa5bff48c8ba3d7623060629fbf90e596be79c792e",
+    "results/4_economics/total_scenarios/PH20mm/fig_pan_h_maps_SI.png": "e506233c055a48a6d43c531a6edb033c7317a7bfbb5915ed2b02c700d267baac",
+    "results/4_economics/total_scenarios/PH20mm/fig_cleaning.pdf": "1714590d9947a917e69795c12a919c08d40b4ea970d93668d849db00db0efded",
+    "results/4_economics/total_scenarios/PH20mm/fig_cleaning.png": "15cf25c0cd373f288c18e849b6add43583bb97290c0cb11a8e628b540ea0694f",
+    "results/4_economics/total_scenarios/PH20mm/table_sites.csv": "1bb2dc09b71914f12bef21298ec762a7c1120390fc0a2a36d3a6f1f75c408569",
+    "results/4_economics/total_scenarios/PH20mm/fig_inverse_chain.pdf": "850664053e255660f2251d2a1cd727298e1075ea4ea1b9b41617c3e3cd8bf749",
+    "results/4_economics/total_scenarios/PH20mm/fig_inverse_chain.png": "6c2da11517b2427eed5b428c9ed5aa8cca633586c2fd87103741374707f9e36d",
+    "results/4_economics/total_scenarios/PH20mm/fig_band_shape.png": "0d09f64fbdfee66a0eeb0e8db25753ddbf86aeeda1e970d1e03fa065c9f2218d",
+    "results/4_economics/total_scenarios/PH20mm/fig_design_levers.pdf": "2771232364f50c77b8f165e3690b444c17838040375a9d317519d8c0f92666b5",
+    "results/4_economics/total_scenarios/PH20mm/fig_band_shape.pdf": "fac9aae4898db33ddf13766c5656b7384af330a82667472290be1ab10f6eb0e6",
+    "results/4_economics/total_scenarios/PH20mm/fig_design_levers.png": "7c67ee9a098c22a09de14758955b950b539231c15b40cf694f15d43c23ccb8b8",
+    "results/4_economics/total_scenarios/PH20mm/data/washing_intervals.csv": "0b5d29f787967b36b757e7583845341e03c303fe8671fc722ec8b35438213295",
+    "results/4_economics/total_scenarios/PH20mm/data/reference_metrics.csv": "ea48400c9dc7ec6a8c9015cf2668220fbe1262935713ac9d2c128428bfd29b64",
+    "results/4_economics/total_scenarios/PH20mm/data/pan_h.csv": "97743d8b6d5ca533c56011c0965e2967fa08eb76c4c60f7b4d2f3122a5f48ee3",
+    "results/4_economics/total_scenarios/PH20mm/data/annual_reference_metrics.csv": "4807d97322ef9385b54420f73d9cdfa42e6deecb2be018a388a270d75d1259ec",
+    "results/4_economics/total_scenarios/PH20mm/data/growth_series_reference.csv": "697df348df72ca9544489fc6ddebf2b3ecf2b98af61d4103d1e4cf26cd1ccd81",
+    "results/4_economics/total_scenarios/PH20mm/data/best_strategy.csv": "d1da7cefe24c52b48a539a2260b884e4ba0a45581e105dfa38dbdf37cf7131d2",
+    "results/4_economics/total_scenarios/PH20mm/data/model_runs.csv": "deb8702c989a8f02ef354ff49f5ec08054d85889cfb7a892bad216849ae259f5",
+    "results/4_economics/total_scenarios/PH20mm/data/energy_triangle_f0.1.csv": "f25cab0d711d0109685614458ee33628afe811c9b14a9160d57ac164abb910e0",
+    "results/4_economics/total_scenarios/PH20mm/data/design_h1.csv": "298d686664b46b767b85d5464ae6ddaa77b14c97829265236164ae4f94f21148",
+    "results/4_economics/total_scenarios/PH20mm/data/daily_series_reference.csv": "697df348df72ca9544489fc6ddebf2b3ecf2b98af61d4103d1e4cf26cd1ccd81",
+    "results/4_economics/total_scenarios/PH20mm/data/sensitivity.csv": "e028adb90b63c36ad78740187d67785ada3040f22873bddeb8f3b0942c9a23a6",
+    "results/4_economics/total_scenarios/PH20mm/data/energy_maps.csv": "5ca3bfba9bbc9f89b23569d84b7f11b54da38cbbf5f16aeda07f6b213135660c",
+    "results/4_economics/total_scenarios/PH10mm/table_sites.tex": "9af584fd10cdd76b7085b079b2636850961dae6ab2cef26010608fa1e624f471",
+    "results/4_economics/total_scenarios/PH10mm/fig_energy_maps.pdf": "3e70a2e4b1bbd80a4ecb41667ea8fd061dec42b9568e32f74d7e57cc3bcd1ce8",
+    "results/4_economics/total_scenarios/PH10mm/fig_energy_maps.png": "9e86a847221653865252127f2cda098f321f828d8c6da847e340458e7b688b93",
+    "results/4_economics/total_scenarios/PH10mm/fig_sensitivity.pdf": "8e92a9d33b22d035bb3c4d7fdef06594fec719a50fa1ff0bceedac0774005a64",
+    "results/4_economics/total_scenarios/PH10mm/fig_design_height.pdf": "d5865c02c6ceaec9a84a260e89232ab5a2a18393f154788420b4acc7ed977366",
+    "results/4_economics/total_scenarios/PH10mm/fig_sensitivity.png": "f634f7e0e48b6e943e3fa30986df3de072eb670544b8824c21efaeaabe60d95a",
+    "results/4_economics/total_scenarios/PH10mm/fig_design_height.png": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e",
+    "results/4_economics/total_scenarios/PH10mm/table_band_parameters.tex": "f21242f536224b075e341102a0049085e99de1cd1c636106b21256f3fe4da526",
+    "results/4_economics/total_scenarios/PH10mm/table_clean_bound.csv": "d7843c00173c2474c119ee2a1c0f2ac3951bcff3c548559059524b3af5947907",
+    "results/4_economics/total_scenarios/PH10mm/fig_band_growth.png": "6c020a7f53c182ed253af7ab24a27b8e071924bfc757c5696b297888ad5d190b",
+    "results/4_economics/total_scenarios/PH10mm/numbers_in_text.csv": "ecab89cbf7be73b9af5a850204a44fc1d1a6bba29242e843405d75b2b483ee04",
+    "results/4_economics/total_scenarios/PH10mm/fig_band_growth.pdf": "c55184f6d9a6eddd5ed729cf43d2463603132f6a3ee3bc75bb43f3071731d40a",
+    "results/4_economics/total_scenarios/PH10mm/fig_pan_h_maps_SI.pdf": "9aaf40f090f8675e4748bb5a1e46c8ef35d6e9185d99156459f7744c5a6bbd60",
+    "results/4_economics/total_scenarios/PH10mm/fig_pan_h_maps_SI.png": "fc864f652045a485b178f78498e618efae181456607c464f4ddcb86a50da0977",
+    "results/4_economics/total_scenarios/PH10mm/fig_cleaning.pdf": "dde3f782129e17b426814f7168f568286b185a411bc0f2d7b30e00dbfd6db193",
+    "results/4_economics/total_scenarios/PH10mm/fig_cleaning.png": "c6d866d78cae0a547f943692b6a90e5a3733c4ab77311b3b52064dc081cd31ad",
+    "results/4_economics/total_scenarios/PH10mm/table_sites.csv": "705af8661245f4bea919579258f175ee04356a2bd1aaab6fe97e4a0b6de3e44c",
+    "results/4_economics/total_scenarios/PH10mm/fig_inverse_chain.pdf": "2278f886190ff8e80c0437699ed5e81d2289ebf02e1f65f156f077f731b3bef0",
+    "results/4_economics/total_scenarios/PH10mm/fig_inverse_chain.png": "b8401726a9ed09f895c4ec31cd1922279d696a89dff3fbad1e09c287e225fec8",
+    "results/4_economics/total_scenarios/PH10mm/fig_band_shape.png": "74e33073c7289ceda77458422e0c9c13a9bddf589a8365daf198c9ce52fe8782",
+    "results/4_economics/total_scenarios/PH10mm/fig_design_levers.pdf": "bdc0b0390fe15aaad65d876f72455a6dd8fa6e67fb987ae8acca0294bcceed30",
+    "results/4_economics/total_scenarios/PH10mm/fig_band_shape.pdf": "ed4540235011ef8bfdd3db9f8a00cf765b886cf64a807090f50821fb9872be4b",
+    "results/4_economics/total_scenarios/PH10mm/fig_design_levers.png": "39d0afe1135a26c172a2b618c48dbd3a2b23a7c3e660be127ebf7b6c788d3162",
+    "results/4_economics/total_scenarios/PH10mm/data/washing_intervals.csv": "92479087324c9bc26383b59ccefa530ea8c76d5e9e89331b76aad77cbecc5862",
+    "results/4_economics/total_scenarios/PH10mm/data/reference_metrics.csv": "ae0ac8e5473fdbf9617d5cdd39a28246296dda77f628fe14181d9d3523304725",
+    "results/4_economics/total_scenarios/PH10mm/data/pan_h.csv": "97743d8b6d5ca533c56011c0965e2967fa08eb76c4c60f7b4d2f3122a5f48ee3",
+    "results/4_economics/total_scenarios/PH10mm/data/annual_reference_metrics.csv": "97be1c3b6cae271ed0ce5d01561a431350d3d60ae311ea9e57e0dcc36ef83322",
+    "results/4_economics/total_scenarios/PH10mm/data/growth_series_reference.csv": "8c7cfe90601d496ff7ab52a0e0db050dbcbb91951ff377d97897dac2806a0fd2",
+    "results/4_economics/total_scenarios/PH10mm/data/best_strategy.csv": "7142d3cbe227a07fa77ec94e819703c2137afdc238ee1675f720b5b9074916c9",
+    "results/4_economics/total_scenarios/PH10mm/data/model_runs.csv": "19799b2430d3068736e7e5c9f98d529976c79ea47f744e094e7095d30311e7e5",
+    "results/4_economics/total_scenarios/PH10mm/data/energy_triangle_f0.1.csv": "eba9748edd8c9ef61eff4e5361af7066206d596f2bd0ad5034391e4b4256d378",
+    "results/4_economics/total_scenarios/PH10mm/data/design_h1.csv": "298d686664b46b767b85d5464ae6ddaa77b14c97829265236164ae4f94f21148",
+    "results/4_economics/total_scenarios/PH10mm/data/daily_series_reference.csv": "8c7cfe90601d496ff7ab52a0e0db050dbcbb91951ff377d97897dac2806a0fd2",
+    "results/4_economics/total_scenarios/PH10mm/data/sensitivity.csv": "3945173e0cd3bbb8368fdd81011b2a75296fc4ac7819671f5c1675e81d980792",
+    "results/4_economics/total_scenarios/PH10mm/data/energy_maps.csv": "3d5f11cfeb61adf29bad7da37b637079dacb5f4a394ab9294ae1279889398a29",
+    "results/4_economics/total_scenarios/PH5mm/table_sites.tex": "74d3e6a60e7e86f24a7f7f6e82ec51c1d898595d62a197010255978cf1386a5a",
+    "results/4_economics/total_scenarios/PH5mm/fig_energy_maps.pdf": "4156f12df8c39842e9664df69cb66acdfcfd27909386ae19c5164c6b76e46a8c",
+    "results/4_economics/total_scenarios/PH5mm/fig_energy_maps.png": "f6efdb525e999dc89a5e974cd32df9632c8300b7fa6195c2a7b6c642118823b8",
+    "results/4_economics/total_scenarios/PH5mm/fig_sensitivity.pdf": "51865d4d6ea99ff74ac0cf3a05d57679978de4094b3da571641b950d4360d171",
+    "results/4_economics/total_scenarios/PH5mm/fig_design_height.pdf": "fd6461c2d2b98aa5e511c32a3615f0f75ba654078ae70ac72f093d70e8dfedb6",
+    "results/4_economics/total_scenarios/PH5mm/fig_sensitivity.png": "83ec1ba719e9ab3c75b28972e3051e65aefe3a77a1f4dcb6f5517a199522a175",
+    "results/4_economics/total_scenarios/PH5mm/fig_design_height.png": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e",
+    "results/4_economics/total_scenarios/PH5mm/table_band_parameters.tex": "c773895c658ad72747f46d36f7a198631579290cc1b92efcfe03b3c7f89e78a3",
+    "results/4_economics/total_scenarios/PH5mm/table_clean_bound.csv": "cc93396c6aecf8ea384b186fd0d2f485a398e4610c48c26d372400e3ca30a0b2",
+    "results/4_economics/total_scenarios/PH5mm/fig_band_growth.png": "17b7361e307fda298f6ca4ab26e479ce4460d26667493f4783b4c8dbf0b0e797",
+    "results/4_economics/total_scenarios/PH5mm/numbers_in_text.csv": "f009ae9cd1d0857a4a5bc038f5f46d2dcf24324c2e869e04250971f9b598dd8d",
+    "results/4_economics/total_scenarios/PH5mm/fig_band_growth.pdf": "5180d0085682817b7c239759cc01abb476cc28e801b8c1e83be459c2c3bb3f35",
+    "results/4_economics/total_scenarios/PH5mm/fig_pan_h_maps_SI.pdf": "98f0ed74b4bae380be6cd5651568c0810ca9055558a6f01b5342d6aa04642150",
+    "results/4_economics/total_scenarios/PH5mm/fig_pan_h_maps_SI.png": "4d6d2192f628a1789cb1a1123efb8a65c2b5b89d59bef61b836472e5a4d2c007",
+    "results/4_economics/total_scenarios/PH5mm/fig_cleaning.pdf": "dcff1f148bb4fb8acd155be0a9d649d1325c7afa1944fb90093dc3f509dfb2ce",
+    "results/4_economics/total_scenarios/PH5mm/fig_cleaning.png": "468cc7692fe3c2aea78cda192e5a29bc226e81b0a81e4a3a5f528a2daa071859",
+    "results/4_economics/total_scenarios/PH5mm/table_sites.csv": "d5f69d9bd722821ddee393df9970ccb93f1cfad401c699fcb1cfc77ae84131b7",
+    "results/4_economics/total_scenarios/PH5mm/fig_inverse_chain.pdf": "9d2cdd1574afe16a417685ced400d603d8d483ee1f736eab78ea39e862c0dd69",
+    "results/4_economics/total_scenarios/PH5mm/fig_inverse_chain.png": "6cda18e0514c264e272b0dc55dd1caad856b4dc02f073f6900c29d8c907a64cd",
+    "results/4_economics/total_scenarios/PH5mm/fig_band_shape.png": "ce79bd337b80ede437f446f133cdfc448f391c2022636360f06052d26ffc2dde",
+    "results/4_economics/total_scenarios/PH5mm/fig_design_levers.pdf": "f20f16883e2f2f6d67d05a2c5ec098c22e6fcc0112c9c179cf437d10ce684ef2",
+    "results/4_economics/total_scenarios/PH5mm/fig_band_shape.pdf": "738555a71e7cb2ebac9986a363d60bd19459808609a093bf05bffc3f12c083e1",
+    "results/4_economics/total_scenarios/PH5mm/fig_design_levers.png": "0bff2deeb33c5b7d32f78e71f6566cfec088dc176f7a1d0f185e707bba810a67",
+    "results/4_economics/total_scenarios/PH5mm/data/washing_intervals.csv": "04fa19d709e94d4084cfd193189c5691984a31b62e68f1e7f5222ee44eed15d8",
+    "results/4_economics/total_scenarios/PH5mm/data/reference_metrics.csv": "da2dd6a005147cc7bea4015e3c1ef36aea4545384f204362cfaafc47cd026907",
+    "results/4_economics/total_scenarios/PH5mm/data/pan_h.csv": "97743d8b6d5ca533c56011c0965e2967fa08eb76c4c60f7b4d2f3122a5f48ee3",
+    "results/4_economics/total_scenarios/PH5mm/data/annual_reference_metrics.csv": "31754e47f4bd754171d703c480cc5a7829ae65dcf0c8451fedc7c9915962cebd",
+    "results/4_economics/total_scenarios/PH5mm/data/growth_series_reference.csv": "162667d3d34d19d808b30d423ec59e502ff628fac78d920353d79cefb6bf106e",
+    "results/4_economics/total_scenarios/PH5mm/data/best_strategy.csv": "47e88d3ee98163252a4ba40c0595f28f596d00d4b9c84c5ba01b5ca485e8929b",
+    "results/4_economics/total_scenarios/PH5mm/data/model_runs.csv": "2bdd34eb747374aeb3b925b385f896ad1f55ff90488c98b262be1d6d19addd13",
+    "results/4_economics/total_scenarios/PH5mm/data/energy_triangle_f0.1.csv": "d1c4a2c7d278bc392db53f6283a502e63552ab76c64491118b1121faed71a8a6",
+    "results/4_economics/total_scenarios/PH5mm/data/design_h1.csv": "298d686664b46b767b85d5464ae6ddaa77b14c97829265236164ae4f94f21148",
+    "results/4_economics/total_scenarios/PH5mm/data/daily_series_reference.csv": "162667d3d34d19d808b30d423ec59e502ff628fac78d920353d79cefb6bf106e",
+    "results/4_economics/total_scenarios/PH5mm/data/sensitivity.csv": "f09c6202b42461e4c30d74c79972da175e2687cb32bd78cfb2ac2f72779034f6",
+    "results/4_economics/total_scenarios/PH5mm/data/energy_maps.csv": "b435c3397ee7e9c3c4433c17aab0072a42146258cb63db7a762442b0cec65451",
+    "results/4_economics/total_scenarios/PH25mm/table_sites.tex": "d48900f058327de96c302a75207f8cefbe106058135309c6f915ea06303ed659",
+    "results/4_economics/total_scenarios/PH25mm/fig_energy_maps.pdf": "56c74900daae1718225c3a3f9c8b0637098399d49040032181956aa7e8c2ba1c",
+    "results/4_economics/total_scenarios/PH25mm/fig_energy_maps.png": "0b081ca32ead393e87156486802f2844ae502f72ed9209107928e392e72b9d29",
+    "results/4_economics/total_scenarios/PH25mm/fig_sensitivity.pdf": "c06a306a841cb8f326fdbf747b3bc2b91ac32cdfbc1e2e0533a9c710678e7918",
+    "results/4_economics/total_scenarios/PH25mm/fig_design_height.pdf": "beb4495a70b091ae81cce52c04394736ccc09ee3062c7e9a3311660f8610013c",
+    "results/4_economics/total_scenarios/PH25mm/fig_sensitivity.png": "52514143a933130742de47267e6122f3f4fac79b34572b0eafa1f080134d7e6a",
+    "results/4_economics/total_scenarios/PH25mm/fig_design_height.png": "fc7294d793d6cad1550d517cce7950f9bca2a47dd50e546d40d7a8a1f4e5a86e",
+    "results/4_economics/total_scenarios/PH25mm/table_band_parameters.tex": "2a7ed188973db5f2bce729dea0305da54999721bb838447bd3f43c3bc7fa0cf2",
+    "results/4_economics/total_scenarios/PH25mm/table_clean_bound.csv": "b4ddcc56bd9928c7b42810af3209686df92c38a194d4bd800820772c07999633",
+    "results/4_economics/total_scenarios/PH25mm/fig_band_growth.png": "67b09dbe9ee6a34b329567a6e617a4237c06cb6070518fc94070ae2f85f2e310",
+    "results/4_economics/total_scenarios/PH25mm/numbers_in_text.csv": "a83c942c7c5512ec6715890e9e7fc6d1dfacf679f6cdcd4ea57ef2df41886b83",
+    "results/4_economics/total_scenarios/PH25mm/fig_band_growth.pdf": "8dbcdc53f27f3532aea8b77618eb8920492ae4f62074a4fdf5e04b008a1d7cfb",
+    "results/4_economics/total_scenarios/PH25mm/fig_pan_h_maps_SI.pdf": "91755a26eff80ef36e53029495239d17da4614bf53bc8201434d0fdfccff462e",
+    "results/4_economics/total_scenarios/PH25mm/fig_pan_h_maps_SI.png": "ffa6425e59eea998ee01e236166507dcdb20ea19e3c39f2c9d61d200530256ae",
+    "results/4_economics/total_scenarios/PH25mm/fig_cleaning.pdf": "67896cab59345fb511c7030e3b870e91500c307b35e2566e15c97c88248a3c9b",
+    "results/4_economics/total_scenarios/PH25mm/fig_cleaning.png": "cb61e092c7a849857b4818283003fa295bdcb9591b888c47a0df19a0eb98eb60",
+    "results/4_economics/total_scenarios/PH25mm/table_sites.csv": "2a3854a024a290c9eb79144525ea1a9fe3f9eb127a6118829ccefa5a0d9254d5",
+    "results/4_economics/total_scenarios/PH25mm/fig_inverse_chain.pdf": "552469061bc6148f4c6a9da9535abc7add0f04b03a3d269c94381563e8d156ea",
+    "results/4_economics/total_scenarios/PH25mm/fig_inverse_chain.png": "d7ac800f0f6a279db839bacd4cf9539d705b57f254d83f8d227a4a4f6123f4f6",
+    "results/4_economics/total_scenarios/PH25mm/fig_band_shape.png": "09c51ecc4def43ee33f25c2fa03c7be119f7168509aed00925f2795314bc9dc6",
+    "results/4_economics/total_scenarios/PH25mm/fig_design_levers.pdf": "4a2bcf0bd4c7f5ab9202a1fe4a91e2249997df9d724353934fad443346f12851",
+    "results/4_economics/total_scenarios/PH25mm/fig_band_shape.pdf": "46dd4d26a4038d45e17c760f7b3d0780641a4b43ed25fe2a0ed9f20ddcd7c4d7",
+    "results/4_economics/total_scenarios/PH25mm/fig_design_levers.png": "181efe64209dd876e0ced6650c8d90a8b1360a10448161d1aa1cd41d2b3542b9",
+    "results/4_economics/total_scenarios/PH25mm/data/washing_intervals.csv": "b06a8bd1a9c496e347eaf0b24b9628d63c36577c302c4eaae012eccbbbcc454c",
+    "results/4_economics/total_scenarios/PH25mm/data/reference_metrics.csv": "cbbc0c236a86bd168ee7a451d2cacbf38ba3856b62adbf3ae36444d754a34407",
+    "results/4_economics/total_scenarios/PH25mm/data/pan_h.csv": "97743d8b6d5ca533c56011c0965e2967fa08eb76c4c60f7b4d2f3122a5f48ee3",
+    "results/4_economics/total_scenarios/PH25mm/data/annual_reference_metrics.csv": "4ad09d1dbb9da9ade5981fe957b92b3d6060e8fd879ce697a1fcc1deb6114cb9",
+    "results/4_economics/total_scenarios/PH25mm/data/growth_series_reference.csv": "fc7597f7169ae2bdc80d33ac5ab64c57b7b6a5bea7820a5b9e634aa91c74e80f",
+    "results/4_economics/total_scenarios/PH25mm/data/best_strategy.csv": "e5311caa252db1e94c8b9b46265f03a52e05ef8d0f9a37a4817792a3e2a67fe3",
+    "results/4_economics/total_scenarios/PH25mm/data/model_runs.csv": "ba2f98b755b10d407d35a43d31a504b8d38640a643944ce79ec96bad746e3d4d",
+    "results/4_economics/total_scenarios/PH25mm/data/energy_triangle_f0.1.csv": "5799d57acdead132a2adbbf57ca37a2ebc78f5ace65162e93491062a6fc54d84",
+    "results/4_economics/total_scenarios/PH25mm/data/design_h1.csv": "298d686664b46b767b85d5464ae6ddaa77b14c97829265236164ae4f94f21148",
+    "results/4_economics/total_scenarios/PH25mm/data/daily_series_reference.csv": "fc7597f7169ae2bdc80d33ac5ab64c57b7b6a5bea7820a5b9e634aa91c74e80f",
+    "results/4_economics/total_scenarios/PH25mm/data/sensitivity.csv": "08f9c08d3232692d02639c5650a874e85c71957f3679e43323d8baab19db0017",
+    "results/4_economics/total_scenarios/PH25mm/data/energy_maps.csv": "be458b64124d0e48c6af4b011c752bfd804ebc1d749d7605f9535ec7035e3f72",
+    "results/4_economics/data/rain_total_summary.csv": "c3d3843a5c3a69c6acdcda1a470472f26b0b55f217673919b162e28941dcda84",
+    "results/4_economics/data/rain_events.csv": "ed3782733366ac00f1f2fed690068971c78cb6a716c66d7fbd8f8c362aefe40d",
+    "results/4_economics/data/rain_total_washing_intervals.csv": "d5a78c9f72c468ec7613fbb8a15651978459387cde2b4ff134f863b9d955ae24",
+    "results/4_economics/data/rain_total_reference_metrics.csv": "9f4ddd9eddd43b0779a14b7bb3fdb725b0f1daf30954b00220f55199cc0a805e",
+    "results/4_economics/data/rain_total_growth_series.csv": "fde0c96279566bab69e949044df8f8b2fb169cad0961f1787f92039bdd4a8aa3",
+    "results/4_economics/data/rain_events_total_scenarios.csv": "1dd2ded81cbb972f23d5e7e87a6d4e27635ea5a6bc68b12e398bfd095fe20d66",
+    "results/4_economics/data/rain_total_annual_metrics.csv": "86824f17a8a6a30463d20e9d92b8a35425b9ca5a163cc79fe08432c4678af0ac",
+    "results/4_economics/data/rain_total_energy_maps.csv": "b37596389b8cded18945e08712115a448ce4d2881a4aa78082da8bcd822f95f7",
+    "results/4_economics/data/threshold_sensitivity/washing_intervals.csv": "3ed5fc81fc2be5d3d89cb16aa946ab0d8b2c009c6c303d536f01c6e56b2e5e88",
+    "results/4_economics/data/threshold_sensitivity/column_dictionary.csv": "396d1a63b6ccccb468ef5e61a95787473d9c91ff6082534d7adefff6cc6bf0d1",
+    "results/4_economics/data/threshold_sensitivity/orientation_reference.csv": "a66f8c08942b5b690f6a1a5a16be70879df72cd9fd5b0c4754b14a6d7c2ad053",
+    "results/4_economics/data/threshold_sensitivity/washing_summary.csv": "1f3d981c210cfa9518c80cd7e654bb9980f5740b911f80fb5f7869f9b8de254e",
+    "results/4_economics/data/threshold_sensitivity/orientation_robustness_reference.csv": "20bbe8f7259b809ee1cf2396a6399456cb1d71f2395592c6065ec20d2efcf037",
+    "results/4_economics/data/threshold_sensitivity/censored_washing_intervals.csv": "0ba420eb0d92a41ff3291ab6932d6278710173aa9f7aff1ef6e03a29e0a03995",
+    "results/4_economics/data/threshold_sensitivity/robustness_all_configurations.csv": "18831a7822f383d66c114b7bb1f982a8400860526deaf43205057e163d43bcfd",
+    "results/4_economics/data/threshold_sensitivity/summary_reference.csv": "458c202a401c356b7768e0f1941d329ef2f42c6c76c94866eee12be266c7b6bb",
+    "results/4_economics/data/threshold_sensitivity/transitions_reference.csv": "ef927e1c9bf41c23f7131688c71f24877baf44ac167fb2fb6493ec44883fe000",
+    "results/4_economics/data/threshold_sensitivity/annual_energy_reference.csv": "0b871fe51cc2aa0652a07cc41d78d795c6b5500ec6f3a68125dae3295e5a546d",
+    "results/4_economics/data/threshold_sensitivity/site_reference_statistics.csv": "e506c549f5fd56988d37881b609d840b3b3be72fe75b8f477b10be2792d70d68",
+    "results/4_economics/data/threshold_sensitivity/transitions_all_configurations.csv": "5ad9ef076093da01a89f65cc58c1230c226ad95592457799499d97704e3baa5c",
+    "results/4_economics/data/threshold_sensitivity/robustness_reference.csv": "9fbfbd94835b37019295767515fe77e0dd438b95ca318fad6ea3b1fc2555e22e",
+    "results/4_economics/data/threshold_sensitivity/summary_all_configurations.csv": "414a475c03f0ced3fc96e1f10ab632b62ff07114fad8956897333b810b8cf78c",
+    "results/4_economics/data/threshold_sensitivity/orientation_all_configurations.csv": "5eaea1c0f6c20094e04020b8f643f8b23ad15a764007e88d49b69efaef642884",
+    "results/4_economics/data/threshold_sensitivity/orientation_robustness_all_configurations.csv": "9a9fa272a7d56cd098625da90f0db8ea94fced146e444649c51d98bf5201a392",
+    "results/4_economics/data/washing_threshold_sensitivity_3x3/plotted_data.csv": "68aac031061ef3796e18c86a383d2b95901575e6f79414732728125c5991755e",
+    "results/4_economics/data/washing_threshold_sensitivity_3x3/robustness_by_configuration.csv": "0e0bcfa43950c701952651489ce939be2117bd731d0e2022e8dfa62d6bcbf601",
+    "results/4_economics/data/washing_threshold_sensitivity_3x3/caption_rooftop.tex": "aa63079eebf4d3b3e911f30ce87830742512f79e888f1b2e68a5e6423f284b75",
+    "results/4_economics/data/washing_threshold_sensitivity_3x3/sign_changes.csv": "83f2e592152639230410a89e8288390113f2f58ee476b0aa6f6beb07e189500c",
+    "results/4_economics/data/washing_threshold_sensitivity_3x3/caption_ground.tex": "77780f6509b8b6a9f834688f8f58e5c3548cd02d00be3dd6638e58882cfebe1e",
+    "results/4_economics/data/washing_threshold_sensitivity_3x3/plotted_data_ground.csv": "0eb423097a2aee0598dd3480a730e4e8f056aa4b3cf9b3dab2cc42aa066792c5",
+    "results/4_economics/data/washing_threshold_sensitivity_3x3/plotted_data_rooftop.csv": "ab1ab092ddc123cf11c8bd95787ceee1c4e6a73b41da93bd014c86a575f0e604"
+  },
+  "presentation_updates": [
+    {
+      "date": "2026-10-27",
+      "type": "presentation_only",
+      "changes": [
+        "Remove ED1 horizontal-scales footer",
+        "Remove PH15 band-growth rain-criterion footer",
+        "PH15 cleaning legend: range over 4 modules × 2 orientations"
+      ],
+      "numerical_outputs_unchanged": true,
+      "outputs": [
+        {
+          "path": "results/4_economics/fig_ed1_parameter_sensitivity.pdf",
+          "before_sha256": "51a549bd1e81425da1ab811dba8737428730856c7d4627ecdaa701cd12bddf55",
+          "after_sha256": "ac8489c9145e27d95ad335b088943a101ed4562d74e8fafc82bcf7f77cec908f"
+        },
+        {
+          "path": "results/4_economics/fig_ed1_parameter_sensitivity.png",
+          "before_sha256": "fe5f4ac191acb7d473486612bb4dccd45aa9452b4c56b51f631f11c0605a1e4a",
+          "after_sha256": "102a5145cb837644ec2e0684cc3a641e99bb38a23e6bf44cfa9e2d27fdb9914c"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_band_growth.pdf",
+          "before_sha256": "ccc1e6daca4e778bd73d6d029e8a7d1c75df8de5efc2a74d545e20c4da1f82d7",
+          "after_sha256": "82bb34f839519b21e083f21f164129a4894a5b0b46910b554ec117607f4a057d"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_band_growth.png",
+          "before_sha256": "df7e2f7fcba610c8ee85211503ce7887ce1c49d7fe0e4044c5fa371a0b842904",
+          "after_sha256": "ee3baa4da181527e5b69fc887bd6408c7006068b265693b0deacaf42875ca515"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_cleaning.pdf",
+          "before_sha256": "cefe1bddb2696f43a74f13bbe066959e1cfe328f73eda93b642fe92b9b8b49c1",
+          "after_sha256": "35a2855f94d3910dc5cad1f3ef2ba1d1b5a736d434c6bfbb5e8f5d8ac1afeabb"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_cleaning.png",
+          "before_sha256": "f6ccde4fcf3dacdebf5c970d34dddae84f9450775d1b20b161a70f48a02ebbad",
+          "after_sha256": "ba277b8d71ed373857c241f7949d70145630e9ba01718102b698662801e52823"
+        }
+      ],
+      "plotting_source_sha256": {
+        "soilspice/fig_energy.py": "19a8023f386bcdd23be95b20912b124802f50343cfbfd52cb30cf566fea63ab2",
+        "soilspice/fig_extended_sensitivity.py": "f0d34efd02270b0ba8ad4b7275835bc3100ba02df19e06652d10033fa8e69478"
+      }
+    }
+  ]
+}

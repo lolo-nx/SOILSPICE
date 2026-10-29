@@ -1,0 +1,70 @@
+{
+  "reference_R_H_mm_event": 15,
+  "sensitivity_thresholds_mm_event": [
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0
+  ],
+  "full_reference_rows_before": 67392,
+  "full_reference_rows_after": 67392,
+  "baseline_matches_saved_reference": true,
+  "existing_publication_outputs_unchanged": true,
+  "original_output_files_verified_unchanged": 236,
+  "tests_passed": 29,
+  "calculation_change": "Convert end-labelled Open-Meteo records to interval starts after PV calculation.",
+  "unchanged_simulation_and_cost_algorithms": true,
+  "unchanged_rain_event_algorithm": true,
+  "manual_boundaries": "UTC midnight; rainfall closure first, then the manual decision",
+  "robot_investment_added_once_in_fig_cleaning": true,
+  "robot_annual_cost_range_eur_kwp": [
+    1.1039999999999999,
+    3.7719999999999994
+  ],
+  "full_grid_max_abs_total_loss_change_pp": 0.07855851508780237,
+  "full_grid_cases_with_changed_intervention_count": 6521,
+  "reference_h60_f01_max_abs_band_loss_change_pp": 0.004427653281247501,
+  "reference_h60_f01_max_abs_manual_gain_change_pp_revenue": 0.0495602574396905,
+  "reference_h60_f01_max_abs_margin_npv_change_eur_kwp": 0.8592440672913,
+  "old_publication_outputs_require_regeneration": false,
+  "final_missing_source_hour": "2025-12-31 23:00--2026-01-01 00:00 UTC; no synthetic data added",
+  "timestamp_source": "https://open-meteo.com/en/docs/historical-weather-api#hourly-parameter-definition",
+  "reference_h60_f01_max_abs_frequency_change_per_year": 0.1001186073610576,
+  "reference_h60_f01_max_abs_intervention_count_change": 1,
+  "reference_manual_gain_sign_changes": 0,
+  "reference_margin_npv_sign_changes": [
+    {
+      "site": "Doha",
+      "market": "ground",
+      "module": "YINGLI",
+      "orientation": "landscape",
+      "before_eur_kwp": -0.2840470728682496,
+      "after_eur_kwp": 0.17686341026181562
+    }
+  ],
+  "original_numeric_and_figure_exports_verified_unchanged": 206,
+  "updated_existing_documentation": [
+    "results/4_economics/README.md"
+  ],
+  "reviewed_source_sha256": {
+    "soilspice/energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+    "soilspice/rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7",
+    "soilspice/fig_energy.py": "3b31c75c70f40d9cdb7dd2642bd005a1ec7d54b0c26e7a28491ea95e28db5185",
+    "chapters/rain_event_audit.py": "d52fd83ae434adcbe835cdaf1fa2021484423e6f67d722396ba1192a4a571609",
+    "tests/test_energy_timing.py": "447f1bb6e1ef3e960650b9e26bbd5315e961032a623a2d854738ba2a7d3b3c7b"
+  },
+  "subsequent_publication_regeneration": {
+    "complete": true,
+    "reference_mm_event": 15,
+    "all_thresholds_mm_event": [
+      5,
+      10,
+      15,
+      20,
+      25
+    ],
+    "reference_after_matches_published": true,
+    "manifest": "../corrected_timestamp_regeneration.json"
+  }
+}

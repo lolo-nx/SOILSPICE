@@ -1,0 +1,41 @@
+{
+  "R_H_mm_event": 15,
+  "width_mm": 183.0,
+  "height_mm": 170.0,
+  "png_dpi": 600,
+  "panels": "abcdefg",
+  "row_order": [
+    "design levers",
+    "cleaning"
+  ],
+  "vector_pdf": true,
+  "source_figures": [
+    {
+      "source": "results/4_economics/total_scenarios/PH15mm/fig_design_levers.pdf",
+      "sha256": "9500ceca660b2313e46a4ae7fdd48089811ba82646652ab598a1974202953a14",
+      "scale": 1.103540376949618,
+      "box_pdf_points": [
+        7.086614173228355,
+        7.495424104486421,
+        511.6535433070867,
+        235.5386011729229
+      ]
+    },
+    {
+      "source": "results/4_economics/total_scenarios/PH15mm/fig_cleaning.pdf",
+      "sha256": "35a2855f94d3910dc5cad1f3ef2ba1d1b5a736d434c6bfbb5e8f5d8ac1afeabb",
+      "scale": 1.1353236550574213,
+      "box_pdf_points": [
+        7.086614173228355,
+        246.87718385008827,
+        511.6535433070867,
+        474.3943396750411
+      ]
+    }
+  ],
+  "label_size_pt": 9.0,
+  "preexisting_exports_unchanged": 237,
+  "model_or_simulation_changes": false,
+  "pdf_sha256": "455ae3d1672cff49615e36e1bd78748858a2faa8f40d6140c4f42db818f77242",
+  "png_sha256": "47a74e2a4e5a312da9a31a9f5dfb07cba8497188cd65cdf30f125b91dc362549"
+}

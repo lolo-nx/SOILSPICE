@@ -1,0 +1,26 @@
+\begin{table*}[!t]
+\caption{Parameters of the band growth model. Sensitivity: low and high values of the one-at-a-time analysis (Extended Data Fig.~\ref{fig:ed-sens}).\label{tab:bandparams}}
+\definecolor{tabgrey}{gray}{0.92}
+\begin{tabularx}{\textwidth}{p{3.6cm}p{3.0cm}p{2.3cm}X}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Sensitivity} & \textbf{Source} \\
+\midrule
+\rowcolor{tabgrey} Soiling rate $k$, Neuch\^atel & 0.10\%~day$^{-1}$ & $\times 0.5$, $\times 2$ & Karlsruhe, dry periods \cite{WorldEnergyMeteorology} \\
+Soiling rate $k$, Almer\'ia & 0.28\%~day$^{-1}$ & $\times 0.5$, $\times 2$ & Granada, summer dry season \cite{micheliEconomicsSeasonalPhotovoltaic2021} \\
+\rowcolor{tabgrey} Soiling rate $k$, Doha & 0.41\%~day$^{-1}$ & $\times 0.5$, $\times 2$ & Doha test facility, multi-year mean \cite{ahziInvestigationPVSoiling} \\
+Loss per unit mass & 4.1\% per g~m$^{-2}$ & -- & Linear up to 2~g~m$^{-2}$ \cite{boyleNaturalSoilingPhotovoltaic2015} \\
+\rowcolor{tabgrey} Attenuation $\alpha$ & 0.041~m$^{2}$~g$^{-1}$ & $\times 0.75$, $\times 1.25$ & Beer--Lambert, initial slope above \\
+Transfer event rain $R_L$ & 1~mm & 0.5, 2 & Scenario assumption; cumulative rain per event \\
+\rowcolor{tabgrey} Washing event total $R_H$ & 25~mm/event & 5, 10, 15, 20, 25 & Complete washing assumed; thresholds not calibrated for bands \\
+Event separation & 3 dry hours & fixed & An event ends after 3 consecutive hours with zero rain \\
+\rowcolor{tabgrey} Trapped fraction $f$ & 0.1 & 0.03, 0.3 & Not measured (maps 0.01--1) \\
+Band height $h$ & 10--100~mm & -- & 5--10~cm observed \cite{yanYao2018} \\
+\rowcolor{tabgrey} Band shape & rectangle, triangle & -- & Along the frame \cite{cuiCharacterizationSoilingBands2021a} \\
+Electricity price $p$ & 0.06 (0.28)~\euro~kWh$^{-1}$ & -- & Ground (rooftop) \cite{ilseTechnoEconomicAssessmentSoiling2019a} \\
+\rowcolor{tabgrey} Cleaning cost $C$ & 0.41 (3.3)~\euro~kWp$^{-1}$ & $\times 0.5$, $\times 2$ & Ground (rooftop) \cite{ilseTechnoEconomicAssessmentSoiling2019a} \\
+Cleaning robot & 2.4--8.2~\euro~m$^{-2}$ & range & Investment over 10 years \cite{ilseTechnoEconomicAssessmentSoiling2019a} \\
+\rowcolor{tabgrey} Discount rate, lifetime & 5\%, 25 years & -- & \cite{ilseTechnoEconomicAssessmentSoiling2019a} \\
+Module price & 0.10~\euro~Wp$^{-1}$ & -- & Assumption (margin cost) \\
+\bottomrule
+\end{tabularx}
+\end{table*}

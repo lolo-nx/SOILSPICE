@@ -1,0 +1,35 @@
+{
+  "washing_family": "total",
+  "scenario_role": "sensitivity",
+  "washing_intensity_mm_h": null,
+  "washing_event_total_mm": 5.0,
+  "washing_rule": "P_e >= P_H only",
+  "washing_assumption": "Complete washing is assumed; thresholds are not calibrated for bottom-edge bands.",
+  "transfer_event_rain_mm": 1.0,
+  "selected_reference_threshold": 15.0,
+  "dry_hours": 3,
+  "years": [
+    2016,
+    2025
+  ],
+  "intensity_definition": "max(hourly precipitation [mm] / 1 h); not event mean",
+  "event_action_time": "one update at event closure, after 3 consecutive dry hours",
+  "climate_csvs": {
+    "Neuchâtel": "open-meteo-46.92N7.00E519m.csv",
+    "Almería": "open-meteo-36.87N2.49W32m.csv",
+    "Doha": "open-meteo-25.34N51.43E20m.csv"
+  },
+  "alpha": 0.041,
+  "deposition_g_m2_day": {
+    "Neuchâtel": 0.02439024390243903,
+    "Almería": 0.06829268292682929,
+    "Doha": 0.1
+  },
+  "spice_sweep_sha256": "6b8893d263007c2cff8ac82c9400bcc39d30a703c60892821c703040e37c51f1",
+  "hourly_time_convention": "Open-Meteo hour ends shifted -1 h after PV calculation; interval starts in UTC",
+  "daily_cleaning_boundaries": "UTC midnight",
+  "simulation_source_sha256": {
+    "energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+    "rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7"
+  }
+}

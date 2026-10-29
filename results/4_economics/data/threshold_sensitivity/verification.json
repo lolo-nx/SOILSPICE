@@ -1,0 +1,32 @@
+{
+  "reference_rows": 240,
+  "all_rows": 8640,
+  "counterfactual_identities_reconcile": true,
+  "margin_matches_saved_figure_definition": true,
+  "washing_sites_thresholds": 15,
+  "censored_periods": 30,
+  "with_without_band_policy_choices_differ": 3,
+  "negative_manual_gain_cases": 6,
+  "figures": [
+    {
+      "path": "results/4_economics/fig_energy_economics_threshold_sensitivity",
+      "width_mm": 178.0816042582194,
+      "height_mm": 124.35989413791233,
+      "pdf_sha256": "49de3bcb342f7bb3b5819ea5a9fa08c9626019a094a287f3ca61ca7588a5f105",
+      "png_sha256": "3499733b9c7e3a064fe4fcace7ea3e75a9ddfdd3cb921d4bbaf25c1abe91ba98"
+    },
+    {
+      "path": "results/4_economics/fig_energy_economics_threshold_sensitivity_rooftop",
+      "width_mm": 178.02648273044161,
+      "height_mm": 124.35989413791233,
+      "pdf_sha256": "a782d1186ad0f2fa2ca45c494d720b4bdee576aadc49e2a0fa7e1a560b39c9a7",
+      "png_sha256": "4d38c5efb0d6265dc24191235310717d9a393de9a68e1ab7d75bab13645d03b8"
+    }
+  ],
+  "temporal_figures_regenerated": true,
+  "no_automatic_threshold_selection": true,
+  "reference_R_H_mm_event": 15,
+  "corrected_timestamp_handling": true,
+  "source_coverage_stop_utc": "2025-12-31 23:00:00+00:00",
+  "regeneration_manifest": "../corrected_timestamp_regeneration.json"
+}

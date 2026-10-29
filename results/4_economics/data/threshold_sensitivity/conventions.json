@@ -1,0 +1,59 @@
+{
+  "thresholds_mm_event": [
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0
+  ],
+  "selected_central_threshold": 15.0,
+  "reference": {
+    "shape": "rectangle",
+    "h_mm": 60,
+    "f": 0.1,
+    "base_margin_mm": 0,
+    "compared_margin_mm": 10
+  },
+  "markets": {
+    "ground": [
+      0.06,
+      0.41
+    ],
+    "rooftop": [
+      0.28,
+      3.3
+    ]
+  },
+  "annual_economic_normalization": "duration_days / 365.25; identical to saved economic figures",
+  "washing_count_normalization": "event count / 10 nominal years, 2016–2025; final source hour unavailable",
+  "economic_years": 10.001254848277435,
+  "hourly_time_convention": "Open-Meteo hour ends shifted -1 h after PV calculation; interval starts in UTC",
+  "source_coverage": {
+    "start_utc": "2016-01-01 00:00:00+00:00",
+    "stop_utc": "2025-12-31 23:00:00+00:00",
+    "missing_trailing_hours": 1.0
+  },
+  "energy_normalization": "clean-production-weighted aggregate fractions, annual values separately exported",
+  "independent_optimization": true,
+  "include_none_in_optimum": true,
+  "include_none_in_manual_only": false,
+  "robot_included": false,
+  "discount_rate": 0.05,
+  "lifetime_years": 25,
+  "annuity_factor": 14.093944566044762,
+  "module_cost_eur_kwp": 100.0,
+  "added_margin_mm": 10,
+  "margin_capex_formula": "100 * 10 / slope_length_mm [EUR/kWp]",
+  "margin_net_npv_formula": "AF * (extra_band_cost_opt_margin0 - extra_band_cost_opt_margin10) - capex",
+  "cost_opt_band_formula": "min(cost_with_band) - min(cost_without_band), independently",
+  "manual_gain_formula": "cost_with_band_none - min(cost_with_band_manual_only); cleaning charges included",
+  "orientation_metrics": [
+    "extra band energy loss without manual cleaning",
+    "extra band cost after independent optimization"
+  ],
+  "EUR_numeric_tolerance": 1e-09,
+  "percentage_point_numeric_tolerance": 1e-08,
+  "transitions": "adjacent simulated threshold brackets; no inferred exact crossing",
+  "washing": "assumed complete; uncalibrated for bands",
+  "figure_representation": "one line per module/orientation; no confidence intervals; statistics file min/max is dispersion between configurations"
+}

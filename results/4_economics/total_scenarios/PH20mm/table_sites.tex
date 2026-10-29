@@ -1,0 +1,22 @@
+\begin{table}[!b]
+\caption{Sites (ERA5 grid points, 2016--2025). Soiling rates are those measured on uniformly soiled modules during dry periods at the site or the nearest site with published data; $D$ follows from the rate and the mass--transmittance relation of \cite{boyleNaturalSoilingPhotovoltaic2015}. $L_{\mathrm{min}}$ is the smallest band loss for which one cleaning can pay (Table~\ref{tab:clean}). Complete washing is assumed when $P_e\geq 20$~mm/event; this threshold is not calibrated for bands. Events end after 3 consecutive dry hours.\label{tab:sites}}
+\definecolor{tabgrey}{gray}{0.92}
+\begin{tabularx}{\columnwidth}{X>{\centering\arraybackslash}p{1.45cm}>{\centering\arraybackslash}p{1.45cm}>{\centering\arraybackslash}p{1.45cm}}
+\toprule
+ & \textbf{Neuch\^atel} & \textbf{Almer\'ia} & \textbf{Doha} \\
+\midrule
+\rowcolor{tabgrey} Latitude & 46.92$^\circ$N & 36.87$^\circ$N & 25.34$^\circ$N \\
+Longitude & 7.00$^\circ$E & 2.49$^\circ$W & 51.43$^\circ$E \\
+\rowcolor{tabgrey} Yield [kWh~kWp$^{-1}$~yr$^{-1}$] & 1399 & 1934 & 2093 \\
+Precipitation [mm~yr$^{-1}$] & 1233 & 266 & 77 \\
+\rowcolor{tabgrey} Days $\geq$ 1~mm [yr$^{-1}$] & 155 & 39 & 12 \\
+Washing events [yr$^{-1}$] & 15.5 & 2.7 & 0.8 \\
+\rowcolor{tabgrey} Soiling rate [\%~day$^{-1}$] & 0.10\textsuperscript{a} & 0.28\textsuperscript{b} & 0.41\textsuperscript{c} \\
+$D$ [g~m$^{-2}$~day$^{-1}$] & 0.024 & 0.068 & 0.10 \\
+\midrule
+\rowcolor{tabgrey} $L_{\mathrm{min}}$, ground [\%] & 7.3 & 1.0 & 0.3 \\
+$L_{\mathrm{min}}$, rooftop [\%] & 12.5 & 1.7 & 0.6 \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize \textsuperscript{a} Karlsruhe, 16$^\circ$ tilt \cite{wagnerVogel2019}. \textsuperscript{b} Granada, 30$^\circ$, summer dry season \cite{micheliEconomicsSeasonalPhotovoltaic2021}. \textsuperscript{c} Doha, 22$^\circ$, multi-year mean \cite{figgis2018}.}
+\end{table}

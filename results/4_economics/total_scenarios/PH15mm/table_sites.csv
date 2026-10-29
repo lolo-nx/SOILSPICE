@@ -1,0 +1,4 @@
+site,Latitude,Longitude,Yield [kWh/kWp/yr],Precipitation [mm/yr],Days >= 1 mm [/yr],Washing events [/yr],Transfer events [/yr],Soiling rate [%/day],D [g/m2/day]
+Neuchâtel,46.924,7.002,1398.721,1233.43,155.1,25.2,104.9,0.1,0.024
+Almería,36.872,-2.487,1933.871,266.13,39.2,4.2,32.8,0.28,0.068
+Doha,25.343,51.429,2093.064,77.24,12.0,1.4,10.5,0.41,0.1

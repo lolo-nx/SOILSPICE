@@ -1,0 +1,92 @@
+{
+  "identical_assumptions": true,
+  "identical_candidate_policy_grids": true,
+  "identical_clean_production_and_prices": true,
+  "saved_costs_reconcile": true,
+  "margin_reconciles_with_existing_figures": true,
+  "assumptions": {
+    "washing_family": "total",
+    "washing_rule": "P_e >= P_H only",
+    "dry_hours": 3,
+    "transfer_event_rain_mm": 1.0,
+    "years": [
+      2016,
+      2025
+    ],
+    "climate_csvs": {
+      "Neuchâtel": "open-meteo-46.92N7.00E519m.csv",
+      "Almería": "open-meteo-36.87N2.49W32m.csv",
+      "Doha": "open-meteo-25.34N51.43E20m.csv"
+    },
+    "hourly_time_convention": "Open-Meteo hour ends shifted -1 h after PV calculation; interval starts in UTC",
+    "daily_cleaning_boundaries": "UTC midnight",
+    "simulation_source_sha256": {
+      "energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+      "rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7"
+    },
+    "alpha": 0.041,
+    "deposition_g_m2_day": {
+      "Neuchâtel": 0.02439024390243903,
+      "Almería": 0.06829268292682929,
+      "Doha": 0.1
+    },
+    "spice_sweep_sha256": "6b8893d263007c2cff8ac82c9400bcc39d30a703c60892821c703040e37c51f1",
+    "event_action_time": "one update at event closure, after 3 consecutive dry hours"
+  },
+  "inputs": [
+    {
+      "threshold_mm_event": 5.0,
+      "file": "results/4_economics/total_scenarios/PH5mm/data/model_runs.csv",
+      "sha256": "2bdd34eb747374aeb3b925b385f896ad1f55ff90488c98b262be1d6d19addd13",
+      "rows": 67392
+    },
+    {
+      "threshold_mm_event": 10.0,
+      "file": "results/4_economics/total_scenarios/PH10mm/data/model_runs.csv",
+      "sha256": "19799b2430d3068736e7e5c9f98d529976c79ea47f744e094e7095d30311e7e5",
+      "rows": 67392
+    },
+    {
+      "threshold_mm_event": 15.0,
+      "file": "results/4_economics/total_scenarios/PH15mm/data/model_runs.csv",
+      "sha256": "27cd2056cd8509d2eb0316ec7496dabe470b8b38e7b3ee376866eab767f8a2dc",
+      "rows": 67392
+    },
+    {
+      "threshold_mm_event": 20.0,
+      "file": "results/4_economics/total_scenarios/PH20mm/data/model_runs.csv",
+      "sha256": "deb8702c989a8f02ef354ff49f5ec08054d85889cfb7a892bad216849ae259f5",
+      "rows": 67392
+    },
+    {
+      "threshold_mm_event": 25.0,
+      "file": "results/4_economics/total_scenarios/PH25mm/data/model_runs.csv",
+      "sha256": "ba2f98b755b10d407d35a43d31a504b8d38640a643944ce79ec96bad746e3d4d",
+      "rows": 67392
+    }
+  ],
+  "rain_only_reference_reconciles": true,
+  "washing_gaps_span_calendar_years": true,
+  "rows": {
+    "summary_all_configurations": 8640,
+    "summary_reference": 240,
+    "washing_summary": 15,
+    "washing_intervals": 1946,
+    "censored_washing_intervals": 30,
+    "robustness_all_configurations": 1728,
+    "robustness_reference": 48,
+    "orientation_all_configurations": 4320,
+    "orientation_reference": 120,
+    "orientation_robustness_all_configurations": 864,
+    "orientation_robustness_reference": 24,
+    "transitions_all_configurations": 773,
+    "transitions_reference": 32,
+    "site_reference_statistics": 30,
+    "annual_energy_reference": 1200
+  },
+  "supporting_inputs": {
+    "rain_total_reference_metrics.csv": "9f4ddd9eddd43b0779a14b7bb3fdb725b0f1daf30954b00220f55199cc0a805e",
+    "rain_total_washing_intervals.csv": "d5a78c9f72c468ec7613fbb8a15651978459387cde2b4ff134f863b9d955ae24",
+    "rain_total_annual_metrics.csv": "86824f17a8a6a30463d20e9d92b8a35425b9ca5a163cc79fe08432c4678af0ac"
+  }
+}

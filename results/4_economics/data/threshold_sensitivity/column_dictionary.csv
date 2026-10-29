@@ -1,0 +1,103 @@
+column,unit
+site,"dimensionless, count, category or UTC date; see README"
+market,"dimensionless, count, category or UTC date; see README"
+module,"dimensionless, count, category or UTC date; see README"
+orientation,"dimensionless, count, category or UTC date; see README"
+h_mm,mm
+f,"dimensionless, count, category or UTC date; see README"
+R_H_mm_event,mm/event
+clean_energy_kwh_kwp_year,kWh/kWp/year (365.25-day normalization)
+clean_revenue_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+energy_none_total_loss_pct,% clean production
+energy_none_uniform_loss_pct,% clean production
+energy_none_band_extra_loss_pct,% clean production
+energy_none_band_extra_kwh_kwp_year,kWh/kWp/year (365.25-day normalization)
+cost_none_total_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_none_total_pct_clean_revenue,% clean revenue
+cost_none_uniform_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_none_uniform_pct_clean_revenue,% clean revenue
+cost_opt_total_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_opt_total_pct_clean_revenue,% clean revenue
+opt_total_policy,"dimensionless, count, category or UTC date; see README"
+opt_total_interval_days,days
+opt_total_cleanings_per_year,manual cleanings / year (365.25-day normalization)
+opt_total_energy_loss_pct,% clean production
+opt_total_cooptimal_policy_count,"dimensionless, count, category or UTC date; see README"
+opt_total_cooptimal_frequency_min,manual cleanings / year (365.25-day normalization)
+opt_total_cooptimal_frequency_max,manual cleanings / year (365.25-day normalization)
+cost_opt_uniform_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_opt_uniform_pct_clean_revenue,% clean revenue
+opt_uniform_policy,"dimensionless, count, category or UTC date; see README"
+opt_uniform_interval_days,days
+opt_uniform_cleanings_per_year,manual cleanings / year (365.25-day normalization)
+opt_uniform_energy_loss_pct,% clean production
+opt_uniform_cooptimal_policy_count,"dimensionless, count, category or UTC date; see README"
+opt_uniform_cooptimal_frequency_min,manual cleanings / year (365.25-day normalization)
+opt_uniform_cooptimal_frequency_max,manual cleanings / year (365.25-day normalization)
+cost_manual_total_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_manual_total_pct_clean_revenue,% clean revenue
+manual_total_policy,"dimensionless, count, category or UTC date; see README"
+manual_total_interval_days,days
+manual_total_cleanings_per_year,manual cleanings / year (365.25-day normalization)
+manual_total_energy_loss_pct,% clean production
+manual_total_cooptimal_policy_count,"dimensionless, count, category or UTC date; see README"
+manual_total_cooptimal_frequency_min,manual cleanings / year (365.25-day normalization)
+manual_total_cooptimal_frequency_max,manual cleanings / year (365.25-day normalization)
+cost_manual_uniform_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_manual_uniform_pct_clean_revenue,% clean revenue
+manual_uniform_policy,"dimensionless, count, category or UTC date; see README"
+manual_uniform_interval_days,days
+manual_uniform_cleanings_per_year,manual cleanings / year (365.25-day normalization)
+manual_uniform_energy_loss_pct,% clean production
+manual_uniform_cooptimal_policy_count,"dimensionless, count, category or UTC date; see README"
+manual_uniform_cooptimal_frequency_min,manual cleanings / year (365.25-day normalization)
+manual_uniform_cooptimal_frequency_max,manual cleanings / year (365.25-day normalization)
+cost_none_band_extra_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_opt_band_extra_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+cost_none_band_extra_pct_clean_revenue,% clean revenue
+cost_opt_band_extra_pct_clean_revenue,% clean revenue
+manual_gain_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+manual_uniform_gain_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+selected_gain_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+band_extra_cost_reduction_by_optimization_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+manual_gain_pct_clean_revenue,% clean revenue
+manual_uniform_gain_pct_clean_revenue,% clean revenue
+selected_gain_pct_clean_revenue,% clean revenue
+band_extra_cost_reduction_by_optimization_pct_clean_revenue,% clean revenue
+margin10_capex_eur_kwp,EUR/kWp (initial investment)
+margin10_savings_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+margin10_annualized_capex_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+margin10_net_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+margin10_net_pct_clean_revenue,% clean revenue
+margin10_npv25_eur_kwp,EUR/kWp (25-year net present value)
+margin10_opt_total_cost_eur_kwp_year,EUR/kWp/year (365.25-day normalization)
+margin10_opt_policy,"dimensionless, count, category or UTC date; see README"
+margin10_opt_interval_days,days
+margin10_opt_cleanings_per_year,manual cleanings / year (365.25-day normalization)
+margin10_state,"dimensionless, count, category or UTC date; see README"
+manual_gain_state,"dimensionless, count, category or UTC date; see README"
+selected_policy_uses_manual_cleaning,"dimensionless, count, category or UTC date; see README"
+shape,"dimensionless, count, category or UTC date; see README"
+base_margin_mm,mm
+washing_events,"dimensionless, count, category or UTC date; see README"
+washing_events_per_calendar_year,events or cleanings / calendar year
+max_complete_washing_gap_days,days
+max_complete_gap_start,"dimensionless, count, category or UTC date; see README"
+max_complete_gap_end,"dimensionless, count, category or UTC date; see README"
+initial_censored_start,"dimensionless, count, category or UTC date; see README"
+initial_censored_end,"dimensionless, count, category or UTC date; see README"
+initial_censored_days,days
+final_censored_start,"dimensionless, count, category or UTC date; see README"
+final_censored_end,"dimensionless, count, category or UTC date; see README"
+final_censored_days,days
+max_observed_including_censored_days,days
+economic_years_365p25,"dimensionless, count, category or UTC date; see README"
+calendar_year_count,"dimensionless, count, category or UTC date; see README"
+study_start_utc,"dimensionless, count, category or UTC date; see README"
+study_stop_utc,"dimensionless, count, category or UTC date; see README"
+missing_trailing_source_hours,hours
+opt_total_cleanings_per_calendar_year,events or cleanings / calendar year
+opt_uniform_cleanings_per_calendar_year,events or cleanings / calendar year
+manual_total_cleanings_per_calendar_year,events or cleanings / calendar year
+manual_uniform_cleanings_per_calendar_year,events or cleanings / calendar year
+margin10_opt_cleanings_per_calendar_year,events or cleanings / calendar year

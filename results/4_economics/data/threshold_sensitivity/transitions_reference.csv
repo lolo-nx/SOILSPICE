@@ -1,0 +1,33 @@
+site,market,module,orientation,h_mm,f,conclusion,R_H_low_mm,R_H_high_mm,state_low,state_high,value_low,value_high,unit
+Neuchâtel,ground,YINGLI,portrait,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.021457948721169663,0.0007195838935064799,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,60.0,0.1,margin10,20.0,25.0,negative,positive,-0.028096561021025687,0.012260613871046447,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.0072645333815738525,0.04476833125668727,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.03986737546461616,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.03380943048737124,0.0009170652552800557,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.00906654787723167,0.009571836435673095,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.06383387496975623,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,60.0,0.1,margin10,20.0,25.0,negative,positive,-0.008652695725246365,0.045632782840691874,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.002872415868054326,0.019020373926985953,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.07934716216735338,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.0307494707242066,0.0005226656153754367,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.014915244178027844,0.021650550275473544,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.0026275035434635136,0.03464504787788526,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.22561640336427313,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.02346612499049673,0.03543418686676257,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.2120065625706853,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.1354453834005689,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.027150327088854634,0.019836745069129733,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.30977903203300805,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.3914196103716767,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.021107805589987774,0.033896883612884385,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.24387254009143344,EUR/kWp/year
+Almería,ground,YINGLI,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.032851551661672515,0.12769364413776452,EUR/kWp/year
+Doha,ground,YINGLI,landscape,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.001986510823448681,0.012548893564397604,EUR/kWp/year
+Doha,ground,YINGLI,landscape,60.0,0.1,margin10,15.0,20.0,positive,negative,0.012548893564397604,-0.019533685986291557,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.01878530587155454,0.03317765230824547,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_energy,5.0,10.0,portrait,landscape,-0.00019866156813997532,4.910904273999761e-05,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_cost,5.0,10.0,portrait,landscape,-0.00019866156813934388,4.910904274559036e-05,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_energy,5.0,10.0,portrait,landscape,-0.00019866156813997532,4.910904273999761e-05,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_cost,5.0,10.0,portrait,landscape,-0.00019866156813932306,4.910904274564587e-05,pp clean revenue
+Doha,ground,LONGI,portrait vs landscape,60.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.12369632006455422,-0.11217570016625622,pp clean yield
+Doha,rooftop,LONGI,portrait vs landscape,60.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.12369632006455422,-0.11217570016625622,pp clean yield

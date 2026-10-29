@@ -1,0 +1,28 @@
+{
+  "primary_family": "total",
+  "reference_R_H_mm_event": 15,
+  "reference_provenance": "user-selected illustrative reference, not calibrated for bands",
+  "sensitivity_R_H_mm_event": [
+    5,
+    10,
+    20,
+    25
+  ],
+  "washing_rule": "P_e >= R_H only",
+  "transfer_rule": "1 <= P_e < R_H",
+  "event_separation_dry_hours": 3,
+  "event_action": "once at completed event closure",
+  "complete_washing": "hypothesis; not calibrated for bands",
+  "reference_outputs": "../total_scenarios/PH15mm/",
+  "sensitivity_outputs": "../total_scenarios/",
+  "corrected_timestamp_handling": true,
+  "hourly_time_convention": "Open-Meteo hour ends shifted -1 h after PV calculation; interval starts in UTC",
+  "daily_cleaning_boundaries": "UTC midnight",
+  "simulation_source_sha256": {
+    "energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+    "rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7"
+  },
+  "source_coverage_stop_utc": "2025-12-31 23:00:00+00:00",
+  "publication_exports_status": "all five scenarios and sensitivity outputs regenerated and verified",
+  "regeneration_manifest": "corrected_timestamp_regeneration.json"
+}

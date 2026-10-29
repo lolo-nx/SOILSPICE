@@ -1,0 +1,205 @@
+{
+  "source_manifest": "results/4_economics/data/corrected_timestamp_regeneration.json",
+  "source_manifest_sha256": "158dc5e8c25c9cca9ad4f200102499432ab5356a42c369b9167ebbf99a5f2ec1",
+  "source_sensitivity_sha256": "78f828e32e87c273b6c8f92174581cab4019166ebc429f32d65b36535e18aedc",
+  "source_summary_sha256": "458c202a401c356b7768e0f1941d329ef2f42c6c76c94866eee12be266c7b6bb",
+  "model_source_sha256": {
+    "energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
+    "rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7"
+  },
+  "source_simulations": [
+    {
+      "path": "results/4_economics/total_scenarios/PH5mm/data/model_runs.csv",
+      "sha256": "2bdd34eb747374aeb3b925b385f896ad1f55ff90488c98b262be1d6d19addd13"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH10mm/data/model_runs.csv",
+      "sha256": "19799b2430d3068736e7e5c9f98d529976c79ea47f744e094e7095d30311e7e5"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH15mm/data/model_runs.csv",
+      "sha256": "27cd2056cd8509d2eb0316ec7496dabe470b8b38e7b3ee376866eab767f8a2dc"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH20mm/data/model_runs.csv",
+      "sha256": "deb8702c989a8f02ef354ff49f5ec08054d85889cfb7a892bad216849ae259f5"
+    },
+    {
+      "path": "results/4_economics/total_scenarios/PH25mm/data/model_runs.csv",
+      "sha256": "ba2f98b755b10d407d35a43d31a504b8d38640a643944ce79ec96bad746e3d4d"
+    }
+  ],
+  "generator_source_sha256": {
+    "chapters/extended_data_sensitivity.py": "063f16559d225e32c3c963e4f091df7e76c0db4623ceb0ff562d6d3542bc6fe9",
+    "soilspice/fig_extended_sensitivity.py": "c8d9bc23cb0b979f4ddc4d43a6a7ed4a0ca994d2ceb8b5a0a13a5cba01c18d85"
+  },
+  "corrected_timestamp_alignment_verified": true,
+  "event_separation_dry_hours": 3,
+  "washing_criterion": "completed event total >= R_H, mm/event; no intensity criterion",
+  "reference_R_H_mm_event": 15,
+  "thresholds_mm_event": [
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0
+  ],
+  "existing_results_reused_without_new_simulations": true,
+  "alpha_sensitivity_preserves_deposition": true,
+  "independent_economic_optimisations_preserved": true,
+  "all_metrics_reconcile_with_summary_and_raw_runs": true,
+  "max_reference_difference_pct_points": 6.494804694057166e-15,
+  "manual_results_retained_without_clipping": true,
+  "preserved_preexisting_exports": 218,
+  "figures": [
+    {
+      "stem": "fig_ed1_parameter_sensitivity",
+      "width_mm": 183.0,
+      "height_mm": 125.0,
+      "panels": 6,
+      "png_dpi": 600,
+      "y_limits": {
+        "a": [
+          4.52,
+          -0.52
+        ],
+        "b": [
+          4.52,
+          -0.52
+        ],
+        "c": [
+          4.52,
+          -0.52
+        ],
+        "d": [
+          4.52,
+          -0.52
+        ],
+        "e": [
+          4.52,
+          -0.52
+        ],
+        "f": [
+          4.52,
+          -0.52
+        ]
+      },
+      "png_pixels": [
+        4322,
+        2952
+      ],
+      "vector_pdf": true,
+      "pdf_sha256": "ac8489c9145e27d95ad335b088943a101ed4562d74e8fafc82bcf7f77cec908f",
+      "png_sha256": "102a5145cb837644ec2e0684cc3a641e99bb38a23e6bf44cfa9e2d27fdb9914c"
+    },
+    {
+      "stem": "fig_ed2_washing_threshold_sensitivity",
+      "width_mm": 183.0,
+      "height_mm": 125.0,
+      "panels": 6,
+      "png_dpi": 600,
+      "y_limits": {
+        "a": [
+          0.0,
+          0.8580190170818092
+        ],
+        "b": [
+          0.0,
+          15.28892860994138
+        ],
+        "c": [
+          0.0,
+          15.28892860994138
+        ],
+        "d": [
+          -1.48312960696146,
+          7.93763121306523
+        ],
+        "e": [
+          -1.48312960696146,
+          7.93763121306523
+        ],
+        "f": [
+          -1.48312960696146,
+          7.93763121306523
+        ]
+      },
+      "png_pixels": [
+        4322,
+        2952
+      ],
+      "vector_pdf": true,
+      "pdf_sha256": "257aa4f53ad3986115c360073e33255e45dcfd250285893811794182d4283da7",
+      "png_sha256": "d4940bdc3046ff46598289b2230e9777e93569b2e7ec38f798e04abe79e199a0"
+    }
+  ],
+  "inconsistencies": [],
+  "presentation_updates": [
+    {
+      "date": "2026-10-27",
+      "type": "presentation_only",
+      "changes": [
+        "Remove ED1 horizontal-scales footer",
+        "Remove PH15 band-growth rain-criterion footer",
+        "PH15 cleaning legend: range over 4 modules × 2 orientations"
+      ],
+      "numerical_outputs_unchanged": true,
+      "outputs": [
+        {
+          "path": "results/4_economics/fig_ed1_parameter_sensitivity.pdf",
+          "before_sha256": "51a549bd1e81425da1ab811dba8737428730856c7d4627ecdaa701cd12bddf55",
+          "after_sha256": "ac8489c9145e27d95ad335b088943a101ed4562d74e8fafc82bcf7f77cec908f"
+        },
+        {
+          "path": "results/4_economics/fig_ed1_parameter_sensitivity.png",
+          "before_sha256": "fe5f4ac191acb7d473486612bb4dccd45aa9452b4c56b51f631f11c0605a1e4a",
+          "after_sha256": "102a5145cb837644ec2e0684cc3a641e99bb38a23e6bf44cfa9e2d27fdb9914c"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_band_growth.pdf",
+          "before_sha256": "ccc1e6daca4e778bd73d6d029e8a7d1c75df8de5efc2a74d545e20c4da1f82d7",
+          "after_sha256": "82bb34f839519b21e083f21f164129a4894a5b0b46910b554ec117607f4a057d"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_band_growth.png",
+          "before_sha256": "df7e2f7fcba610c8ee85211503ce7887ce1c49d7fe0e4044c5fa371a0b842904",
+          "after_sha256": "ee3baa4da181527e5b69fc887bd6408c7006068b265693b0deacaf42875ca515"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_cleaning.pdf",
+          "before_sha256": "cefe1bddb2696f43a74f13bbe066959e1cfe328f73eda93b642fe92b9b8b49c1",
+          "after_sha256": "35a2855f94d3910dc5cad1f3ef2ba1d1b5a736d434c6bfbb5e8f5d8ac1afeabb"
+        },
+        {
+          "path": "results/4_economics/total_scenarios/PH15mm/fig_cleaning.png",
+          "before_sha256": "f6ccde4fcf3dacdebf5c970d34dddae84f9450775d1b20b161a70f48a02ebbad",
+          "after_sha256": "ba277b8d71ed373857c241f7949d70145630e9ba01718102b698662801e52823"
+        }
+      ],
+      "plotting_source_sha256": {
+        "soilspice/fig_energy.py": "19a8023f386bcdd23be95b20912b124802f50343cfbfd52cb30cf566fea63ab2",
+        "soilspice/fig_extended_sensitivity.py": "f0d34efd02270b0ba8ad4b7275835bc3100ba02df19e06652d10033fa8e69478"
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "type": "presentation_only",
+      "changes": [
+        "Remove ED2 scale footer"
+      ],
+      "numerical_outputs_unchanged": true,
+      "outputs": [
+        {
+          "path": "results/4_economics/fig_ed2_washing_threshold_sensitivity.pdf",
+          "before_sha256": "e3acc3ff9f6867e78b9c2261df992fb92df6fd61b5b9472c39b8831212a57b89",
+          "after_sha256": "257aa4f53ad3986115c360073e33255e45dcfd250285893811794182d4283da7"
+        },
+        {
+          "path": "results/4_economics/fig_ed2_washing_threshold_sensitivity.png",
+          "before_sha256": "43f6cb672820b0cbbd3e5af1ab752b9f406a0e72fc6a341ba4826e71c540730e",
+          "after_sha256": "d4940bdc3046ff46598289b2230e9777e93569b2e7ec38f798e04abe79e199a0"
+        }
+      ]
+    }
+  ]
+}

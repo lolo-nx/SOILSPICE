@@ -1,0 +1,97 @@
+* /Users/lorrainenaux/Documents/LTspice/Yingli_SOLAR_Bishop.asc
+XX1 N002 N005 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX2 N005 N011 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX3 N011 N017 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX4 N017 N023 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX5 N023 N029 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX6 N029 N035 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX7 N035 N041 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX8 N041 N047 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX9 N047 N053 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX10 N053 N058 pvcell_bishop params: f_cov=0.3269 tau_I=0.706
+XX11 N004 0 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX12 N010 N004 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX13 N016 N010 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX14 N022 N016 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX15 N028 N022 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX16 N034 N028 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX17 N040 N034 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX18 N046 N040 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX19 N052 N046 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX20 N058 N052 pvcell_bishop params: f_cov=0.3269 tau_I=0.706
+XX21 N003 N007 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX22 N007 N013 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX23 N013 N019 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX24 N019 N025 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX25 N025 N031 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX26 N031 N037 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX27 N037 N043 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX28 N043 N049 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX29 N049 N055 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX30 N055 N059 pvcell_bishop params: f_cov=0.3269 tau_I=0.706
+XX31 N006 N002 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX32 N012 N006 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX33 N018 N012 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX34 N024 N018 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX35 N030 N024 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX36 N036 N030 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX37 N042 N036 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX38 N048 N042 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX39 N054 N048 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX40 N059 N054 pvcell_bishop params: f_cov=0.3269 tau_I=0.706
+XX41 N001 N009 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX42 N009 N015 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX43 N015 N021 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX44 N021 N027 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX45 N027 N033 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX46 N033 N039 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX47 N039 N045 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX48 N045 N051 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX49 N051 N057 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX50 N057 N060 pvcell_bishop params: f_cov=0.3269 tau_I=0.706
+XX51 N008 N003 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX52 N014 N008 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX53 N020 N014 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX54 N026 N020 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX55 N032 N026 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX56 N038 N032 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX57 N044 N038 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX58 N050 N044 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX59 N056 N050 pvcell_bishop params: f_cov=0.0000 tau_I=0.706
+XX60 N060 N056 pvcell_bishop params: f_cov=0.3269 tau_I=0.706
+V1 N001 0 V
+D1 0 N002 RF2001NS2D
+D2 N002 N003 RF2001NS2D
+D3 N003 N001 RF2001NS2D
+
+* block symbol definitions
+.subckt pvcell_bishop + -
+I1 - N001 {I1*(1 - f_cov*(1 - tau_I))}
+Bsh N001 - I=if(V(N001,-)>=0,V(N001,-)/{rp},V(N001,-)/20)
+Rs + N001 {rs}
+D1 N001 - 1N914
+.model 1N914 D IS={IS} N={n1} TNOM={t}
+.param IS= 6.994062e-10
+.param n1=1.075
+.param Isc=  9.1010
+.param kc=0.0004
+.param t=24.8
+.param kv=-0.0031
+.param Vi=1000
+.param rp=5.99
+.param rs=  0.00491
+.param q=1.6e-19
+.param k=1.3806e-23     ; constante de Boltzmann
+.param I1=(Isc+Isc*kc*(t-25))*(Vi/1000)
+.param f_cov=0
+.param tau_I=1
+.ends pvcell_bishop
+
+.model D D
+.lib /Users/lorrainenaux/Library/Application Support/LTspice/lib/cmp/standard.dio
+.dc V1 0 39.5 0.05
+.backanno
+.save I(V1) I(D1) I(D2) I(D3) V(N052) V(x20:N001) I(x20:Bsh) I(x20:D1) I(x20:I1) I(x20:Rs) V(N058) V(x10:N001) I(x10:Bsh) I(x10:D1) I(x10:I1) I(x10:Rs) V(N054) V(x40:N001) I(x40:Bsh) I(x40:D1) I(x40:I1) I(x40:Rs) V(N059) V(x30:N001) I(x30:Bsh) I(x30:D1) I(x30:I1) I(x30:Rs) V(N056) V(x60:N001) I(x60:Bsh) I(x60:D1) I(x60:I1) I(x60:Rs) V(N060) V(x50:N001) I(x50:Bsh) I(x50:D1) I(x50:I1) I(x50:Rs)
+.options reltol=1e-5 abstol=1e-10 vntol=1e-8
+.nodeset V(n005)=-0.467753142118 V(n002)=3.23295833464e-13 V(n011)=-0.935506284237 V(n017)=-1.40325939655 V(n023)=-1.87101256847 V(n029)=-2.3387658596 V(n035)=-2.80651879311 V(n041)=-3.27427196503 V(n047)=-3.74202513695 V(n053)=-4.20977830887 V(n058)=1.95843341544e-13 V(n004)=0.467753142118 V(n010)=0.935506284237 V(n016)=1.40325939655 V(n022)=1.87101256847 V(n028)=2.3387658596 V(n034)=2.80651879311 V(n040)=3.27427196503 V(n046)=3.74202513695 V(n052)=4.20977830887 V(n007)=-0.467753142118 V(n003)=-5.33295629879e-13 V(n013)=-0.935506284237 V(n019)=-1.40325939655 V(n025)=-1.87101256847 V(n031)=-2.3387658596 V(n037)=-2.80651879311 V(n043)=-3.27427196503 V(n049)=-3.74202513695 V(n055)=-4.20977830887 V(n059)=1.05852826504e-13 V(n006)=0.467753142118 V(n012)=0.935506284237 V(n018)=1.40325939655 V(n024)=1.87101256847 V(n030)=2.3387658596 V(n036)=2.80651879311 V(n042)=3.27427196503 V(n048)=3.74202513695 V(n054)=4.20977830887 V(n009)=-0.467753142118 V(n001)=0 V(n015)=-0.935506284237 V(n021)=-1.40325939655 V(n027)=-1.87101256847 V(n033)=-2.3387658596 V(n039)=-2.80651879311 V(n045)=-3.27427196503 V(n051)=-3.74202513695 V(n057)=-4.20977830887 V(n060)=-3.64312746637e-13 V(n008)=0.467753142118 V(n014)=0.935506284237 V(n020)=1.40325939655 V(n026)=1.87101256847 V(n032)=2.3387658596 V(n038)=2.80651879311 V(n044)=3.27427196503 V(n050)=3.74202513695 V(n056)=4.20977830887
+.end

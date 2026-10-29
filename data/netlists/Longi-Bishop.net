@@ -1,0 +1,143 @@
+* /Users/lorrainenaux/Documents/LTspice/Longi-Bishop.asc
+XX1 N001 N002 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX2 N002 N003 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX3 N003 N004 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX4 N004 N005 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX5 N005 N006 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX6 N006 N007 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX7 N007 N008 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX8 N008 N009 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX9 N009 0 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX10 N027 N026 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX11 N026 N025 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX12 N025 N024 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX13 N024 N023 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX14 N023 N022 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX15 N022 N021 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX16 N021 N020 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX17 N020 N019 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX18 N019 N001 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX19 N036 N037 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX20 N037 N038 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX21 N038 N039 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX22 N039 N040 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX23 N040 N041 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX24 N041 N042 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX25 N042 N043 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX26 N043 N044 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX27 N044 N027 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX28 N062 N061 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX29 N061 N060 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX30 N060 N059 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX31 N059 N058 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX32 N058 N057 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX33 N057 N056 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX34 N056 N055 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX35 N055 N054 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX36 N054 N036 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX37 N071 N072 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX38 N072 N073 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX39 N073 N074 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX40 N074 N075 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX41 N075 N076 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX42 N076 N077 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX43 N077 N078 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX44 N078 N079 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX45 N079 N062 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX46 N097 N096 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX47 N096 N095 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX48 N095 N094 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX49 N094 N093 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX50 N093 N092 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX51 N092 N091 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX52 N091 N090 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX53 N090 N089 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX54 N089 N071 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX55 N018 N017 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX56 N017 N016 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX57 N016 N015 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX58 N015 N014 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX59 N014 N013 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX60 N013 N012 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX61 N012 N011 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX62 N011 N010 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX63 N010 0 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX64 N027 N028 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX65 N028 N029 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX66 N029 N030 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX67 N030 N031 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX68 N031 N032 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX69 N032 N033 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX70 N033 N034 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX71 N034 N035 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX72 N035 N018 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX73 N053 N052 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX74 N052 N051 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX75 N051 N050 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX76 N050 N049 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX77 N049 N048 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX78 N048 N047 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX79 N047 N046 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX80 N046 N045 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX81 N045 N027 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX82 N062 N063 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX83 N063 N064 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX84 N064 N065 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX85 N065 N066 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX86 N066 N067 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX87 N067 N068 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX88 N068 N069 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX89 N069 N070 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX90 N070 N053 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX91 N088 N087 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX92 N087 N086 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX93 N086 N085 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX94 N085 N084 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX95 N084 N083 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX96 N083 N082 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX97 N082 N081 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX98 N081 N080 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX99 N080 N062 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX100 N097 N098 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX101 N098 N099 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX102 N099 N100 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX103 N100 N101 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX104 N101 N102 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX105 N102 N103 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX106 N103 N104 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX107 N104 N105 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+XX108 N105 N088 pvcell-longi params: f_cov=0.0000 tau_I=1.0
+V1 N097 0 V
+D1 0 N027 RF2001NS2D
+D2 N027 N062 RF2001NS2D
+D3 N062 N097 RF2001NS2D
+
+* block symbol definitions
+.subckt pvcell-longi + -
+I1 - N {I1*(1 - f_cov*(1 - tau_I))}
+D1 N - 1N914
+R1 N - {rp}
+R2 N + {rs}
+B1 N - I=V(N,-)/{rp}*{a}*pwr(1-V(N,-)/{Vb},-{b})
+.model 1N914 D IS={IS1} N={n1} TNOM={t}
+.param IS1  = 1.702211e-12 ; 4.875715e-14
+.param Isc  = 7.20214        ; A / demi-cellule
+.param kc   = 0.0005         ; current temp coef
+.param t=25.0
+.param kv   = -0.00210         ; voltage temp coef
+.param n1   = 1
+.param Vi   = 1000
+.param rp   =  5.5438
+.param rs   =0.001948 ;  0.002702     ohm / demi-cellule
+.param q    = 1.6e-19
+.param k    = 1.3806e-23      ; constante de Boltzmann
+.param I1   = (Isc+Isc*kc*(t-25))*(Vi/1000)
+.param Vb=-4.5 a=2e-3 b=3
+.param f_cov=0 tau_I=1
+.ends pvcell-longi
+
+.model D D
+.lib /Users/lorrainenaux/Library/Application Support/LTspice/lib/cmp/standard.dio
+.dc V1 42 0 0.2
+.backanno
+.end

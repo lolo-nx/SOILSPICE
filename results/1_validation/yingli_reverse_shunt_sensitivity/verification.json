@@ -1,0 +1,126 @@
+{
+  "diagnostic_only": true,
+  "original_models_unchanged": true,
+  "other_modules_unchanged": true,
+  "R_forward_ohm": 5.99,
+  "R_reverse_ohm": [
+    "5.99",
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+    "500",
+    "negligible"
+  ],
+  "shunt_law": "Ish(Vj)=Vj/5.99 if Vj>=0; Vj/Rrev if Vj<0",
+  "negligible_conduction_ohm": 1000000.0,
+  "limit_convergence_check_ohm": 10000000.0,
+  "max_limit_check_current_change_A": 3.814697265625e-06,
+  "exact_zero_reverse_conductance_not_used": "Ill-conditioned voltage sharing between identical reverse-biased cells; use verified negligible-current limit",
+  "continuous_at_zero": true,
+  "derivative_continuity_required": false,
+  "bishop_terms_added": false,
+  "all_other_electrical_lines_preserved_verbatim": true,
+  "numerical_solver_options": "reltol=1e-5 abstol=1e-10 vntol=1e-8; tighten convergence at the conductance kink",
+  "solver_initial_guess": "nodeset from original constant-shunt short-circuit node voltages; no final equation or electrical parameter changed",
+  "max_baseline_current_difference_A": 0.0,
+  "max_KCL_residual_A": 7.52793566789478e-05,
+  "max_piecewise_shunt_law_residual_A": 6.097162108253951e-07,
+  "max_forward_conductance_residual_A": 6.097162108253951e-07,
+  "clean_curves_unchanged": true,
+  "measurement_count": 9,
+  "shaded_measurement_count": 7,
+  "common_grid_step_V": 0.1,
+  "measured_current_cutoff_A": 0.3,
+  "plateau_window_V": [
+    5,
+    25
+  ],
+  "Pmax_error_definition": "100*(Pmax_simulated/Pmax_measured-1), signed",
+  "preserved_existing_files": 724,
+  "sources": [
+    {
+      "orientation": "portrait",
+      "tau_I": 1.0,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/clean_YINGLI.net",
+      "net_sha256": "2870a37fd5aeab923f401e9ffc87ec2105c21802c6c5bc7b99f5573518c24317",
+      "raw_sha256": "e5a1489602c9bb8ac113b706162cb868690f3a5a5128c634ecc1c1af3c9a105c",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash2-yingli-24.8-clean.asc",
+      "measurement_sha256": "797225caa4d13d00520aa36e42e0fe6d3f2ed6f8883e9c5ba22ae13bb307f4f4"
+    },
+    {
+      "orientation": "portrait",
+      "tau_I": 0.706,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/YINGLI_rectangle_portrait_tau0.706_constant.net",
+      "net_sha256": "dfb05c13994bd336ebc8cd0adee540ee920832b311188ce663c256d500e36cc0",
+      "raw_sha256": "7a44173bd7ec66f5a89d23272776d68503144a0cf1ddd1a21876cb9cd7110323",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash4-yingli-25.8-portrait-rectangle-80m.asc",
+      "measurement_sha256": "ff62eeb70578ba36879f163ee11a38d68c864aac10a16ae03fd7284fa745d37e"
+    },
+    {
+      "orientation": "portrait",
+      "tau_I": 0.536,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/YINGLI_rectangle_portrait_tau0.536_constant.net",
+      "net_sha256": "089285b579f0662be24ee929998e3cf7fee7c3f6e3215ae6cae3bf7743f0658d",
+      "raw_sha256": "45fc6180da8a9700622e8cf7d9c4afe5140a7cf26608863f26df886e9dbf6991",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-26.2-portrait-rectangle-80m-2layer.asc",
+      "measurement_sha256": "e9fd6d22d00f0d6447a26ae3b26d3d48a4d2151fc3eb1618f18119cccf48337e"
+    },
+    {
+      "orientation": "portrait",
+      "tau_I": 0.442,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/YINGLI_rectangle_portrait_tau0.442_constant.net",
+      "net_sha256": "7bc8bf0e30b700a00f2149a8c519d9ecc70880c5070bfc5562569a00b2b67086",
+      "raw_sha256": "e8cb33c54cb6c7879e2b3c7d4ff93fc9eb1b1743a81534f4b62ef4700ef9f57a",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-26.5-portrait-rectangle-80m-3layer.asc",
+      "measurement_sha256": "3ff4d89acbf11c7e2993275e70a87403686391cb5e3689e4d349d8c98dd98b79"
+    },
+    {
+      "orientation": "portrait",
+      "tau_I": 0.0,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/YINGLI_rectangle_portrait_tau0_constant.net",
+      "net_sha256": "d0caf2c2542680962a45be0676cd1bb24482ff1b1c1f080788ae5a9dafe3f59c",
+      "raw_sha256": "f95d2d154acb3b62ce4bf49e81d373ae91593482ba05ef0bb1a07c0c69a60824",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/08-09/YS-0809-carton-rectangle-portrait-25.5.asc",
+      "measurement_sha256": "799a667daf9928bae1ec17406c554b600633395d2cc922fd2ee47773b64cda30"
+    },
+    {
+      "orientation": "landscape",
+      "tau_I": 1.0,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/clean_YINGLI.net",
+      "net_sha256": "2870a37fd5aeab923f401e9ffc87ec2105c21802c6c5bc7b99f5573518c24317",
+      "raw_sha256": "e5a1489602c9bb8ac113b706162cb868690f3a5a5128c634ecc1c1af3c9a105c",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash2-yingli-24.8-clean.asc",
+      "measurement_sha256": "797225caa4d13d00520aa36e42e0fe6d3f2ed6f8883e9c5ba22ae13bb307f4f4"
+    },
+    {
+      "orientation": "landscape",
+      "tau_I": 0.706,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/YINGLI_rectangle_landscape_tau0.706_constant.net",
+      "net_sha256": "4b1d3f451ca3e12773ea9e244b5de0549bd3c87f5c4259d0f262b4dc06211d09",
+      "raw_sha256": "29637c299301d01412a21c4c751c2502cfd73d5bcf9b5e305d3c855dcb1ed12b",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-25.9-landscape-rectangle-80m-1layer.asc",
+      "measurement_sha256": "4a99e470356c5760b3b207881bd0d63adf22752196dc543c205dc830c225cb59"
+    },
+    {
+      "orientation": "landscape",
+      "tau_I": 0.536,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/YINGLI_rectangle_landscape_tau0.536_constant.net",
+      "net_sha256": "dc9a36532ba8a8634a89bf16730203de9c8793ff9d9ba232620efea27005649c",
+      "raw_sha256": "ff6af1563e1db5d49c2e811e602e0a9574f0efa115f558376a9a76e5ba7baa7d",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-25.4-landscape-rectangle-80m-2layer.asc",
+      "measurement_sha256": "31fe2371a7b1b2fbcbb86e9ea089a6f12b5d3395451008c67f8acfa812377405"
+    },
+    {
+      "orientation": "landscape",
+      "tau_I": 0.0,
+      "net_path": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/results/1_validation/yingli_shunt_comparison/runs/constant/YINGLI_rectangle_landscape_tau0_constant.net",
+      "net_sha256": "735852051be3ac0b30f192df892871ac9b3bec33ae12f4f6b2a9c2e21c5e676e",
+      "raw_sha256": "526babb0d8e1fd0a1c68139a20eeeb9532bad31261558fbf45420310f95910aa",
+      "measurement_path": "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/08-09/YS-0809-carton-rectangle-landscape-24.4.asc",
+      "measurement_sha256": "b3ba51995b3a1b4908c959d0fff8ea18277332b4fb3605a79e358c5d50ce2838"
+    }
+  ],
+  "generator_sha256": "2d6180e98b57c2a27339c25d88288e6f909eb561adef6e374aaeea96533326cf"
+}

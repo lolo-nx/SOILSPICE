@@ -1,0 +1,25 @@
+{
+  "source": "results/2_simulation/data/resilience_metrics.csv",
+  "source_sha256": "5c0024d00038a40833de24d75fa4aa420c444205075b05912ac1aa41a867821b",
+  "row_count": 16,
+  "S_ref_percent": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "M0_definition_max_S_percent": 2,
+  "all_16_M0_values_match_original_bar_artists_and_table": true,
+  "all_128_heatmap_values_and_annotations_match_original": true,
+  "heatmap_colours_and_normalisation_identical": true,
+  "physical_metrics_recalculated": false,
+  "vector_pdf": true,
+  "width_mm": 183,
+  "height_mm": 145,
+  "png_dpi": 600,
+  "preexisting_exports_unchanged": 46
+}

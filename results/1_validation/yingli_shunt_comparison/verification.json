@@ -1,0 +1,47 @@
+{
+  "module": "YINGLI",
+  "law": {
+    "r_stc": 5.99,
+    "zero_ratio": 4.0,
+    "exponent": 5.5
+  },
+  "formula": "Rbase + (R0-Rbase)*exp(-5.5*g); R0=4*Rstc; g=1-f_cov*(1-tau_I)",
+  "band_height_mm": 80.0,
+  "measurement_count": 18,
+  "shaded_measurement_count": 14,
+  "model_temperature_C": 24.8,
+  "temperature_normalization": true,
+  "plateau_window_V": [
+    5,
+    25
+  ],
+  "paired_voltage_step_V": 0.1,
+  "measured_current_cutoff_A": 0.3,
+  "other_electrical_parameters_unchanged": true,
+  "bishop_breakdown_added": false,
+  "clean_curves_identical": true,
+  "preserved_existing_exports": 532,
+  "measurement_sha256": {
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash2-yingli-24.8-clean.asc": "797225caa4d13d00520aa36e42e0fe6d3f2ed6f8883e9c5ba22ae13bb307f4f4",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash4-yingli-25.8-portrait-rectangle-80m.asc": "ff62eeb70578ba36879f163ee11a38d68c864aac10a16ae03fd7284fa745d37e",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-26.2-portrait-rectangle-80m-2layer.asc": "e9fd6d22d00f0d6447a26ae3b26d3d48a4d2151fc3eb1618f18119cccf48337e",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-26.5-portrait-rectangle-80m-3layer.asc": "3ff4d89acbf11c7e2993275e70a87403686391cb5e3689e4d349d8c98dd98b79",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/08-09/YS-0809-carton-rectangle-portrait-25.5.asc": "799a667daf9928bae1ec17406c554b600633395d2cc922fd2ee47773b64cda30",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-25.9-landscape-rectangle-80m-1layer.asc": "4a99e470356c5760b3b207881bd0d63adf22752196dc543c205dc830c225cb59",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-25.4-landscape-rectangle-80m-2layer.asc": "31fe2371a7b1b2fbcbb86e9ea089a6f12b5d3395451008c67f8acfa812377405",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/08-09/YS-0809-carton-rectangle-landscape-24.4.asc": "b3ba51995b3a1b4908c959d0fff8ea18277332b4fb3605a79e358c5d50ce2838",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flahs2-yingli-26.2-triangle-portrait-80m-1layer.asc": "e6712e2ae12bfe40b24da34d1b6f5082e102548d680db44898b8f114ffb081fe",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flahs2-yingli-26-triangle-portrait-80m-2layer.asc": "9f743f804a16a00162aa0da0df59897953f4a5dbe22c97f32cc3d8e8508d8e49",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flahs1-yingli-25.8-triangle-portrait-80m-3layer.asc": "51adf069241c6d8a0cd0c529df934b410634134e55825d7762a1924c5c6f0bde",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/08-09/YS-0809-carton-triamgle-portrait-25.9.asc": "001e71f381a68af608b3cd9883579cd2dedd4a22d2a339e6b8899e09052a93f2",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash2-yingli-25.6-landscape-triangle-80m-1layer.asc": "47d4356fc38de7f31331d2ce2de194c027de42388587364dfe8ca0808685c921",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/flash1-yingli-25.6-landscape-triangle-80m-2layer.asc": "011a61f0b5ec24de30e558169a065fd9caa9bd0a686ce0fffacf0e08b0deb218",
+    "/Users/lorrainenaux/Desktop/Valorisation-master/Data/IV-curve/Yingli/08-09/YS-0809-carton-triangle-landscape-25.3.asc": "663c149ffb85fcb92aa505219010bff802eb7c08abf33a440f7cb6fc63cb9180"
+  },
+  "netlist_sha256": "c7310e10f88ef46574911bf558f7d88b7c46c74fcd707498ad8dbc4114b62d65",
+  "source_sha256": {
+    "soilspice/spice.py": "0fff11889334850fdfa6614a39901b18bf894550bc96a27809036dc254a7b3c3",
+    "soilspice/modules.py": "0416a66996e86ba66d128ddbb44eb944091bc691dcc0e43273eda2bd289ced88",
+    "chapters/yingli_shunt_comparison.py": "be6937845eddebe03b0a695e67d8460fc8accab794db07d7906bc1c01bbad803"
+  }
+}

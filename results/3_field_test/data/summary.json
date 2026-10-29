@@ -1,0 +1,39 @@
+{
+  "data": "/Users/lorrainenaux/Desktop/Valorisation-master/soilspice_paper/data/field_test/rooftop_SPR_2026-09-21_2026-10-15.csv",
+  "band": {
+    "h_mm": 80.0,
+    "tau_I": 0.71,
+    "from": "2026-09-28 15:30:00",
+    "to": "2026-09-28 15:45:00"
+  },
+  "calibration": {
+    "r0": 0.9966239798647212,
+    "r0_iqr": [
+      0.9930957796704554,
+      0.999955181229817
+    ],
+    "n_pairs": 409,
+    "days": [
+      "2026-09-25 16:15:43",
+      "2026-09-28 15:15:43"
+    ]
+  },
+  "after": {
+    "n_pairs": 736,
+    "days": 16
+  },
+  "spice_loss_%": -7.982360973372961,
+  "spice_half_width_pt": 2.0939952856019657,
+  "spice_bias_pt": 0.8234210635436822,
+  "power_loss_%": -8.40518570784492,
+  "power_loss_iqr_%": [
+    -9.524521288092892,
+    -7.684250136685344
+  ],
+  "energy_loss_%": -8.866913456120407,
+  "energy_lost_Wh": 1348.170204213542,
+  "energy_lost_Wh_per_day": 84.26063776334638,
+  "energy_meas_minus_spice_Wh": -134.4918169332177,
+  "gap_energy_pt": -0.8845524827474467,
+  "n_pairs_clean_shaded": 275
+}

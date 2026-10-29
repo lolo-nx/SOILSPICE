@@ -1,0 +1,774 @@
+site,market,module,orientation,h_mm,f,conclusion,R_H_low_mm,R_H_high_mm,state_low,state_high,value_low,value_high,unit
+Neuchâtel,ground,YINGLI,portrait,35.0,0.3,margin10,15.0,20.0,negative,positive,-0.011799531704353584,0.010906646624390857,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,40.0,0.1,margin10,20.0,25.0,negative,positive,-0.0053748913367092435,0.02229367048935523,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,40.0,0.3,margin10,10.0,15.0,negative,positive,-0.0033935401042842553,0.01808400162328324,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,45.0,0.1,margin10,15.0,20.0,negative,positive,-0.019637471088003657,0.0011379613788697548,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,45.0,0.3,margin10,5.0,10.0,negative,positive,-0.022365256411682445,0.0050586881942342385,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,50.0,0.1,margin10,15.0,20.0,negative,positive,-0.020389599567105655,0.0008237471517382397,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,50.0,0.3,margin10,5.0,10.0,negative,positive,-0.022518237440975176,0.006563699342528838,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.021457948721169663,0.0007195838935064799,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,60.0,0.3,margin10,5.0,10.0,negative,positive,-0.022393672503426477,0.010001580643417905,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,60.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.03993588242064505,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,80.0,0.1,margin10,20.0,25.0,negative,positive,-0.002200786189124039,0.046579132918870246,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,80.0,0.3,margin10,5.0,10.0,negative,positive,-0.023625176732758803,0.007704367755418572,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,80.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.253139716630431,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,100.0,0.1,margin10,20.0,25.0,negative,positive,-0.00047627744894077756,0.04969932949923924,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,100.0,0.3,margin10,5.0,10.0,negative,positive,-0.02315907150766875,0.009308972221489319,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait,100.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.4553094126721171,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,25.0,0.3,margin10,15.0,20.0,negative,positive,-0.027570713906659203,0.0051433464340223806,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,30.0,0.1,margin10,20.0,25.0,negative,positive,-0.02195073275951563,0.014171650178784703,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,30.0,0.3,margin10,10.0,15.0,negative,positive,-0.019565077170687215,0.00859987075023573,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,35.0,0.1,margin10,20.0,25.0,negative,positive,-0.01640288877950473,0.02623429554484026,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,35.0,0.3,margin10,10.0,15.0,negative,positive,-0.01259799383811104,0.020164271737609887,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,40.0,0.1,margin10,20.0,25.0,negative,positive,-0.019869459998784908,0.022809800776345993,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,40.0,0.3,margin10,10.0,15.0,negative,positive,-0.015152838213314021,0.017194490477595095,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,45.0,0.1,margin10,20.0,25.0,negative,positive,-0.022506665041556004,0.0199852132530164,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,45.0,0.3,margin10,10.0,15.0,negative,positive,-0.0173114394175211,0.014580938364391519,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.03269390471314082,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,50.0,0.1,margin10,20.0,25.0,negative,positive,-0.02481993334443182,0.017059723382758088,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,50.0,0.3,margin10,10.0,15.0,negative,positive,-0.019209998679951587,0.011884092777993085,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,50.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.009596544693152964,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,60.0,0.1,margin10,20.0,25.0,negative,positive,-0.028096561021025687,0.012260613871046447,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,60.0,0.3,margin10,10.0,15.0,negative,positive,-0.0224005601173317,0.007272239474626366,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,60.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.07050102054519636,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,80.0,0.1,margin10,20.0,25.0,negative,positive,-0.03390879216311114,0.0004503304687567683,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,80.0,0.3,margin10,15.0,20.0,negative,positive,-0.00378151752503518,0.0785404908430516,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,80.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.17905414378676432,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,100.0,0.3,margin10,15.0,20.0,negative,positive,-0.006360900050155868,0.06846787462634386,EUR/kWp/year
+Neuchâtel,ground,YINGLI,landscape,100.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.2507489607815001,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,20.0,0.3,margin10,15.0,20.0,negative,positive,-0.0064167445978033436,0.018349775138672746,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,25.0,0.1,margin10,15.0,20.0,negative,positive,-0.011479283242147649,0.018059600286603965,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,25.0,0.3,margin10,5.0,10.0,negative,positive,-0.01597925732739764,0.021716442209137148,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,30.0,0.1,margin10,15.0,20.0,negative,positive,-0.006025211696281348,0.03308363390379781,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,30.0,0.3,margin10,5.0,10.0,negative,positive,-0.008723448074715874,0.0440951357018508,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,30.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.004826087734296602,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,35.0,0.1,margin10,15.0,20.0,negative,positive,-0.0072197484461100705,0.035971798132286396,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,35.0,0.3,margin10,5.0,10.0,negative,positive,-0.007228852809709925,0.05477383291299703,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,35.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.0330617311619148,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,40.0,0.1,margin10,15.0,20.0,negative,positive,-0.008116231070155973,0.03895654266633763,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,40.0,0.3,margin10,5.0,10.0,negative,positive,-0.005974992835640187,0.06279425148270523,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.11876465018377447,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,45.0,0.1,margin10,15.0,20.0,negative,positive,-0.008124115375298897,0.04139233946205411,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,45.0,0.3,margin10,5.0,10.0,negative,positive,-0.0048851442766224065,0.06811222690586716,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.2634492693224755,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,50.0,0.1,margin10,15.0,20.0,negative,positive,-0.007937149862190913,0.043067574358398024,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,50.0,0.3,margin10,5.0,10.0,negative,positive,-0.004054171347604392,0.07037940583279428,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,50.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.027455336893832172,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.0072645333815738525,0.04476833125668727,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.03986737546461616,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,60.0,0.3,margin10,5.0,10.0,negative,positive,-0.002529419571530807,0.07247180601179609,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,60.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.16601453555704548,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,80.0,0.1,margin10,15.0,20.0,negative,positive,-0.007327176058079372,0.038129212949510376,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,80.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.11889572251157421,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,80.0,0.3,margin10,5.0,10.0,negative,positive,-0.006402345602113897,0.054930477322219055,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,80.0,0.3,manual_cleaning,5.0,10.0,zero,positive,0.0,0.003478387377050085,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,80.0,0.3,manual_cleaning,10.0,15.0,positive,zero,0.003478387377050085,0.0,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,80.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.303150432231553,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,100.0,0.1,margin10,10.0,15.0,negative,positive,-0.015771794642096888,0.00014326051389378786,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.08711717332079338,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,100.0,0.3,margin10,5.0,10.0,negative,positive,-0.0038952038615178777,0.04933773633241539,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,100.0,0.3,manual_cleaning,5.0,10.0,zero,positive,0.0,0.009793477308119192,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,100.0,0.3,manual_cleaning,10.0,15.0,positive,zero,0.009793477308119192,0.0,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,portrait,100.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.4114188473514828,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,20.0,0.1,margin10,20.0,25.0,negative,positive,-0.02116620239023799,0.01079262186964873,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,20.0,0.3,margin10,10.0,15.0,negative,positive,-0.019826011248297096,0.005292574607953612,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,25.0,0.1,margin10,15.0,20.0,negative,positive,-0.02417593514219897,0.013809705996431818,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,25.0,0.3,margin10,5.0,10.0,negative,positive,-0.02987930760869069,0.019140517794049003,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,30.0,0.1,margin10,15.0,20.0,negative,positive,-0.02776880718360021,0.01010030472052996,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,30.0,0.3,margin10,5.0,10.0,negative,positive,-0.03146646895059864,0.019547809090122534,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,30.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.03491456276118288,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,35.0,0.1,margin10,15.0,20.0,negative,positive,-0.03011449754225272,0.007463386847420414,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,35.0,0.3,margin10,5.0,10.0,negative,positive,-0.03248917677508652,0.019833343014737312,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,35.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.040852447361622746,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,40.0,0.1,margin10,15.0,20.0,negative,positive,-0.031761403843163186,0.005338232032432097,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,40.0,0.3,margin10,5.0,10.0,negative,positive,-0.0331981711689668,0.019927962733546398,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.10094785924705896,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,45.0,0.1,margin10,15.0,20.0,negative,positive,-0.0328691144232129,0.0037191737354089066,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,45.0,0.3,margin10,5.0,10.0,negative,positive,-0.03385599567123583,0.018866345967328377,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.1583088715790697,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,50.0,0.1,margin10,15.0,20.0,negative,positive,-0.033515303623963114,0.0027465757488090853,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,50.0,0.3,margin10,5.0,10.0,negative,positive,-0.0346855342814046,0.017713388365962743,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,50.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.2761714752967799,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.03380943048737124,0.0009170652552800557,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,60.0,0.3,margin10,5.0,10.0,negative,positive,-0.035976025469534725,0.01411369760236146,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,60.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.4217502499184935,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,80.0,0.1,margin10,20.0,25.0,negative,positive,-0.004471651902672749,0.053468070740807214,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,80.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.0044118198697062905,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,80.0,0.3,margin10,5.0,10.0,negative,positive,-0.0377388486476254,0.005134231163408484,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,80.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.0842311204183468,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,100.0,0.1,margin10,20.0,25.0,negative,positive,-0.0015008688825926125,0.021103895526405667,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.03399759212968145,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,100.0,0.3,margin10,5.0,10.0,negative,positive,-0.03633588745647583,0.006137709889697848,EUR/kWp/year
+Neuchâtel,ground,SUNPOWER,landscape,100.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.1606014423946167,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,25.0,0.3,margin10,15.0,20.0,negative,positive,-0.008121915456499387,0.013954157006617993,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,30.0,0.1,margin10,15.0,20.0,negative,positive,-0.011354396831897665,0.015608418293399415,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,30.0,0.3,margin10,5.0,10.0,negative,positive,-0.014387711807647266,0.021071368465754733,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,35.0,0.1,margin10,15.0,20.0,negative,positive,-0.003982110642307815,0.037078663165690515,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,35.0,0.3,margin10,5.0,10.0,negative,positive,-0.004113289177590421,0.052879399337999,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,40.0,0.1,margin10,15.0,20.0,negative,positive,-0.0019626883709784188,0.04905941965055664,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.04818730548812655,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,45.0,0.1,margin10,15.0,20.0,negative,positive,-0.00026067950237158855,0.058352919719798765,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.14418973737823637,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,50.0,0.1,margin10,10.0,15.0,negative,positive,-0.013626932803291317,0.0029070615470597055,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,50.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.0025064859472860856,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,60.0,0.03,margin10,20.0,25.0,negative,positive,-0.015759371940238423,0.005317687326247808,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.00906654787723167,0.009571836435673095,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.06383387496975623,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,60.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.12103095701832145,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,80.0,0.03,margin10,20.0,25.0,negative,positive,-0.012547764397162611,0.008189152401655228,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,80.0,0.1,margin10,10.0,15.0,negative,positive,-0.00709706503808151,0.011188087347956996,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,80.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.0772763767638831,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,80.0,0.3,manual_cleaning,5.0,10.0,zero,positive,0.0,0.005655797221977954,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,80.0,0.3,manual_cleaning,10.0,15.0,positive,zero,0.005655797221977954,0.0,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,80.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.27226549319916793,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,100.0,0.03,margin10,20.0,25.0,negative,positive,-0.006912896501911306,0.017547344845657994,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,100.0,0.1,margin10,10.0,15.0,negative,positive,-0.0014285775261833195,0.019365038627299366,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.12910439359843062,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,100.0,0.3,manual_cleaning,5.0,10.0,zero,positive,0.0,0.013527798457128037,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,100.0,0.3,manual_cleaning,10.0,15.0,positive,zero,0.013527798457128037,0.0,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,portrait,100.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.38252066226894677,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,15.0,0.3,margin10,20.0,25.0,negative,positive,-0.011552428293623088,0.0098977814533132,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,20.0,0.1,margin10,20.0,25.0,negative,positive,-0.00021639333704810693,0.04213386438816118,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,20.0,0.3,margin10,5.0,10.0,negative,positive,-0.03360487555567011,0.0014084781635815696,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,25.0,0.1,margin10,15.0,20.0,negative,positive,-0.020788144014668733,0.015522082847438487,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,25.0,0.3,margin10,5.0,10.0,negative,positive,-0.026202904470498237,0.020356148724785403,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,30.0,0.1,margin10,15.0,20.0,negative,positive,-0.025183150323215123,0.009411416930976677,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,30.0,0.3,margin10,5.0,10.0,negative,positive,-0.029030466263582425,0.01649625506573292,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,35.0,0.1,margin10,15.0,20.0,negative,positive,-0.02835960643171538,0.004606538000675883,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,35.0,0.3,margin10,5.0,10.0,negative,positive,-0.03129678024297229,0.012929895003573652,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,40.0,0.1,margin10,15.0,20.0,negative,positive,-0.03067881642365823,0.0007264711748032754,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,40.0,0.3,margin10,5.0,10.0,negative,positive,-0.03290014122243802,0.009853006521083271,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.028360927364460498,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,45.0,0.1,margin10,20.0,25.0,negative,positive,-0.002787688717237516,0.056712038904493986,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,45.0,0.3,margin10,5.0,10.0,negative,positive,-0.03430944522819991,0.007111891677787072,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.06587622454017361,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,50.0,0.1,margin10,20.0,25.0,negative,positive,-0.005946400256531328,0.050726476455503475,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,50.0,0.3,margin10,5.0,10.0,negative,positive,-0.03586832381668022,0.00341044728898858,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,50.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.09924035596848957,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,60.0,0.1,margin10,20.0,25.0,negative,positive,-0.008652695725246365,0.045632782840691874,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,60.0,0.3,margin10,10.0,15.0,negative,positive,-8.52253165271738e-05,0.038872138340439275,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,60.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.15671142596290855,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,80.0,0.1,margin10,20.0,25.0,negative,positive,-0.017597438701737203,0.02532551078634919,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,80.0,0.3,margin10,10.0,15.0,negative,positive,-0.011310096398916239,0.019951677006496624,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,80.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.0007425620417174095,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,100.0,0.1,margin10,20.0,25.0,negative,positive,-0.018552546509581783,0.01977015543101844,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,100.0,0.3,margin10,10.0,15.0,negative,positive,-0.013506574947862629,0.014950599163100306,EUR/kWp/year
+Neuchâtel,ground,JASOLAR,landscape,100.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.00942883801550809,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,30.0,0.1,margin10,15.0,20.0,negative,positive,-0.01769066231496115,0.002070627849297277,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,30.0,0.3,margin10,5.0,10.0,negative,positive,-0.02016256040937621,0.005737637461862274,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,35.0,0.1,margin10,15.0,20.0,negative,positive,-0.003305749568805208,0.03684177122310049,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,35.0,0.3,margin10,5.0,10.0,negative,positive,-0.003740798580133445,0.05122125737764137,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,35.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.004236622318399164,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,40.0,0.1,margin10,10.0,15.0,negative,positive,-0.014535505291328313,0.000643021271626229,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.025632273430331143,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,45.0,0.03,margin10,20.0,25.0,negative,positive,-0.01902125444687021,0.0008630635526286484,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,45.0,0.1,margin10,10.0,15.0,negative,positive,-0.01240695985050573,0.004398042868246452,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.13585548641963485,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,50.0,0.03,margin10,20.0,25.0,negative,positive,-0.017281973167701428,0.004594783130170629,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,50.0,0.1,margin10,10.0,15.0,negative,positive,-0.009700722507206452,0.009083179719601639,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,50.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.0012866573190702946,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,50.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.17150928799788345,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,60.0,0.03,margin10,20.0,25.0,negative,positive,-0.010400517502457976,0.014543596111961363,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.002872415868054326,0.019020373926985953,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.07934716216735338,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,60.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.11285187224903082,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,80.0,0.03,margin10,20.0,25.0,negative,positive,-0.005989197220038225,0.01877864003438505,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,80.0,0.1,margin10,10.0,15.0,negative,positive,-1.6653625105125802e-05,0.021892367272374633,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,80.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.08231045543898641,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,80.0,0.3,manual_cleaning,5.0,10.0,zero,positive,0.0,0.0058781996347314625,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,80.0,0.3,manual_cleaning,10.0,15.0,positive,zero,0.0058781996347314625,0.0,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,80.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.26117390994372824,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,100.0,0.03,margin10,20.0,25.0,negative,positive,-0.001081570431686621,0.02741303139111688,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,100.0,0.1,margin10,5.0,10.0,negative,positive,-0.02003754916117463,0.005506457792007355,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.11734609856655975,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,100.0,0.3,manual_cleaning,5.0,10.0,zero,positive,0.0,0.014125782463905057,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,100.0,0.3,manual_cleaning,10.0,15.0,positive,zero,0.014125782463905057,0.0,EUR/kWp/year
+Neuchâtel,ground,LONGI,portrait,100.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.37220187905654756,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,15.0,0.3,margin10,15.0,20.0,negative,positive,-0.012051611952368438,0.019573984165715194,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,20.0,0.1,margin10,15.0,20.0,negative,positive,-0.021627187263820305,0.012687336216493802,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,20.0,0.3,margin10,5.0,10.0,negative,positive,-0.027630412900968807,0.015685952401799083,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,25.0,0.1,margin10,15.0,20.0,negative,positive,-0.018175946756197617,0.02243835553636679,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,25.0,0.3,margin10,5.0,10.0,negative,positive,-0.022981694912119724,0.029737960308849107,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,30.0,0.1,margin10,15.0,20.0,negative,positive,-0.022277127993024906,0.01736435233832044,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,30.0,0.3,margin10,5.0,10.0,negative,positive,-0.02538658118035765,0.027410040867175176,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,35.0,0.1,margin10,15.0,20.0,negative,positive,-0.025211535798285403,0.012880402788409559,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,35.0,0.3,margin10,5.0,10.0,negative,positive,-0.027479433891229713,0.024096359733969494,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,35.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.021588337867698648,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,40.0,0.1,margin10,15.0,20.0,negative,positive,-0.02726466389618072,0.009435927004770403,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,40.0,0.3,margin10,5.0,10.0,negative,positive,-0.028811288667960136,0.021561931025296174,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.06485284433491345,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,45.0,0.1,margin10,15.0,20.0,negative,positive,-0.02890693269243362,0.005561319317385613,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,45.0,0.3,margin10,5.0,10.0,negative,positive,-0.030367588813839122,0.01773763915992381,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.13028897175346543,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,50.0,0.1,margin10,15.0,20.0,negative,positive,-0.02998625827889402,0.0030163213653992965,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,50.0,0.3,margin10,5.0,10.0,negative,positive,-0.031698147236770904,0.014516342431539195,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,50.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.1411364992882267,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,60.0,0.1,margin10,15.0,20.0,negative,positive,-0.0307494707242066,0.0005226656153754367,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,60.0,0.3,margin10,5.0,10.0,negative,positive,-0.03318491562775917,0.010242057897599119,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,60.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.24930694307964307,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,80.0,0.1,margin10,20.0,25.0,negative,positive,-0.00981165901665422,0.04034317236475131,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,80.0,0.3,margin10,10.0,15.0,negative,positive,-0.002640493834293503,0.03383925389377322,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,80.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.44076219110879866,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,100.0,0.1,margin10,20.0,25.0,negative,positive,-0.008496855355300384,0.034755773188513014,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.0019092151467853258,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,100.0,0.3,margin10,10.0,15.0,negative,positive,-0.003228507665049743,0.03059690038759237,EUR/kWp/year
+Neuchâtel,ground,LONGI,landscape,100.0,0.3,manual_cleaning,15.0,20.0,zero,positive,0.0,0.03859984269784,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,30.0,0.3,margin10,15.0,20.0,negative,positive,-0.011430886787552587,0.006198083251824436,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,35.0,0.03,margin10,20.0,25.0,negative,positive,-0.013697116832334134,0.007126448576743015,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,35.0,0.1,margin10,10.0,15.0,negative,positive,-0.009232182157950665,0.008857024739327334,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,40.0,0.03,margin10,15.0,20.0,negative,positive,-0.013946375355679032,0.010066656456154642,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.015700028171969062,0.018939437975557825,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,45.0,0.03,margin10,15.0,20.0,negative,positive,-0.010130323269101273,0.01726289342996675,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.011871603600423643,0.027700541257050314,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,50.0,0.03,margin10,15.0,20.0,negative,positive,-0.011663160345742697,0.014468790789465356,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.013312567676107702,0.025098436739889395,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,50.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.49448864893321076,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,60.0,0.03,margin10,15.0,20.0,negative,positive,-0.013164928856273884,0.011723063577696556,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.014915244178027844,0.021650550275473544,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,60.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.12409593703565935,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,80.0,0.03,margin10,15.0,20.0,negative,positive,-0.0162749261003177,0.006888276057908725,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.01727805094290317,0.01607046768848438,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,80.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.3156502712759841,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,80.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.8451011592455933,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,80.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.8451011592455933,0.31743621987028625,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,100.0,0.03,margin10,15.0,20.0,negative,positive,-0.014231250287663623,0.010936158569114528,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,100.0,0.1,margin10,5.0,10.0,negative,positive,-0.015429344867586216,0.02057709537068427,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,100.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.2085879582789385,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,100.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0033104825760368,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,portrait,100.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-1.0033104825760368,1.028776823081154,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,20.0,0.3,margin10,15.0,20.0,negative,positive,-0.023095445018821867,0.005066294010907427,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,25.0,0.1,margin10,10.0,15.0,negative,positive,-0.02435506017075005,0.001046824485707823,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,25.0,0.3,margin10,5.0,10.0,negative,positive,-0.010604378777240728,0.06348962504766865,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,30.0,0.03,margin10,20.0,25.0,negative,positive,-0.001322211454284114,0.04970530853814294,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.03550365170373658,0.010398524980797644,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,35.0,0.03,margin10,15.0,20.0,negative,positive,-0.029224299073940627,0.00622145468286274,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,35.0,0.1,margin10,5.0,10.0,negative,positive,-0.032067721675675495,0.01810472610961235,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,40.0,0.03,margin10,20.0,25.0,negative,positive,-0.0006657036090802343,0.05104849507425581,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.035128374404092874,0.011199887348657192,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,40.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.4883310986168121,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,45.0,0.03,margin10,20.0,25.0,negative,positive,-0.005408256093212702,0.04346379922682299,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.037563832474148726,0.00654947990847822,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,45.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.5859119198842384,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,50.0,0.03,margin10,20.0,25.0,negative,positive,-0.008632769747136879,0.037551913632403636,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.03956988990275388,0.0016676348846300787,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,50.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.33923388702608825,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,60.0,0.03,margin10,20.0,25.0,negative,positive,-0.0129802675713626,0.029832585033817485,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.0026275035434635136,0.03464504787788526,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,60.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.08446010558448691,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,80.0,0.03,margin10,20.0,25.0,negative,positive,-0.018498397880426717,0.020765255833194343,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,80.0,0.1,margin10,10.0,15.0,negative,positive,-0.009809713507792348,0.024093550251707244,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,80.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.7513596143441355,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,100.0,0.03,margin10,20.0,25.0,negative,positive,-0.01903964598757589,0.019922358043796842,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,100.0,0.1,margin10,10.0,15.0,negative,positive,-0.010448132566033705,0.02347446482204131,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,100.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.30356501809725867,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,100.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.8595726095031209,EUR/kWp/year
+Neuchâtel,rooftop,YINGLI,landscape,100.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.8595726095031209,0.3211677133208397,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,20.0,0.03,margin10,20.0,25.0,negative,positive,-0.006298087853745811,0.021068176626946426,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,20.0,0.1,margin10,10.0,15.0,negative,positive,-0.0005137291195074847,0.023088880027558982,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,25.0,0.03,margin10,10.0,15.0,negative,positive,-0.014052947823100688,0.00280103837497208,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,30.0,0.03,margin10,10.0,15.0,negative,positive,-0.010451983653146098,0.008329623157995618,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,30.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.7036419483297065,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,35.0,0.03,margin10,10.0,15.0,negative,positive,-0.012640083551027921,0.0054104706425134805,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,35.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.009750083084437478,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,40.0,0.03,margin10,10.0,15.0,negative,positive,-0.014570850650386387,0.002893123191579132,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,40.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.3092037871244142,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,40.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.8808394349758784,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,45.0,0.03,margin10,10.0,15.0,negative,positive,-0.015191672869167956,0.0017361604464367006,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,45.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.22268578193520794,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,45.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.2390848045354979,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,45.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-1.2390848045354979,0.2045879493946643,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,50.0,0.03,margin10,10.0,15.0,negative,positive,-0.015283046098289184,0.001768421350109177,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,50.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.4318531084224011,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,50.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.8807042000705403,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,50.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.8807042000705403,0.7332613478265717,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,60.0,0.03,margin10,10.0,15.0,negative,positive,-0.014005086314009603,0.003985065419392857,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.22561640336427313,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,60.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.2706246286341649,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,60.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.2706246286341649,1.7753064363223459,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,80.0,0.03,margin10,10.0,15.0,negative,positive,-0.011812340965506714,0.006718318835336738,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,80.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.20868414604159558,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,80.0,0.3,manual_cleaning,5.0,10.0,zero,negative,0.0,-0.27227242085374437,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,80.0,0.3,manual_cleaning,15.0,20.0,negative,positive,-0.2722724208537448,0.006453120468732365,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,100.0,0.03,margin10,10.0,15.0,negative,positive,-0.005721543797333979,0.017029986968523918,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.052103640821586694,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,100.0,0.3,manual_cleaning,5.0,10.0,zero,negative,0.0,-0.23192877854989202,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,portrait,100.0,0.3,manual_cleaning,15.0,20.0,negative,positive,-0.23192877854989202,0.6768515005362818,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,20.0,0.03,margin10,20.0,25.0,negative,positive,-0.00018774839604231153,0.04813203406303633,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,20.0,0.1,margin10,5.0,10.0,negative,positive,-0.033063863151462716,0.010258482568745828,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,25.0,0.03,margin10,15.0,20.0,negative,positive,-0.005752639488900604,0.04564069821106474,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,25.0,0.1,margin10,5.0,10.0,negative,positive,-0.009454236541798569,0.06412822436141728,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,25.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.323978422158711,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,30.0,0.03,margin10,15.0,20.0,negative,positive,-0.012690427683062291,0.03369506624954487,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.015115870288199398,0.05276730742304979,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,30.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.5572025474830555,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,35.0,0.03,margin10,15.0,20.0,negative,positive,-0.01574986421956738,0.027873793078711948,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,35.0,0.1,margin10,5.0,10.0,negative,positive,-0.018891058450890244,0.04535577953526847,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,35.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.058133377427248334,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,40.0,0.03,margin10,15.0,20.0,negative,positive,-0.01836199456317668,0.023034177776530704,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.02088920694054698,0.0406336011975129,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.4280915734790618,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,45.0,0.03,margin10,15.0,20.0,negative,positive,-0.01955216023767327,0.02137713445379351,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.02210232588905127,0.037039013192757694,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,45.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.3224886495629633,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,45.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.9051901284280195,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,45.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.9051901284280195,0.21953072981821897,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,50.0,0.03,margin10,15.0,20.0,negative,positive,-0.021097237019867557,0.019388148349392606,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.023297036337920254,0.03553339531098586,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,50.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.28378648057131617,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,50.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0904000918314862,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,50.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-1.0904000918314862,0.3923369577262932,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,60.0,0.03,margin10,15.0,20.0,negative,positive,-0.02083294660814307,0.020602001877446527,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.02346612499049673,0.03543418686676257,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.2120065625706853,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,60.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0971990952894135,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,60.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-1.0971990952894135,0.8738871123526213,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,80.0,0.03,margin10,15.0,20.0,negative,positive,-0.022247272043130054,0.01877058857701784,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.023785898680116616,0.03465012909150854,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,80.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.353218339649346,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,80.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.6326183433411563,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,80.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.6326183433411563,1.5826852244385954,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,100.0,0.03,margin10,15.0,20.0,negative,positive,-0.019855842457196085,0.02593299469726139,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,100.0,0.1,margin10,5.0,10.0,negative,positive,-0.020828681601654644,0.04005682685680921,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,100.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.24384399059705864,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,100.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.30624798662467345,EUR/kWp/year
+Neuchâtel,rooftop,SUNPOWER,landscape,100.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.30624798662467345,2.281384491356519,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,25.0,0.03,margin10,20.0,25.0,negative,positive,-0.009332058738545215,0.012453802395096233,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,25.0,0.1,margin10,10.0,15.0,negative,positive,-0.004753695158573337,0.014112674077088092,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,30.0,0.03,margin10,15.0,20.0,negative,positive,-0.0006978763614946121,0.03310822844194687,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.0021377349748745306,0.04675935294851245,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,35.0,0.03,margin10,10.0,15.0,negative,positive,-0.009719105083531424,0.006826050240876166,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,35.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.5412087244776407,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,40.0,0.03,margin10,10.0,15.0,negative,positive,-0.009484127710378279,0.00740068491241179,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.16361135064783472,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,45.0,0.03,margin10,10.0,15.0,negative,positive,-0.00891684362522667,0.008543615998186024,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,45.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.242023620966628,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,45.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0582806829418239,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,50.0,0.03,margin10,10.0,15.0,negative,positive,-0.007528977924792193,0.010582731920490127,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,50.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.41713661427699344,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,50.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.9763503597811249,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,50.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.9763503597811249,0.06925365712912246,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,60.0,0.03,margin10,10.0,15.0,negative,positive,-0.00031900780360656633,0.021976837723016993,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.1354453834005689,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,60.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.29797321138836264,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,60.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.29797321138836264,1.0517242245058895,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,80.0,0.03,margin10,5.0,10.0,negative,positive,-0.02113084989680898,0.004193861751007152,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,80.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.025033618458428997,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,80.0,0.3,manual_cleaning,5.0,10.0,zero,negative,0.0,-0.24167774308257517,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,80.0,0.3,manual_cleaning,15.0,20.0,negative,positive,-0.24167774308257162,0.08584374729006683,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.01846557456398719,0.01249778584943155,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.3209326408119848,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,100.0,0.3,manual_cleaning,5.0,10.0,zero,negative,0.0,-0.17933528386731545,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,portrait,100.0,0.3,manual_cleaning,15.0,20.0,negative,positive,-0.48680033634806463,0.7618366638074132,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,15.0,0.1,margin10,15.0,20.0,negative,positive,-0.005126206664062008,0.03799568403920177,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,15.0,0.3,margin10,5.0,10.0,negative,positive,-0.01572015102078335,0.03734766498330204,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,20.0,0.03,margin10,15.0,20.0,negative,positive,-0.01333274357168475,0.027718945988634933,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,20.0,0.1,margin10,5.0,10.0,negative,positive,-0.015929079987019937,0.042140425796892075,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,25.0,0.03,margin10,15.0,20.0,negative,positive,-0.003115027269143103,0.04586325192530065,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,25.0,0.1,margin10,5.0,10.0,negative,positive,-0.006313880999383417,0.06399082946367955,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,30.0,0.03,margin10,15.0,20.0,negative,positive,-0.010533855035427434,0.033080728748700314,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.0131272170775278,0.050052319087755356,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,30.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.4155804209847993,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,35.0,0.03,margin10,15.0,20.0,negative,positive,-0.01513407017811881,0.024355194066046734,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,35.0,0.1,margin10,5.0,10.0,negative,positive,-0.017692166942639934,0.04055817327177551,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,35.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.4054618865254005,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,40.0,0.03,margin10,15.0,20.0,negative,positive,-0.018152463402020216,0.019011475728672164,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.02099090865369764,0.03308869504361249,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,40.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.11558946372066536,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,45.0,0.03,margin10,15.0,20.0,negative,positive,-0.020966839179369992,0.013984001734887827,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.023077800826395392,0.02804463322266408,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,45.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.17743386810303363,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,50.0,0.03,margin10,15.0,20.0,negative,positive,-0.02323477573257167,0.011072059710106871,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.025211300995185718,0.023398036707573053,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,50.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.4278358781004332,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,60.0,0.03,margin10,15.0,20.0,negative,positive,-0.025761596203592377,0.007463926817313157,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.027150327088854634,0.019836745069129733,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.30977903203300805,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,60.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.8807531937572675,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,80.0,0.03,margin10,20.0,25.0,negative,positive,-0.0005425648947987166,0.044666081989384085,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.030631271837374865,0.009911469047100538,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,80.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.24469656661120442,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,80.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.9905241575106638,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,80.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.9905241575106638,0.34744553035524994,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,100.0,0.03,margin10,20.0,25.0,negative,positive,-0.0021113706514718916,0.04480560229627577,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,100.0,0.1,margin10,5.0,10.0,negative,positive,-0.031238560690283815,0.009196961915562338,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,100.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.4971818352916926,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,100.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0968095932815807,EUR/kWp/year
+Neuchâtel,rooftop,JASOLAR,landscape,100.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-1.0968095932815807,0.5787755792898821,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,25.0,0.1,margin10,20.0,25.0,negative,positive,-0.008279775409590642,0.010579668880010648,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,25.0,0.3,margin10,10.0,15.0,negative,positive,-0.008349537294844736,0.006929858800712549,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,30.0,0.03,margin10,15.0,20.0,negative,positive,-0.00933809876826626,0.016229274340331654,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.010626565568963423,0.02614276126230712,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,35.0,0.03,margin10,10.0,15.0,negative,positive,-0.008564504327023895,0.008033502680891577,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,35.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.7087508258558834,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,40.0,0.03,margin10,10.0,15.0,negative,positive,-0.007658910564464841,0.009688389772091896,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.009711598676878097,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,45.0,0.03,margin10,10.0,15.0,negative,positive,-0.005938882254897096,0.012331314220441134,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,45.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.24281622890268473,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,45.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.763285664377344,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,50.0,0.03,margin10,10.0,15.0,negative,positive,-0.003374067131578687,0.016872265362695635,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,50.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.37902339000595786,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,50.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0099971754939032,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,60.0,0.03,margin10,5.0,10.0,negative,positive,-0.018536207789190143,0.007669301718138663,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.3914196103716767,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,60.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.3220365037659638,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,60.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.3220365037659638,0.862695871962389,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,80.0,0.03,margin10,5.0,10.0,negative,positive,-0.01681652822870268,0.013476304437514394,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,80.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.10501886062817345,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,80.0,0.3,manual_cleaning,5.0,10.0,zero,negative,0.0,-0.24167658267386116,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,80.0,0.3,manual_cleaning,15.0,20.0,negative,positive,-0.24167658267386116,0.0868114045475128,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.014638554405625961,0.02220508042657325,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,100.0,0.1,manual_cleaning,20.0,25.0,zero,positive,0.0,0.42881579589672913,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,100.0,0.3,manual_cleaning,5.0,10.0,zero,negative,0.0,-0.1780302458564842,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,portrait,100.0,0.3,manual_cleaning,15.0,20.0,negative,positive,-0.7943851200866154,0.4389404004027462,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,15.0,0.03,margin10,20.0,25.0,negative,positive,-0.011488882327395492,0.02410206188218615,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,15.0,0.1,margin10,10.0,15.0,negative,positive,-0.003966954407245996,0.02669180590359592,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,20.0,0.03,margin10,15.0,20.0,negative,positive,-0.004532701983992207,0.04408821180395166,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,20.0,0.1,margin10,5.0,10.0,negative,positive,-0.007434108482174476,0.06173151120249769,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,25.0,0.03,margin10,15.0,20.0,negative,positive,-0.0002341752604803765,0.05128282064205218,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,25.0,0.1,margin10,5.0,10.0,negative,positive,-0.003397163334738232,0.0713777925252657,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,25.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.5422882918913277,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,30.0,0.03,margin10,15.0,20.0,negative,positive,-0.007271215537872203,0.03913771843837836,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.009864746930274795,0.058308644988009736,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,30.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.48706134635535214,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,35.0,0.03,margin10,15.0,20.0,negative,positive,-0.011513538820409688,0.031013472690625973,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,35.0,0.1,margin10,5.0,10.0,negative,positive,-0.014127468102190968,0.0495668101896352,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,35.0,0.3,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.12247636064202183,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,40.0,0.03,margin10,15.0,20.0,negative,positive,-0.013927686575132284,0.02679508800175849,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.016959438081827163,0.04297008295817854,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,40.0,0.3,manual_cleaning,20.0,25.0,zero,positive,0.0,0.21513673263424238,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,45.0,0.03,margin10,15.0,20.0,negative,positive,-0.016271711397236557,0.022641166587545267,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.01860432090416593,0.03866250012298593,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,45.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.3228369052604001,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,45.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.6247604248903569,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,45.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.6247604248903569,0.1776166154862615,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,50.0,0.03,margin10,15.0,20.0,negative,positive,-0.01803567057745621,0.020825879990103366,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.020275199154636117,0.0350170163478654,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,50.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.2975914466438456,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,50.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.8632200162970287,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,60.0,0.03,margin10,15.0,20.0,negative,positive,-0.019472057158319525,0.019448104573403666,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.021107805589987774,0.033896883612884385,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,60.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.24387254009143344,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,60.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0208612654489695,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,60.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-1.0208612654489695,0.3875362144902006,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,80.0,0.03,margin10,15.0,20.0,negative,positive,-0.023451048835428437,0.010216333147849574,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.025104991833663395,0.022452280397851562,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,80.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.4720239674891058,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,80.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-1.0225386401640053,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,80.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-1.0225386401640053,0.6022062152760999,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,100.0,0.03,margin10,15.0,20.0,negative,positive,-0.02418203950225957,0.011751005228802167,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,100.0,0.1,margin10,5.0,10.0,negative,positive,-0.02406771944281401,0.02562000216913067,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,100.0,0.1,manual_cleaning,20.0,25.0,zero,negative,0.0,-0.3705217631047528,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,100.0,0.3,manual_cleaning,15.0,20.0,zero,negative,0.0,-0.7998083575450741,EUR/kWp/year
+Neuchâtel,rooftop,LONGI,landscape,100.0,0.3,manual_cleaning,20.0,25.0,negative,positive,-0.7998083575450741,1.2432361091452133,EUR/kWp/year
+Almería,ground,YINGLI,portrait,35.0,0.03,margin10,20.0,25.0,negative,positive,-0.014853639479335747,0.06748857734913646,EUR/kWp/year
+Almería,ground,YINGLI,portrait,50.0,0.03,margin10,5.0,10.0,negative,positive,-0.023604396927090966,0.03155632633829782,EUR/kWp/year
+Almería,ground,YINGLI,portrait,60.0,0.03,margin10,5.0,10.0,negative,positive,-0.031331201348868944,0.01773725822613411,EUR/kWp/year
+Almería,ground,YINGLI,portrait,60.0,0.03,margin10,10.0,15.0,positive,negative,0.01773725822613411,-0.0019988920437805993,EUR/kWp/year
+Almería,ground,YINGLI,portrait,60.0,0.03,margin10,15.0,20.0,negative,positive,-0.0019988920437805993,0.05889698374438176,EUR/kWp/year
+Almería,ground,YINGLI,portrait,80.0,0.03,margin10,10.0,15.0,negative,positive,-0.013330950065356041,0.043199831974734836,EUR/kWp/year
+Almería,ground,YINGLI,portrait,100.0,0.03,margin10,10.0,15.0,negative,positive,-0.01527551416338916,0.06463284305863046,EUR/kWp/year
+Almería,ground,YINGLI,landscape,20.0,0.1,margin10,20.0,25.0,negative,positive,-0.05244083758490946,0.029622277316932136,EUR/kWp/year
+Almería,ground,YINGLI,landscape,20.0,0.3,margin10,15.0,20.0,negative,positive,-0.009487301462166128,0.03387339907645549,EUR/kWp/year
+Almería,ground,YINGLI,landscape,25.0,0.03,margin10,15.0,20.0,negative,positive,-0.0009674278569773292,0.04507963506519565,EUR/kWp/year
+Almería,ground,YINGLI,landscape,30.0,0.03,margin10,5.0,10.0,negative,positive,-0.008858686236298693,0.006684915340472011,EUR/kWp/year
+Almería,ground,YINGLI,landscape,35.0,0.03,margin10,5.0,10.0,negative,positive,-0.008503036569874153,0.04730933531680594,EUR/kWp/year
+Almería,ground,YINGLI,landscape,40.0,0.03,margin10,5.0,10.0,negative,positive,-0.05269751472659999,0.04391185408944433,EUR/kWp/year
+Almería,ground,YINGLI,landscape,45.0,0.03,margin10,20.0,25.0,negative,positive,-0.005495823610702763,0.03767553753670351,EUR/kWp/year
+Almería,ground,YINGLI,landscape,50.0,0.03,margin10,15.0,20.0,negative,positive,-0.027079988273465125,0.029841184216432795,EUR/kWp/year
+Almería,ground,YINGLI,landscape,60.0,0.03,margin10,15.0,20.0,negative,positive,-0.023737317125610544,0.013689795569463273,EUR/kWp/year
+Almería,ground,YINGLI,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.032851551661672515,0.12769364413776452,EUR/kWp/year
+Almería,ground,YINGLI,landscape,80.0,0.03,margin10,10.0,15.0,negative,positive,-0.04886013268111243,0.006395976475771961,EUR/kWp/year
+Almería,ground,YINGLI,landscape,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.022934997728709425,0.03191998916600382,EUR/kWp/year
+Almería,ground,YINGLI,landscape,100.0,0.03,margin10,15.0,20.0,negative,positive,-0.001439108617244264,0.036424648211598645,EUR/kWp/year
+Almería,ground,YINGLI,landscape,100.0,0.03,margin10,20.0,25.0,positive,negative,0.036424648211598645,-0.002168379947552465,EUR/kWp/year
+Almería,ground,YINGLI,landscape,100.0,0.1,margin10,15.0,20.0,positive,negative,0.036184725571110535,-0.005196347352350847,EUR/kWp/year
+Almería,ground,YINGLI,landscape,100.0,0.1,margin10,20.0,25.0,negative,positive,-0.005196347352350847,0.016433590156139447,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,30.0,0.03,margin10,5.0,10.0,negative,positive,-0.011803915970826813,0.09088044108310805,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,35.0,0.03,margin10,5.0,10.0,negative,positive,-0.011313556749946115,0.09272624138778868,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,40.0,0.03,margin10,5.0,10.0,negative,positive,-0.012937061740940399,0.04875680444657154,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,45.0,0.03,margin10,5.0,10.0,negative,positive,-0.012217968034030476,0.009620137823730106,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,50.0,0.03,margin10,5.0,10.0,negative,positive,-0.00986795270985314,0.010116034431115688,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.028486991388423873,0.02857742044862637,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,100.0,0.03,margin10,10.0,15.0,positive,negative,0.02857742044862637,-0.012934133736426885,EUR/kWp/year
+Almería,ground,SUNPOWER,portrait,100.0,0.03,margin10,20.0,25.0,negative,positive,-0.009404287084366976,0.060281193132594994,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,20.0,0.03,margin10,5.0,10.0,negative,positive,-0.007427283386701636,0.005984904231428043,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,30.0,0.03,margin10,5.0,10.0,negative,positive,-0.03421937986720826,0.06621709167375288,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,35.0,0.03,margin10,5.0,10.0,negative,positive,-0.03846329856591536,0.019399256626963943,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,40.0,0.03,margin10,10.0,15.0,negative,positive,-0.020398932077172152,0.057325267864960824,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,45.0,0.03,margin10,10.0,15.0,negative,positive,-0.022074703369470275,0.09464095573143348,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,50.0,0.03,margin10,10.0,15.0,negative,positive,-0.020128141970134142,0.08172261590927198,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,60.0,0.03,margin10,10.0,15.0,negative,positive,-0.02439224257123941,0.09833016977208674,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,80.0,0.03,margin10,5.0,10.0,positive,negative,0.001040580794016907,-0.029084054343073387,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,80.0,0.03,margin10,15.0,20.0,negative,positive,-0.03325672089549249,0.001352691739565745,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,80.0,0.1,margin10,5.0,10.0,positive,negative,0.053615172757926696,-0.0017123551240826457,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,80.0,0.1,margin10,10.0,15.0,negative,positive,-0.0017123551240826457,0.11067472500741525,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.046491469099570484,0.009794186124906776,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,100.0,0.03,margin10,10.0,15.0,positive,negative,0.009794186124906776,-0.032703539716598354,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,100.0,0.03,margin10,15.0,20.0,negative,positive,-0.032703539716598354,0.012790960040739971,EUR/kWp/year
+Almería,ground,SUNPOWER,landscape,100.0,0.03,margin10,20.0,25.0,positive,negative,0.012790960040739971,-0.016587226379747425,EUR/kWp/year
+Almería,ground,JASOLAR,portrait,35.0,0.03,margin10,5.0,10.0,negative,positive,-0.006166532427651375,0.09780230580205833,EUR/kWp/year
+Almería,ground,JASOLAR,portrait,40.0,0.03,margin10,5.0,10.0,negative,positive,-0.003461078719742175,0.10115253459430056,EUR/kWp/year
+Almería,ground,JASOLAR,portrait,45.0,0.03,margin10,5.0,10.0,negative,positive,-0.005143221997782901,0.061995280950356155,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,15.0,0.03,margin10,15.0,20.0,negative,positive,-0.00011833609194362993,0.0435834890157563,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,25.0,0.03,margin10,5.0,10.0,negative,positive,-0.02823118472782178,0.07494007485620595,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,30.0,0.03,margin10,5.0,10.0,negative,positive,-0.03191476194364058,0.06495079053488388,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,35.0,0.03,margin10,5.0,10.0,negative,positive,-0.036943631034702176,0.017937990513809995,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,40.0,0.03,margin10,10.0,15.0,negative,positive,-0.01866182230482534,0.008762239777762512,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,45.0,0.03,margin10,10.0,15.0,negative,positive,-0.024850054877880237,0.04539572666497586,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,50.0,0.03,margin10,10.0,15.0,negative,positive,-0.02882103287534439,0.03791413062601427,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,60.0,0.03,margin10,10.0,15.0,negative,positive,-0.03007706901362313,0.06765106607723985,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,80.0,0.03,margin10,10.0,15.0,negative,positive,-0.03602711876442073,0.036262974645350485,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,80.0,0.03,margin10,20.0,25.0,positive,negative,0.07766431633436315,-0.0028516072527202257,EUR/kWp/year
+Almería,ground,JASOLAR,landscape,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.01060590632772436,0.1351790557254185,EUR/kWp/year
+Almería,ground,LONGI,portrait,40.0,0.03,margin10,5.0,10.0,negative,positive,-0.0030552402234859805,0.10533948017471077,EUR/kWp/year
+Almería,ground,LONGI,portrait,45.0,0.03,margin10,5.0,10.0,negative,positive,-0.00013599028369944144,0.07238273270006994,EUR/kWp/year
+Almería,ground,LONGI,portrait,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.00545033840624827,0.05829759884445833,EUR/kWp/year
+Almería,ground,LONGI,landscape,15.0,0.03,margin10,5.0,10.0,negative,positive,-0.006263978218525826,0.0030488323437576764,EUR/kWp/year
+Almería,ground,LONGI,landscape,25.0,0.03,margin10,5.0,10.0,negative,positive,-0.02755760089051358,0.07777422295744744,EUR/kWp/year
+Almería,ground,LONGI,landscape,30.0,0.03,margin10,5.0,10.0,negative,positive,-0.03080776893385946,0.07137909450527373,EUR/kWp/year
+Almería,ground,LONGI,landscape,35.0,0.03,margin10,10.0,15.0,negative,positive,-0.017298852578696303,0.0209429870071252,EUR/kWp/year
+Almería,ground,LONGI,landscape,40.0,0.03,margin10,10.0,15.0,negative,positive,-0.01532258006597105,0.060230816195804546,EUR/kWp/year
+Almería,ground,LONGI,landscape,45.0,0.03,margin10,10.0,15.0,negative,positive,-0.01849688866756645,0.08975386564374115,EUR/kWp/year
+Almería,ground,LONGI,landscape,50.0,0.03,margin10,10.0,15.0,negative,positive,-0.02206386613722207,0.07359612916230289,EUR/kWp/year
+Almería,ground,LONGI,landscape,60.0,0.03,margin10,10.0,15.0,negative,positive,-0.01971492682744054,0.10090540649702322,EUR/kWp/year
+Almería,ground,LONGI,landscape,80.0,0.03,margin10,20.0,25.0,negative,positive,-0.001555862562804447,0.0014607340838029143,EUR/kWp/year
+Almería,rooftop,YINGLI,portrait,30.0,0.03,margin10,20.0,25.0,negative,positive,-0.0017158360160891908,0.0063683910700155985,EUR/kWp/year
+Almería,rooftop,YINGLI,portrait,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.011370200787844488,0.010004946586750628,EUR/kWp/year
+Almería,rooftop,YINGLI,landscape,20.0,0.1,margin10,5.0,10.0,negative,positive,-0.022507432459134988,0.011378986609739586,EUR/kWp/year
+Almería,rooftop,JASOLAR,landscape,15.0,0.03,margin10,5.0,10.0,negative,positive,-0.012455725925398523,0.012764967665316138,EUR/kWp/year
+Almería,rooftop,LONGI,portrait,25.0,0.1,margin10,10.0,15.0,positive,negative,0.013991621069273472,-0.005253771581994207,EUR/kWp/year
+Almería,rooftop,LONGI,portrait,25.0,0.1,margin10,15.0,20.0,negative,positive,-0.005253771581994207,0.005950523205111843,EUR/kWp/year
+Almería,rooftop,LONGI,portrait,25.0,0.1,margin10,20.0,25.0,positive,negative,0.005950523205111843,-0.0034950560069970243,EUR/kWp/year
+Doha,ground,YINGLI,portrait,40.0,0.1,margin10,15.0,20.0,negative,positive,-0.011422111235532419,0.029950500254102473,EUR/kWp/year
+Doha,ground,YINGLI,portrait,45.0,0.1,margin10,15.0,20.0,negative,positive,-0.010651709325017612,0.032954356147722984,EUR/kWp/year
+Doha,ground,YINGLI,portrait,50.0,0.1,margin10,15.0,20.0,negative,positive,-0.00035633356489665063,0.03816625118543012,EUR/kWp/year
+Doha,ground,YINGLI,portrait,80.0,0.03,margin10,20.0,25.0,negative,positive,-0.03219063558342942,0.00591571247280772,EUR/kWp/year
+Doha,ground,YINGLI,portrait,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.007120741347929317,0.04988434504070046,EUR/kWp/year
+Doha,ground,YINGLI,portrait,100.0,0.1,margin10,5.0,10.0,negative,positive,-0.009806860039068645,0.04928176613005949,EUR/kWp/year
+Doha,ground,YINGLI,landscape,25.0,0.3,margin10,15.0,20.0,negative,positive,-0.029584629855487363,0.01559567932793128,EUR/kWp/year
+Doha,ground,YINGLI,landscape,30.0,0.1,margin10,15.0,20.0,negative,positive,-0.036457516204005044,0.006591589634818776,EUR/kWp/year
+Doha,ground,YINGLI,landscape,35.0,0.1,margin10,15.0,20.0,negative,positive,-0.027802644767842763,0.014864524694304451,EUR/kWp/year
+Doha,ground,YINGLI,landscape,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.01049357627292545,0.008547267736452882,EUR/kWp/year
+Doha,ground,YINGLI,landscape,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.0005405131538356173,0.016127899111599633,EUR/kWp/year
+Doha,ground,YINGLI,landscape,45.0,0.1,margin10,20.0,25.0,positive,negative,0.017804236292684253,-0.02237862875765438,EUR/kWp/year
+Doha,ground,YINGLI,landscape,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.0051677111608554455,0.007134684413263828,EUR/kWp/year
+Doha,ground,YINGLI,landscape,50.0,0.1,margin10,20.0,25.0,positive,negative,0.013892457092290714,-0.02555296383850235,EUR/kWp/year
+Doha,ground,YINGLI,landscape,60.0,0.03,margin10,20.0,25.0,negative,positive,-0.02596832354709798,0.014797514099101919,EUR/kWp/year
+Doha,ground,YINGLI,landscape,60.0,0.1,margin10,10.0,15.0,negative,positive,-0.001986510823448681,0.012548893564397604,EUR/kWp/year
+Doha,ground,YINGLI,landscape,60.0,0.1,margin10,15.0,20.0,positive,negative,0.012548893564397604,-0.019533685986291557,EUR/kWp/year
+Doha,ground,YINGLI,landscape,100.0,0.1,margin10,20.0,25.0,negative,positive,-0.014262135265455042,0.01913415988278301,EUR/kWp/year
+Doha,ground,SUNPOWER,portrait,50.0,0.03,margin10,20.0,25.0,negative,positive,-0.024666934448278673,0.018174355084560938,EUR/kWp/year
+Doha,ground,SUNPOWER,portrait,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.037097501033045495,0.00991141532610123,EUR/kWp/year
+Doha,ground,SUNPOWER,landscape,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.011406483841611373,0.10063321612458496,EUR/kWp/year
+Doha,ground,SUNPOWER,landscape,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.007426070004111676,0.052929202299562536,EUR/kWp/year
+Doha,ground,SUNPOWER,landscape,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.006926623137452861,0.05020983937137467,EUR/kWp/year
+Doha,ground,SUNPOWER,landscape,60.0,0.03,margin10,20.0,25.0,negative,positive,-0.012225257196282993,0.022042402793807855,EUR/kWp/year
+Doha,ground,SUNPOWER,landscape,80.0,0.1,margin10,5.0,10.0,negative,positive,-0.018602236448931234,0.020090199393519956,EUR/kWp/year
+Doha,ground,SUNPOWER,landscape,100.0,0.1,margin10,15.0,20.0,negative,positive,-0.016825838292321774,0.023073594754764545,EUR/kWp/year
+Doha,ground,JASOLAR,portrait,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.012409697350101737,0.007545891465489604,EUR/kWp/year
+Doha,ground,JASOLAR,portrait,50.0,0.03,margin10,20.0,25.0,negative,positive,-0.0111110820716422,0.03301635717705524,EUR/kWp/year
+Doha,ground,JASOLAR,portrait,100.0,0.03,margin10,15.0,20.0,negative,positive,-0.007349150241082028,0.03442666800292686,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,35.0,0.1,margin10,5.0,10.0,negative,positive,-0.022197635904811233,0.04566226427888202,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,40.0,0.1,margin10,5.0,10.0,negative,positive,-0.01870260786279894,0.08763633456668223,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,45.0,0.1,margin10,5.0,10.0,negative,positive,-0.014423691530191587,0.08901450008564153,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,50.0,0.1,margin10,5.0,10.0,negative,positive,-0.020687276748229746,0.02969846174677264,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,60.0,0.1,margin10,5.0,10.0,negative,positive,-0.01878530587155454,0.03317765230824547,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,80.0,0.3,margin10,5.0,10.0,positive,negative,0.037414196646393935,-0.018320584437277757,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,80.0,0.3,margin10,10.0,15.0,negative,positive,-0.018320584437277757,0.04459334972650501,EUR/kWp/year
+Doha,ground,JASOLAR,landscape,100.0,0.3,margin10,5.0,10.0,negative,positive,-0.027052108602510797,0.049908227272116565,EUR/kWp/year
+Doha,ground,LONGI,portrait,45.0,0.03,margin10,20.0,25.0,negative,positive,-0.006796026853986795,0.001658578093526139,EUR/kWp/year
+Doha,ground,LONGI,portrait,60.0,0.03,margin10,5.0,10.0,negative,positive,-0.02336868952975353,0.02660427271416159,EUR/kWp/year
+Doha,ground,LONGI,portrait,80.0,0.03,margin10,5.0,10.0,negative,positive,-0.02334825580614082,0.02161183766485157,EUR/kWp/year
+Doha,ground,LONGI,portrait,100.0,0.03,margin10,15.0,20.0,negative,positive,-0.00451179868438141,0.03955198394619712,EUR/kWp/year
+Doha,ground,LONGI,landscape,30.0,0.1,margin10,5.0,10.0,negative,positive,-0.008043803624736737,0.09315961862398096,EUR/kWp/year
+Doha,ground,LONGI,landscape,35.0,0.1,margin10,5.0,10.0,negative,positive,-0.008586818743239147,0.05615722098304281,EUR/kWp/year
+Doha,ground,LONGI,landscape,45.0,0.03,margin10,20.0,25.0,negative,positive,-0.004087518792734682,0.03729786431641684,EUR/kWp/year
+Doha,ground,LONGI,landscape,80.0,0.3,margin10,5.0,10.0,negative,positive,-0.010007558905184635,0.07235341101399632,EUR/kWp/year
+Doha,ground,LONGI,landscape,100.0,0.1,margin10,5.0,10.0,negative,positive,-0.03399530524375778,0.0037847974952077007,EUR/kWp/year
+Doha,ground,LONGI,landscape,100.0,0.1,margin10,15.0,20.0,positive,negative,0.009311198501740267,-2.0463040378129738e-05,EUR/kWp/year
+Doha,ground,LONGI,landscape,100.0,0.1,margin10,20.0,25.0,negative,positive,-2.0463040378129738e-05,0.007710418118942061,EUR/kWp/year
+Doha,ground,LONGI,landscape,100.0,0.3,margin10,5.0,10.0,negative,positive,-0.015345915627162879,0.12138407665397159,EUR/kWp/year
+Doha,rooftop,YINGLI,portrait,35.0,0.03,margin10,5.0,10.0,negative,positive,-0.009871547883879152,0.004399019516380741,EUR/kWp/year
+Doha,rooftop,YINGLI,portrait,50.0,0.03,margin10,5.0,10.0,negative,positive,-0.006446432431321404,0.020977824986029923,EUR/kWp/year
+Doha,rooftop,YINGLI,portrait,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.008276388314460127,0.0566325030701584,EUR/kWp/year
+Doha,rooftop,YINGLI,landscape,25.0,0.03,margin10,15.0,20.0,negative,positive,-0.0009454091655871494,0.006294555508383995,EUR/kWp/year
+Doha,rooftop,YINGLI,landscape,30.0,0.03,margin10,15.0,20.0,negative,positive,-0.008598816098056558,0.01900528932284941,EUR/kWp/year
+Doha,rooftop,YINGLI,landscape,35.0,0.03,margin10,5.0,10.0,negative,positive,-0.01758489455816091,0.01984551828520266,EUR/kWp/year
+Doha,rooftop,YINGLI,landscape,40.0,0.03,margin10,15.0,20.0,negative,positive,-0.0011177677423634819,0.0333916933726084,EUR/kWp/year
+Doha,rooftop,YINGLI,landscape,45.0,0.03,margin10,5.0,10.0,negative,positive,-0.008725679500527703,0.04679107290456243,EUR/kWp/year
+Doha,rooftop,YINGLI,landscape,80.0,0.03,margin10,15.0,20.0,negative,positive,-0.009814576686955276,0.04451434698260327,EUR/kWp/year
+Doha,rooftop,SUNPOWER,portrait,20.0,0.03,margin10,5.0,10.0,negative,positive,-0.00012517373274262972,0.028479718468629338,EUR/kWp/year
+Doha,rooftop,SUNPOWER,landscape,20.0,0.03,margin10,10.0,15.0,negative,positive,-0.010823672710479695,0.0013582336489575825,EUR/kWp/year
+Doha,rooftop,SUNPOWER,landscape,80.0,0.03,margin10,5.0,10.0,negative,positive,-0.02187017068683174,0.03733346592176888,EUR/kWp/year
+Doha,rooftop,JASOLAR,portrait,25.0,0.03,margin10,5.0,10.0,negative,positive,-0.0037494766311396283,0.024586852059836503,EUR/kWp/year
+Doha,rooftop,JASOLAR,landscape,15.0,0.03,margin10,5.0,10.0,negative,positive,-0.025007163120921175,0.0025350071252572687,EUR/kWp/year
+Doha,rooftop,JASOLAR,landscape,15.0,0.03,margin10,20.0,25.0,positive,negative,0.007192223030668063,-0.013445368210813283,EUR/kWp/year
+Doha,rooftop,JASOLAR,landscape,30.0,0.03,margin10,5.0,10.0,negative,positive,-0.0017085910870337645,0.0242915737497396,EUR/kWp/year
+Doha,rooftop,JASOLAR,landscape,80.0,0.03,margin10,10.0,15.0,positive,negative,0.2229704333200187,-0.023912872192329584,EUR/kWp/year
+Doha,rooftop,JASOLAR,landscape,80.0,0.03,margin10,15.0,20.0,negative,positive,-0.023912872192329584,0.06455022579742269,EUR/kWp/year
+Doha,rooftop,JASOLAR,landscape,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.034639671302751876,0.01661186870973501,EUR/kWp/year
+Doha,rooftop,LONGI,portrait,25.0,0.3,margin10,10.0,15.0,negative,positive,-0.003090304307047112,0.003117879386284536,EUR/kWp/year
+Doha,rooftop,LONGI,portrait,30.0,0.03,margin10,5.0,10.0,negative,positive,-0.007837669451962362,0.016249250967238546,EUR/kWp/year
+Doha,rooftop,LONGI,landscape,15.0,0.03,margin10,10.0,15.0,negative,positive,-0.0034234628656650418,0.005054463784464988,EUR/kWp/year
+Doha,rooftop,LONGI,landscape,40.0,0.03,margin10,5.0,10.0,negative,positive,-0.008602422050695904,0.0803320718025771,EUR/kWp/year
+Doha,rooftop,LONGI,landscape,100.0,0.03,margin10,5.0,10.0,negative,positive,-0.007960203206710273,0.01487870951534069,EUR/kWp/year
+Doha,rooftop,LONGI,landscape,100.0,0.03,margin10,15.0,20.0,positive,negative,0.07054788297814389,-0.01677056337168943,EUR/kWp/year
+Doha,rooftop,LONGI,landscape,100.0,0.03,margin10,20.0,25.0,negative,positive,-0.01677056337168943,0.2641352862902449,EUR/kWp/year
+Neuchâtel,ground,YINGLI,portrait vs landscape,80.0,0.3,orientation_energy,15.0,20.0,portrait,landscape,-0.010423530272250014,0.06971840334747004,pp clean yield
+Neuchâtel,ground,YINGLI,portrait vs landscape,80.0,0.3,orientation_cost,15.0,20.0,portrait,landscape,-0.010423530272245518,0.06971840334747248,pp clean revenue
+Neuchâtel,ground,YINGLI,portrait vs landscape,100.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.0004648127163100254,-0.0001522342642400025,pp clean yield
+Neuchâtel,ground,YINGLI,portrait vs landscape,100.0,0.03,orientation_cost,5.0,10.0,landscape,portrait,0.0004648127163021879,-0.00015223426423343484,pp clean revenue
+Neuchâtel,ground,YINGLI,portrait vs landscape,100.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.013688146722760058,0.034106261624070044,pp clean yield
+Neuchâtel,ground,YINGLI,portrait vs landscape,100.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.01368814672276017,0.03410626162406338,pp clean revenue
+Neuchâtel,ground,YINGLI,portrait vs landscape,100.0,0.3,orientation_energy,5.0,10.0,portrait,landscape,-0.007053574406399962,0.006194679205839992,pp clean yield
+Neuchâtel,ground,YINGLI,portrait vs landscape,100.0,0.3,orientation_cost,5.0,10.0,portrait,landscape,-0.00705357440640024,0.00619467920584954,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,35.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.007770373385049961,0.0034494214218100394,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,35.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.007770373385046797,0.0034494214218120933,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,35.0,0.3,orientation_energy,10.0,15.0,portrait,landscape,-0.001190819302249957,0.005098609487779959,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,35.0,0.3,orientation_cost,10.0,15.0,portrait,landscape,-0.0011908193022504288,0.00509860948778762,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,40.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.005920320479540012,0.0009817787068600037,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,40.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.005920320479538291,0.0009817787068652217,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,40.0,0.3,orientation_energy,5.0,10.0,portrait,landscape,-0.0002449252271300023,0.012073031180650007,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,40.0,0.3,orientation_cost,5.0,10.0,portrait,landscape,-0.00024492522712510345,0.012073031180644372,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,45.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.003589856706860073,0.009894135481830046,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,45.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.0035898567068532727,0.009894135481834404,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.00013805306313999753,-0.0011883753055999813,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_cost,5.0,10.0,landscape,portrait,0.0001380530631456319,-0.0011883753055938612,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,50.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.0014968781381400342,0.01773538468804997,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,50.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.0014968781381373836,0.017735384688044642,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,60.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.00029086991511001123,-0.0004119988573699773,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,60.0,0.03,orientation_cost,5.0,10.0,landscape,portrait,0.0002908699151090797,-0.00041199885736863465,pp clean revenue
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_energy,5.0,10.0,portrait,landscape,-0.00019866156813997532,4.910904273999761e-05,pp clean yield
+Neuchâtel,ground,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_cost,5.0,10.0,portrait,landscape,-0.00019866156813934388,4.910904274559036e-05,pp clean revenue
+Neuchâtel,ground,JASOLAR,portrait vs landscape,40.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.021240058633279962,0.009535806028780014,pp clean yield
+Neuchâtel,ground,JASOLAR,portrait vs landscape,40.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.0212400586332821,0.00953580602878018,pp clean revenue
+Neuchâtel,ground,JASOLAR,portrait vs landscape,40.0,0.3,orientation_energy,10.0,15.0,portrait,landscape,-0.004704453285879928,0.01089750534635997,pp clean yield
+Neuchâtel,ground,JASOLAR,portrait vs landscape,40.0,0.3,orientation_cost,10.0,15.0,portrait,landscape,-0.00470445328588287,0.010897505346359526,pp clean revenue
+Neuchâtel,ground,JASOLAR,portrait vs landscape,45.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.012354611351150013,0.006066791274940003,pp clean yield
+Neuchâtel,ground,JASOLAR,portrait vs landscape,45.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.012354611351154551,0.00606679127493745,pp clean revenue
+Neuchâtel,ground,JASOLAR,portrait vs landscape,50.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.0008796966148499896,0.037526511490109965,pp clean yield
+Neuchâtel,ground,JASOLAR,portrait vs landscape,50.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.0008796966148542501,0.03752651149010322,pp clean revenue
+Neuchâtel,ground,LONGI,portrait vs landscape,45.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.01583497807680001,0.03283200020052002,pp clean yield
+Neuchâtel,ground,LONGI,portrait vs landscape,45.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.015834978076801315,0.032832000200527844,pp clean revenue
+Neuchâtel,ground,LONGI,portrait vs landscape,45.0,0.3,orientation_energy,5.0,10.0,portrait,landscape,-0.009149190027710016,0.004364021692140008,pp clean yield
+Neuchâtel,ground,LONGI,portrait vs landscape,45.0,0.3,orientation_cost,5.0,10.0,portrait,landscape,-0.009149190027702009,0.004364021692134512,pp clean revenue
+Neuchâtel,ground,LONGI,portrait vs landscape,50.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.010593749376839975,0.02078384409704004,pp clean yield
+Neuchâtel,ground,LONGI,portrait vs landscape,50.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.010593749376845027,0.020783844097041287,pp clean revenue
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,80.0,0.3,orientation_energy,15.0,20.0,portrait,landscape,-0.010423530272250014,0.06971840334747004,pp clean yield
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,80.0,0.3,orientation_cost,15.0,20.0,portrait,landscape,-0.010423530272245463,0.06971840334747237,pp clean revenue
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,100.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.0004648127163100254,-0.0001522342642400025,pp clean yield
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,100.0,0.03,orientation_cost,5.0,10.0,landscape,portrait,0.0004648127163021862,-0.00015223426423339667,pp clean revenue
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,100.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.013688146722760058,0.034106261624070044,pp clean yield
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,100.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.013688146722760142,0.034106261624062995,pp clean revenue
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,100.0,0.3,orientation_energy,5.0,10.0,portrait,landscape,-0.007053574406399962,0.006194679205839992,pp clean yield
+Neuchâtel,rooftop,YINGLI,portrait vs landscape,100.0,0.3,orientation_cost,5.0,10.0,portrait,landscape,-0.00705357440640024,0.006194679205849374,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,35.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.007770373385049961,0.0034494214218100394,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,35.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.007770373385046686,0.00344942142181226,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,35.0,0.3,orientation_energy,10.0,15.0,portrait,landscape,-0.001190819302249957,0.005098609487779959,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,35.0,0.3,orientation_cost,10.0,15.0,portrait,landscape,-0.0011908193022504288,0.005098609487787453,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,40.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.005920320479540012,0.0009817787068600037,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,40.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.005920320479538221,0.0009817787068652495,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,40.0,0.3,orientation_energy,5.0,10.0,portrait,landscape,-0.0002449252271300023,0.012073031180650007,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,40.0,0.3,orientation_cost,5.0,10.0,portrait,landscape,-0.0002449252271251312,0.012073031180644456,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,45.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.003589856706860073,0.009894135481830046,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,45.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.003589856706853467,0.009894135481834515,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.00013805306313999753,-0.0011883753055999813,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_cost,5.0,10.0,landscape,portrait,0.0001380530631456614,-0.0011883753055939444,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,50.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.0014968781381400342,0.01773538468804997,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,50.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.0014968781381375085,0.017735384688044697,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,60.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.00029086991511001123,-0.0004119988573699773,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,60.0,0.03,orientation_cost,5.0,10.0,landscape,portrait,0.00029086991510890794,-0.00041199885736867975,pp clean revenue
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_energy,5.0,10.0,portrait,landscape,-0.00019866156813997532,4.910904273999761e-05,pp clean yield
+Neuchâtel,rooftop,SUNPOWER,portrait vs landscape,60.0,0.1,orientation_cost,5.0,10.0,portrait,landscape,-0.00019866156813932306,4.910904274564587e-05,pp clean revenue
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,40.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.021240058633279962,0.009535806028780014,pp clean yield
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,40.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.021240058633282127,0.009535806028780291,pp clean revenue
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,40.0,0.3,orientation_energy,10.0,15.0,portrait,landscape,-0.004704453285879928,0.01089750534635997,pp clean yield
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,40.0,0.3,orientation_cost,10.0,15.0,portrait,landscape,-0.004704453285882676,0.010897505346359637,pp clean revenue
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,45.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.012354611351150013,0.006066791274940003,pp clean yield
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,45.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.012354611351154482,0.006066791274937339,pp clean revenue
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,50.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.0008796966148499896,0.037526511490109965,pp clean yield
+Neuchâtel,rooftop,JASOLAR,portrait vs landscape,50.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.0008796966148543056,0.037526511490103276,pp clean revenue
+Neuchâtel,rooftop,LONGI,portrait vs landscape,45.0,0.1,orientation_energy,20.0,25.0,portrait,landscape,-0.01583497807680001,0.03283200020052002,pp clean yield
+Neuchâtel,rooftop,LONGI,portrait vs landscape,45.0,0.1,orientation_cost,20.0,25.0,portrait,landscape,-0.015834978076801315,0.03283200020052801,pp clean revenue
+Neuchâtel,rooftop,LONGI,portrait vs landscape,45.0,0.3,orientation_energy,5.0,10.0,portrait,landscape,-0.009149190027710016,0.004364021692140008,pp clean yield
+Neuchâtel,rooftop,LONGI,portrait vs landscape,45.0,0.3,orientation_cost,5.0,10.0,portrait,landscape,-0.009149190027701912,0.0043640216921344566,pp clean revenue
+Neuchâtel,rooftop,LONGI,portrait vs landscape,50.0,0.1,orientation_energy,15.0,20.0,portrait,landscape,-0.010593749376839975,0.02078384409704004,pp clean yield
+Neuchâtel,rooftop,LONGI,portrait vs landscape,50.0,0.1,orientation_cost,15.0,20.0,portrait,landscape,-0.010593749376845082,0.020783844097041343,pp clean revenue
+Almería,ground,YINGLI,portrait vs landscape,80.0,0.03,orientation_energy,5.0,10.0,portrait,landscape,-0.010246185316079015,0.0007826748651490467,pp clean yield
+Almería,ground,YINGLI,portrait vs landscape,80.0,0.1,orientation_cost,5.0,10.0,portrait,landscape,-0.0014525178563536412,0.013341673326404235,pp clean revenue
+Almería,ground,YINGLI,portrait vs landscape,80.0,0.3,orientation_energy,10.0,15.0,landscape,portrait,0.2146715491282709,-0.13249280084473014,pp clean yield
+Almería,ground,YINGLI,portrait vs landscape,100.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.00820371197269082,0.06259082090678508,pp clean revenue
+Almería,ground,SUNPOWER,portrait vs landscape,35.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.0007531382563907008,0.0011439846838981749,pp clean revenue
+Almería,ground,SUNPOWER,portrait vs landscape,35.0,0.03,orientation_cost,15.0,20.0,landscape,portrait,0.0011439846838981749,-0.0022785811222147956,pp clean revenue
+Almería,ground,SUNPOWER,portrait vs landscape,35.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.04117173161975041,-0.0005716384684593123,pp clean yield
+Almería,ground,SUNPOWER,portrait vs landscape,35.0,0.1,orientation_cost,5.0,10.0,portrait,landscape,-0.02988483349861565,0.004829559973197783,pp clean revenue
+Almería,ground,SUNPOWER,portrait vs landscape,40.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.0005097294280085041,0.040638941208165746,pp clean revenue
+Almería,ground,SUNPOWER,portrait vs landscape,40.0,0.3,orientation_energy,5.0,10.0,landscape,portrait,0.03434265716985996,-0.008378822857360468,pp clean yield
+Almería,ground,SUNPOWER,portrait vs landscape,45.0,0.3,orientation_energy,15.0,20.0,landscape,portrait,0.1183514470827296,-0.33588554467055687,pp clean yield
+Almería,ground,SUNPOWER,portrait vs landscape,50.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.02464542913736345,-0.3975083664983394,pp clean yield
+Almería,ground,JASOLAR,portrait vs landscape,40.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.010228411513319297,0.03605237692155261,pp clean revenue
+Almería,ground,JASOLAR,portrait vs landscape,40.0,0.1,orientation_cost,5.0,10.0,portrait,landscape,-0.020713400455390663,0.027404798513859907,pp clean revenue
+Almería,ground,JASOLAR,portrait vs landscape,40.0,0.3,orientation_energy,10.0,15.0,landscape,portrait,0.06506739810372997,-0.0645746399945395,pp clean yield
+Almería,ground,JASOLAR,portrait vs landscape,45.0,0.03,orientation_cost,5.0,10.0,portrait,landscape,-0.0006107139359158992,0.005964000125980362,pp clean revenue
+Almería,ground,JASOLAR,portrait vs landscape,45.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.19021545555973063,-0.05806370339414002,pp clean yield
+Almería,ground,LONGI,portrait vs landscape,45.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.004418639840977734,0.030126980579226303,pp clean revenue
+Almería,ground,LONGI,portrait vs landscape,45.0,0.1,orientation_energy,20.0,25.0,landscape,portrait,0.03913068324437052,-0.21726236263571952,pp clean yield
+Almería,ground,LONGI,portrait vs landscape,50.0,0.3,orientation_energy,10.0,15.0,landscape,portrait,0.09285150350250948,-0.19103961421943705,pp clean yield
+Almería,ground,LONGI,portrait vs landscape,60.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.01192870991259909,-0.580529121772738,pp clean yield
+Almería,rooftop,YINGLI,portrait vs landscape,80.0,0.03,orientation_energy,5.0,10.0,portrait,landscape,-0.010246185316079015,0.0007826748651490467,pp clean yield
+Almería,rooftop,YINGLI,portrait vs landscape,80.0,0.3,orientation_energy,10.0,15.0,landscape,portrait,0.2146715491282709,-0.13249280084473014,pp clean yield
+Almería,rooftop,YINGLI,portrait vs landscape,100.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.011048291896419482,0.005579586282427634,pp clean revenue
+Almería,rooftop,SUNPOWER,portrait vs landscape,35.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.0014995529526163204,0.0010901100985515055,pp clean revenue
+Almería,rooftop,SUNPOWER,portrait vs landscape,35.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.04117173161975041,-0.0005716384684593123,pp clean yield
+Almería,rooftop,SUNPOWER,portrait vs landscape,35.0,0.3,orientation_cost,20.0,25.0,landscape,portrait,0.03355463348559651,-0.035483027467925865,pp clean revenue
+Almería,rooftop,SUNPOWER,portrait vs landscape,40.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.04140581888296299,0.029296018122995426,pp clean revenue
+Almería,rooftop,SUNPOWER,portrait vs landscape,40.0,0.3,orientation_energy,5.0,10.0,landscape,portrait,0.03434265716985996,-0.008378822857360468,pp clean yield
+Almería,rooftop,SUNPOWER,portrait vs landscape,45.0,0.03,orientation_cost,5.0,10.0,portrait,landscape,-0.0007255081642809358,0.007994678134874977,pp clean revenue
+Almería,rooftop,SUNPOWER,portrait vs landscape,45.0,0.3,orientation_energy,15.0,20.0,landscape,portrait,0.1183514470827296,-0.33588554467055687,pp clean yield
+Almería,rooftop,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_cost,5.0,10.0,portrait,landscape,-0.0015950418091567053,0.011947529816979469,pp clean revenue
+Almería,rooftop,SUNPOWER,portrait vs landscape,50.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.02464542913736345,-0.3975083664983394,pp clean yield
+Almería,rooftop,JASOLAR,portrait vs landscape,40.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.05787757777561381,0.004385702764867494,pp clean revenue
+Almería,rooftop,JASOLAR,portrait vs landscape,40.0,0.3,orientation_energy,10.0,15.0,landscape,portrait,0.06506739810372997,-0.0645746399945395,pp clean yield
+Almería,rooftop,JASOLAR,portrait vs landscape,45.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.014618421818248184,0.1264598865973824,pp clean revenue
+Almería,rooftop,JASOLAR,portrait vs landscape,45.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.19021545555973063,-0.05806370339414002,pp clean yield
+Almería,rooftop,LONGI,portrait vs landscape,45.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.0028865225848841436,0.013978512907283358,pp clean revenue
+Almería,rooftop,LONGI,portrait vs landscape,45.0,0.1,orientation_energy,20.0,25.0,landscape,portrait,0.03913068324437052,-0.21726236263571952,pp clean yield
+Almería,rooftop,LONGI,portrait vs landscape,50.0,0.3,orientation_energy,10.0,15.0,landscape,portrait,0.09285150350250948,-0.19103961421943705,pp clean yield
+Almería,rooftop,LONGI,portrait vs landscape,60.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.01192870991259909,-0.580529121772738,pp clean yield
+Doha,ground,YINGLI,portrait vs landscape,80.0,0.03,orientation_cost,5.0,10.0,landscape,portrait,0.0032423081709489696,-0.002444315805587592,pp clean revenue
+Doha,ground,SUNPOWER,portrait vs landscape,30.0,0.03,orientation_cost,10.0,15.0,landscape,portrait,0.0013825374590392889,-0.0014484585065551465,pp clean revenue
+Doha,ground,SUNPOWER,portrait vs landscape,35.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.005909248002688994,-0.025401341421310564,pp clean yield
+Doha,ground,SUNPOWER,portrait vs landscape,40.0,0.03,orientation_energy,20.0,25.0,landscape,portrait,0.02201910006701091,-0.03672527386174895,pp clean yield
+Doha,ground,SUNPOWER,portrait vs landscape,45.0,0.03,orientation_cost,10.0,15.0,landscape,portrait,0.0005356717300024523,-0.000175606869387869,pp clean revenue
+Doha,ground,SUNPOWER,portrait vs landscape,45.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.000175606869387869,0.0006061589274250559,pp clean revenue
+Doha,ground,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_cost,10.0,15.0,portrait,landscape,-0.0003297934754307591,9.42156140621743e-05,pp clean revenue
+Doha,ground,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_cost,15.0,20.0,landscape,portrait,9.42156140621743e-05,-0.0016834590114881212,pp clean revenue
+Doha,ground,SUNPOWER,portrait vs landscape,50.0,0.03,orientation_cost,20.0,25.0,portrait,landscape,-0.0016834590114881212,0.028594719364983145,pp clean revenue
+Doha,ground,SUNPOWER,portrait vs landscape,50.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.08229481749779133,-0.09290647659734841,pp clean yield
+Doha,ground,JASOLAR,portrait vs landscape,15.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.0005978936302385066,9.968411312407363e-06,pp clean revenue
+Doha,ground,JASOLAR,portrait vs landscape,15.0,0.03,orientation_cost,20.0,25.0,landscape,portrait,9.968411312407363e-06,-0.0012657976526608606,pp clean revenue
+Doha,ground,JASOLAR,portrait vs landscape,45.0,0.03,orientation_cost,20.0,25.0,portrait,landscape,-0.0008310313095051189,0.000725989691673326,pp clean revenue
+Doha,ground,JASOLAR,portrait vs landscape,45.0,0.1,orientation_energy,15.0,20.0,landscape,portrait,0.08258869985494055,-0.0248850367407627,pp clean yield
+Doha,ground,JASOLAR,portrait vs landscape,45.0,0.3,orientation_energy,5.0,10.0,landscape,portrait,0.06995008236752032,-0.14706199162406985,pp clean yield
+Doha,ground,JASOLAR,portrait vs landscape,50.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.015633897795236606,-0.15065902550261967,pp clean yield
+Doha,ground,LONGI,portrait vs landscape,45.0,0.03,orientation_energy,10.0,15.0,landscape,portrait,0.03560489015433976,-0.01100748442007804,pp clean yield
+Doha,ground,LONGI,portrait vs landscape,50.0,0.03,orientation_cost,10.0,15.0,landscape,portrait,0.0008387850152907217,-0.000435573534258063,pp clean revenue
+Doha,ground,LONGI,portrait vs landscape,50.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.000435573534258063,0.002103225027901237,pp clean revenue
+Doha,ground,LONGI,portrait vs landscape,60.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.12369632006455422,-0.11217570016625622,pp clean yield
+Doha,ground,LONGI,portrait vs landscape,80.0,0.3,orientation_energy,5.0,10.0,landscape,portrait,0.4176413600438691,-0.16022761280883202,pp clean yield
+Doha,rooftop,YINGLI,portrait vs landscape,100.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.007399239185375633,0.005314744530660054,pp clean revenue
+Doha,rooftop,SUNPOWER,portrait vs landscape,20.0,0.03,orientation_cost,5.0,10.0,portrait,landscape,-0.00026795578387853094,0.0029031391178986187,pp clean revenue
+Doha,rooftop,SUNPOWER,portrait vs landscape,20.0,0.03,orientation_cost,15.0,20.0,landscape,portrait,0.0018614229296306517,-0.0005708754213305314,pp clean revenue
+Doha,rooftop,SUNPOWER,portrait vs landscape,35.0,0.03,orientation_energy,5.0,10.0,landscape,portrait,0.005909248002688994,-0.025401341421310564,pp clean yield
+Doha,rooftop,SUNPOWER,portrait vs landscape,35.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.0011182360221319992,0.00135273460186279,pp clean revenue
+Doha,rooftop,SUNPOWER,portrait vs landscape,40.0,0.03,orientation_energy,20.0,25.0,landscape,portrait,0.02201910006701091,-0.03672527386174895,pp clean yield
+Doha,rooftop,SUNPOWER,portrait vs landscape,40.0,0.03,orientation_cost,5.0,10.0,portrait,landscape,-7.946496014347298e-05,0.0024265256343204006,pp clean revenue
+Doha,rooftop,SUNPOWER,portrait vs landscape,50.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.08229481749779133,-0.09290647659734841,pp clean yield
+Doha,rooftop,JASOLAR,portrait vs landscape,40.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.0027212151423783235,0.006006596582769433,pp clean revenue
+Doha,rooftop,JASOLAR,portrait vs landscape,45.0,0.1,orientation_energy,15.0,20.0,landscape,portrait,0.08258869985494055,-0.0248850367407627,pp clean yield
+Doha,rooftop,JASOLAR,portrait vs landscape,45.0,0.3,orientation_energy,5.0,10.0,landscape,portrait,0.06995008236752032,-0.14706199162406985,pp clean yield
+Doha,rooftop,JASOLAR,portrait vs landscape,50.0,0.3,orientation_energy,20.0,25.0,landscape,portrait,0.015633897795236606,-0.15065902550261967,pp clean yield
+Doha,rooftop,LONGI,portrait vs landscape,45.0,0.03,orientation_energy,10.0,15.0,landscape,portrait,0.03560489015433976,-0.01100748442007804,pp clean yield
+Doha,rooftop,LONGI,portrait vs landscape,45.0,0.03,orientation_cost,15.0,20.0,portrait,landscape,-0.005970063077947993,0.057998969144579304,pp clean revenue
+Doha,rooftop,LONGI,portrait vs landscape,60.0,0.1,orientation_energy,10.0,15.0,landscape,portrait,0.12369632006455422,-0.11217570016625622,pp clean yield
+Doha,rooftop,LONGI,portrait vs landscape,80.0,0.3,orientation_energy,5.0,10.0,landscape,portrait,0.4176413600438691,-0.16022761280883202,pp clean yield

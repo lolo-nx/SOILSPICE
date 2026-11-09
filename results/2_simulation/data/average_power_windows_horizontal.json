@@ -2,9 +2,40 @@
   "source": "results/2_simulation/data/resilience_metrics.csv",
   "source_sha256": "5c0024d00038a40833de24d75fa4aa420c444205075b05912ac1aa41a867821b",
   "width_mm": 183,
-  "height_mm": 95,
+  "height_mm": 58,
   "png_dpi": 600,
   "vector_pdf": true,
+  "colorbar_orientation": "vertical",
+  "colorbar_position": "right",
+  "palette": "original grey-gold-green",
+  "palette_stops": [
+    [
+      0.0,
+      "#7d7d7d"
+    ],
+    [
+      0.3,
+      "#b9a35a"
+    ],
+    [
+      0.55,
+      "#f8c421"
+    ],
+    [
+      0.78,
+      "#8fb12b"
+    ],
+    [
+      1.0,
+      "#1d6e1d"
+    ]
+  ],
+  "color_scale_limits": [
+    0.5,
+    1.0
+  ],
+  "dark_cells_have_white_text": false,
+  "annotation_text_color": "black",
   "configuration_columns": [
     {
       "module": "YINGLI",
@@ -12,57 +43,12 @@
       "orientation": "portrait"
     },
     {
-      "module": "SUNPOWER",
-      "shape": "rectangle",
-      "orientation": "portrait"
-    },
-    {
-      "module": "JASOLAR",
-      "shape": "rectangle",
-      "orientation": "portrait"
-    },
-    {
-      "module": "LONGI",
-      "shape": "rectangle",
-      "orientation": "portrait"
-    },
-    {
       "module": "YINGLI",
       "shape": "rectangle",
       "orientation": "landscape"
     },
     {
-      "module": "SUNPOWER",
-      "shape": "rectangle",
-      "orientation": "landscape"
-    },
-    {
-      "module": "JASOLAR",
-      "shape": "rectangle",
-      "orientation": "landscape"
-    },
-    {
-      "module": "LONGI",
-      "shape": "rectangle",
-      "orientation": "landscape"
-    },
-    {
       "module": "YINGLI",
-      "shape": "triangle",
-      "orientation": "portrait"
-    },
-    {
-      "module": "SUNPOWER",
-      "shape": "triangle",
-      "orientation": "portrait"
-    },
-    {
-      "module": "JASOLAR",
-      "shape": "triangle",
-      "orientation": "portrait"
-    },
-    {
-      "module": "LONGI",
       "shape": "triangle",
       "orientation": "portrait"
     },
@@ -73,13 +59,58 @@
     },
     {
       "module": "SUNPOWER",
+      "shape": "rectangle",
+      "orientation": "portrait"
+    },
+    {
+      "module": "SUNPOWER",
+      "shape": "rectangle",
+      "orientation": "landscape"
+    },
+    {
+      "module": "SUNPOWER",
+      "shape": "triangle",
+      "orientation": "portrait"
+    },
+    {
+      "module": "SUNPOWER",
       "shape": "triangle",
       "orientation": "landscape"
     },
     {
       "module": "JASOLAR",
+      "shape": "rectangle",
+      "orientation": "portrait"
+    },
+    {
+      "module": "JASOLAR",
+      "shape": "rectangle",
+      "orientation": "landscape"
+    },
+    {
+      "module": "JASOLAR",
+      "shape": "triangle",
+      "orientation": "portrait"
+    },
+    {
+      "module": "JASOLAR",
       "shape": "triangle",
       "orientation": "landscape"
+    },
+    {
+      "module": "LONGI",
+      "shape": "rectangle",
+      "orientation": "portrait"
+    },
+    {
+      "module": "LONGI",
+      "shape": "rectangle",
+      "orientation": "landscape"
+    },
+    {
+      "module": "LONGI",
+      "shape": "triangle",
+      "orientation": "portrait"
     },
     {
       "module": "LONGI",
@@ -87,6 +118,23 @@
       "orientation": "landscape"
     }
   ],
+  "column_grouping": "module",
+  "module_group_order": [
+    "YINGLI",
+    "SUNPOWER",
+    "JASOLAR",
+    "LONGI"
+  ],
+  "module_labels_position": "above",
+  "configuration_labels_position": "shared legend below",
+  "per_column_configuration_symbols": true,
+  "repeated_configuration_text": false,
+  "configuration_symbols": {
+    "rectangle": "rectangle",
+    "triangle": "triangle",
+    "portrait": "open",
+    "landscape": "filled"
+  },
   "S_ref_rows_percent": [
     1,
     2,
@@ -98,8 +146,8 @@
     10
   ],
   "all_128_values_match_original": true,
-  "transformation": "transpose only",
+  "transformation": "transpose and regroup columns by module",
   "M0_shown": false,
   "physical_metrics_recalculated": false,
-  "preexisting_exports_unchanged": 50
+  "preexisting_exports_unchanged": 97
 }

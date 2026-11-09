@@ -1,0 +1,74 @@
+{
+  "source_sha256": "d6eb1290618a2c247203474fc64f17765c8c0e6ec00bdf3a0449cee497310056",
+  "regime_order": [
+    "I",
+    "II",
+    "III"
+  ],
+  "variants": [
+    {
+      "letter": "A",
+      "title": "Lagon et framboise",
+      "palette": {
+        "0": "#E1F5F4",
+        "1": "#EF9FBD",
+        "2": "#A3DADB"
+      },
+      "pdf": "A_lagon_et_framboise.pdf",
+      "lightness": [
+        95.09522458248723,
+        74.07520393520906,
+        83.46542466033634
+      ],
+      "black_text_contrast": [
+        18.568804156805772,
+        10.364223921023711,
+        13.608762124859108
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Ciel et rose",
+      "palette": {
+        "0": "#E1F1FF",
+        "1": "#E995B5",
+        "2": "#AFD1F1"
+      },
+      "pdf": "B_ciel_et_rose.pdf",
+      "lightness": [
+        94.37138562201892,
+        70.97746523776344,
+        82.41408289089038
+      ],
+      "black_text_contrast": [
+        18.227629070815425,
+        9.430945247887093,
+        13.213152418319002
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Lavande et menthe",
+      "palette": {
+        "0": "#F0ECFA",
+        "1": "#B4E2C0",
+        "2": "#C9B9EB"
+      },
+      "pdf": "C_lavande_et_menthe.pdf",
+      "lightness": [
+        94.06307112849616,
+        85.95731269233954,
+        77.94201540125398
+      ],
+      "black_text_contrast": [
+        18.083659576864797,
+        14.580356426957657,
+        11.622717877497863
+      ]
+    }
+  ],
+  "main_exports_preserved": true,
+  "plotted_data_and_axes_identical": true,
+  "atlas_white_grid_removed": true,
+  "diagnostic_cvd_model": "Machado 2009, severity 100"
+}

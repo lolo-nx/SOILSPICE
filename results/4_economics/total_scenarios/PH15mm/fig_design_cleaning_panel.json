@@ -12,7 +12,7 @@
   "source_figures": [
     {
       "source": "results/4_economics/total_scenarios/PH15mm/fig_design_levers.pdf",
-      "sha256": "9500ceca660b2313e46a4ae7fdd48089811ba82646652ab598a1974202953a14",
+      "sha256": "9c4dbb9cae2a2bace832ea13bb4cd5eeaf93eeeb62cb1baa2a559776900feeac",
       "scale": 1.103540376949618,
       "box_pdf_points": [
         7.086614173228355,
@@ -23,7 +23,7 @@
     },
     {
       "source": "results/4_economics/total_scenarios/PH15mm/fig_cleaning.pdf",
-      "sha256": "35a2855f94d3910dc5cad1f3ef2ba1d1b5a736d434c6bfbb5e8f5d8ac1afeabb",
+      "sha256": "0253cb4db1a5eb0940bedf96bd866109ef66974d1fb4178f4bcc88fdc9086d27",
       "scale": 1.1353236550574213,
       "box_pdf_points": [
         7.086614173228355,
@@ -36,6 +36,6 @@
   "label_size_pt": 9.0,
   "preexisting_exports_unchanged": 237,
   "model_or_simulation_changes": false,
-  "pdf_sha256": "455ae3d1672cff49615e36e1bd78748858a2faa8f40d6140c4f42db818f77242",
-  "png_sha256": "47a74e2a4e5a312da9a31a9f5dfb07cba8497188cd65cdf30f125b91dc362549"
+  "pdf_sha256": "1475d512c93cf6049e2b19642ce4a9f0425e756d6a4685b415a056fe2fa5f02b",
+  "png_sha256": "627151e8defea932e5e30fe22a85526c17094e7b7bf58a4568f870b005743f4c"
 }

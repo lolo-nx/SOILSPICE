@@ -42,14 +42,25 @@ def horizontal_power():
     with pymupdf.open(output.with_suffix(".pdf")) as doc:
         assert len(doc) == 1 and not doc[0].get_images()
         np.testing.assert_allclose([doc[0].rect.width, doc[0].rect.height],
-                                  [183 / 25.4 * 72, 95 / 25.4 * 72], atol=1e-3)
+                                  [183 / 25.4 * 72, 58 / 25.4 * 72], atol=1e-3)
     for path, sha in protected.items():
         assert digest(path) == sha, f"A pre-existing export changed: {path}"
     report = dict(source=str(source.relative_to(config.REPO_DIR)), source_sha256=digest(source),
-                  width_mm=183, height_mm=95, png_dpi=600, vector_pdf=True,
+                  width_mm=183, height_mm=58, png_dpi=600, vector_pdf=True,
+                  colorbar_orientation="vertical", colorbar_position="right",
+                  palette="original grey-gold-green",
+                  palette_stops=[[0., "#7d7d7d"], [.3, "#b9a35a"], [.55, "#f8c421"],
+                                 [.78, "#8fb12b"], [1., "#1d6e1d"]],
+                  color_scale_limits=[.5, 1.], dark_cells_have_white_text=False,
+                  annotation_text_color="black",
                   configuration_columns=plotted[keys].to_dict("records"),
+                  column_grouping="module", module_group_order=list(ORDER),
+                  module_labels_position="above", configuration_labels_position="shared legend below",
+                  per_column_configuration_symbols=True, repeated_configuration_text=False,
+                  configuration_symbols=dict(rectangle="rectangle", triangle="triangle",
+                                             portrait="open", landscape="filled"),
                   S_ref_rows_percent=list(resilience.PAN_WINDOWS),
-                  all_128_values_match_original=True, transformation="transpose only",
+                  all_128_values_match_original=True, transformation="transpose and regroup columns by module",
                   M0_shown=False, physical_metrics_recalculated=False,
                   preexisting_exports_unchanged=len(protected))
     (config.SWEEP_DIR / "average_power_windows_horizontal.json").write_text(json.dumps(report, indent=2) + "\n")

@@ -1,7 +1,7 @@
 """Chapter 2 - Electrical resilience across modules.
 
 Paper: Electrical resilience across modules (optical_loss_modules_grid, regime_map, regime_atlas,
-average_power_windows, initial_amplification), Methods: simulation framework and soiling scenarios. Also writes the
+average_power_windows_horizontal, initial_amplification), Methods: simulation framework and soiling scenarios. Also writes the
 losses at equal band height used by chapters 3 and 4.
 
     python chapters/2_simulation.py            # from the saved loss maps (no LTspice)
@@ -88,7 +88,7 @@ def main():
     fig_simulation.optical_loss_grid(sweep, OUT / "optical_loss_modules_grid")
     fig_simulation.regime_map(states4, OUT / "regime_map")
     fig_simulation.regime_atlas(states4, OUT / "regime_atlas")
-    fig_simulation.average_power_windows(metrics4, OUT / "average_power_windows")
+    fig_simulation.average_power_windows_horizontal(metrics4, OUT / "average_power_windows_horizontal")
     fig_simulation.initial_amplification(metrics4, OUT / "initial_amplification")
     combined = fig_simulation.resilience_overview(metrics4, OUT / "fig_resilience")
     combined.to_csv(DATA / "fig_resilience_data.csv", index=False)

@@ -3,10 +3,12 @@
 Run from the repository: python Nature-builder-panel.py
 Writes a 183 × 148 mm PDF (retaining source vectors) and a 600 dpi PNG.
 The legacy --without-photos layout retains its 183 × 170 mm page.
+Use --framework-only for a standalone framework PDF and 600 dpi PNG.
 """
 import argparse
 import importlib.util
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import pymupdf
 from matplotlib import font_manager
@@ -47,18 +49,46 @@ def framework_without_step_labels(source, output):
         doc.save(output, garbage=3, deflate=True)
 
 
+def standalone_framework(source, output):
+    """Export only the vector framework at 183 mm wide, with 3 mm margins."""
+    mm = fig_soiling.MM
+    with pymupdf.open(source) as workflow, pymupdf.open() as doc:
+        clip = fig_soiling._bounds(workflow[0])
+        height_mm = 177.0 * clip.height / clip.width + 6.0
+        page = doc.new_page(width=183.0 * mm, height=height_mm * mm)
+        page.show_pdf_page(fig_soiling._rect(3, 3, 177, height_mm - 6),
+                           workflow, 0, clip=clip)
+        doc.save(output.with_suffix(".pdf"), garbage=3, deflate=True)
+        page.get_pixmap(dpi=600).save(output.with_suffix(".png"))
+    print(f"Saved {output.with_suffix('.pdf')} and .png (183 × {height_mm:.1f} mm)")
+
+
 def main():
     assets = config.INPUT_DIR / "figure_assets"
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--framework", type=Path, default=assets / "simulation_framework.pdf")
     parser.add_argument("--output", type=Path,
-                        default=config.CH1_DIR / "fig_soiling_layout_framework")
+                        help="Output file stem (default depends on the selected layout)")
     parser.add_argument("--photos", type=Path, default=assets / "Soiling-images.png")
-    parser.add_argument("--without-photos", action="store_true",
+    layout = parser.add_mutually_exclusive_group()
+    layout.add_argument("--without-photos", action="store_true",
                         help="Reproduce the previous two-panel layout without photographs")
+    layout.add_argument("--framework-only", action="store_true",
+                        help="Export only the simulation framework as PDF and PNG")
     args = parser.parse_args()
     if not args.framework.is_file():
         parser.error(f"Source figure not found: {args.framework}")
+    if args.output is None:
+        name = "fig_simulation_framework" if args.framework_only else "fig_soiling_layout_framework"
+        args.output = config.CH1_DIR / name
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+
+    if args.framework_only:
+        with TemporaryDirectory(prefix="soilspice-framework-") as temporary:
+            framework_panel = Path(temporary) / "framework.pdf"
+            framework_without_step_labels(args.framework, framework_panel)
+            standalone_framework(framework_panel, args.output)
+        return
 
     electrical = config.CH1_DIR / "pv_module_schematics"
     schematics.draw(electrical)
@@ -69,7 +99,6 @@ def main():
                     panel_labels=False, title_labels=True)
     framework_panel = config.CH1_DIR / "data" / "simulation_framework_panel.pdf"
     framework_without_step_labels(args.framework, framework_panel)
-
     args.output.parent.mkdir(parents=True, exist_ok=True)
     if not args.without_photos:
         fig_soiling.draw(args.photos, electrical_panel.with_suffix(".pdf"), framework_panel, args.output)

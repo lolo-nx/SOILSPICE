@@ -1,0 +1,120 @@
+{
+  "source": "results/2_simulation/data/resilience_states.csv",
+  "source_sha256": "d6eb1290618a2c247203474fc64f17765c8c0e6ec00bdf3a0449cee497310056",
+  "regime_order": [
+    "I: current limited",
+    "II: bypass clamped",
+    "III: mixed"
+  ],
+  "supplied_colours": {
+    "bleu": "#AACCEE",
+    "cyan": "#CCEEFF",
+    "vert": "#BBDDBB",
+    "jaune": "#EEEEBB",
+    "rose": "#FFBBCC",
+    "violet": "#EEBBDD",
+    "gris": "#DDDDDD"
+  },
+  "variants": [
+    {
+      "letter": "A",
+      "names_I_II_III": [
+        "cyan",
+        "jaune",
+        "violet"
+      ],
+      "palette": {
+        "0": "#CCEEFF",
+        "1": "#EEEEBB",
+        "2": "#EEBBDD"
+      },
+      "pdf": "A_cyan_jaune_violet.pdf",
+      "verified_states": 800,
+      "atlas_panels": 16
+    },
+    {
+      "letter": "B",
+      "names_I_II_III": [
+        "cyan",
+        "vert",
+        "rose"
+      ],
+      "palette": {
+        "0": "#CCEEFF",
+        "1": "#BBDDBB",
+        "2": "#FFBBCC"
+      },
+      "pdf": "B_cyan_vert_rose.pdf",
+      "verified_states": 800,
+      "atlas_panels": 16
+    },
+    {
+      "letter": "C",
+      "names_I_II_III": [
+        "gris",
+        "cyan",
+        "rose"
+      ],
+      "palette": {
+        "0": "#DDDDDD",
+        "1": "#CCEEFF",
+        "2": "#FFBBCC"
+      },
+      "pdf": "C_gris_cyan_rose.pdf",
+      "verified_states": 800,
+      "atlas_panels": 16
+    },
+    {
+      "letter": "D",
+      "names_I_II_III": [
+        "cyan",
+        "jaune",
+        "vert"
+      ],
+      "palette": {
+        "0": "#CCEEFF",
+        "1": "#EEEEBB",
+        "2": "#BBDDBB"
+      },
+      "pdf": "D_cyan_jaune_vert.pdf",
+      "verified_states": 800,
+      "atlas_panels": 16
+    },
+    {
+      "letter": "E",
+      "names_I_II_III": [
+        "bleu",
+        "jaune",
+        "rose"
+      ],
+      "palette": {
+        "0": "#AACCEE",
+        "1": "#EEEEBB",
+        "2": "#FFBBCC"
+      },
+      "pdf": "E_bleu_jaune_rose.pdf",
+      "verified_states": 800,
+      "atlas_panels": 16
+    },
+    {
+      "letter": "F",
+      "names_I_II_III": [
+        "gris",
+        "vert",
+        "violet"
+      ],
+      "palette": {
+        "0": "#DDDDDD",
+        "1": "#BBDDBB",
+        "2": "#EEBBDD"
+      },
+      "pdf": "F_gris_vert_violet.pdf",
+      "verified_states": 800,
+      "atlas_panels": 16
+    }
+  ],
+  "identical_plotted_data_and_axes": true,
+  "data_signature": "ad4723cebd33a1a4b5a9dc10e875c6b1cf706793a8cbfbfebda49674dbc16e64",
+  "preexisting_files_unchanged": 54,
+  "original_exports_preserved": true
+}

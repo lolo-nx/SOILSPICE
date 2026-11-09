@@ -59,7 +59,7 @@ results/
 | Paper | File |
 |---|---|
 | iv_grid_rectangle, errors_grid, fig_model_hierarchy, pv_module_schematics, Table uncertainty | results/1_validation/ |
-| optical_loss_modules_grid, regime_map, regime_atlas, average_power_windows, initial_amplification | results/2_simulation/ |
+| optical_loss_modules_grid, regime_map, regime_atlas, average_power_windows_horizontal, initial_amplification | results/2_simulation/ |
 | Table field (summary.json), fig_field_test (SI), fig_field_photos | results/3_field_test/ |
 | fig_band_growth, fig_energy_maps, fig_design_height, fig_design_levers, fig_cleaning, fig_inverse_chain, ed_massband_sensitivity (= fig_sensitivity), fig_pan_h_maps (SI), Tables sites and clean | results/4_economics/total_scenarios/PH15mm/ (reference); PH5mm, PH10mm, PH20mm, PH25mm for sensitivity |
 | fig_rain_total_comparison, fig_band_growth_total_comparison, energy/economics threshold sensitivity | results/4_economics/ |
@@ -79,6 +79,10 @@ reproduce the previous two-panel layout.
 The source framework is kept in `data/figure_assets/`; the electrical layouts are regenerated
 by `soilspice/schematics.py`. PDF panels remain vector in the assembled figure (183 × 148 mm).
 
+`python Nature-builder-panel.py --framework-only` exports the simulation framework alone
+to `results/1_validation/fig_simulation_framework.pdf` (vector) and `.png` (600 dpi),
+at 183 mm wide with 3 mm margins and no outer panel letter.
+
 `python Nature-builder-validation.py` creates `results/1_validation/fig_validation_panel.pdf` and `.png`:
 rectangle I-V curves across the top (a), curve errors at bottom left (b), and model comparison at bottom right (c).
 The saved results are redrawn in compact formats to fit a 183 × 170 mm figure,
@@ -88,6 +92,28 @@ with matching bottom panels, 11 pt bold panel letters and vector plots.
 at 183 × 170 mm: an integrated response map above (a), shared legends, and an atlas below (b)
 with modules in rows and band configurations in columns. The drawing code is `soilspice/fig_regimes.py`.
 It uses the saved `resilience_states.csv`; the standalone map and atlas retain their existing layout.
+
+`optical_loss_modules_grid` shows positive power losses, mean curves in 1 % optical-loss
+bins and min–max envelopes. The Y-axis label includes the definition
+`100 × (Pmp,clean − Pmp,soiled) / Pmp,clean [%]`, without an `L_P` symbol. The positive loss
+scale runs from 0 % at the bottom to 100 % at the top; no extra line is drawn at zero.
+Dotted horizontal guides
+labelled `Bypass loss reference` mark the power share of
+the smallest bypass-protected substring: 1/3 (33.3 %) for Yingli, JA Solar and LONGi,
+and 1/4 (25 %) for SunPower's unbalanced 2/4/2-column layout. These are idealised loss
+levels associated with bypassing a substring, not exact activation thresholds or fitted
+plateau values; the simulated losses can lie above these references.
+
+Chapter 2 exports `average_power_windows_horizontal.pdf` and `.png`: the retained
+average-power values and scale limits, with the 16 module/configuration combinations
+in columns and the eight optical-loss windows in rows, with a vertical colour bar
+on the right, in a wide format (183 × 65 mm). It uses the original grey–gold–green
+palette, with all numbers in black. The colour scale remains 0.5–1.0.
+
+`python chapters/fig_resilience.py --horizontal-power-only` regenerates this figure
+from the saved metrics and checks all 128 values against the source data. This is the
+only retained standalone average-power-window layout; trial layouts, palettes and
+comparison exports have been removed.
 
 ## Energy and economics: retained rain-event model
 

@@ -56,7 +56,7 @@ def main():
     sources = {"a": data / "iv_grid_rectangle_compact.pdf",
                "b": data / "errors_grid_compact.pdf"}
     fig_validation.iv_grid(pd.read_csv(inputs["a"]), sources["a"].with_suffix(""),
-                           figsize=(7.2, 3.15))
+                           figsize=(7.2, 3.15), compact_layout=True)
     fig_validation.errors_grid(pd.read_csv(inputs["b"]), sources["b"].with_suffix(""),
                                figsize=(3.4, 2.8))
     panels = {}
@@ -88,6 +88,10 @@ def main():
     composer.OUTPUT = str(args.output)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     composer.build()
+    # Keep an existing viewer-reset copy synchronized with the main figure.
+    upright = args.output.with_name(args.output.stem + "_upright.pdf")
+    if upright.exists():
+        upright.write_bytes(args.output.with_suffix(".pdf").read_bytes())
 
 
 if __name__ == "__main__":

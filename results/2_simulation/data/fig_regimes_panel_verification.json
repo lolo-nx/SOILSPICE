@@ -4,7 +4,7 @@
   "png_dpi": 600,
   "atlas_panels": 16,
   "saved_states_plotted": 800,
-  "header": "full simulation scatter with colour definitions and original point encodings",
+  "header": "full simulation scatter with regime names and explicit configuration legend",
   "scatter_points_plotted": 800,
   "scatter_points_clipped": 0,
   "scatter_limits_percent": {
@@ -41,22 +41,33 @@
       "orientation": "landscape"
     }
   ],
-  "point_symbol_key": "four joint markers beside atlas configuration row labels",
-  "module_colour_key": "coloured dots beside atlas module names",
+  "point_symbol_key": "open/filled rectangles and triangles in panel a legend and atlas row labels",
+  "configuration_legend_labels": [
+    "Rectangle, portrait",
+    "Rectangle, landscape",
+    "Triangle, portrait",
+    "Triangle, landscape"
+  ],
+  "atlas_row_label_rotation_degrees": 90,
+  "classification_formulas_in_legend": false,
+  "regime_numerals_in_scatter": false,
+  "module_colour_key": "coloured frames around single-line module and technology labels",
+  "atlas_configuration_symbols": "inline with vertical row labels",
+  "panel_b_label_y_mm": 61,
   "coverage_labels_on_first_column_only": true,
   "tau_labels_on_bottom_panel_of_each_column": true,
   "atlas_tick_labels": "left column and bottom row only",
   "atlas_cell_size_mm": [
-    34.625,
-    20.8
+    38.5,
+    20.7
   ],
   "atlas_gaps_mm": [
     2.5,
-    3
+    2
   ],
   "response_map_box_mm": [
     41,
-    8,
+    6,
     62,
     42.5
   ],
@@ -66,19 +77,21 @@
   },
   "contour_key_font_pt": 7,
   "section_titles_removed": true,
-  "contour_key": "compact reading key at upper right; explicitly applies to b",
+  "contour_key": "centred below panel b",
+  "contour_key_y_mm": 166.5,
+  "contour_key_centre_x_mm": 99.25,
   "voltage_boundary_percent": -15.0,
   "current_tolerance_percent": 3.0,
   "palette": {
     "0": "#e5effa",
-    "1": "#fbdccd",
+    "1": "#EEBBDD",
     "2": "#ded9f0"
   },
   "source_metrics_recalculated": false,
   "source": "results/2_simulation/data/resilience_states.csv",
   "source_sha256": "d6eb1290618a2c247203474fc64f17765c8c0e6ec00bdf3a0449cee497310056",
-  "preexisting_exports_unchanged": 51,
+  "preexisting_exports_unchanged": 97,
   "standalone_regime_map_and_atlas_preserved": true,
-  "pdf_sha256": "353f9612f4e7831c982b3b274b9770522a23b0ec3ccd2d798e2ab2ec77b348b7",
-  "png_sha256": "28b83c752902732482015780fb7f2aef726fd05174f172aa4315033e66f2af69"
+  "pdf_sha256": "b8f338cfbbedf2c23f16d2dc229ff7c36c65ae29eb21f2bfddc01e5c6b12a6c4",
+  "png_sha256": "4758d1ac8c1ffbd6b936f593f3510342672078834635868af116ecb53d531c52"
 }

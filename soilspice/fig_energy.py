@@ -7,12 +7,13 @@ import pandas as pd
 from matplotlib.colors import BoundaryNorm, ListedColormap
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
-from scipy.interpolate import RegularGridInterpolator
+from scipy.interpolate import RegularGridInterpolator, interp1d
 
 from matplotlib.patches import FancyBboxPatch, Rectangle
 
 from . import config, modules
-from .energy import AF, ROBOT, cycle_loss, washing_flags, washing_threshold, REFERENCE_TOTAL
+from .energy import (AF, ROBOT, cycle_loss, washing_flags, washing_threshold, REFERENCE_TOTAL,
+                     GROWTH_REFERENCE, TAU, lut)
 from .style import (LETTER, LOSS_CMAP, LOSS_NORM, MODULE_COLOR, ORDER, ORIENTATIONS, PRETTY, SITES as SITES_STYLE,
                     STYLE, LETTER_KW, SITE_COLOR, bold, edges, loss_colorbar, module_label, save)
 
@@ -20,45 +21,66 @@ INK = "black"
 SITE = SITE_COLOR
 
 
-def band_growth(series, path, *, threshold):
-    """Band growth updated at rain-event closures (three consecutive dry hours)."""
+def _band_loss_conversion(reference):
+    """Continuous SPICE scale for the fixed reference module and band geometry."""
+    loss_pct = 100 * lut([reference])[0]
+    if not np.all(np.isfinite(loss_pct)) or not np.all(np.diff(loss_pct) < 0):
+        raise ValueError("A secondary loss axis requires a strictly decreasing SPICE curve.")
+    # Extrapolation only supports the plotting margin outside the physical [0, 1] range.
+    forward = interp1d(TAU, loss_pct, bounds_error=False, fill_value="extrapolate")
+    inverse = interp1d(loss_pct[::-1], TAU[::-1], bounds_error=False, fill_value="extrapolate")
+    return forward, inverse
+
+
+def band_growth(series, path, *, threshold, reference=GROWTH_REFERENCE):
+    """One band-state curve with transmittance and calibrated SPICE loss axes.
+
+    Keep the saved, unrounded transmittance. The simulation samples loss on the
+    nearest 0.005 transmittance grid point; the secondary axis interpolates that
+    same lookup table continuously for reading the curve.
+    """
+    tau_to_loss, loss_to_tau = _band_loss_conversion(reference)
+    lookup_tau = TAU[np.rint(series.tau.to_numpy() * (len(TAU) - 1)).astype(int)]
+    if not np.allclose(100 * series.L_band, tau_to_loss(lookup_tau), rtol=0, atol=1e-9):
+        raise ValueError("Band-growth data and the secondary-axis SPICE reference do not match.")
+    max_loss = float(tau_to_loss(0))
+    loss_ticks = np.r_[np.arange(0, max_loss, 5.0), max_loss]
     summary = []
     with plt.rc_context(STYLE):
         fig, axes = plt.subplots(3, 1, figsize=(7.2, 4.6), sharex=True)
         fig.subplots_adjust(left=0.09, right=0.90, bottom=0.12, top=0.84, hspace=0.65)
-        ymax = max(30.0, 10 * np.ceil(100 * series.L_band.max() / 10))
-        for k, (site, color) in enumerate(SITE.items()):
+        for k, site in enumerate(("Doha", "Almería", "Neuchâtel")):
+            color = SITE[site]
             s = series[series.site == site]
             dates = pd.to_datetime(s.date)
             ax = axes[k]
-            ax.fill_between(dates, 0, 100 * s.L_band, color=color, alpha=0.25, lw=0,
-                            step="post", label="band power loss")
-            ax.set_ylim(0, ymax)
-            ax.set_ylabel("Band loss (%)")
-            ax2 = ax.twinx()
-            ax2.spines["right"].set_visible(True)
-            ax2.plot(dates, s.tau, color=color, lw=0.8, drawstyle="steps-post", label="band transmittance")
-            ax2.set_ylim(0, 1.05)
-            ax2.set_ylabel(r"Band $\tau_I$")
+            ax.plot(dates, s.tau, color=color, lw=0.8, drawstyle="steps-post", label="band state")
+            ax.set_ylim(1.05, 0)
+            ax.set_ylabel(r"Band $\tau_I$")
+            ax2 = ax.secondary_yaxis("right", functions=(tau_to_loss, loss_to_tau))
+            ax2.set_ylabel("Band power loss (%)")
+            ax2.set_yticks(loss_ticks, labels=[f"{x:g}" if x != max_loss else f"{x:.1f}"
+                                             for x in loss_ticks])
             washing = washing_flags(s.rain, washing_total=threshold)
             transfer = (s.rain >= 1.0) & ~washing
             event_times = pd.to_datetime(s.end_time)
-            ax.plot(event_times[washing], np.full(washing.sum(), ymax * 0.97), marker="v", ls="none", ms=3,
-                    color=INK, label="washing rain")
+            ax.vlines(event_times[washing], 0, 1, transform=ax.get_xaxis_transform(),
+                      colors="#4388A6", alpha=0.35, lw=0.5, linestyles="solid",
+                      zorder=0.5, label="washing rain")
             n_years = dates.dt.year.nunique()
             ax.set_title(f"{site}: {washing.sum() / n_years:.1f} washing events per year, "
                          f"{transfer.sum() / n_years:.1f} transfer events per year",
                          loc="left", fontweight="normal")
-            letter(ax, k)
-            if k == 0:
-                h1, l1 = ax.get_legend_handles_labels()
-                h2, l2 = ax2.get_legend_handles_labels()
-                fig.legend(h1 + h2, l1 + l2, loc="upper center", ncol=3, bbox_to_anchor=(0.5, 0.99),
-                           columnspacing=1.0)
+            ax.text(-.07, 1.07, "abc"[k], transform=ax.transAxes,
+                    va="bottom", **LETTER_KW)
             summary.append(dict(site=site, years=n_years, washing_events=int(washing.sum()),
                                 transfer_events=int(transfer.sum()), washing_per_year=washing.sum() / n_years,
                                 transfer_per_year=transfer.sum() / n_years, tau_min=s.tau.min(),
                                 band_loss_mean_pct=100 * np.average(s.L_band, weights=s.Y)))
+        fig.legend(handles=[Line2D([], [], lw=0.7, ls="-", color="#4388A6", alpha=0.35,
+                                   label=rf"Washing rain ($P_e\geq {threshold:g}$ mm/event)")],
+                   loc="upper center", ncol=1, bbox_to_anchor=(0.5, 0.93), bbox_transform=fig.transFigure,
+                   fontsize=7, columnspacing=1.2, handlelength=1.8)
         if threshold != REFERENCE_TOTAL:
             condition = rf"$P_e\geq {threshold:g}$ mm/event"
             fig.text(0.5, 0.035,
@@ -66,7 +88,8 @@ def band_growth(series, path, *, threshold):
                      "\n" + "3 dry hours separate events. Thresholds are not calibrated for bands.",
                      ha="center", fontsize=6)
         save(fig, path)
-    return pd.DataFrame(summary)
+    # Preserve the summary-table order used by the other economic exports.
+    return pd.DataFrame(summary).set_index("site").loc[list(SITE)].reset_index()
 
 
 def letter(ax, k, x=None, y=None, inside=True):
@@ -78,41 +101,16 @@ def letter(ax, k, x=None, y=None, inside=True):
 
 
 
-def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL):
-    """All the chapter-4 figures of the main text and the Extended Data.
-    R: model runs (energy.model_runs), T: maps on the f grid (energy.tau_grid), S: daily series of the reference
-    module (energy.growth_series), S16: sensitivity (energy.sensitivity), H1: band height at 1 % loss
-    (energy.design_h1). Figures in out, the best strategy per configuration in data. Returns the numbers quoted in
-    the text (one row per item)."""
-    selected_threshold = washing_threshold(washing_total)
+def energy_maps(T, path):
+    """Energy curves above the reference maps, using precomputed simulation data."""
     with plt.rc_context(STYLE):
-        R = R.copy(); R["k"] = R.k.astype(int)
-        KEY = ["site", "module", "orientation", "h", "f", "margin"]
-        G = R[R.market == "ground"]
-        man = G[G["mode"] != "robot"]
-        B = man.loc[man.groupby(KEY).cost.idxmin()].set_index(KEY)
-        B["cost_u_best"] = man.groupby(KEY).cost_u.min()
-        B = B.reset_index()
-        B["bc"] = 100 * (B.cost - B.cost_u_best) / B.revenue
-        B["bc_eur"] = B.cost - B.cost_u_best
-        B.to_csv(data / "best_strategy.csv", index=False)
-        summary = []
-
-        # ---- band growth at rain-event closures ------------------------------------------------------------------------
-        growth = band_growth(S, out / "fig_band_growth", threshold=selected_threshold)
-        for r in growth.itertuples(index=False):
-            summary.append(dict(item="series", site=r.site, washing_per_yr=r.washing_per_year,
-                                transfer_events_per_yr=r.transfer_per_year, tau_min=r.tau_min, Lband_mean=r.band_loss_mean_pct))
-
-        # ---- energy maps against h and f ---------------------------------------------------------------------------------
         T = T.copy()
         T["band"] = 100 * (T.loss - T.loss_u)                    # minus the uniform layer alone (same module)
-        med = T.groupby(["site", "h", "f"])[["band", "tau_mean"]].median().reset_index()
         fig = plt.figure(figsize=(7.2, 5.4))
-        gs = fig.add_gridspec(2, 3, height_ratios=[1.25, 1], hspace=0.5, wspace=0.16)
-        axs = np.array([fig.add_subplot(gs[0, 0])] + [None, None])
-        axs[1] = fig.add_subplot(gs[0, 1], sharey=axs[0]); axs[2] = fig.add_subplot(gs[0, 2], sharey=axs[0])
-        bxs = [fig.add_subplot(gs[1, 0])]; bxs += [fig.add_subplot(gs[1, j], sharey=bxs[0]) for j in (1, 2)]
+        gs = fig.add_gridspec(2, 3, height_ratios=[1, 1.25], hspace=0.5, wspace=0.16)
+        axs = np.array([fig.add_subplot(gs[1, 0])] + [None, None])
+        axs[1] = fig.add_subplot(gs[1, 1], sharey=axs[0]); axs[2] = fig.add_subplot(gs[1, 2], sharey=axs[0])
+        bxs = [fig.add_subplot(gs[0, 0])]; bxs += [fig.add_subplot(gs[0, j], sharey=bxs[0]) for j in (1, 2)]
         levels = [0, 0.5, 1, 2, 5, 10, 15, 20, 30, 100]
         cmap = plt.get_cmap("YlOrBr")
         cols = ["#ffffff"] + [cmap(v) for v in np.linspace(0.12, 0.95, len(levels) - 2)]   # white below 0.5 %, as in the paper
@@ -126,7 +124,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
                 if d[i[0]] < d[i[0] + 1] else float(np.interp(0, [d[i[0] + 1], d[i[0]]], axis_vals[i[0]:i[0] + 2][::-1]))
 
 
-        F0 = 0.1                                                                         # reference f, row 2
+        F0 = 0.1                                                                         # fixed f for the upper curves
         REF = ("JASOLAR", "landscape")   # reference configuration of the maps: closest to the median of the 8 over all (site, h, f)
         ref = T[(T.module == REF[0]) & (T.orientation == REF[1])][["site", "h", "f", "band", "tau_mean"]]
         for k, site in enumerate(SITE):
@@ -160,7 +158,6 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
             man = [(np.log10(0.6), y) for v in c2.levels if (y := crossing(zi[:, col], yi, v)) is not None]
             ax.clabel(c2, fmt="%g %%", fontsize=5.5, inline_spacing=1, manual=man)
             FF, HH = np.meshgrid(lf, Hs); ax.scatter(FF, HH, s=0.6, color=INK, alpha=0.5, lw=0)    # simulated points
-            ax.axvline(np.log10(F0), color=INK, lw=0.5, ls=":")
             ft = [0.01, 0.03, 0.1, 0.3, 1.0]; ax.set_xticks(np.log10(ft)); ax.set_xticklabels([f"{v:g}" for v in ft])
             ax.set_title(site); ax.set_xlabel("Trapped fraction $f$")
             if k == 0:
@@ -168,13 +165,12 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
             else:
                 plt.setp(ax.get_yticklabels(), visible=False)
             letter(ax, k, inside=False)
-            # row 2: each module and orientation at f = F0 (the dotted line of the map)
+            # upper row: each module and orientation at the fixed trapped fraction F0
             bx = bxs[k]
             for mname in ORDER:
                 for o, ls in (("portrait", "-"), ("landscape", "--")):
                     z = T[(T.site == site) & (T.module == mname) & (T.orientation == o) & np.isclose(T.f, F0)].sort_values("h")
-                    isref = (mname, o) == REF
-                    bx.plot(z.h, z.band, color=MODULE_COLOR[mname], ls=ls, lw=2.0 if isref else 0.9, zorder=3 if isref else 2)
+                    bx.plot(z.h, z.band, color=MODULE_COLOR[mname], ls=ls, lw=0.9, zorder=2)
             bx.set_xlim(10, 100); bx.set_xlabel("Band height $h$ (mm)")
             bx.set_title(site)
             if k == 0:
@@ -185,15 +181,46 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
         bxs[0].set_ylim(bottom=0)
         from matplotlib.lines import Line2D  # noqa: E402
         hd = [Line2D([], [], color=MODULE_COLOR[mname], lw=1.0, label=PRETTY[mname]) for mname in ORDER]
-        hd += [Line2D([], [], color="0.3", ls="-", label="portrait"), Line2D([], [], color="0.3", ls="--", label="landscape"),
-               Line2D([], [], color=MODULE_COLOR[REF[0]], ls="--", lw=2.0, label="reference (maps)")]
-        fig.legend(handles=hd, loc="upper center", ncol=7, bbox_to_anchor=(0.5, 0.475), handlelength=1.6, columnspacing=1.0)
+        hd += [Line2D([], [], color="0.3", ls="-", label="portrait"), Line2D([], [], color="0.3", ls="--", label="landscape")]
+        fig.legend(handles=hd, loc="upper center", ncol=6, bbox_to_anchor=(0.5, 0.99), bbox_transform=fig.transFigure, handlelength=1.6, columnspacing=1.0)
         cb = fig.colorbar(im, ax=list(axs), orientation="horizontal", location="top", fraction=0.05, pad=0.13, aspect=60,
                           spacing="uniform", ticks=levels[:-1])
         cb.ax.set_xticklabels([f"{v:g}" for v in levels[:-1]])
         cb.set_label("Energy lost to the band (% per year)", labelpad=2)
         cb.outline.set_linewidth(0.6)
-        save(fig, out / "fig_energy_maps")
+        save(fig, path)
+
+
+def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL):
+    """All the chapter-4 figures of the main text and the Extended Data.
+    R: model runs (energy.model_runs), T: maps on the f grid (energy.tau_grid), S: daily series of the reference
+    module (energy.growth_series), S16: sensitivity (energy.sensitivity), H1: band height at 1 % loss
+    (energy.design_h1). Figures in out, the best strategy per configuration in data. Returns the numbers quoted in
+    the text (one row per item)."""
+    selected_threshold = washing_threshold(washing_total)
+    with plt.rc_context(STYLE):
+        R = R.copy(); R["k"] = R.k.astype(int)
+        KEY = ["site", "module", "orientation", "h", "f", "margin"]
+        G = R[R.market == "ground"]
+        man = G[G["mode"] != "robot"]
+        B = man.loc[man.groupby(KEY).cost.idxmin()].set_index(KEY)
+        B["cost_u_best"] = man.groupby(KEY).cost_u.min()
+        B = B.reset_index()
+        B["bc"] = 100 * (B.cost - B.cost_u_best) / B.revenue
+        B["bc_eur"] = B.cost - B.cost_u_best
+        B.to_csv(data / "best_strategy.csv", index=False)
+        summary = []
+
+        # ---- band growth at rain-event closures ------------------------------------------------------------------------
+        growth = band_growth(S, out / "fig_band_growth", threshold=selected_threshold)
+        for r in growth.itertuples(index=False):
+            summary.append(dict(item="series", site=r.site, washing_per_yr=r.washing_per_year,
+                                transfer_events_per_yr=r.transfer_per_year, tau_min=r.tau_min, Lband_mean=r.band_loss_mean_pct))
+
+        # ---- energy maps against h and f ---------------------------------------------------------------------------------
+        T = T.copy()
+        T["band"] = 100 * (T.loss - T.loss_u)
+        energy_maps(T, out / "fig_energy_maps")
         for site in SITE:
             for h in (40.0, 60.0, 80.0):
                 q = T[(T.site == site) & (T.h == h)]
@@ -238,7 +265,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
                 m = q[q.f == 0.1].set_index("h").d
                 ax.plot(m.index, m, color=MODULE_COLOR[mname], label=PRETTY[mname])
             ax.axhline(0, color=INK, lw=0.5)
-            ax.set_xlim(10, 100); ax.set_ylim(-0.7, 0.9); ax.set_title(site, color=SITE[site])
+            ax.set_xlim(10, 100); ax.set_ylim(-0.7, 0.9); ax.set_title(site, color=INK)
             ax.set_xlabel("Band height $h$ (mm)")
             ax.text(98, 0.85, "landscape cheaper", fontsize=5.5, va="top", ha="right", color="0.35")
             ax.text(98, -0.65, "portrait cheaper", fontsize=5.5, va="bottom", ha="right", color="0.35")
@@ -328,7 +355,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
             ax.plot(n.index, n, color=col, ls="--", lw=0.9)
             ax.fill_between(b.min().index, b.min(), b.max(), color=col, alpha=0.18, lw=0)
             ax.plot(b.median().index, b.median(), color=col, label=site)
-        ax.set_ylim(0, 20); ax.set_xlim(10, 100)
+        ax.set_ylim(-2, 20); ax.set_xlim(10, 100)
         ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Band cost (% of revenue)")
         ax.legend(handles=[Line2D([], [], color="0.4", ls="--", label="rain only"), Line2D([], [], color="0.4", label="cheapest cleaning")],
                   loc="upper left", bbox_to_anchor=(0.0, 0.88), fontsize=6)
@@ -341,7 +368,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
             ax.plot(c.median().index, c.median(), color=col)
             ax.axhline(q.cleans_u.median(), color=col, ls=":", lw=0.9)
         ax.plot([], [], color="0.4", label="with the band"); ax.plot([], [], color="0.4", ls=":", label="without band")
-        ax.set_xlim(10, 100); ax.set_ylim(0, 15)
+        ax.set_xlim(10, 100); ax.set_ylim(-1.5, 15)
         ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Cleanings per year (trigger rule)")
         ax.legend(loc="upper right", bbox_to_anchor=(1.0, 0.77), fontsize=6)
         letter(ax, 1, x=-0.25)

@@ -50,9 +50,6 @@ def _regime_key(ax, states):
             np.testing.assert_array_equal(line.get_xdata(), x)
             np.testing.assert_array_equal(line.get_ydata(), y)
             points += len(sub)
-    for label, x, y, regime in (("I", 19, -96, 0), ("II", -71, 0, 1), ("III", -71, -96, 2)):
-        ax.text(x, y, label, ha="center", va="center", fontsize=6.2 if label == "II" else 8,
-                fontweight="bold", color=REGIME_EDGE[regime])
     ax.set(xlim=(x0, x1), ylim=(y0, y1),
            xlabel=r"$\Delta V_{\mathrm{mp}}/V_{\mathrm{mp,clean}}$ [%]",
            ylabel=r"$\Delta I_{\mathrm{mp}}/I_{\mathrm{mp,clean}}$ [%]")
@@ -67,27 +64,30 @@ def _regime_key(ax, states):
 
 
 def _definitions(fig):
-    dv, di = REGIME_DV_PCT, REGIME_DI_PCT
-    voltage = r"\Delta V_{\mathrm{mp}}/V_{\mathrm{mp,clean}}"
-    current = r"\Delta I_{\mathrm{mp}}/I_{\mathrm{mp,clean}}"
-    definitions = (
-        ("I  Current limited", rf"${voltage}>{dv:g}\%$"),
-        ("II  Bypass clamped", rf"${voltage}\leq{dv:g}\%,\quad|{current}|<{di:g}\%$"),
-        ("III  Mixed", rf"${voltage}\leq{dv:g}\%,\quad|{current}|\geq{di:g}\%$"),
-    )
-    for regime, (title, criterion) in enumerate(definitions):
-        y = 9.5 + 12.5 * regime
+    """Regime colours and all four shape/orientation combinations for panel a."""
+    for regime, title in enumerate(("I, current limited", "II, bypass clamped", "III, mixed")):
+        y = 9.5 + 7 * regime
         left, bottom, width, height = _rect(113, y + .2, 3.3, 3.3)
         fig.add_artist(Rectangle((left, bottom), width, height, transform=fig.transFigure,
-                                 fc=REGIME_FILL[regime], ec=REGIME_EDGE[regime], lw=.65))
-        _text(fig, 119, y, title, fontsize=7.5, fontweight="bold", va="top")
-        _text(fig, 119, y + 5.3, criterion, fontsize=6.3, va="top")
-    # The contour key belongs to the same compact reading key; its panel is
-    # explicit, so the classification boundaries in a cannot be mistaken for it.
-    fig.add_artist(Line2D([113 / WIDTH_MM, 120 / WIDTH_MM], [1 - 54.5 / HEIGHT_MM] * 2,
-                          transform=fig.transFigure, color="0.15", lw=1.1))
-    _text(fig, 122, 54.5, r"Contours in b: $\Delta P_{\mathrm{mp}}/P_{\mathrm{mp,clean}}$ [%]",
-          fontsize=7, va="center")
+                                 fc=REGIME_FILL[regime], ec="none", lw=0))
+        _text(fig, 119, y + .2 + 3.3 / 2, title, fontsize=7.5, fontweight="bold", va="center")
+    _text(fig, 113, 30.5, "Band configuration", fontsize=7, fontweight="bold", va="top")
+    for index, (shape, orientation) in enumerate(CONFIGS):
+        x = 114 + 34 * (index % 2)
+        y = 36.5 + 7 * (index // 2)
+        fig.add_artist(Line2D([x / WIDTH_MM], [1 - y / HEIGHT_MM], transform=fig.transFigure,
+                             ls="none", marker=SHAPE_MARKER[shape], ms=4.3, mew=.65,
+                             mec="0.25", mfc="none" if orientation == "portrait" else "0.25"))
+        _text(fig, x + 3, y, f"{shape.capitalize()}, {orientation}", fontsize=6.7, va="center")
+
+
+def _contour_key(fig, centre_x):
+    """Centre the line and its complete label together beneath the atlas."""
+    fig.legend(handles=[Line2D([], [], color="0.15", lw=1.1)],
+               labels=[r"Contours: $\Delta P_{\mathrm{mp}}/P_{\mathrm{mp,clean}}$ [%]"],
+               loc="center", bbox_to_anchor=(centre_x / WIDTH_MM, 1 - 166.5 / HEIGHT_MM),
+               bbox_transform=fig.transFigure, fontsize=7, frameon=False,
+               borderpad=0, borderaxespad=0, handlelength=2.4, handletextpad=.7)
 
 
 def _atlas_cell(ax, sub, last_row, first_column):
@@ -121,40 +121,41 @@ def draw(states, path):
     with plt.rc_context(STYLE):
         fig = plt.figure(figsize=(WIDTH_MM / 25.4, HEIGHT_MM / 25.4))
         _text(fig, 3, 6, "a", fontsize=9, fontweight="bold", va="top")
-        response_box = (41, 8, 62, 42.5)
+        response_box = (41, 6, 62, 42.5)
         scatter_points = _regime_key(fig.add_axes(_rect(*response_box)), states)
         _definitions(fig)
 
-        _text(fig, 3, 59, "b", fontsize=9, fontweight="bold", va="top")
-        left, top, cell_width, cell_height, gap_x, gap_y = 33, 69.5, 34.625, 20.8, 2.5, 3
+        _text(fig, 3, 61, "b", fontsize=9, fontweight="bold", va="top")
+        left, top, cell_width, cell_height, gap_x, gap_y = 18.5, 69, 38.5, 20.7, 2.5, 2
         # Module columns retain the layout of the original standalone atlas.
-        # Colour dots beside the module names also key the response scatter.
+        # Colour frames around the single-line names also key the response scatter.
         for col, name in enumerate(ORDER):
             x = left + col * (cell_width + gap_x)
             centre = x + cell_width / 2
-            name_label = _text(fig, centre + 1.5, 60.5, PRETTY[name], ha="center", va="top",
-                               fontsize=7.5, fontweight="bold")
-            name_width_mm = name_label.get_window_extent(fig.canvas.get_renderer()).width / fig.dpi * 25.4
-            # Keep the same physical gap from the printed name for all modules.
-            dot_x = centre + 1.5 - name_width_mm / 2 - 1.5 - 4.4 / 72 * 25.4 / 2
-            fig.add_artist(Line2D([dot_x / WIDTH_MM], [1 - 61.9 / HEIGHT_MM],
-                                  transform=fig.transFigure, ls="none", marker="o", ms=4.4,
-                                  color=MODULE_COLOR[name], mew=0))
-            _text(fig, centre + 1.5, 64.5, f"({TECH[name]})", ha="center", va="top", fontsize=7.5, fontweight="bold")
+            _text(fig, centre, 63.5, f"{PRETTY[name]} ({TECH[name]})", ha="center", va="center",
+                  fontsize=7.5, fontweight="bold",
+                  bbox=dict(boxstyle="square,pad=0.3", facecolor="white",
+                            edgecolor=MODULE_COLOR[name], linewidth=1.0))
             for row, (shape, orientation) in enumerate(CONFIGS):
                 y = top + row * (cell_height + gap_y)
                 ax = fig.add_axes(_rect(x, y, cell_width, cell_height))
                 plotted_states += _atlas_cell(ax, sel(states, name, shape, orientation),
                                               row == len(CONFIGS) - 1, col == 0)
-        # Four unique joint symbols, integrated with their configuration labels:
-        # open/filled circles and open/filled triangles. No separate symbol table.
+        # Vertical row labels leave room for wider maps. The same open/filled
+        # rectangles and triangles are keyed explicitly beside panel a.
         for row, (shape, orientation) in enumerate(CONFIGS):
             y = top + row * (cell_height + gap_y) + cell_height / 2
-            fig.add_artist(Line2D([6 / WIDTH_MM], [1 - y / HEIGHT_MM], transform=fig.transFigure,
+            marker_height = 4.3 / 72 * 25.4
+            label = _text(fig, 5.5, y - (1 + marker_height) / 2,
+                          f"{shape.capitalize()}\n{orientation.capitalize()}", fontsize=6.7,
+                          fontweight="bold", ha="center", va="center", rotation=90, multialignment="center")
+            label_height = label.get_window_extent(fig.canvas.get_renderer()).height / fig.dpi * 25.4
+            marker_y = y + label_height / 2 + .5
+            fig.add_artist(Line2D([5.5 / WIDTH_MM], [1 - marker_y / HEIGHT_MM], transform=fig.transFigure,
                                   ls="none", marker=SHAPE_MARKER[shape], ms=4.3, mew=.65,
                                   mec="0.25", mfc="none" if orientation == "portrait" else "0.25"))
-            _text(fig, 22, y - 1.6, shape.capitalize(), fontsize=7, fontweight="bold", ha="right", va="center")
-            _text(fig, 22, y + 1.8, orientation.capitalize(), fontsize=6.5, ha="right", va="center")
+        contour_centre = left + (len(ORDER) * cell_width + (len(ORDER) - 1) * gap_x) / 2
+        _contour_key(fig, contour_centre)
         fig.canvas.draw()
         renderer = fig.canvas.get_renderer()
         assert len(fig.axes[1:]) == 16
@@ -178,13 +179,19 @@ def draw(states, path):
         plots.save(fig, path, dpi=600, bbox_inches=None)
     return dict(width_mm=WIDTH_MM, height_mm=HEIGHT_MM, png_dpi=600,
                 atlas_panels=16, saved_states_plotted=plotted_states,
-                header="full simulation scatter with colour definitions and original point encodings",
+                header="full simulation scatter with regime names and explicit configuration legend",
                 scatter_points_plotted=scatter_points, scatter_points_clipped=0,
                 scatter_limits_percent=dict(voltage=[-75, 22], current=[-103, 13]),
                 atlas_column_modules=list(ORDER),
                 atlas_row_configurations=[dict(shape=s, orientation=o) for s, o in CONFIGS],
-                point_symbol_key="four joint markers beside atlas configuration row labels",
-                module_colour_key="coloured dots beside atlas module names",
+                point_symbol_key="open/filled rectangles and triangles in panel a legend and atlas row labels",
+                configuration_legend_labels=[f"{s.capitalize()}, {o}" for s, o in CONFIGS],
+                atlas_row_label_rotation_degrees=90,
+                classification_formulas_in_legend=False,
+                regime_numerals_in_scatter=False,
+                module_colour_key="coloured frames around single-line module and technology labels",
+                atlas_configuration_symbols="inline with vertical row labels",
+                panel_b_label_y_mm=61,
                 coverage_labels_on_first_column_only=True,
                 tau_labels_on_bottom_panel_of_each_column=True,
                 atlas_tick_labels="left column and bottom row only",
@@ -193,7 +200,8 @@ def draw(states, path):
                 response_map_box_mm=list(response_box),
                 module_and_technology_font=dict(size_pt=7.5, weight="bold"),
                 contour_key_font_pt=7,
-                section_titles_removed=True, contour_key="compact reading key at upper right; explicitly applies to b",
+                section_titles_removed=True, contour_key="centred below panel b",
+                contour_key_y_mm=166.5, contour_key_centre_x_mm=contour_centre,
                 voltage_boundary_percent=REGIME_DV_PCT, current_tolerance_percent=REGIME_DI_PCT,
                 palette={str(k): REGIME_FILL[k] for k in (0, 1, 2)},
                 source_metrics_recalculated=False)

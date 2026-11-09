@@ -1,0 +1,110 @@
+{
+  "width_mm": 183.0,
+  "height_mm": 170.0,
+  "png_dpi": 600,
+  "atlas_panels": 16,
+  "saved_states_plotted": 800,
+  "header": "full simulation scatter with regime names and explicit configuration legend",
+  "scatter_points_plotted": 800,
+  "scatter_points_clipped": 0,
+  "scatter_limits_percent": {
+    "voltage": [
+      -75,
+      22
+    ],
+    "current": [
+      -103,
+      13
+    ]
+  },
+  "atlas_column_modules": [
+    "YINGLI",
+    "SUNPOWER",
+    "JASOLAR",
+    "LONGI"
+  ],
+  "atlas_row_configurations": [
+    {
+      "shape": "rectangle",
+      "orientation": "portrait"
+    },
+    {
+      "shape": "rectangle",
+      "orientation": "landscape"
+    },
+    {
+      "shape": "triangle",
+      "orientation": "portrait"
+    },
+    {
+      "shape": "triangle",
+      "orientation": "landscape"
+    }
+  ],
+  "point_symbol_key": "open/filled rectangles and triangles in panel a legend and atlas row labels",
+  "configuration_legend_labels": [
+    "Rectangle, portrait",
+    "Rectangle, landscape",
+    "Triangle, portrait",
+    "Triangle, landscape"
+  ],
+  "atlas_row_label_rotation_degrees": 90,
+  "classification_formulas_in_legend": false,
+  "regime_numerals_in_scatter": false,
+  "module_colour_key": "coloured frames around single-line module and technology labels",
+  "atlas_configuration_symbols": "inline with vertical row labels",
+  "panel_b_label_y_mm": 61,
+  "coverage_labels_on_first_column_only": true,
+  "tau_labels_on_bottom_panel_of_each_column": true,
+  "atlas_tick_labels": "left column and bottom row only",
+  "atlas_cell_size_mm": [
+    38.5,
+    20.7
+  ],
+  "atlas_gaps_mm": [
+    2.5,
+    2
+  ],
+  "response_map_box_mm": [
+    41,
+    6,
+    62,
+    42.5
+  ],
+  "module_and_technology_font": {
+    "size_pt": 7.5,
+    "weight": "bold"
+  },
+  "contour_key_font_pt": 7,
+  "section_titles_removed": true,
+  "contour_key": "centred below panel b",
+  "contour_key_y_mm": 166.5,
+  "contour_key_centre_x_mm": 99.25,
+  "voltage_boundary_percent": -15.0,
+  "current_tolerance_percent": 3.0,
+  "palette": {
+    "0": "#E6F1F5",
+    "1": "#D1A6C0",
+    "2": "#BFD2DE"
+  },
+  "source_metrics_recalculated": false,
+  "CIELAB_lightness_D65": [
+    94.45163032829024,
+    72.64992230531405,
+    83.14869911329153
+  ],
+  "contrast_black_text_on_regime_fill": [
+    18.265232060567584,
+    9.926703417272732,
+    13.488695856862591
+  ],
+  "diagnostics_are_not_accessibility_certification": true,
+  "cvd_source": "https://github.com/njsmith/colorspacious/blob/master/colorspacious/cvd.py",
+  "nature_guidance": [
+    "https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/",
+    "https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/"
+  ],
+  "source_sha256": "d6eb1290618a2c247203474fc64f17765c8c0e6ec00bdf3a0449cee497310056",
+  "main_exports_preserved": true,
+  "plotted_data_and_axis_limits_identical": true
+}

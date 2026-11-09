@@ -1,8 +1,8 @@
 """Draw the regime map and atlas as an integrated 183 × 170 mm vector figure.
 
 Run: python Nature-builder-regimes.py
-The full response scatter and original colour criteria form the key above the atlas.
-The atlas below uses module columns and configuration rows, which also key the scatter.
+The full response scatter and its colour and symbol legend sit above the atlas.
+The atlas uses module columns and vertical configuration rows, with its contour key below.
 No metric is recalculated.
 """
 import argparse
@@ -56,11 +56,14 @@ def main():
     caption = (
         r"\caption{\textbf{Electrical regimes under bottom-edge soiling.} "
         r"\textbf{a}, Simulated changes in maximum-power voltage and current relative to the clean module; "
-        rf"all {len(states)} saved states are shown. Background colours identify the three regimes using "
-        r"the criteria at right. \textbf{b}, Corresponding regime maps versus band transmittance $\tau_I$ "
-        r"and active-cell coverage $A_{\mathrm{cov}}$. Module colours are keyed in the column headers; "
-        r"the four markers beside the configuration row labels also apply to a. Black contours show "
-        r"relative maximum-power change in percent; negative values indicate power loss. "
+        rf"all {len(states)} saved states are shown. Background colours distinguish current-limited, "
+        r"bypass-clamped and mixed regimes. The legend identifies all four band configurations: "
+        r"rectangles and triangles denote band shape, with open symbols for portrait and filled symbols "
+        r"for landscape. \textbf{b}, Corresponding regime maps versus band transmittance $\tau_I$ "
+        r"and active-cell coverage $A_{\mathrm{cov}}$. Coloured frames around the single-line module "
+        r"names and technologies key the module colours; "
+        r"vertical row labels use the same four configuration symbols as a. Black contours show "
+        r"relative maximum-power change in percent, keyed below b; negative values indicate power loss. "
         r"All classifications and power values are unchanged from the saved simulations.\label{fig:regimes}}"
     )
     (config.SWEEP_DIR / "fig_regimes_panel_caption.tex").write_text(caption + "\n")

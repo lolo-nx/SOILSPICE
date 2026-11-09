@@ -1,6 +1,8 @@
 """Figures of chapter 2 (electrical resilience): regime map and atlas, initial amplification, mean power on
 windows of the optical loss, power loss against the optical loss for the four modules. Inputs: the loss maps of
 run_simulation in chapter 2 (resilience_states.csv, resilience_metrics.csv, same_acov_tauI_sweep.csv)."""
+from fractions import Fraction
+
 import matplotlib.patheffects as pe
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,29 +10,32 @@ import pandas as pd
 from matplotlib.colors import LinearSegmentedColormap, ListedColormap, Normalize, TwoSlopeNorm
 from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle
+from matplotlib.path import Path
 
 from . import modules, plots, resilience
 from .analysis import REGIME_DI_PCT, REGIME_DV_PCT, REGIME_NAMES
 from .style import LETTER_KW, ORDER, ORIENTATIONS, STYLE
 
 # optical_loss_grid: (orientation, shape, colour, marker)
+RECTANGLE_MARKER = Path([(-1, -0.65), (1, -0.65), (1, 0.65), (-1, 0.65), (-1, -0.65)],
+                        [Path.MOVETO, Path.LINETO, Path.LINETO, Path.LINETO, Path.CLOSEPOLY])
 OPTICAL_CONFIGS = [
-    ("portrait", "rectangle", "#08519C", "s"),
+    ("portrait", "rectangle", "#08519C", RECTANGLE_MARKER),
     ("portrait", "triangle", "#6BAED6", "^"),
-    ("landscape", "rectangle", "#A4161A", "o"),
-    ("landscape", "triangle", "#F4A259", "D"),
+    ("landscape", "rectangle", "#A4161A", RECTANGLE_MARKER),
+    ("landscape", "triangle", "#F4A259", "^"),
 ]
 
 SHAPES = ("rectangle", "triangle")
 CONFIGS = [(s, o) for s in SHAPES for o in ORIENTATIONS]
-SHAPE_MARKER = {"rectangle": "o", "triangle": "^"}
+SHAPE_MARKER = {"rectangle": RECTANGLE_MARKER, "triangle": "^"}
 SHAPE_LS = {"rectangle": "-", "triangle": "--"}
 LETTER = 7.5                                        # panel letters, as in the validation figures
 EDGE = dict(edgecolor="black", lw=0.4)
 REGIME_LABEL = {0: "I, current limited", 1: "II, bypass clamped", 2: "III, mixed"}
-# regime colours of the first version of the paper (blue, salmon, lavender)
-REGIME_FILL = {0: "#e5effa", 1: "#fbdccd", 2: "#ded9f0"}     # I light blue, II light salmon, III lavender
-REGIME_EDGE = {0: "#2a78d6", 1: "#eb6834", 2: "#4a3aa7"}
+# Original pale blue and lavender; replace the salmon/orange regime with pale purple.
+REGIME_FILL = {0: "#e5effa", 1: "#EEBBDD", 2: "#ded9f0"}
+REGIME_EDGE = {0: "#2a78d6", 1: "#606060", 2: "#4a3aa7"}
 S_LABEL = r"Optical loss $S = A_{\mathrm{cov}}(1-\tau_I)$ [%]"
 LOSS_P = r"Loss of $P_{\mathrm{mp}}$ [%]"
 
@@ -149,7 +154,7 @@ def loss_vs_S(df, path):
             for name in ORDER:
                 for shape in SHAPES:
                     sub = sel(df, name, shape, orientation)
-                    ax.plot(sub["S_%"], sub["Pmp_loss_%"], SHAPE_MARKER[shape], ms=3.0, mew=0,
+                    ax.plot(sub["S_%"], sub["Pmp_loss_%"], ls="none", marker=SHAPE_MARKER[shape], ms=3.0, mew=0,
                             color=plots.MODULE_COLOR[name], alpha=0.9, zorder=3)
             ax.set_xlim(0, smax * 1.05)
             ax.set_ylim(-102, 3)
@@ -287,8 +292,8 @@ def average_power_windows(metrics, path, windows=resilience.PAN_WINDOWS, vmin=0.
 
 
 def average_power_windows_horizontal(metrics, path, windows=resilience.PAN_WINDOWS):
-    """Transpose the saved power table: 16 configurations across, optical windows down."""
-    keys = [(name, shape, orientation) for shape, orientation in CONFIGS for name in ORDER]
+    """Module-grouped power table with configuration symbols and black numbers."""
+    keys = [(name, shape, orientation) for name in ORDER for shape, orientation in CONFIGS]
     selected = metrics[metrics.module.isin(ORDER)]
     if len(selected) != 16 or selected.duplicated(["module", "shape", "orientation"]).any():
         raise ValueError("Expected exactly 16 module/shape/orientation configurations")
@@ -297,34 +302,48 @@ def average_power_windows_horizontal(metrics, path, windows=resilience.PAN_WINDO
     values = ordered.to_numpy(float).T
     if not np.isfinite(values).all():
         raise ValueError("All saved average-power values must be finite")
-    with plt.rc_context({**STYLE, "xtick.labelsize": 6.5, "ytick.labelsize": 7}):
-        fig = plt.figure(figsize=(183 / 25.4, 95 / 25.4))
-        ax = fig.add_axes([.09, .29, .895, .48])
+    cmap = _average_power_colormap()
+    norm = Normalize(vmin=.5, vmax=1.)
+    with plt.rc_context({**STYLE, "xtick.labelsize": 6, "ytick.labelsize": 7}):
+        fig = plt.figure(figsize=(183 / 25.4, 58 / 25.4))
+        bottom, height = 13 / 58, 39 / 58
+        ax = fig.add_axes([.09, bottom, .78, height])
         im = ax.pcolormesh(np.arange(17) - .5, np.arange(len(windows) + 1) - .5, values,
-                          cmap=_average_power_colormap(), norm=Normalize(vmin=.5, vmax=1.),
+                          cmap=cmap, norm=norm,
                           shading="flat", edgecolors="none", linewidth=0, rasterized=False)
         for (i, j), value in np.ndenumerate(values):
             label = f"{value:.2f}" if value >= .995 else f"{value:.2f}"[1:]
             ax.text(j, i, label, ha="center", va="center", fontsize=7, color="black")
         ax.set(xlim=(-.5, 15.5), ylim=(len(windows) - .5, -.5))
-        ax.set_xticks(range(16))
-        ax.set_xticklabels([plots.module_label(name, with_tech=False) for name, _, _ in keys])
+        ax.set_xticks([])
         ax.set_yticks(range(len(windows)))
         ax.set_yticklabels([f"{w:g}" for w in windows])
         ax.set_ylabel(r"Window $[0,S_{\mathrm{ref}}]$, $S_{\mathrm{ref}}$ [%]", labelpad=6)
         ax.tick_params(length=0, pad=4)
         ax.spines["top"].set_visible(True)
         ax.spines["right"].set_visible(True)
-        for group, (shape, orientation) in enumerate(CONFIGS):
+        for j, (_, shape, orientation) in enumerate(keys):
+            ax.plot(j, -.065, transform=ax.get_xaxis_transform(), clip_on=False,
+                    ls="none", marker=SHAPE_MARKER[shape], ms=4, mew=.65,
+                    mec="0.25", mfc="none" if orientation == "portrait" else "0.25")
+        for group, name in enumerate(ORDER):
             if group:
                 ax.axvline(group * 4 - .5, color="black", lw=.8)
-            ax.text(group * 4 + 1.5, -.23, f"{shape.capitalize()}\n{orientation}",
-                    transform=ax.get_xaxis_transform(), ha="center", va="top", fontsize=7, fontweight="bold")
-        cax = fig.add_axes([.09, .865, .895, .025])
-        cb = fig.colorbar(im, cax=cax, orientation="horizontal", ticks=np.linspace(.5, 1, 6))
+            ax.text(group * 4 + 1.5, 1.035, plots.module_label(name, with_tech=False),
+                    transform=ax.get_xaxis_transform(), ha="center", va="bottom", fontsize=7, fontweight="bold")
+        handles = [Line2D([], [], ls="none", marker=SHAPE_MARKER[shape], ms=4, mew=.65,
+                          mec="0.25", mfc="none" if orientation == "portrait" else "0.25",
+                          label=f"{shape.capitalize()}, {orientation}") for shape, orientation in CONFIGS]
+        legend = fig.legend(handles=handles, loc="center", ncol=4,
+                            bbox_to_anchor=(.48, 4.5 / 58), bbox_transform=fig.transFigure,
+                            fontsize=6.2, frameon=False, borderpad=0,
+                            handletextpad=.5, columnspacing=1.7, handlelength=1.4)
+        cax = fig.add_axes([.90, bottom, .016, height])
+        cb = fig.colorbar(im, cax=cax, orientation="vertical", ticks=np.linspace(.5, 1, 6))
         cb.solids.set_rasterized(False)
-        cb.ax.xaxis.set_ticks_position("top")
-        cb.ax.xaxis.set_label_position("top")
+        cb.solids.set_edgecolor("face")
+        cb.ax.yaxis.set_ticks_position("right")
+        cb.ax.yaxis.set_label_position("right")
         cb.set_label(r"$P_{\mathrm{an},S}$ [–]", labelpad=4)
         cb.ax.tick_params(labelsize=6.5, length=2, pad=2)
         cb.outline.set_linewidth(.5)
@@ -332,7 +351,7 @@ def average_power_windows_horizontal(metrics, path, windows=resilience.PAN_WINDO
         fig.canvas.draw()
         renderer = fig.canvas.get_renderer()
         for text in [*ax.texts, *ax.get_xticklabels(), *ax.get_yticklabels(), ax.yaxis.label,
-                     cb.ax.xaxis.label, *cb.ax.get_xticklabels()]:
+                     cb.ax.yaxis.label, *cb.ax.get_yticklabels(), *legend.get_texts()]:
             box = text.get_window_extent(renderer)
             if box.x0 < 0 or box.y0 < 0 or box.x1 > fig.bbox.width or box.y1 > fig.bbox.height:
                 raise ValueError(f"Text clipped in horizontal power figure: {text.get_text()}")
@@ -520,7 +539,7 @@ def regime_map(df, path, dv=REGIME_DV_PCT, di=REGIME_DI_PCT, *,
                 for o in ORIENTATIONS:
                     sub = sel(df, name, shape, o)
                     filled = o == "landscape"
-                    ax.plot(sub["Vmp_loss_%"], sub["Imp_loss_%"], SHAPE_MARKER[shape], ms=2.8,
+                    ax.plot(sub["Vmp_loss_%"], sub["Imp_loss_%"], ls="none", marker=SHAPE_MARKER[shape], ms=2.8,
                             mew=0 if filled else 0.5, mec=plots.MODULE_COLOR[name],
                             mfc=plots.MODULE_COLOR[name] if filled else "none", alpha=0.9, zorder=3)
         kw = dict(fontsize=7, fontweight="bold", color="0.25")
@@ -585,9 +604,14 @@ def binned(S, loss, width=BIN):
 
 
 def optical_loss_grid(sweep, path, names=ORDER, show_pan=False):
-    """2 x 2 figure of the conventional modules: shared legend on top. With show_pan,
+    """2 x 2 figure with positive power losses and a shared legend on top. With show_pan,
     P_an,S of each configuration written in its panel and its definition once below
-    (off by default: P_an,S is in the average_power_windows table of the paper)."""
+    (off by default: P_an,S is in the average_power_windows table of the paper).
+    Horizontal guides mark the idealized loss of the smallest bypass substring:
+    one third for the balanced modules, one quarter for SunPower. These are
+    architecture reference levels, not exact diode-activation thresholds.
+    The Y axis runs from 0 % at the bottom to 100 % at the top.
+    """
     names = [n for n in names if (sweep["module"] == n).any()]
     with plt.rc_context(STYLE):
         fig, axes = plt.subplots(2, 2, figsize=(7.2, 4.6), sharex=True, sharey=True,
@@ -601,21 +625,28 @@ def optical_loss_grid(sweep, path, names=ORDER, show_pan=False):
             s_ref = summ.attrs["s_full"]
             s_max = 10.0
             s = np.linspace(0, s_max * 1.04, 20)
-            ax.plot(s, -s, color="0.35", lw=0.9, ls="--", zorder=2)
+            ax.plot(s, s, color="0.35", lw=0.9, ls="--", zorder=2)
             # uniform soiling line: named in the legend only (a label in the panel hits the zero line)
             lines = []
             for ori, shape, color, marker in OPTICAL_CONFIGS:
                 g = mx[(mx["orientation"] == ori) & (mx["shape"] == shape)]
                 if g.empty:
                     continue
-                x, mean, lo, hi = binned(g["S_%"].to_numpy(float), g["Pmp_loss_%"].to_numpy(float))
+                x, mean, lo, hi = binned(g["S_%"].to_numpy(float), -g["Pmp_loss_%"].to_numpy(float))
                 ax.fill_between(x, lo, hi, color=color, alpha=0.18, lw=0, zorder=1)
-                ax.errorbar(x[1:], mean[1:], yerr=[mean[1:] - lo[1:], hi[1:] - mean[1:]], fmt="none",
-                            ecolor=color, elinewidth=0.7, capsize=1.8, capthick=0.7, zorder=3)
-                ax.plot(x, mean, color=color, lw=1.0, ls="-.", marker=marker, ms=4, mfc="white", mec=color,
+                ax.plot(x, mean, color=color, lw=1.0, ls="-.", marker=marker, ms=4,
+                        mfc="white" if ori == "portrait" else color, mec=color,
                         mew=0.9, zorder=4, label=f"{ori.capitalize()}, {shape}")
                 lines.append((ori, shape, color))
-            ax.axhline(0, color="black", lw=0.6, zorder=2)
+            module = modules.get(name)
+            if module.bypass_groups:
+                total = module.n_rows if module.bypass_axis == "rows" else module.n_cols
+                fraction = Fraction(min(last - first + 1 for first, last in module.bypass_groups), total)
+                level = 100.0 * float(fraction)
+                ax.axhline(level, color="0.55", lw=0.8, ls=":", zorder=0.8)
+                ax.text(0.025, level + 2.0,
+                        rf"${fraction.numerator}/{fraction.denominator}$", transform=ax.get_yaxis_transform(),
+                        fontsize=6.5, color="0.35", ha="left", va="bottom", zorder=6)
             if show_pan:
                 # P_an,S of the four configurations, bottom-left corner
                 y0 = 0.05
@@ -628,16 +659,18 @@ def optical_loss_grid(sweep, path, names=ORDER, show_pan=False):
                             bbox=dict(facecolor="white", edgecolor="none", alpha=0.85, pad=0.6))
             ax.set_title(f"{chr(97 + k)}   {modules.get(name).label}", loc="left", fontsize=7,
                          fontweight="bold", pad=4)
-            ax.set(xlim=(-0.3, s_max * 1.04), ylim=(-105, 5))
+            ax.set(xlim=(-0.3, s_max * 1.04), ylim=(-5, 105))
             ax.set_xticks(np.arange(0, s_max + 0.1, 2))
-            ax.set_yticks(np.arange(-100, 1, 20))
-        for ax in axes[1]:
-            ax.set_xlabel(r"Optical loss $S = A_\mathrm{cov}(1-\tau_I)$ [%]")
-        # one label for both rows: the figure is short
-        fig.supylabel(r"Power loss $\Delta P_\mathrm{mp}/P_\mathrm{mp,clean}$ [%]", x=0.015, y=0.465, fontsize=7)
+            ax.set_yticks(np.arange(0, 101, 20))
+        fig.supxlabel(r"Optical loss $S = A_\mathrm{cov}(1-\tau_I)$ [%]",
+                      x=0.54, y=0.01, fontsize=7)
+        # Shared axis labels for the four panels.
+        fig.supylabel("Power loss (%)", x=0.015, y=0.465, fontsize=7)
         handles, labels = axes[0, 0].get_legend_handles_labels()
         handles.append(plt.Line2D([], [], color="0.35", lw=0.9, ls="--"))
-        labels.append(r"Uniform soiling ($\Delta P = -S$)")
+        labels.append("Uniform soiling approximation")
+        handles.append(plt.Line2D([], [], color="0.55", lw=0.8, ls=":"))
+        labels.append("Bypass loss reference")
         fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, 0.895), ncol=3, fontsize=7,
                    handlelength=2.4, columnspacing=1.2, borderpad=0.5)
         if show_pan:

@@ -438,8 +438,8 @@ def loss_map_grid(sweep, module_name, shape, path, scale=None, unc=None):
         save(fig, path)
 
 
-REGIME_FILL = {0: "#e5effa", 1: "#fbdccd", 2: "#ded9f0"}
-REGIME_EDGE = {0: "#2a78d6", 1: "#eb6834", 2: "#4a3aa7"}
+REGIME_FILL = {0: "#e5effa", 1: "#EEBBDD", 2: "#ded9f0"}
+REGIME_EDGE = {0: "#2a78d6", 1: "#606060", 2: "#4a3aa7"}
 
 
 PAPER_ORDER = ("YINGLI", "SUNPOWER", "JASOLAR", "LONGI", "MATRIX")

@@ -46,6 +46,7 @@ F_GRID = np.array([0.01, 0.02, 0.03, 0.05, 0.1, 0.2, 0.3, 0.5, 1.0])
 F3 = [0.03, 0.1, 0.3] # f pour les calculs economiques
 MARGINS = [0.0, 10.0, 20.0, 30.0, 40.0, 50.0] 
 TAU = np.linspace(0, 1, 201)             # 201 valeurs de 0 a 1 (pas de 0.005)
+GROWTH_REFERENCE = ("JASOLAR", "landscape", 60.0, 0.1, 0.0)
 
 # ---- economics --------------------------------------------------------------------------------------------------------
 MARKETS = {"ground": (0.06, 0.41), "rooftop": (0.28, 3.3)}     # EUR/kWh, EUR/kWp per cleaning (Ilse et al. 2019)
@@ -342,7 +343,7 @@ def tau_grid(shape="rectangle", fs=F_GRID, *, washing_total=REFERENCE_TOTAL):
     return pd.DataFrame(rows)
 
 
-def growth_series(ref=("JASOLAR", "landscape", 60.0, 0.1, 0.0), *, washing_total=REFERENCE_TOTAL):
+def growth_series(ref=GROWTH_REFERENCE, *, washing_total=REFERENCE_TOTAL):
     """Band state on event/midnight intervals, with energy-weighted uniform loss within each interval."""
     out = []
     for site in SITES:

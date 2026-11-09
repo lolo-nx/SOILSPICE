@@ -7,12 +7,29 @@ from matplotlib.colors import to_rgba
 from matplotlib.lines import Line2D
 from matplotlib.patches import Polygon, Rectangle
 from matplotlib.ticker import MaxNLocator, MultipleLocator
+from matplotlib.transforms import Bbox
 
-from . import experiments, geometry, modules, plots, validation
+from . import experiments, geometry, modules, plots, schematics, validation
 from .style import LETTER_KW, MODULE_COLOR, ORDER, ORIENTATIONS, STYLE, letter_inside, module_label, save
 
 SHAPES = ("rectangle", "triangle")
 METRICS = (("nRMSE_PV_%", r"nRMSE, $P$–$V$ [%]"), ("nMBE_IV_%", r"nMBE, $I$–$V$ [%]"))
+# Warm yellow-to-brown progression with wider lightness spacing than the original.
+# Keep this palette local to the validation grid and preserve the shared markers.
+IV_TAU_COLORS = {1.00: "#E1B83D", 0.71: "#CF8425", 0.54: "#AA501A",
+                 0.44: "#6F300F", 0.00: "#26130B"}
+# Architecture references in pv_module_schematics: standard full-cell,
+# unequal-substring full-cell, and butterfly half-cell, respectively.
+ELECTRICAL_LAYOUT = {"YINGLI": "A", "SUNPOWER": "B", "JASOLAR": "C", "LONGI": "C"}
+CELL_FILL, CELL_EDGE = "#F5F5F5", "#808080"
+
+
+def iv_tau_style(tau):
+    color, marker = plots.tau_style(tau)
+    anchor = min(IV_TAU_COLORS, key=lambda value: abs(value - tau))
+    if abs(anchor - tau) <= plots.TAU_TOL:
+        color = IV_TAU_COLORS[anchor]
+    return color, marker
 
 
 def collect(shape):
@@ -48,17 +65,21 @@ def mini_schematic(ax, module, shape, orientation, fontsize=None):
     k = 0.09 * min(cw, ch)                               # visual shrink of each cell
     half = module.junction_box != "top"                  # butterfly (half-cell) layout
     nr, nc = lay.n_rows, lay.n_cols
-    wire = dict(color=plots.WIRE, lw=0.5, solid_capstyle="butt", zorder=4)
+    wire_color = schematics.RED
+    wire = dict(color=wire_color, lw=0.65, solid_capstyle="butt", zorder=4)
 
     def line(xs, ys, **kw):
         pts = [T(x, y) for x, y in zip(xs, ys)]
         ax.plot([p[0] for p in pts], [p[1] for p in pts], **{**wire, **kw})
 
     def diode(x, y, size):
-        s = size / 2                                       # points to the right in portrait
-        tri = [T(x - s, y - s), T(x - s, y + s), T(x + s, y)]
-        ax.add_patch(Polygon(tri, facecolor="white", edgecolor=plots.WIRE, lw=0.5, zorder=5))
-        line([x + s, x + s], [y - s, y + s], zorder=5)
+        s = size / 2
+        # Full-cell cathodes face left, as in the architecture overview.
+        # Apply T afterwards so the symbol rotates with its module in landscape.
+        direction = 1 if land else -1
+        tri = [T(x - direction * s, y - s), T(x - direction * s, y + s), T(x + direction * s, y)]
+        ax.add_patch(Polygon(tri, facecolor="white", edgecolor=wire_color, lw=0.65, zorder=5))
+        line([x + direction * s] * 2, [y - s, y + s], lw=0.9, zorder=5)
 
     # cells and the f_cov of the covered ones
     for r in range(nr):
@@ -66,7 +87,7 @@ def mini_schematic(ax, module, shape, orientation, fontsize=None):
             x0, y0 = T(lay.x0[c] + k, lay.y0[r] + k)
             x1, y1 = T(lay.x1[c] - k, lay.y1[r] - k)
             ax.add_patch(Rectangle((min(x0, x1), min(y0, y1)), abs(x1 - x0), abs(y1 - y0),
-                                   facecolor="white", edgecolor="black", lw=0.25, zorder=3))
+                                   facecolor=CELL_FILL, edgecolor=CELL_EDGE, lw=0.30, zorder=3))
             f = fcov[c, r] if land else fcov[r, c]
             if f > 5e-3 and fontsize:
                 ax.text((x0 + x1) / 2, (y0 + y1) / 2, f"{f:.1f}" if f >= 0.095 else f"{f:.2f}",
@@ -99,7 +120,7 @@ def mini_schematic(ax, module, shape, orientation, fontsize=None):
             line([cx[c], cx[c]], [lay.y1[-1] - k, yb])
     line([cx[0], cx[-1]], [yb, yb])
     for first, last in module.bypass_groups:
-        diode((cx[first] + cx[last]) / 2, yb, 0.55 * min(cw, ch))   # centred on its group
+        diode((cx[first] + cx[last]) / 2, yb, 0.70 * min(cw, ch))   # centred on its group
 
     # band: grey, translucent, from the lower edge of the module (display coordinates)
     lay_d = geometry.layout(module, orientation)
@@ -107,13 +128,14 @@ def mini_schematic(ax, module, shape, orientation, fontsize=None):
     h = min(experiments.BAND_HEIGHT_MM, H)
     band = ([(0, 0), (W, 0), (W, h), (0, h)] if shape == "rectangle"
             else [(0, 0), (W, 0), (W, h)] if experiments.TRIANGLE_APEX == "right" else [(0, 0), (W, 0), (0, h)])
-    ax.add_patch(Polygon(band, facecolor=to_rgba("0.6", 0.45), edgecolor="0.45", lw=0.4, zorder=7))
+    ax.add_patch(Polygon(band, facecolor=to_rgba("0.35", 0.80), edgecolor="0.25", lw=0.5, zorder=7))
 
     pad = 1.0 * min(cw, ch)
     xs, ys = zip(*[T(x, y) for x, y in ((0, -pad), (lay.width, lay.height + pad))])
     ax.set_xlim(min(xs + (0,)), max(xs + (W,)))
     ax.set_ylim(min(ys + (0,)), max(ys + (H,)))
     ax.set_aspect("equal")
+    ax.set_anchor("W")
     ax.axis("off")
 
 
@@ -126,7 +148,7 @@ def tau_groups(curves):
     }
 
 
-def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9)):
+def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9), compact_layout=False):
     with plt.rc_context(STYLE):
         fig, axes = plt.subplots(2, len(ORDER), figsize=figsize, sharex="col", sharey="col")
         for col, name in enumerate(ORDER):
@@ -134,7 +156,7 @@ def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9)):
                 ax = axes[row, col]
                 sub = curves[(curves["module"] == name) & (curves["orientation"] == orientation)]
                 for tau, g in sub.groupby("tau_I", sort=False):
-                    color, marker = plots.tau_style(tau)
+                    color, marker = iv_tau_style(tau)
                     exp, sim = g[g["source"] == "EXP"], g[g["source"] == "SPICE"]
                     ax.plot(exp["V"], exp["I"], ls="none", marker=marker, ms=2.6, mew=0,
                             markevery=0.04, color=color)
@@ -148,8 +170,33 @@ def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9)):
                 letter = "abcdefgh"[row * len(ORDER) + col]
                 ax.text(0.04, 0.05, letter, transform=ax.transAxes, **LETTER_KW)
                 # module drawing in the empty lower-left corner (below the plateau, left of the knee)
-                box = (0.15, 0.03, 0.34, 0.56) if orientation == "portrait" else (0.15, 0.03, 0.55, 0.42)
-                mini_schematic(ax.inset_axes(box), modules.get(name), shape, orientation)
+                if orientation == "portrait":
+                    # Use the bottom padding to lower the drawing without clipping
+                    # the band or the outer U-turns against the current axis.
+                    bottom = -0.025 if name in ("YINGLI", "SUNPOWER") else -0.005
+                    height = 0.61 if name == "YINGLI" else 0.64
+                    box = (0.08, bottom, 0.43, height)
+                else:
+                    box = (0.08, 0.015, 0.64, 0.50)
+                inset = ax.inset_axes(box)
+                mini_schematic(inset, modules.get(name), shape, orientation)
+                if orientation == "landscape":
+                    # Swapping the physical dimensions of the portrait frame keeps
+                    # cell sizes equal after rotation, at any figure/export size.
+                    portrait = axes[0, col].child_axes[0]
+
+                    def same_scale_position(_, renderer, reference=portrait, parent=ax):
+                        ref = reference.get_window_extent(renderer)
+                        plot = parent.get_window_extent(renderer)
+                        frame = Bbox.from_bounds(plot.x0 + 0.08 * plot.width,
+                                                 plot.y0 + 0.015 * plot.height,
+                                                 ref.height, ref.width)
+                        return frame.transformed(parent.figure.transFigure.inverted())
+
+                    inset.set_axes_locator(same_scale_position)
+                inset.text(1.06, 0.5, ELECTRICAL_LAYOUT[name], transform=inset.transAxes,
+                           ha="left", va="center", fontsize=7, fontweight="bold",
+                           color="0.25", clip_on=False)
                 if row == 0:
                     ax.set_title(plots.module_label(name))
                 else:
@@ -159,8 +206,8 @@ def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9)):
 
         labels = tau_groups(curves)
         handles = [
-            Line2D([], [], color=plots.tau_style(tau)[0],
-                   marker=plots.tau_style(tau)[1], ms=4,
+            Line2D([], [], color=iv_tau_style(tau)[0],
+                   marker=iv_tau_style(tau)[1], ms=4,
                    ls="none", label=label)
             for tau, label in labels.items()
         ]
@@ -169,6 +216,13 @@ def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9)):
         fig.legend(handles=handles, loc="lower center", ncol=len(handles), bbox_to_anchor=(0.5, -0.04),
                    frameon=False, handletextpad=0.3, columnspacing=1.0)
         fig.tight_layout(rect=(0, 0.05, 1, 1), h_pad=0.6, w_pad=0.0)
+        if compact_layout:
+            # Spend less vertical space on margins so the curves and their
+            # embedded schematics stay readable in the fixed article panel.
+            fig.subplots_adjust(top=0.92, bottom=0.09, hspace=0.06)
+            # Keep the anchor in figure coordinates when tight PNG/PDF exports
+            # temporarily change the canvas bounds.
+            fig.legends[0].set_bbox_to_anchor((0.5, -0.085), transform=fig.transFigure)
         plots.save(fig, path)
 
 
@@ -213,7 +267,7 @@ def model_hierarchy(me, path, *, figsize=(3.5, 3.0)):
     """Predicted against measured loss of P_mp for uniform soiling (L = S, open squares) and SPICE (filled circles),
     one colour per module; RMSE of each model in the legend. One column wide.
     me: one row per shaded flash (columns module, L_meas, S, L_spice)."""
-    models = [("S", "Uniform soiling ($L = S$)", "s", "none"), ("L_spice", "SPICE (this work)", "o", None)]
+    models = [("S", "Uniform soiling approximation", "s", "none"), ("L_spice", "SPICE", "o", None)]
     with plt.rc_context(STYLE):
         fig, ax = plt.subplots(figsize=figsize)
         ax.plot([0, 55], [0, 55], color="black", lw=0.6, ls="--", zorder=1)

@@ -9,14 +9,15 @@
   "scatter_points_clipped": 0,
   "scatter_limits_percent": {
     "voltage": [
-      -75,
-      22
+      -22,
+      75
     ],
     "current": [
-      -103,
-      13
+      -13,
+      103
     ]
   },
+  "loss_convention": "(clean - soiled) / clean; stored changes negated for display",
   "atlas_column_modules": [
     "YINGLI",
     "SUNPOWER",
@@ -88,10 +89,10 @@
     "2": "#ded9f0"
   },
   "source_metrics_recalculated": false,
-  "source": "results/2_simulation/data/resilience_states.csv",
-  "source_sha256": "d6eb1290618a2c247203474fc64f17765c8c0e6ec00bdf3a0449cee497310056",
+  "source": "results\\2_simulation\\data\\resilience_states.csv",
+  "source_sha256": "6bbd2ee9404f9b991750fce98f28a6d08325b0e89b1cc6fbe607acd5ca463fa6",
   "preexisting_exports_unchanged": 97,
   "standalone_regime_map_and_atlas_preserved": true,
-  "pdf_sha256": "b8f338cfbbedf2c23f16d2dc229ff7c36c65ae29eb21f2bfddc01e5c6b12a6c4",
-  "png_sha256": "4758d1ac8c1ffbd6b936f593f3510342672078834635868af116ecb53d531c52"
+  "pdf_sha256": "2aa80cd0e9daa73eb0c4062f4fb1749afc14e531227f6427af73172a24731adf",
+  "png_sha256": "9827b022343008ff50fc9cb7ec3a31a43bfedfe4dc3852af0ce6a4137fbb7ee4"
 }

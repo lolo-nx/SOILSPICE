@@ -15,21 +15,21 @@
   "intensity_definition": "max(hourly precipitation [mm] / 1 h); not event mean",
   "event_action_time": "one update at event closure, after 3 consecutive dry hours",
   "climate_csvs": {
-    "Neuch√¢tel": "open-meteo-46.92N7.00E519m.csv",
-    "Almer√≠a": "open-meteo-36.87N2.49W32m.csv",
+    "Neuch‚tel": "open-meteo-46.92N7.00E519m.csv",
+    "AlmerÌa": "open-meteo-36.87N2.49W32m.csv",
     "Doha": "open-meteo-25.34N51.43E20m.csv"
   },
   "alpha": 0.041,
   "deposition_g_m2_day": {
-    "Neuch√¢tel": 0.02439024390243903,
-    "Almer√≠a": 0.06829268292682929,
+    "Neuch‚tel": 0.02439024390243903,
+    "AlmerÌa": 0.06829268292682929,
     "Doha": 0.1
   },
-  "spice_sweep_sha256": "6b8893d263007c2cff8ac82c9400bcc39d30a703c60892821c703040e37c51f1",
+  "spice_sweep_sha256": "d871c4c23b6b4254721ca075bb617e4a32f8a6cbf9048cacfd06768f72bf523b",
   "hourly_time_convention": "Open-Meteo hour ends shifted -1 h after PV calculation; interval starts in UTC",
   "daily_cleaning_boundaries": "UTC midnight",
   "simulation_source_sha256": {
-    "energy.py": "76930109a112eeb2240bc95676ceb2f6b53d92ade6c3703697bccad14c307c8c",
-    "rain.py": "0259730cf2049f86134780c5d68d8ecce3ee125bc765954ce0ac775249bb61b7"
+    "energy.py": "c82bfd8c63af888c3caaf82fd2c37cce0c114df7669ad54ec9ec39c2246dc80d",
+    "rain.py": "444fd2b2972b90d4de74a85a637e0ccf064efeb6ef038a402d6eb380c1f49a37"
   }
 }

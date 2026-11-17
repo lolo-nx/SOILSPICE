@@ -12,7 +12,7 @@ from .fig_simulation import CONFIGS, REGIME_EDGE, REGIME_FILL, SHAPE_MARKER, sel
 from .style import MODULE_COLOR, ORDER, PRETTY, STYLE, TECH
 
 WIDTH_MM, HEIGHT_MM = 183.0, 170.0
-CONTOURS = (-80, -60, -45, -35, -15, -5)
+CONTOURS = (5, 15, 35, 45, 60, 80)
 
 
 def _rect(x, y, width, height):
@@ -26,20 +26,19 @@ def _text(fig, x, y, text, **kwargs):
 
 
 def _regime_key(ax, states):
-    """Original decision regions and every simulated point, on the full original axes."""
-    dv, di = REGIME_DV_PCT, REGIME_DI_PCT
-    x0, x1, y0, y1 = -75, 22, -103, 13
-    ax.add_patch(Rectangle((dv, y0), x1 - dv, y1 - y0, fc=REGIME_FILL[0], lw=0))
-    ax.add_patch(Rectangle((x0, y0), dv - x0, y1 - y0, fc=REGIME_FILL[2], lw=0))
-    ax.add_patch(Rectangle((x0, -di), dv - x0, 2 * di,
+    """Saved decision regions and points expressed as clean-minus-soiled losses."""
+    dv, di = -REGIME_DV_PCT, REGIME_DI_PCT
+    x0, x1, y0, y1 = -22, 75, -13, 103
+    ax.add_patch(Rectangle((x0, y0), dv - x0, y1 - y0, fc=REGIME_FILL[0], lw=0))
+    ax.add_patch(Rectangle((dv, y0), x1 - dv, y1 - y0, fc=REGIME_FILL[2], lw=0))
+    ax.add_patch(Rectangle((dv, -di), x1 - dv, 2 * di,
                            fc=REGIME_FILL[1], ec=REGIME_EDGE[1], lw=.5))
-    ax.axvline(dv, color="0.35", lw=.55)
     ax.axhline(0, color="0.4", lw=.35)
     points = 0
     for name in ORDER:
         for shape, orientation in CONFIGS:
             sub = sel(states, name, shape, orientation)
-            x, y = sub["Vmp_loss_%"].to_numpy(), sub["Imp_loss_%"].to_numpy()
+            x, y = -sub["Vmp_loss_%"].to_numpy(), -sub["Imp_loss_%"].to_numpy()
             if not (np.isfinite(x).all() and np.isfinite(y).all() and
                     (x >= x0).all() and (x <= x1).all() and (y >= y0).all() and (y <= y1).all()):
                 raise ValueError("Every saved response point must be finite and within the full map")
@@ -53,8 +52,8 @@ def _regime_key(ax, states):
     ax.set(xlim=(x0, x1), ylim=(y0, y1),
            xlabel=r"$\Delta V_{\mathrm{mp}}/V_{\mathrm{mp,clean}}$ [%]",
            ylabel=r"$\Delta I_{\mathrm{mp}}/I_{\mathrm{mp,clean}}$ [%]")
-    ax.set_xticks([-60, -40, -20, 0, 20])
-    ax.set_yticks([-100, -80, -60, -40, -20, 0])
+    ax.set_xticks([-20, 0, 20, 40, 60])
+    ax.set_yticks([0, 20, 40, 60, 80, 100])
     ax.tick_params(pad=2, labelsize=6.3, length=2.5)
     ax.xaxis.labelpad = 2
     ax.yaxis.labelpad = 2
@@ -65,7 +64,7 @@ def _regime_key(ax, states):
 
 def _definitions(fig):
     """Regime colours and all four shape/orientation combinations for panel a."""
-    for regime, title in enumerate(("I, current limited", "II, bypass clamped", "III, mixed")):
+    for regime, title in enumerate(("I, current-limited", "II, voltage-dominated", "III, mixed")):
         y = 9.5 + 7 * regime
         left, bottom, width, height = _rect(113, y + .2, 3.3, 3.3)
         fig.add_artist(Rectangle((left, bottom), width, height, transform=fig.transFigure,
@@ -98,6 +97,7 @@ def _atlas_cell(ax, sub, last_row, first_column):
                         norm=Normalize(-0.5, 2.5), edgecolors="white", linewidth=0.4)
     np.testing.assert_array_equal(np.ma.filled(mesh.get_array(), np.nan).reshape(grid.shape), grid)
     loss, _, _ = plots._grid(sub, "Pmp_loss_%")
+    loss = -loss
     levels = [level for level in CONTOURS if np.nanmin(loss) < level < np.nanmax(loss)]
     if levels:
         cs = ax.contour(t, a, loss, levels=levels, colors="0.15", linewidths=0.5,
@@ -181,7 +181,8 @@ def draw(states, path):
                 atlas_panels=16, saved_states_plotted=plotted_states,
                 header="full simulation scatter with regime names and explicit configuration legend",
                 scatter_points_plotted=scatter_points, scatter_points_clipped=0,
-                scatter_limits_percent=dict(voltage=[-75, 22], current=[-103, 13]),
+                scatter_limits_percent=dict(voltage=[-22, 75], current=[-13, 103]),
+                loss_convention="(clean - soiled) / clean; stored changes negated for display",
                 atlas_column_modules=list(ORDER),
                 atlas_row_configurations=[dict(shape=s, orientation=o) for s, o in CONFIGS],
                 point_symbol_key="open/filled rectangles and triangles in panel a legend and atlas row labels",

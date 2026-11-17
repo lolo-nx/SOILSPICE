@@ -55,15 +55,15 @@ def main():
     (config.SWEEP_DIR / "fig_regimes_panel_verification.json").write_text(json.dumps(report, indent=2) + "\n")
     caption = (
         r"\caption{\textbf{Electrical regimes under bottom-edge soiling.} "
-        r"\textbf{a}, Simulated changes in maximum-power voltage and current relative to the clean module; "
+        r"\textbf{a}, Simulated losses in maximum-power voltage and current, defined as clean minus soiled relative to the clean module; "
         rf"all {len(states)} saved states are shown. Background colours distinguish current-limited, "
-        r"bypass-clamped and mixed regimes. The legend identifies all four band configurations: "
+        r"voltage-dominated and mixed regimes. The legend identifies all four band configurations: "
         r"rectangles and triangles denote band shape, with open symbols for portrait and filled symbols "
         r"for landscape. \textbf{b}, Corresponding regime maps versus band transmittance $\tau_I$ "
         r"and active-cell coverage $A_{\mathrm{cov}}$. Coloured frames around the single-line module "
         r"names and technologies key the module colours; "
         r"vertical row labels use the same four configuration symbols as a. Black contours show "
-        r"relative maximum-power change in percent, keyed below b; negative values indicate power loss. "
+        r"relative maximum-power loss in percent, keyed below b; positive values indicate power loss. "
         r"All classifications and power values are unchanged from the saved simulations.\label{fig:regimes}}"
     )
     (config.SWEEP_DIR / "fig_regimes_panel_caption.tex").write_text(caption + "\n")

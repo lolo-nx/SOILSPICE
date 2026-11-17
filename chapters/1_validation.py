@@ -214,7 +214,9 @@ def main():
         csv = DATA / f"iv_grid_{shape}.csv"
         if full or not csv.exists():
             fig_validation.collect(shape).to_csv(csv, index=False)
-        fig_validation.iv_grid(pd.read_csv(csv), OUT / name, shape)
+        grid_options = (dict(figsize=(7.2, 3.15), compact_layout=True, panel_letters=False)
+                        if shape == "triangle" else {})
+        fig_validation.iv_grid(pd.read_csv(csv), OUT / name, shape, **grid_options)
     fig_validation.errors_grid(pd.read_csv(config.VALIDATION_DIR / "curve_errors_summary.csv"), OUT / "errors_grid")
     run_uncertainty()
     fig_validation.model_hierarchy(three_models(), OUT / "fig_model_hierarchy")

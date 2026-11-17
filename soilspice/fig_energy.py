@@ -92,6 +92,43 @@ def band_growth(series, path, *, threshold, reference=GROWTH_REFERENCE):
     return pd.DataFrame(summary).set_index("site").loc[list(SITE)].reset_index()
 
 
+def band_growth_orientations(series, path, *, threshold):
+    """Compare JA Solar orientations on common transmittance and power-loss axes."""
+    with plt.rc_context(STYLE):
+        fig, axes = plt.subplots(3, 2, figsize=(7.2, 5.4), sharex=True, sharey="col")
+        fig.subplots_adjust(left=0.09, right=0.97, bottom=0.13, top=0.86,
+                            hspace=0.48, wspace=0.30)
+        for row, site in enumerate(("Doha", "Almería", "Neuchâtel")):
+            for orientation, linestyle in (("landscape", "-"), ("portrait", "--")):
+                s = series[(series.site == site) & (series.orientation == orientation)]
+                dates = pd.to_datetime(s.date)
+                for col, values in enumerate((s.tau, 100 * s.L_band)):
+                    axes[row, col].plot(dates, values, color=SITE[site], ls=linestyle,
+                                        lw=0.85, drawstyle="steps-post")
+            for col, ax in enumerate(axes[row]):
+                ax.set_title(site, loc="left", fontweight="normal")
+                ax.text(-0.13, 1.05, "abcdef"[2 * row + col], transform=ax.transAxes,
+                        va="bottom", **LETTER_KW)
+                washing = washing_flags(s.rain, washing_total=threshold)
+                ax.vlines(pd.to_datetime(s.end_time)[washing], 0, 1,
+                          transform=ax.get_xaxis_transform(), colors="#4388A6",
+                          alpha=0.25, lw=0.5, zorder=0.5)
+            axes[row, 0].set_ylabel(r"Band $\tau_I$")
+            axes[row, 1].set_ylabel("Band power loss (%)")
+        axes[0, 0].set_ylim(1.05, 0)
+        axes[0, 1].set_ylim(bottom=0)
+        fig.legend(handles=[
+            Line2D([], [], color="0.25", ls="-", label="JA Solar landscape"),
+            Line2D([], [], color="0.25", ls="--", label="JA Solar portrait"),
+            Line2D([], [], color="#4388A6", alpha=0.35,
+                   label=rf"Washing rain ($P_e\geq {threshold:g}$ mm/event)")],
+            loc="upper center", bbox_to_anchor=(0.5, 0.99), ncol=3, fontsize=7)
+        fig.text(0.5, 0.035,
+                 r"Rectangular band: $h=60$ mm, $f=0.1$, glass margin $=0$ mm; identical climate and rain events.",
+                 ha="center", fontsize=6)
+        save(fig, path)
+
+
 def letter(ax, k, x=None, y=None, inside=True):
     if inside:
         ax.text(0.03, 0.97, "abcdefgh"[k], transform=ax.transAxes, va="top", **LETTER_KW)
@@ -164,7 +201,7 @@ def energy_maps(T, path):
                 ax.set_ylabel("Band height $h$ (mm)")
             else:
                 plt.setp(ax.get_yticklabels(), visible=False)
-            letter(ax, k, inside=False)
+            letter(ax, k + 3, inside=False)
             # upper row: each module and orientation at the fixed trapped fraction F0
             bx = bxs[k]
             for mname in ORDER:
@@ -177,7 +214,7 @@ def energy_maps(T, path):
                 bx.set_ylabel("Energy lost to the band\n(% per year)")
             else:
                 plt.setp(bx.get_yticklabels(), visible=False)
-            letter(bx, k + 3)
+            letter(bx, k)
         bxs[0].set_ylim(bottom=0)
         from matplotlib.lines import Line2D  # noqa: E402
         hd = [Line2D([], [], color=MODULE_COLOR[mname], lw=1.0, label=PRETTY[mname]) for mname in ORDER]

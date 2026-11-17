@@ -28,6 +28,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import pandas as pd  # noqa: E402
+import numpy as np  # noqa: E402
 
 from soilspice import config, energy, fig_energy, tables, rain_scenarios  # noqa: E402
 
@@ -40,8 +41,22 @@ def run_economics(threshold, *, band_growth_only=False):
     rain_scenarios.write_scenario_settings(threshold, OUT)
     rain_kw = rain_scenarios.options(threshold)
     if band_growth_only:
-        series = energy.growth_series(**rain_kw)
+        saved = DATA / "growth_series_reference.csv"
+        series = pd.read_csv(saved) if saved.exists() else energy.growth_series(**rain_kw)
         fig_energy.band_growth(series, OUT / "fig_band_growth", threshold=threshold)
+        portrait_ref = (energy.GROWTH_REFERENCE[0], "portrait", *energy.GROWTH_REFERENCE[2:])
+        # In the rain-only mass balance, band mass is proportional to f L_s / h.
+        # Reuse the exact saved intervals and unrounded state for a paired comparison.
+        portrait = series.copy()
+        ratio = energy.gains([portrait_ref])[0] / energy.gains([energy.GROWTH_REFERENCE])[0]
+        portrait["tau"] = series.tau ** ratio
+        portrait["L_band"] = energy.lut([portrait_ref])[0][
+            np.rint(portrait.tau.to_numpy() * (len(energy.TAU) - 1)).astype(int)]
+        comparison = pd.concat([series.assign(orientation="landscape"),
+                                portrait.assign(orientation="portrait")], ignore_index=True)
+        comparison.to_csv(DATA / "growth_series_orientations.csv", index=False)
+        fig_energy.band_growth_orientations(
+            comparison, OUT / "fig_band_growth_orientations", threshold=threshold)
         return
     sites = energy.site_table(**rain_kw)
     sites.round(3).to_csv(OUT / "table_sites.csv", index=False)

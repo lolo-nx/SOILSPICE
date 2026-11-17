@@ -329,7 +329,7 @@ def average_power_windows_horizontal(metrics, path, windows=resilience.PAN_WINDO
         for group, name in enumerate(ORDER):
             if group:
                 ax.axvline(group * 4 - .5, color="black", lw=.8)
-            ax.text(group * 4 + 1.5, 1.035, plots.module_label(name, with_tech=False),
+            ax.text(group * 4 + 1.5, 1.035, plots.module_label(name),
                     transform=ax.get_xaxis_transform(), ha="center", va="bottom", fontsize=7, fontweight="bold")
         handles = [Line2D([], [], ls="none", marker=SHAPE_MARKER[shape], ms=4, mew=.65,
                           mec="0.25", mfc="none" if orientation == "portrait" else "0.25",
@@ -521,35 +521,33 @@ def loss_maps(df, name, shape, path):
 
 def regime_map(df, path, dv=REGIME_DV_PCT, di=REGIME_DI_PCT, *,
                legend_right=False, legend_below=False):
-    """How the regimes are defined: every simulated state in the (dVmp, dImp) plane, on the
-    regions of analysis.regime (I: dVmp > dv, II: dVmp <= dv and |dImp| < di, III: the rest)."""
+    """Saved regimes displayed as positive losses (clean minus soiled).
+
+    The stored signed changes and classification thresholds remain unchanged.
+    """
     with plt.rc_context(STYLE):
         figsize = (7.2, 2.6) if legend_right else (2.7, 6.5) if legend_below else (3.5, 3.1)
         fig, ax = plt.subplots(figsize=figsize)
-        x0, x1, y0, y1 = -75, 22, -103, 13
+        dv = -dv
+        x0, x1, y0, y1 = -22, 75, -13, 103
         box = dict(lw=0, zorder=0)
-        ax.add_patch(Rectangle((dv, y0), x1 - dv, y1 - y0, fc=REGIME_FILL[0], **box))
-        ax.add_patch(Rectangle((x0, y0), dv - x0, y1 - y0, fc=REGIME_FILL[2], **box))
-        ax.add_patch(Rectangle((x0, -di), dv - x0, 2 * di, fc=REGIME_FILL[1], ec=REGIME_EDGE[1],
+        ax.add_patch(Rectangle((x0, y0), dv - x0, y1 - y0, fc=REGIME_FILL[0], **box))
+        ax.add_patch(Rectangle((dv, y0), x1 - dv, y1 - y0, fc=REGIME_FILL[2], **box))
+        ax.add_patch(Rectangle((dv, -di), x1 - dv, 2 * di, fc=REGIME_FILL[1], ec=REGIME_EDGE[1],
                                lw=0.6, zorder=1))
-        ax.axvline(dv, color="0.3", lw=0.6, zorder=1)
         ax.axhline(0, color="black", lw=0.5, zorder=1)
         for name in ORDER:
             for shape in SHAPES:
                 for o in ORIENTATIONS:
                     sub = sel(df, name, shape, o)
                     filled = o == "landscape"
-                    ax.plot(sub["Vmp_loss_%"], sub["Imp_loss_%"], ls="none", marker=SHAPE_MARKER[shape], ms=2.8,
+                    ax.plot(-sub["Vmp_loss_%"], -sub["Imp_loss_%"], ls="none", marker=SHAPE_MARKER[shape], ms=2.8,
                             mew=0 if filled else 0.5, mec=plots.MODULE_COLOR[name],
                             mfc=plots.MODULE_COLOR[name] if filled else "none", alpha=0.9, zorder=3)
         kw = dict(fontsize=7, fontweight="bold", color="0.25")
-        ax.text(x1 - 2, y0 + 3, "I", ha="right", va="bottom", **kw)
-        ax.text(x0 + 2, di + 1.0, "II", ha="left", va="bottom", **kw)
-        ax.text(x0 + 2, y0 + 3, "III", ha="left", va="bottom", **kw)
-        ax.text(dv + 1, y0 + 3,
-                rf"$\Delta V_{{\mathrm{{mp}}}}/V_{{\mathrm{{mp,clean}}}} = {dv:g}$%",
-                rotation=90, ha="left", va="bottom",
-                fontsize=6.5, color="0.3")
+        ax.text(x0 + 2, y1 - 3, "I", ha="left", va="top", **kw)
+        ax.text(x1 - 2, -di - 1.0, "II", ha="right", va="top", **kw)
+        ax.text(x1 - 2, y1 - 3, "III", ha="right", va="top", **kw)
         ax.set_xlim(x0, x1)
         ax.set_ylim(y0, y1)
         ax.set_xlabel(r"$\Delta V_{\mathrm{mp}}/V_{\mathrm{mp,clean}}$ [%]")
@@ -665,12 +663,12 @@ def optical_loss_grid(sweep, path, names=ORDER, show_pan=False):
         fig.supxlabel(r"Optical loss $S = A_\mathrm{cov}(1-\tau_I)$ [%]",
                       x=0.54, y=0.01, fontsize=7)
         # Shared axis labels for the four panels.
-        fig.supylabel("Power loss (%)", x=0.015, y=0.465, fontsize=7)
+        fig.supylabel(r"Power loss $\Delta P_{mp}/P_{mp,\mathrm{clean}}$ (%)", x=0.015, y=0.465, fontsize=7)
         handles, labels = axes[0, 0].get_legend_handles_labels()
         handles.append(plt.Line2D([], [], color="0.35", lw=0.9, ls="--"))
-        labels.append("Uniform soiling approximation")
+        labels.append("Optical loss assumption")
         handles.append(plt.Line2D([], [], color="0.55", lw=0.8, ls=":"))
-        labels.append("Bypass loss reference")
+        labels.append("Ideal substring bypass loss")
         fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, 0.895), ncol=3, fontsize=7,
                    handlelength=2.4, columnspacing=1.2, borderpad=0.5)
         if show_pan:

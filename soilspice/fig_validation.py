@@ -148,7 +148,8 @@ def tau_groups(curves):
     }
 
 
-def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9), compact_layout=False):
+def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9), compact_layout=False,
+            panel_letters=True):
     with plt.rc_context(STYLE):
         fig, axes = plt.subplots(2, len(ORDER), figsize=figsize, sharex="col", sharey="col")
         for col, name in enumerate(ORDER):
@@ -168,7 +169,8 @@ def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9), compact_layo
                 ax.xaxis.set_major_locator(MultipleLocator(20))
                 ax.tick_params(pad=1.5, labelsize=7)
                 letter = "abcdefgh"[row * len(ORDER) + col]
-                ax.text(0.04, 0.05, letter, transform=ax.transAxes, **LETTER_KW)
+                if panel_letters:
+                    ax.text(0.04, 0.05, letter, transform=ax.transAxes, **LETTER_KW)
                 # module drawing in the empty lower-left corner (below the plateau, left of the knee)
                 if orientation == "portrait":
                     # Use the bottom padding to lower the drawing without clipping
@@ -267,7 +269,7 @@ def model_hierarchy(me, path, *, figsize=(3.5, 3.0)):
     """Predicted against measured loss of P_mp for uniform soiling (L = S, open squares) and SPICE (filled circles),
     one colour per module; RMSE of each model in the legend. One column wide.
     me: one row per shaded flash (columns module, L_meas, S, L_spice)."""
-    models = [("S", "Uniform soiling approximation", "s", "none"), ("L_spice", "SPICE", "o", None)]
+    models = [("S", "Optical loss assumption", "s", "none"), ("L_spice", "SPICE model", "o", None)]
     with plt.rc_context(STYLE):
         fig, ax = plt.subplots(figsize=figsize)
         ax.plot([0, 55], [0, 55], color="black", lw=0.6, ls="--", zorder=1)

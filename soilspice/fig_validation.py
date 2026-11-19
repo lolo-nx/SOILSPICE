@@ -149,7 +149,7 @@ def tau_groups(curves):
 
 
 def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9), compact_layout=False,
-            panel_letters=True):
+            panel_letters=True, normalized=False):
     with plt.rc_context(STYLE):
         fig, axes = plt.subplots(2, len(ORDER), figsize=figsize, sharex="col", sharey="col")
         for col, name in enumerate(ORDER):
@@ -165,8 +165,11 @@ def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9), compact_layo
                 ax.set_ylim(bottom=0)
                 ax.set_xlim(left=0)
                 # integer ticks and small padding: narrower tick labels, so wider panels
-                ax.yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
-                ax.xaxis.set_major_locator(MultipleLocator(20))
+                ax.yaxis.set_major_locator(MaxNLocator(nbins=4, integer=not normalized))
+                ax.xaxis.set_major_locator(MultipleLocator(0.25 if normalized else 20))
+                if normalized:
+                    ax.set_xlim(0, 1.05)
+                    ax.set_ylim(0, 1.05)
                 ax.tick_params(pad=1.5, labelsize=7)
                 letter = "abcdefgh"[row * len(ORDER) + col]
                 if panel_letters:
@@ -202,9 +205,10 @@ def iv_grid(curves, path, shape="rectangle", *, figsize=(7.2, 3.9), compact_layo
                 if row == 0:
                     ax.set_title(plots.module_label(name))
                 else:
-                    ax.set_xlabel("Voltage [V]")
+                    ax.set_xlabel(r"$V / V_{oc,clean}$" if normalized else "Voltage [V]")
                 if col == 0:
-                    ax.set_ylabel(r"$\bf{" + orientation.capitalize() + r"}$" + "\nCurrent [A]", labelpad=1)
+                    current_label = r"$I / I_{sc,clean}$" if normalized else "Current [A]"
+                    ax.set_ylabel(r"$\bf{" + orientation.capitalize() + r"}$" + "\n" + current_label, labelpad=1)
 
         labels = tau_groups(curves)
         handles = [

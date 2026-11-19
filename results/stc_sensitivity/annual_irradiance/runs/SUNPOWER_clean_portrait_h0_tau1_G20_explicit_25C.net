@@ -1,0 +1,133 @@
+* /Users/lorrainenaux/Documents/LTspice/SUNPOWER-BISHOP-NEW.asc
+XX1 N005 0 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX2 N013 N005 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX3 N021 N013 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX4 N029 N021 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX5 N037 N029 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX6 N045 N037 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX7 N053 N045 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX8 N061 N053 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX9 N069 N061 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX10 N077 N069 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX11 N085 N077 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX12 N093 N085 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX13 N086 N093 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX14 N078 N086 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX15 N070 N078 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX16 N062 N070 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX17 N054 N062 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX18 N046 N054 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX19 N038 N046 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX20 N030 N038 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX21 N022 N030 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX22 N014 N022 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX23 N006 N014 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX24 N002 N006 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX25 N007 N002 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX26 N015 N007 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX27 N023 N015 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX28 N031 N023 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX29 N039 N031 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX30 N047 N039 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX31 N055 N047 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX32 N063 N055 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX33 N071 N063 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX34 N079 N071 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX35 N087 N079 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX36 N094 N087 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX37 N088 N094 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX38 N080 N088 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX39 N072 N080 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX40 N064 N072 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX41 N056 N064 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX42 N048 N056 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX43 N040 N048 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX44 N032 N040 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX45 N024 N032 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX46 N016 N024 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX47 N008 N016 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX48 N004 N008 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX49 N009 N004 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX50 N017 N009 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX51 N025 N017 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX52 N033 N025 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX53 N041 N033 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX54 N049 N041 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX55 N057 N049 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX56 N065 N057 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX57 N073 N065 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX58 N081 N073 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX59 N089 N081 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX60 N095 N089 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX61 N090 N095 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX62 N082 N090 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX63 N074 N082 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX64 N066 N074 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX65 N058 N066 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX66 N050 N058 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX67 N042 N050 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX68 N034 N042 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX69 N026 N034 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX70 N018 N026 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX71 N010 N018 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX72 N003 N010 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX73 N011 N003 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX74 N019 N011 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX75 N027 N019 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX76 N035 N027 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX77 N043 N035 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX78 N051 N043 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX79 N059 N051 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX80 N067 N059 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX81 N075 N067 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX82 N083 N075 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX83 N091 N083 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX84 N096 N091 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX85 N092 N096 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX86 N084 N092 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX87 N076 N084 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX88 N068 N076 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX89 N060 N068 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX90 N052 N060 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX91 N044 N052 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX92 N036 N044 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX93 N028 N036 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX94 N020 N028 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX95 N012 N020 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+XX96 N001 N012 pvcell-sunpower-bishop params: f_cov=0.0000 tau_I=1.0
+D1 0 N002 RF2001NS2D
+D2 N002 N003 RF2001NS2D
+D3 N003 N001 RF2001NS2D
+V1 N001 0 0
+* block symbol definitions
+.subckt pvcell-sunpower-bishop + -
+I1 - N {I1*(1 - f_cov*(1 - tau_I))}
+R1 N - {rp}
+R2 N + {rs}
+D1 N - 1N914
+B1 N - I=V(N,-)/{rp}*{a}*pwr(1-V(N,-)/{Vb},-{b})
+.model 1N914 D IS={IS1} N={n1} TNOM={t}
+.param IS1= 3.239880e-10
+.param n1=1.1797
+.param Isc= 6.1406
+.param kc=0.000472
+.param t=25.0 ; 24.7
+.param kv=-0.002455
+.param Vi=20
+.param rp=5.51
+.param rs=0.00168
+.param q=1.6e-19
+.param k=1.3806e-23     ; constante de Boltzmann
+.param I1=(Isc+Isc*kc*(t-25))*(Vi/1000)
+.param Vb=-3 a=2e-3 b=3
+.param f_cov=0
+.param tau_I=1
+.ends pvcell-sunpower-bishop
+
+.model D D
+.lib "C:\Users\naux\AppData\Local\LTspice\lib\cmp\standard.dio"
+.dc V1 78.78 0 -0.02
+.backanno
+.temp 25
+.save I(V1) I(D1) I(D2) I(D3) V(N001) V(N002) V(N003)
+.end

@@ -7,7 +7,7 @@
     "b": "electrical layouts",
     "c": "simulation framework"
   },
-  "photo_source": "data/figure_assets/Soiling-images.png",
+  "photo_source": "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\data\\figure_assets\\Soiling-images.png",
   "photo_source_is_annotated_montage": true,
   "original_photographs_available": false,
   "photo_content_retouched": false,
@@ -34,7 +34,7 @@
     }
   ],
   "electrical_scale": 0.3648520263625387,
-  "framework_scale": 0.950485967704399,
+  "framework_scale": 1.0015157918857314,
   "panel_label_positions_mm": {
     "a": [
       2,
@@ -51,8 +51,8 @@
   },
   "electrical_and_framework_vectors_preserved": true,
   "source_sha256": {
-    "data/figure_assets/Soiling-images.png": "d8204991c582d1cbca6d903380aef16dc5f48140d82698d5575b99a28bba3179",
-    "results/1_validation/data/pv_module_schematics_soiling_panel.pdf": "a98e5afd91739a868555feaaac1551580c237ec268ae324ab056c158b3589999",
-    "results/1_validation/data/simulation_framework_panel.pdf": "9c37dbf19da81fd49e35ddc002f44ba5e188d8495283d5313bc501cffee1b0d8"
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\data\\figure_assets\\Soiling-images.png": "d8204991c582d1cbca6d903380aef16dc5f48140d82698d5575b99a28bba3179",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\results\\1_validation\\data\\pv_module_schematics_soiling_panel.pdf": "eb8f406af0e0f18532807ce8b7712c750a3f218843866e1667d249cf8e9033d2",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\results\\1_validation\\data\\simulation_framework_panel.pdf": "7c0f110128b1784d54facef40ffc89aebcb072585e4947bea10499cf6bee7ce7"
   }
 }

@@ -7,6 +7,7 @@ Use --framework-only for a standalone framework PDF and 600 dpi PNG.
 """
 import argparse
 import importlib.util
+import re
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -14,6 +15,67 @@ import pymupdf
 from matplotlib import font_manager
 
 from soilspice import config, fig_soiling, schematics
+
+
+def annotate_module_geometry(page):
+    """Redraw the schematic with a narrow, identifiable glass margin."""
+    sx, sy = page.rect.width / 514.572937, page.rect.height / 175.956406
+    def point(x, y):
+        return pymupdf.Point(x * sx, y * sy)
+    def rect(x0, y0, x1, y1):
+        return pymupdf.Rect(x0*sx, y0*sy, x1*sx, y1*sy)
+    # Replace only the first illustration, preserving headings, workflow and
+    # explanatory text. Keep the lower glass margin comparable to the top.
+    page.add_redact_annot(rect(10, 20, 114, 123),
+                          fill=(1, 1, 1), cross_out=False)
+    page.apply_redactions(images=0, graphics=2)
+    font_path = font_manager.findfont(font_manager.FontProperties(family="DejaVu Sans"))
+    font = pymupdf.Font(fontfile=font_path)
+    page.insert_font(fontname="GeometryAnnotation", fontbuffer=font.buffer)
+    blue, amber, ink = (0.16, 0.36, 0.58), (0.60, 0.35, 0.08), (0.18, 0.18, 0.18)
+    # Warm glass surrounds blue active cells; the lower glass strip is now
+    # visible independently of the dust band, rather than a one-pixel gap.
+    page.draw_rect(rect(16, 25, 72, 117), color=ink,
+                   fill=(1.0, 0.94, 0.78), width=0.9*sx)
+    for row in range(10):
+        for col in range(6):
+            x, y = 19 + col*8.5, 29 + row*8.5
+            page.draw_rect(rect(x, y, x+7.5, y+7.5), color=blue,
+                           fill=(0.87, 0.92, 0.97), width=0.3*sx)
+    # The band starts at the bottom edge and covers both inactive glass and
+    # part of the bottom cells. Its h is not the height of the inactive strip.
+    page.draw_rect(rect(16, 105, 72, 117), color=(0.35, 0.35, 0.35),
+                   fill=(0.35, 0.35, 0.35), fill_opacity=0.32, width=0.5*sx)
+    for x, y, text, color in ((84, 37, "Active cell", blue), (84, 44, "area", blue),
+                              (84, 86, "Inactive glass", amber), (84, 93, "margin", amber),
+                              (85, 111, "Band height h", ink)):
+        page.insert_text(point(x, y), text, fontname="GeometryAnnotation",
+                         fontsize=6.1*sx, color=color)
+    # Short, colour-matched elbow leaders terminate in the actual target area.
+    for vertices, color in ((((82, 42), (76, 42), (65, 48)), blue),
+                             (((82, 94), (74, 94), (74, 115), (65, 115)), amber)):
+        for start, end in zip(vertices, vertices[1:]):
+            page.draw_line(point(*start), point(*end), color=color, width=0.55*sx)
+        page.draw_circle(point(*vertices[-1]), radius=0.7*sx, color=color, fill=color, width=0)
+    # A separate dimension arrow makes the full band height unambiguous.
+    page.draw_line(point(79, 105), point(79, 117), color=ink, width=0.6*sx)
+    for y, direction in ((105, 1), (117, -1)):
+        for x in (77.8, 80.2):
+            page.draw_line(point(79, y), point(x, y+direction*2), color=ink, width=0.6*sx)
+    page.insert_text(point(36.0, 112.1), "τ", fontname="GeometryAnnotation",
+                     fontsize=7.5*sx, color=(0, 0, 0))
+    page.insert_text(point(40.6, 113.4), "I", fontname="GeometryAnnotation",
+                     fontsize=5.0*sx, color=(0, 0, 0))
+    # Replace the original three-line paragraph with a concise input summary.
+    # Stop above the bracket stroke at y=156.096 so it survives redaction.
+    page.add_redact_annot(rect(17, 125, 99, 155.1), fill=(1, 1, 1), cross_out=False)
+    page.apply_redactions(images=0, graphics=2)
+    for y, text in ((134, "Module geometry + band"),
+                    (143, "Height h, transmittance τ")):
+        size = 6.4*sx
+        x = 53*sx - font.text_length(text, fontsize=size)/2
+        page.insert_text((x, y*sy), text, fontname="GeometryAnnotation",
+                         fontsize=size, color=ink)
 
 
 def framework_without_step_labels(source, output):
@@ -30,6 +92,16 @@ def framework_without_step_labels(source, output):
     font = pymupdf.Font(fontfile=font_path)
     with pymupdf.open(source) as doc:
         page = doc[0]
+        # Translate only the final workflow arrow, preserving the nearby
+        # rotated Current label and all other vector artwork.
+        for xref in page.get_contents():
+            stream = doc.xref_stream(xref)
+            pattern = rb"381\.329091 105\.3064 m.*?\nB"
+            shifted, count = re.subn(pattern,
+                lambda m: b"q\n1 0 0 1 -4 0 cm\n" + m.group() + b"\nQ",
+                stream, flags=re.DOTALL)
+            if count:
+                doc.update_stream(xref, shifted)
         headings = []
         for block in page.get_text("dict")["blocks"]:
             for line in block.get("lines", []):
@@ -41,11 +113,13 @@ def framework_without_step_labels(source, output):
                         headings.append((title, span["size"], span["origin"][1]))
                         page.add_redact_annot(span["bbox"], fill=(1, 1, 1), cross_out=False)
         page.apply_redactions(images=0, graphics=0)
+        page.insert_font(fontname="FrameworkTitle", fontbuffer=font.buffer)
         for title, size, baseline in headings:
             centre = illustration_centres[title] * page.rect.width / 514.572937
             x = centre - font.text_length(title, fontsize=size) / 2
             page.insert_text((x, baseline), title, fontsize=size,
-                             fontname="FrameworkTitle", fontfile=font_path)
+                             fontname="FrameworkTitle")
+        annotate_module_geometry(page)
         doc.save(output, garbage=3, deflate=True)
 
 

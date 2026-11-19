@@ -1,0 +1,41 @@
+{
+  "R_H_mm_event": 15,
+  "width_mm": 183.0,
+  "height_mm": 170.0,
+  "png_dpi": 600,
+  "panels": "abcdefg",
+  "row_order": [
+    "design levers",
+    "cleaning"
+  ],
+  "vector_pdf": true,
+  "source_figures": [
+    {
+      "source": "results\\4_economics\\total_scenarios\\PH15mm\\fig_design_levers.pdf",
+      "sha256": "12f4096910d215c3ebb6949c36b987129547220964fb07efa8ca5b0c726cc8e9",
+      "scale": 1.1064199958980392,
+      "box_pdf_points": [
+        7.3657212750898395,
+        7.0866141732283445,
+        511.37443620522515,
+        235.97336781988886
+      ]
+    },
+    {
+      "source": "results\\4_economics\\total_scenarios\\PH15mm\\fig_cleaning_with_residual.pdf",
+      "sha256": "e8bb4b81eaa59e756c39af085adaccde50df9bc327453faf6d13bfed0accab21",
+      "scale": 1.1340501765193918,
+      "box_pdf_points": [
+        7.3657212750898395,
+        247.31195049705423,
+        511.37443620522515,
+        474.80314960629926
+      ]
+    }
+  ],
+  "label_size_pt": 9.0,
+  "preexisting_exports_unchanged": 259,
+  "model_or_simulation_changes": false,
+  "pdf_sha256": "b4253534c132d927424af39addd5d1acf869aa5cbac1e3eebc9c1970211036f2",
+  "png_sha256": "09a41e1dfedd1ee3cbcc88d751261f729a0eff9e8879a6f59805fc92484983e6"
+}

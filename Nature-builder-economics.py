@@ -48,8 +48,12 @@ def main():
     scenario = config.CH4_DIR / "total_scenarios/PH15mm"
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=scenario / "fig_design_cleaning_panel")
+    parser.add_argument("--cleaning-figure", type=Path, default=scenario / "fig_cleaning.pdf",
+                        help="Explicit cleaning-cost scenario source (default: remaining-life residual credit)")
     args = parser.parse_args()
-    paths = [scenario / "fig_design_levers.pdf", scenario / "fig_cleaning.pdf"]
+    args.output = args.output.resolve()
+    args.cleaning_figure = args.cleaning_figure.resolve()
+    paths = [scenario / "fig_design_levers.pdf", args.cleaning_figure]
     for path in paths:
         if not path.is_file():
             parser.error(f"Missing source: {path}")

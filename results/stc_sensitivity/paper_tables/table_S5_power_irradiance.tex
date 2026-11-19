@@ -1,0 +1,23 @@
+% Requires \usepackage{booktabs}. Table numbering is set by the SI document.
+\begin{table}[t]
+\centering
+\caption{\textbf{Sensitivity of relative power losses to irradiance}}
+\label{tab:irradiance-power}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lrr}
+\toprule
+\shortstack{Module} & \shortstack{Conditions within\\2 pp of STC} & \shortstack{Largest absolute\\change (pp)} \\
+\midrule
+Yingli (n-Si) & 53 / 56 & 4.71 \\
+SunPower (IBC) & 48 / 56 & 10.44 \\
+JA Solar (TOPCon) & 55 / 56 & 3.28 \\
+LONGi (HIBC) & 52 / 56 & 5.23 \\
+All modules & 208 / 224 & 10.44 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize Changes are relative to the loss at 1000 W m$^{-2}$ and 25 $^\circ$C for the same band configuration. Each module has 56 conditions at 200, 400, 600 and 800 W m$^{-2}$. Bands are 80 mm rectangles and triangles with transmittance 0.71, 0.44 or 0 in both orientations. A 60 mm rectangle with transmittance 0.44 is also included in both orientations. pp denotes percentage points.
+\end{minipage}
+\end{table}

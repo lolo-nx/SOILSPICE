@@ -1,0 +1,3 @@
+state,normal_Pmp_W,alternate_Pmp_W,difference_W,pass_solver_comparison
+SUNPOWER_clean_portrait_h0_tau1_G1000_explicit_25C,338.7876422595978,338.7876422595978,0.0,True
+SUNPOWER_rectangle_portrait_h60_tau0.44_G1000_explicit_25C,301.42955129623414,301.42955129623414,0.0,True

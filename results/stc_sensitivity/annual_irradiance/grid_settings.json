@@ -1,0 +1,43 @@
+{
+  "irradiances": [
+    1,
+    5,
+    20,
+    50,
+    100,
+    150,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000,
+    1200
+  ],
+  "transmittances": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.44,
+    0.5,
+    0.6,
+    0.7,
+    0.71,
+    0.8,
+    0.9,
+    0.95,
+    0.98,
+    0.99,
+    1.0
+  ],
+  "electrical_temperature_C": 25,
+  "geometry": "rectangle, h=60mm, all modules/orientations",
+  "rainfall_washing_threshold_mm": 15,
+  "trapped_fraction": 0.1,
+  "cleaning": "none"
+}

@@ -12,8 +12,9 @@ from scipy.interpolate import RegularGridInterpolator, interp1d
 from matplotlib.patches import FancyBboxPatch, Rectangle
 
 from . import config, modules
-from .energy import (AF, ROBOT, cycle_loss, washing_flags, washing_threshold, REFERENCE_TOTAL,
+from .energy import (AF, cycle_loss, washing_flags, washing_threshold, REFERENCE_TOTAL,
                      GROWTH_REFERENCE, TAU, lut)
+from .robot_economics import robot_strategy_costs
 from .style import (LETTER, LOSS_CMAP, LOSS_NORM, MODULE_COLOR, ORDER, ORIENTATIONS, PRETTY, SITES as SITES_STYLE,
                     STYLE, LETTER_KW, SITE_COLOR, bold, edges, loss_colorbar, module_label, save)
 
@@ -138,7 +139,7 @@ def letter(ax, k, x=None, y=None, inside=True):
 
 
 
-def energy_maps(T, path):
+def energy_maps(T, path, *, neuchatel_zoom=False):
     """Energy curves above the reference maps, using precomputed simulation data."""
     with plt.rc_context(STYLE):
         T = T.copy()
@@ -211,19 +212,36 @@ def energy_maps(T, path):
             bx.set_xlim(10, 100); bx.set_xlabel("Band height $h$ (mm)")
             bx.set_title(site)
             if k == 0:
-                bx.set_ylabel("Energy lost to the band\n(% per year)")
+                bx.set_ylabel("Energy lost due to the band\n(% per year)")
             else:
                 plt.setp(bx.get_yticklabels(), visible=False)
             letter(bx, k)
+            if neuchatel_zoom and site == "Neuchâtel":
+                zoom = bx.inset_axes((0.19, 0.30, 0.76, 0.58))
+                for mname in ORDER:
+                    for orientation, ls in (("portrait", "-"), ("landscape", "--")):
+                        z = T[(T.site == site) & (T.module == mname)
+                              & (T.orientation == orientation) & np.isclose(T.f, F0)].sort_values("h")
+                        zoom.plot(z.h, z.band, color=MODULE_COLOR[mname], ls=ls, lw=0.9)
+                zoom.set_xlim(10, 100)
+                zoom.set_ylim(0, 0.4)
+                zoom.set_xticks([20, 60, 100])
+                zoom.set_yticks([0, 0.2, 0.4])
+                zoom.tick_params(labelsize=5.5, pad=1.5, length=2,
+                                 direction="out", width=0.5)
+                for spine in zoom.spines.values():
+                    spine.set_visible(True)
+                    spine.set_color("0.45")
+                    spine.set_linewidth(0.5)
         bxs[0].set_ylim(bottom=0)
         from matplotlib.lines import Line2D  # noqa: E402
-        hd = [Line2D([], [], color=MODULE_COLOR[mname], lw=1.0, label=PRETTY[mname]) for mname in ORDER]
+        hd = [Line2D([], [], color=MODULE_COLOR[mname], lw=1.0, label=module_label(mname)) for mname in ORDER]
         hd += [Line2D([], [], color="0.3", ls="-", label="portrait"), Line2D([], [], color="0.3", ls="--", label="landscape")]
-        fig.legend(handles=hd, loc="upper center", ncol=6, bbox_to_anchor=(0.5, 0.99), bbox_transform=fig.transFigure, handlelength=1.6, columnspacing=1.0)
+        fig.legend(handles=hd, loc="upper center", ncol=6, bbox_to_anchor=(0.5, 0.99), bbox_transform=fig.transFigure, handlelength=1.4, columnspacing=0.8)
         cb = fig.colorbar(im, ax=list(axs), orientation="horizontal", location="top", fraction=0.05, pad=0.13, aspect=60,
                           spacing="uniform", ticks=levels[:-1])
         cb.ax.set_xticklabels([f"{v:g}" for v in levels[:-1]])
-        cb.set_label("Energy lost to the band (% per year)", labelpad=2)
+        cb.set_label("Energy lost due to the band (% per year)", labelpad=2)
         cb.outline.set_linewidth(0.6)
         save(fig, path)
 
@@ -257,7 +275,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
         # ---- energy maps against h and f ---------------------------------------------------------------------------------
         T = T.copy()
         T["band"] = 100 * (T.loss - T.loss_u)
-        energy_maps(T, out / "fig_energy_maps")
+        energy_maps(T, out / "fig_energy_maps", neuchatel_zoom=np.isclose(selected_threshold, 15.0))
         for site in SITE:
             for h in (40.0, 60.0, 80.0):
                 q = T[(T.site == site) & (T.h == h)]
@@ -291,7 +309,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
         ax.add_artist(ax.legend(loc="upper right", fontsize=6))
         ax.legend(handles=[Patch(color="0.4", alpha=0.25, lw=0, label="$f$ = 0.03–0.3")], loc="center right", fontsize=6)
         ax.set_xlim(10, 100); ax.set_ylim(0, 16)
-        ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Value of +10 mm margin\nover 25 years (€ kWp$^{-1}$)")
+        ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Present value of +10 mm margin\nover 25 years (€ kWp$^{-1}$)")
         letter(ax, 0, x=-0.24)
         O = B[B.margin == 0].pivot_table(index=["site", "module", "h", "f"], columns="orientation", values="bc").reset_index()
         O["d"] = O.portrait - O.landscape
@@ -300,7 +318,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
             for mname in ORDER:
                 q = O[(O.site == site) & (O.module == mname)]
                 m = q[q.f == 0.1].set_index("h").d
-                ax.plot(m.index, m, color=MODULE_COLOR[mname], label=PRETTY[mname])
+                ax.plot(m.index, m, color=MODULE_COLOR[mname], label=module_label(mname))
             ax.axhline(0, color=INK, lw=0.5)
             ax.set_xlim(10, 100); ax.set_ylim(-0.7, 0.9); ax.set_title(site, color=INK)
             ax.set_xlabel("Band height $h$ (mm)")
@@ -346,7 +364,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
             ax.set_title("Rectangular band" if shape == "rectangle" else "Triangular band")
             letter(ax, k, inside=False)
         axs[0].set_ylabel("Band height at 1 % loss\n(mm, from the frame edge)")
-        hd = [Line2D([], [], color=MODULE_COLOR[m], label=PRETTY[m]) for m in ORDER]
+        hd = [Line2D([], [], color=MODULE_COLOR[m], label=module_label(m)) for m in ORDER]
         hd += [Line2D([], [], color="0.4", ls="-", marker="o", ms=2.5, label="portrait"),
                Line2D([], [], color="0.4", ls="--", marker="o", ms=2.5, mfc="white", label="landscape"),
                Line2D([], [], color="0.4", ls="none", marker=">", ms=3.5, label="frame-to-cell distance $d$")]
@@ -382,82 +400,7 @@ def paper_figures(R, T, S, S16, H1, out, data, *, washing_total=REFERENCE_TOTAL)
         save(fig, out / "fig_sensitivity")
 
         # ---- cleaning -------------------------------------------------------------------------------------------------------
-        N = G[(G["mode"] == "none") & (G.margin == 0)].assign(bc=lambda x: 100 * (x.cost - x.cost_u) / x.revenue)
-        Tg = G[(G["mode"] == "trigger") & (G.margin == 0)]
-        fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.4), gridspec_kw=dict(wspace=0.4, width_ratios=[1, 1, 1.3]))
-        ax = axs[0]
-        for site, col in SITE.items():
-            n = N[(N.site == site) & (N.f == 0.1)].groupby("h").bc.median()
-            b = B[(B.site == site) & (B.f == 0.1) & (B.margin == 0)].groupby("h").bc
-            ax.plot(n.index, n, color=col, ls="--", lw=0.9)
-            ax.fill_between(b.min().index, b.min(), b.max(), color=col, alpha=0.18, lw=0)
-            ax.plot(b.median().index, b.median(), color=col, label=site)
-        ax.set_ylim(-2, 20); ax.set_xlim(10, 100)
-        ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Band cost (% of revenue)")
-        ax.legend(handles=[Line2D([], [], color="0.4", ls="--", label="rain only"), Line2D([], [], color="0.4", label="cheapest cleaning")],
-                  loc="upper left", bbox_to_anchor=(0.0, 0.88), fontsize=6)
-        letter(ax, 0, x=-0.28)
-        ax = axs[1]
-        for site, col in SITE.items():
-            q = Tg[(Tg.site == site) & (Tg.f == 0.1)]
-            c = q.groupby("h").cleans
-            ax.fill_between(c.min().index, c.min(), c.max(), color=col, alpha=0.18, lw=0)
-            ax.plot(c.median().index, c.median(), color=col)
-            ax.axhline(q.cleans_u.median(), color=col, ls=":", lw=0.9)
-        ax.plot([], [], color="0.4", label="with the band"); ax.plot([], [], color="0.4", ls=":", label="without band")
-        ax.set_xlim(10, 100); ax.set_ylim(-1.5, 15)
-        ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Cleanings per year (trigger rule)")
-        ax.legend(loc="upper right", bbox_to_anchor=(1.0, 0.77), fontsize=6)
-        letter(ax, 1, x=-0.25)
-        ax = axs[2]
-        h0 = 60.0
-        strategies = [("Rain\nonly", lambda q: q[q["mode"] == "none"]),
-                      ("Best fixed\ninterval", lambda q: q[q["mode"] == "interval"]),
-                      ("Trigger\nrule", lambda q: q[q["mode"] == "trigger"]),
-                      ("Robot", lambda q: q[q["mode"] == "robot"])]
-        w = 0.26
-        for i, (site, col) in enumerate(SITE.items()):
-            q0 = G[(G.site == site) & (G.f == 0.1) & (G.h == h0) & (G.margin == 0)]
-            for j, (lab, sel) in enumerate(strategies):
-                q = sel(q0)
-                if lab == "Robot":
-                    # model_runs excludes robot investment; include it exactly once here, in both counterfactuals.
-                    cb_ = 100 * (q.cost + np.mean(ROBOT)) / q.revenue; cu_ = 100 * (q.cost_u + np.mean(ROBOT)) / q.revenue
-                    err = 100 * (ROBOT[1] - ROBOT[0]) / 2 / q.revenue.iloc[0]
-                else:
-                    per = q.groupby(["module", "orientation"])
-                    cb_ = per.apply(lambda t: (100 * t.cost / t.revenue).min()); cu_ = per.apply(lambda t: (100 * t.cost_u / t.revenue).min())
-                    err = None
-                x = j + (i - 1) * w
-                ax.bar(x, np.median(cb_), w * 0.9, color=col, label=site if j == 0 else None, yerr=err, error_kw=dict(lw=0.6, capsize=1.5))
-                ax.plot([x - w * 0.4, x + w * 0.4], [np.median(cu_)] * 2, color=INK, lw=0.9, label="without band" if (i, j) == (0, 0) else None)
-                summary.append(dict(item="strategy", site=site, strategy=lab.replace("\n", " "), cost_band=np.median(cb_),
-                                    cost_noband=np.median(cu_)))
-        ax.set_xticks(range(len(strategies))); ax.set_xticklabels([s for s, _ in strategies], fontsize=6); ax.tick_params(axis="x", length=0)
-        ax.set_ylabel("Soiling cost (% of revenue)"); ax.set_ylim(0, 40)
-        hh, ll = ax.get_legend_handles_labels()
-        ax.legend(hh[:1] + [Line2D([], [], color=INK, marker="|", ls="none", ms=6, mew=0.6)], ll[:1] + ["robot cost range"],
-                  loc="upper right", fontsize=6)
-        letter(ax, 2, x=-0.17)
-        fig.legend(handles=[Line2D([], [], color=c, lw=1.4, label=s_) for s_, c in SITE.items()]
-                   + [Patch(color="0.4", alpha=0.3, lw=0, label="range over 4 modules × 2 orientations")],
-                   loc="lower center", ncol=4, bbox_to_anchor=(0.5, 0.98))
-        save(fig, out / "fig_cleaning")
-        for site in SITE:
-            for h in (40.0, 60.0, 80.0):
-                for f in (0.03, 0.1, 0.3):
-                    q = Tg[(Tg.site == site) & (Tg.h == h) & np.isclose(Tg.f, f)]
-                    b = B[(B.site == site) & (B.h == h) & np.isclose(B.f, f) & (B.margin == 0)]
-                    n = N[(N.site == site) & (N.h == h) & np.isclose(N.f, f)]
-                    summary.append(dict(item="cleaning", site=site, h=h, f=f, cleans=q.cleans.median(), cleans_u=q.cleans_u.median(),
-                                        bc_best=b.bc.median(), bc_best_min=b.bc.min(), bc_best_max=b.bc.max(), bc_none=n.bc.median(),
-                                        best_modes="; ".join(sorted(set(b["mode"] + b.k.astype(str))))))
-        rt = R[(R.market == "rooftop") & (R["mode"] == "trigger") & (R.margin == 0)]
-        for site in SITE:
-            for h in (40.0, 60.0, 80.0):
-                q = rt[(rt.site == site) & (rt.h == h) & (rt.f == 0.1)]
-                summary.append(dict(item="rooftop", site=site, h=h, f=0.1, cleans=q.cleans.median(), cleans_u=q.cleans_u.median(),
-                                    bc_best=(100 * (q.cost - q.cost_u) / q.revenue).median()))
+        summary.extend(cleaning_figures(R, B, out, robot_residual_mode="linear_remaining_life").to_dict("records"))
     return pd.DataFrame(summary)
 
 
@@ -659,3 +602,98 @@ def band_shape(T, path, f0=0.1):
               Patch(color="0.3", alpha=0.2, lw=0, label="range over 4 modules × 2 orientations")]
         fig.legend(handles=hd, loc="lower center", ncol=3, bbox_to_anchor=(0.5, 0.98))
         save(fig, path)
+
+
+def cleaning_figures(R, B, out, *, robot_residual_mode, output_name="fig_cleaning"):
+    """Saved annual losses + explicit robot ownership scenario; no resimulation."""
+    summary = []
+    G = R[R.market == "ground"]
+    with plt.rc_context(STYLE):
+        N = G[(G["mode"] == "none") & (G.margin == 0)].assign(bc=lambda x: 100 * (x.cost - x.cost_u) / x.revenue)
+        Tg = G[(G["mode"] == "trigger") & (G.margin == 0)]
+        fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.4), gridspec_kw=dict(wspace=0.4, width_ratios=[1, 1, 1.3]))
+        ax = axs[0]
+        for site, col in SITE.items():
+            n = N[(N.site == site) & (N.f == 0.1)].groupby("h").bc.median()
+            b = B[(B.site == site) & (B.f == 0.1) & (B.margin == 0)].groupby("h").bc
+            ax.plot(n.index, n, color=col, ls="--", lw=0.9)
+            ax.fill_between(b.min().index, b.min(), b.max(), color=col, alpha=0.18, lw=0)
+            ax.plot(b.median().index, b.median(), color=col, label=site)
+        ax.set_ylim(-2, 20); ax.set_xlim(10, 100)
+        ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Band cost (% of revenue)")
+        ax.legend(handles=[Line2D([], [], color="0.4", ls="--", label="rain only"), Line2D([], [], color="0.4", label="cheapest cleaning")],
+                  loc="upper left", bbox_to_anchor=(0.0, 0.88), fontsize=6)
+        letter(ax, 0, x=-0.28)
+        ax = axs[1]
+        for site, col in SITE.items():
+            q = Tg[(Tg.site == site) & (Tg.f == 0.1)]
+            c = q.groupby("h").cleans
+            ax.fill_between(c.min().index, c.min(), c.max(), color=col, alpha=0.18, lw=0)
+            ax.plot(c.median().index, c.median(), color=col)
+            ax.axhline(q.cleans_u.median(), color=col, ls=":", lw=0.9)
+        ax.plot([], [], color="0.4", label="with the band"); ax.plot([], [], color="0.4", ls=":", label="without band")
+        ax.set_xlim(10, 100); ax.set_ylim(-1.5, 15)
+        ax.set_xlabel("Band height $h$ (mm)"); ax.set_ylabel("Cleanings per year (trigger rule)")
+        ax.legend(loc="upper right", bbox_to_anchor=(1.0, 0.77), fontsize=6)
+        letter(ax, 1, x=-0.25)
+        ax = axs[2]
+        h0 = 60.0
+        strategies = [("Rain\nonly", lambda q: q[q["mode"] == "none"]),
+                      ("Best fixed\ninterval", lambda q: q[q["mode"] == "interval"]),
+                      ("Trigger\nrule", lambda q: q[q["mode"] == "trigger"]),
+                      ("Robot", lambda q: q[q["mode"] == "robot"])]
+        w = 0.26
+        for i, (site, col) in enumerate(SITE.items()):
+            q0 = G[(G.site == site) & (G.f == 0.1) & (G.h == h0) & (G.margin == 0)]
+            for j, (lab, sel) in enumerate(strategies):
+                q = sel(q0)
+                if lab == "Robot":
+                    costs = robot_strategy_costs(q, residual_mode=robot_residual_mode)
+                    cb_ = costs.band_mid_pct_clean_revenue
+                    cu_ = costs.noband_mid_pct_clean_revenue
+                    # Investment bounds are evaluated for every configuration
+                    # before taking medians; yields differ across the modules.
+                    centre = float(cb_.median())
+                    err = np.array([[centre - costs.band_low_pct_clean_revenue.median()],
+                                    [costs.band_high_pct_clean_revenue.median() - centre]])
+                else:
+                    per = q.groupby(["module", "orientation"])
+                    cb_ = per.apply(lambda t: (100 * t.cost / t.revenue).min()); cu_ = per.apply(lambda t: (100 * t.cost_u / t.revenue).min())
+                    err = None
+                x = j + (i - 1) * w
+                ax.bar(x, np.median(cb_), w * 0.9, color=col, label=site if j == 0 else None, yerr=err, error_kw=dict(lw=0.6, capsize=1.5))
+                ax.plot([x - w * 0.4, x + w * 0.4], [np.median(cu_)] * 2, color=INK, lw=0.9, label="without band" if (i, j) == (0, 0) else None)
+                summary.append(dict(item="strategy", site=site, strategy=lab.replace("\n", " "), cost_band=np.median(cb_),
+                                    cost_noband=np.median(cu_)))
+                if lab == "Robot":
+                    summary[-1].update(robot_residual_mode=robot_residual_mode,
+                        cost_band_low=float(costs.band_low_pct_clean_revenue.median()),
+                        cost_band_high=float(costs.band_high_pct_clean_revenue.median()),
+                        cost_noband_low=float(costs.noband_low_pct_clean_revenue.median()),
+                        cost_noband_high=float(costs.noband_high_pct_clean_revenue.median()))
+        ax.set_xticks(range(len(strategies))); ax.set_xticklabels([s for s, _ in strategies], fontsize=6); ax.tick_params(axis="x", length=0)
+        ax.set_ylabel("Soiling cost (% of revenue)"); ax.set_ylim(0, 40)
+        hh, ll = ax.get_legend_handles_labels()
+        ax.legend(hh[:1] + [Line2D([], [], color=INK, marker="|", ls="none", ms=6, mew=0.6)], ll[:1] + ["robot cost range"],
+                  loc="upper right", fontsize=6)
+        letter(ax, 2, x=-0.17)
+        fig.legend(handles=[Line2D([], [], color=c, lw=1.4, label=s_) for s_, c in SITE.items()]
+                   + [Patch(color="0.4", alpha=0.3, lw=0, label="range over 4 modules × 2 orientations")],
+                   loc="lower center", ncol=4, bbox_to_anchor=(0.5, 0.98))
+        save(fig, out / output_name)
+        for site in SITE:
+            for h in (40.0, 60.0, 80.0):
+                for f in (0.03, 0.1, 0.3):
+                    q = Tg[(Tg.site == site) & (Tg.h == h) & np.isclose(Tg.f, f)]
+                    b = B[(B.site == site) & (B.h == h) & np.isclose(B.f, f) & (B.margin == 0)]
+                    n = N[(N.site == site) & (N.h == h) & np.isclose(N.f, f)]
+                    summary.append(dict(item="cleaning", site=site, h=h, f=f, cleans=q.cleans.median(), cleans_u=q.cleans_u.median(),
+                                        bc_best=b.bc.median(), bc_best_min=b.bc.min(), bc_best_max=b.bc.max(), bc_none=n.bc.median(),
+                                        best_modes="; ".join(sorted(set(b["mode"] + b.k.astype(str))))))
+        rt = R[(R.market == "rooftop") & (R["mode"] == "trigger") & (R.margin == 0)]
+        for site in SITE:
+            for h in (40.0, 60.0, 80.0):
+                q = rt[(rt.site == site) & (rt.h == h) & (rt.f == 0.1)]
+                summary.append(dict(item="rooftop", site=site, h=h, f=0.1, cleans=q.cleans.median(), cleans_u=q.cleans_u.median(),
+                                    bc_best=(100 * (q.cost - q.cost_u) / q.revenue).median()))
+    return pd.DataFrame(summary)

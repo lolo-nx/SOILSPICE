@@ -1,0 +1,50 @@
+[
+  {
+    "module": "YINGLI",
+    "fitted_nominal_parameter_temperature_C": 24.8,
+    "runtime_default_temperature_C": 27,
+    "temperature_setter": "param",
+    "temperature_sweep_supported": false,
+    "reason": "t changes both Iph and diode TNOM; no operating .temp. Varying t is not varying a physical cell temperature.",
+    "bishop_branch_present": false,
+    "unused_voltage_temperature_coefficient": true,
+    "explicit_25C_control": ".param t=25; .temp 25; diode nominal temperature remains fixed at 25 throughout irradiance sweep",
+    "fixed_parameters": "IS/IS1, n1, Rs, Rp, Bishop a/b/Vb, bypass model unchanged; no refitting"
+  },
+  {
+    "module": "SUNPOWER",
+    "fitted_nominal_parameter_temperature_C": 25.4,
+    "runtime_default_temperature_C": 27,
+    "temperature_setter": "param",
+    "temperature_sweep_supported": false,
+    "reason": "t changes both Iph and diode TNOM; no operating .temp. Varying t is not varying a physical cell temperature.",
+    "bishop_branch_present": true,
+    "unused_voltage_temperature_coefficient": true,
+    "explicit_25C_control": ".param t=25; .temp 25; diode nominal temperature remains fixed at 25 throughout irradiance sweep",
+    "fixed_parameters": "IS/IS1, n1, Rs, Rp, Bishop a/b/Vb, bypass model unchanged; no refitting"
+  },
+  {
+    "module": "JASOLAR",
+    "fitted_nominal_parameter_temperature_C": 24.2,
+    "runtime_default_temperature_C": 27,
+    "temperature_setter": "param",
+    "temperature_sweep_supported": false,
+    "reason": "t changes both Iph and diode TNOM; no operating .temp. Varying t is not varying a physical cell temperature.",
+    "bishop_branch_present": false,
+    "unused_voltage_temperature_coefficient": true,
+    "explicit_25C_control": ".param t=25; .temp 25; diode nominal temperature remains fixed at 25 throughout irradiance sweep",
+    "fixed_parameters": "IS/IS1, n1, Rs, Rp, Bishop a/b/Vb, bypass model unchanged; no refitting"
+  },
+  {
+    "module": "LONGI",
+    "fitted_nominal_parameter_temperature_C": 25.0,
+    "runtime_default_temperature_C": 27,
+    "temperature_setter": "param",
+    "temperature_sweep_supported": false,
+    "reason": "t changes both Iph and diode TNOM; no operating .temp. Varying t is not varying a physical cell temperature.",
+    "bishop_branch_present": true,
+    "unused_voltage_temperature_coefficient": true,
+    "explicit_25C_control": ".param t=25; .temp 25; diode nominal temperature remains fixed at 25 throughout irradiance sweep",
+    "fixed_parameters": "IS/IS1, n1, Rs, Rp, Bishop a/b/Vb, bypass model unchanged; no refitting"
+  }
+]

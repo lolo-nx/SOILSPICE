@@ -116,7 +116,12 @@ def band_params_table(path, cite_karlsruhe="WorldEnergyMeteorology", cite_doha="
         ("Cleaning cost $C$", f"{cg:g} ({cr:g})~\\euro~kWp$^{{-1}}$", "$\\times 0.5$, $\\times 2$",
          "Ground (rooftop) \\cite{ilseTechnoEconomicAssessmentSoiling2019a}"),
         ("Cleaning robot", "2.4--8.2~\\euro~m$^{-2}$", "range",
-         "Investment over 10 years \\cite{ilseTechnoEconomicAssessmentSoiling2019a}"),
+         "Initial investment; unchanged area conversion, 4.6~m$^2$~kWp$^{-1}$ \\cite{ilseTechnoEconomicAssessmentSoiling2019a}"),
+        ("Robot lifetime", "12 years", "fixed", "Purchases at years 0, 12 and 24"),
+        ("Robot maintenance and repair", "5\\% of initial investment per year", "fixed",
+         "Year-end payments in years 1--25; no per-clean manual fee"),
+        ("Robot terminal value", "11/12 of investment (main case)", "Zero residual credit",
+         "Remaining-life credit in year 25 is an explicit alternative, not an assumed resale price"),
         ("Discount rate, lifetime", "5\\%, 25 years", "--", "\\cite{ilseTechnoEconomicAssessmentSoiling2019a}"),
         ("Module price", "0.10~\\euro~Wp$^{-1}$", "--", "Assumption (margin cost)"),
     ]

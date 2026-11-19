@@ -1,0 +1,15 @@
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\naux\Documents\GitHub\SOILSPICE\results\stc_sensitivity\annual_irradiance\runs\YINGLI_rectangle_portrait_h60_tau0.2_G50_explicit_25C.net
+Start Time: Wed Nov 18 16:54:52 2026
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 25
+method = trap
+Total elapsed time: 0.388 seconds.
+Total iterations: 4548
+
+Files loaded:
+C:\Users\naux\Documents\GitHub\SOILSPICE\results\stc_sensitivity\annual_irradiance\runs\YINGLI_rectangle_portrait_h60_tau0.2_G50_explicit_25C.net
+C:\Users\naux\AppData\Local\LTspice\lib\cmp\standard.dio
+

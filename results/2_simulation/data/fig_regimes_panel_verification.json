@@ -93,6 +93,6 @@
   "source_sha256": "6bbd2ee9404f9b991750fce98f28a6d08325b0e89b1cc6fbe607acd5ca463fa6",
   "preexisting_exports_unchanged": 97,
   "standalone_regime_map_and_atlas_preserved": true,
-  "pdf_sha256": "2aa80cd0e9daa73eb0c4062f4fb1749afc14e531227f6427af73172a24731adf",
-  "png_sha256": "9827b022343008ff50fc9cb7ec3a31a43bfedfe4dc3852af0ce6a4137fbb7ee4"
+  "pdf_sha256": "b054073d952acc6090064a9281f17454dc3d2cce8f82a26bf491eacec8bcfcb2",
+  "png_sha256": "cb94f92df4e31b31261226468352ad0c70aeac28b0bd4ac057fb0d7e30a819b7"
 }

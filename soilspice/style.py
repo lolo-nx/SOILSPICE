@@ -26,7 +26,7 @@ ORDER = ("YINGLI", "SUNPOWER", "JASOLAR", "LONGI")
 ORIENTATIONS = ("portrait", "landscape")
 MODULE_COLOR = {"YINGLI": "#009E73", "SUNPOWER": "#D55E00", "JASOLAR": "#E69F00", "LONGI": "#0072B2"}   # Okabe-Ito
 PRETTY = {"YINGLI": "Yingli", "SUNPOWER": "SunPower", "JASOLAR": "JA Solar", "LONGI": "LONGi"}
-TECH = {"YINGLI": "n-Si", "SUNPOWER": "IBC", "JASOLAR": "TOPCon", "LONGI": "HJT BC"}
+TECH = {"YINGLI": "n-Si", "SUNPOWER": "IBC", "JASOLAR": "TOPCon", "LONGI": "HIBC"}
 EDGE = dict(edgecolor="black", lw=0.4)
 LETTER = 8                                   # panel letters: 8 pt bold lowercase
 LETTER_KW = dict(fontsize=LETTER, fontweight="bold")

@@ -179,7 +179,7 @@ def matrix_cells():
 
 MODULES = {
     "LONGI": Module(
-        name="LONGI", pretty_name="LONGi", technology="HJT BC",
+        name="LONGI", pretty_name="LONGi", technology="HIBC",
         n_cols=6, n_rows=18, width=1134.0, height=1800.0,
         cell_width=182.2, cell_height=95.8, gap=1.0, center_gap=13.0,
         margins=(2.0, 2.0, 14.0, 12.0), frame=(10.0, 10.0, 10.0, 10.0),

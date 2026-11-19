@@ -1,0 +1,65 @@
+{
+  "checks": {
+    "kcl_A": 0.004165902370004915,
+    "series_ohm_V": 2.7088556289675547e-06,
+    "shunt_ohm_A": 5.707818324096614e-07,
+    "bishop_formula_A": 1.7222650423587282e-05,
+    "parallel_kcl_A": 0.0026116327078362644,
+    "series_branch_A": 0.0
+  },
+  "simulations": [
+    {
+      "tau_I": 0.0,
+      "instrumented_IV_max_change_A": 0.0,
+      "saved_validation_IV_max_change_A": 9.536743341698184e-07,
+      "Voc_V": 40.08163859094664,
+      "Vmp_V": 35.2,
+      "sweep_step_V": 0.2
+    },
+    {
+      "tau_I": 0.442,
+      "instrumented_IV_max_change_A": 0.0,
+      "saved_validation_IV_max_change_A": 1.8918200339612667e-13,
+      "Voc_V": 40.11831461875795,
+      "Vmp_V": 35.4,
+      "sweep_step_V": 0.2
+    }
+  ],
+  "source_sha256": {
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\analysis.py": "ebd6cb9ce61a79d81b04961b06b5c762a4422af175c7974f4092530f606a745e",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\arrange-fig.py": "83fd4c1c3d6005cbda09e2a707ce3d0635de8051631ba1c6771d691d9c1842ec",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\bypass.py": "4e5d0274c0dd70728b67330933eae1c39c2943d785a778c02940e03ed9ca254c",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\config.py": "d02809367572dc8a83624678114ed9324f2101d11d1f13798075083a30bb5f3f",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\energy.py": "c82bfd8c63af888c3caaf82fd2c37cce0c114df7669ad54ec9ec39c2246dc80d",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\energy_sensitivity.py": "11761fd09c1be915b9fdda3d27d79e02d99944735cba79ac68ecfdbf62411434",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\experiments.py": "cc72c98f727aac02b7755de71bc3b6d42709c80ddc4c13b147ab595a22a196db",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\field.py": "2b04c93970d78833caaba4959e079a5f93d309785973911f0c8e2fa8506abf37",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\fig_energy.py": "79ad8a967848ecd8c364bb36132ca5f8d5d184dbaa5448f1826b88e0f13f89c0",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\fig_extended_sensitivity.py": "0ba9c67c2d3af788f41ea8d022053b7642bd24c6a72f04d7c5bc252e9cd27b2c",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\fig_regimes.py": "4119b4a3f5925ec465357afe76e52aac99df44f711d0a62aacc50c03f439a9f8",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\fig_simulation.py": "e787883325ec385ba05bfc400edb0eec3d13db084bd90b2fe4d1cc89fc50fd17",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\fig_soiling.py": "120729ea675f0ecf8efa082266660ea539e10b2436bf94b1e27b6675abb3cded",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\fig_threshold_sensitivity.py": "8071cdfdbb3dc8b9346221277d8a77409f240643a5c6f05dac26e521f612cccc",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\fig_validation.py": "7235a7906d36b213597cc6d31dc7ec4f4c9442829144c1be1935eeb4d4ca1457",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\geometry.py": "5a242357a8446ea33b275d399377e051b297bc6e627256ccd5757ed44268e0a3",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\measurements.py": "dda0a558f630f12a1e8c9ea4db16f5c0e63c605e85393444494b04f63032748d",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\modules.py": "136ba452c774ea6a450878129d83eadb3a9e7024fa2de7bd159c64fcaee7b7f3",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\photos.py": "4d32e0505fa5b113851884fde89548880b0b10e500d1b5896c45dfb2e23d3679",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\plots.py": "9120eace93d145ed08fdc42ffe0345eedde2a02bb53af589031d98f989e0ae29",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\rain.py": "444fd2b2972b90d4de74a85a637e0ccf064efeb6ef038a402d6eb380c1f49a37",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\rain_scenarios.py": "d0b559765ee210a2240ce0491f76862f6fb4f4d2d6ac4227797d0413592f7c5e",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\resilience.py": "1721c9c3f5ac16b445f2aa91c6afcd5fa60c6476958193b5a3a619634233d1ab",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\schematics.py": "13b439cd464a93b221e8777d78507c70531161931af40c333aec807ffe370913",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\simulation.py": "dc641c3d8ff3ed71502b055613ebd4b3dbe32ac8703b5d6bbf23d1a7512e2d52",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\spice.py": "af27942a54209ed0a8bb83311bf47b523a8b244d967cc741ea18d30af0bd861b",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\style.py": "c38982303f01cd79859286d0f8e8e66a436b69312aca72e2572e50db8e70da3a",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\tables.py": "d6b691615e0adb3500bd8f4ab407b7568608cd2c9056a033dbc1f2b85a2a83c1",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\uncertainty.py": "9e4391a3345eecd596a1b9db53676d9e39bf46bb4b83a9606fa294a9409b6b27",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\validation.py": "3db8a975ace440c171982d0019c928f67729887c3211c3272f8b2c9bef5b69dc",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\soilspice\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\naux\\Documents\\GitHub\\SOILSPICE\\data\\netlists\\Longi-Bishop.net": "1e8cf787c8217b8d5d963425d00eb9262d1ea5eb67afb20e573fa9be32fc2d4d"
+  },
+  "library": "C:\\Users\\naux\\AppData\\Local\\LTspice\\lib\\cmp\\standard.dio",
+  "library_sha256": "696d34dfe538966c80cfe1da259c1043f408777be79f59e4f1c47d82f3af320a",
+  "original_model_unchanged": true
+}

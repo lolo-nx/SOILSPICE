@@ -1,0 +1,15 @@
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\naux\Documents\GitHub\SOILSPICE\results\stc_sensitivity\annual_irradiance\runs\JASOLAR_rectangle_landscape_h60_tau0.1_G1200_explicit_25C.net
+Start Time: Wed Nov 18 16:41:44 2026
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 25
+method = trap
+Total elapsed time: 0.211 seconds.
+Total iterations: 4724
+
+Files loaded:
+C:\Users\naux\Documents\GitHub\SOILSPICE\results\stc_sensitivity\annual_irradiance\runs\JASOLAR_rectangle_landscape_h60_tau0.1_G1200_explicit_25C.net
+C:\Users\naux\AppData\Local\LTspice\lib\cmp\standard.dio
+

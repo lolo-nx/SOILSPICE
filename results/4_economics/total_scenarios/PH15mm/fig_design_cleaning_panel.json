@@ -11,31 +11,31 @@
   "vector_pdf": true,
   "source_figures": [
     {
-      "source": "results/4_economics/total_scenarios/PH15mm/fig_design_levers.pdf",
-      "sha256": "9c4dbb9cae2a2bace832ea13bb4cd5eeaf93eeeb62cb1baa2a559776900feeac",
-      "scale": 1.103540376949618,
+      "source": "results\\4_economics\\total_scenarios\\PH15mm\\fig_design_levers.pdf",
+      "sha256": "12f4096910d215c3ebb6949c36b987129547220964fb07efa8ca5b0c726cc8e9",
+      "scale": 1.1064199958980392,
       "box_pdf_points": [
-        7.086614173228355,
-        7.495424104486421,
-        511.6535433070867,
-        235.5386011729229
+        7.3657212750898395,
+        7.0866141732283445,
+        511.37443620522515,
+        235.97336781988886
       ]
     },
     {
-      "source": "results/4_economics/total_scenarios/PH15mm/fig_cleaning.pdf",
-      "sha256": "0253cb4db1a5eb0940bedf96bd866109ef66974d1fb4178f4bcc88fdc9086d27",
-      "scale": 1.1353236550574213,
+      "source": "results\\4_economics\\total_scenarios\\PH15mm\\fig_cleaning.pdf",
+      "sha256": "19ebe3cf45f79b569fe6c2c6ddba3af1b7408fca3125d9f0b5ea0eec6f353969",
+      "scale": 1.1340501765193918,
       "box_pdf_points": [
-        7.086614173228355,
-        246.87718385008827,
-        511.6535433070867,
-        474.3943396750411
+        7.3657212750898395,
+        247.31195049705423,
+        511.37443620522515,
+        474.80314960629926
       ]
     }
   ],
   "label_size_pt": 9.0,
-  "preexisting_exports_unchanged": 237,
+  "preexisting_exports_unchanged": 261,
   "model_or_simulation_changes": false,
-  "pdf_sha256": "1475d512c93cf6049e2b19642ce4a9f0425e756d6a4685b415a056fe2fa5f02b",
-  "png_sha256": "627151e8defea932e5e30fe22a85526c17094e7b7bf58a4568f870b005743f4c"
+  "pdf_sha256": "6391c16154f89292c64dd0c09f48909626cecbc1ed77f2b85d932414ba099e29",
+  "png_sha256": "09a41e1dfedd1ee3cbcc88d751261f729a0eff9e8879a6f59805fc92484983e6"
 }

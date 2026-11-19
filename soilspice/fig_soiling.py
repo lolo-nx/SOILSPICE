@@ -101,5 +101,8 @@ def draw(photo, electrical, framework, output):
         r"\textbf{b}, Electrical layouts of the full-cell standard (A), full-cell unbalanced-substring (B) "
         r"and half-cell butterfly (C) architectures. "
         r"\textbf{c}, Module geometry and band properties determine cell coverage and the cell-level "
-        r"SPICE netlist, from which I--V curves and electrical losses are calculated." + "\n")
+        r"SPICE netlist, from which I--V curves and electrical losses are calculated. "
+        r"Blue cells identify the active area, beige identifies inactive glass, and grey denotes the dust band. "
+        r"The illustration is schematic and not to scale. "
+        r"Band height $h$ is measured from the lower module edge." + "\n")
     print(f"Saved {output.with_suffix('.pdf')} and .png ({WIDTH_MM:g} × {HEIGHT_MM:g} mm)")

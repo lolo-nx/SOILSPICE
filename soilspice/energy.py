@@ -27,6 +27,7 @@ import pandas as pd
 
 from . import config, modules, rain as rainfall
 from .style import ORDER, ORIENTATIONS
+from .robot_economics import DISCOUNT_RATE, EVALUATION_YEARS, annuity_factor
 
 # ---- sites and climate ----------------------------------------------------------------------------------------------
 FILES = {"Neuchâtel": "open-meteo-46.92N7.00E519m.csv", "Almería": "open-meteo-36.87N2.49W32m.csv",
@@ -51,8 +52,7 @@ GROWTH_REFERENCE = ("JASOLAR", "landscape", 60.0, 0.1, 0.0)
 # ---- economics --------------------------------------------------------------------------------------------------------
 MARKETS = {"ground": (0.06, 0.41), "rooftop": (0.28, 3.3)}     # EUR/kWh, EUR/kWp per cleaning (Ilse et al. 2019)
 INTERVALS = [14, 30, 60, 90, 120, 180, 270, 365] # intervalles fixed de nettoyage testés
-ROBOT = (2.4 * 4.6 / 10, 8.2 * 4.6 / 10)                       # min-max ; cout annuel d'un robot  EUR/kWp/yr
-AF = (1 - 1.05 ** -25) / 0.05                                  # annuity factor, 25 years at 5 %; convertir un gain annuel en valeur sur 25 ans 
+AF = annuity_factor(EVALUATION_YEARS, DISCOUNT_RATE)             # 25-year end-of-year annuity, 5%
 P_STC_W = {"YINGLI": 265.0, "SUNPOWER": 345.0, "JASOLAR": 445.0, "LONGI": 495.0}
 CLEAN_EUR_M2 = {"utility": 0.09, "roof_self": 0.72}            # previous model (SI): cost of one cleaning per m2
 
@@ -295,7 +295,8 @@ def model_runs(*, washing_total=REFERENCE_TOTAL):
     """Every module, orientation, h, f in F3, margin and cleaning strategy, both markets.
     Columns: site, market, mode, k, module, orientation, h, f, margin, Y, loss, loss_u, cleans, cleans_u, tau_mean,
     cost, cost_u, revenue (EUR/kWp/yr). Robot rows contain lost-revenue cost only; fig_energy adds the
-    annual ROBOT investment once for its final comparison. Robot is excluded from manual-policy optima.
+    discounted robot ownership EAC once for its final comparison (robot_economics).
+    Robot is excluded from manual-policy optima.
     """
     ts, hs, _ = spice_table()
     combos = [(m, o, h, f, g) for m in ORDER for o in ORIENTATIONS for h in hs for f in F3 for g in MARGINS]

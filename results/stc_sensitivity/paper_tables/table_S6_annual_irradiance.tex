@@ -1,0 +1,21 @@
+% Requires \usepackage{booktabs}. Table numbering is set by the SI document.
+\begin{table}[t]
+\centering
+\caption{\textbf{Effect of irradiance on additional annual band energy losses}}
+\label{tab:irradiance-annual}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lrrrr}
+\toprule
+\shortstack{Site} & \shortstack{STC estimate\\(\%)} & \shortstack{With irradiance\\dependence (\%)} & \shortstack{Change in\\median (pp)} & \shortstack{Largest individual\\change (pp)} \\
+\midrule
+Neuchâtel & 0.136 & 0.140 & +0.004 & 0.005 \\
+Almería & 3.768 & 3.795 & +0.026 & 0.123 \\
+Doha & 6.979 & 6.940 & -0.040 & 0.277 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize Values are additional annual energy losses due to the band, relative to clean annual production. Medians cover four modules and two orientations. The largest individual change is the maximum absolute change among these eight combinations. The scenario uses a 60 mm rectangular band, f = 0.1, no manual cleaning and complete band removal after rainfall events of at least 15 mm. The correction isolates irradiance dependence at 25 $^\circ$C. pp denotes percentage points.
+\end{minipage}
+\end{table}

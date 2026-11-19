@@ -173,6 +173,24 @@ the saved summary and raw runs; all retained figures, including the main economi
 
 ## Requirements
 
+### Daily robot economics (PH15 mm reference)
+
+`python chapters/update_robot_economics.py` recalculates robot ownership costs
+from saved energy losses, without rerunning the electrical or dust models.
+The 25-year, 5% discounted evaluation includes purchases at years 0, 12 and 24
+and year-end maintenance/repair of 5% of initial investment in years 1–25.
+The initial investment range remains 11.04–37.72 EUR/kWp. The main figure
+credits **11/12 of the final purchase cost at year 25**; a named sensitivity
+uses no residual value. `data/robot_economics/` in PH15mm contains full
+cash flows, equivalent annual costs, per-configuration and median totals,
+verification, and Results/Methods/caption text. Raw robot `cost`/`cost_u`
+remain energy-loss costs only; ownership is added once for the comparison.
+
+`python Nature-builder-economics.py` rebuilds the main Fig. 8. For the
+alternative, use `--cleaning-figure results/4_economics/total_scenarios/PH15mm/fig_cleaning_without_residual.pdf
+--output results/4_economics/total_scenarios/PH15mm/fig_design_cleaning_panel_without_residual`.
+Other rainfall scenario exports are not refreshed by this targeted command.
+
 ### Yingli irradiance-dependent shunt comparison
 
 `python chapters/yingli_shunt_comparison.py` compares every available Yingli flash curve

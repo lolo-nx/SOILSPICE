@@ -1,0 +1,60 @@
+{
+  "horizon_years": 25,
+  "discount_rate": 0.05,
+  "robot_lifetime_years": 12,
+  "purchase_years": [
+    0,
+    12,
+    24
+  ],
+  "initial_investment_eur_kwp": [
+    11.04,
+    37.71999999999999
+  ],
+  "maintenance_fraction_of_initial_investment_per_year": 0.05,
+  "maintenance_payment_years": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "annuity_factor": 14.09394456604475,
+  "main_figure_residual_mode": "linear_remaining_life",
+  "alternative_residual_mode": "none",
+  "alternative_terminal_fraction": 0.9166666666666666,
+  "terminal_credit_year": 25,
+  "discounting_convention": "Purchases at t=0,12,24; annual recurring costs/revenue at t=1..25",
+  "annual_energy_cost_convention": "Saved 10-year mean annual losses held stationary over 25-year economic horizon",
+  "inflation_escalation_degradation": "Unchanged: no added escalation or degradation",
+  "robot_energy_water_or_extra_operating_costs": "No new operating assumptions: only specified 5% maintenance added",
+  "reference": {
+    "market": "ground",
+    "h_mm": 60,
+    "f": 0.1,
+    "margin_mm": 0
+  },
+  "investment_uncertainty": "Input range endpoints, not statistical confidence intervals",
+  "no_band_markers": "Same ownership EAC as band case; independently calculated uniform-layer energy loss",
+  "model_runs_cost_contract": "Robot cost/cost_u are energy-loss costs only; no ownership already included"
+}

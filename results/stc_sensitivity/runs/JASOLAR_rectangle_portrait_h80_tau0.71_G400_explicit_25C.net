@@ -1,0 +1,144 @@
+* /Users/lorrainenaux/Documents/LTspice/JASolar-bishop2.asc
+XX1 N001 N002 pvcell_jasolar params: f_cov=0.6265 tau_I=0.71
+XX2 N002 N003 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX3 N003 N004 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX4 N004 N005 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX5 N005 N006 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX6 N006 N007 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX7 N007 N008 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX8 N008 N009 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX9 N009 0 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX10 N027 N026 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX11 N026 N025 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX12 N025 N024 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX13 N024 N023 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX14 N023 N022 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX15 N022 N021 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX16 N021 N020 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX17 N020 N019 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX18 N019 N001 pvcell_jasolar params: f_cov=0.6265 tau_I=0.71
+XX55 N018 N017 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX56 N017 N016 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX57 N016 N015 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX58 N015 N014 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX59 N014 N013 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX60 N013 N012 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX61 N012 N011 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX62 N011 N010 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX63 N010 0 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX64 N027 N028 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX65 N028 N029 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX66 N029 N030 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX67 N030 N031 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX68 N031 N032 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX69 N032 N033 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX70 N033 N034 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX71 N034 N035 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX72 N035 N018 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+V1 N097 0 0
+D1 0 N027 RF2001NS2D
+D2 N027 N062 RF2001NS2D
+D3 N062 N097 RF2001NS2D
+XX19 N036 N037 pvcell_jasolar params: f_cov=0.6265 tau_I=0.71
+XX20 N037 N038 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX21 N038 N039 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX22 N039 N040 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX23 N040 N041 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX24 N041 N042 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX25 N042 N043 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX26 N043 N044 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX27 N044 N027 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX28 N062 N061 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX29 N061 N060 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX30 N060 N059 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX31 N059 N058 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX32 N058 N057 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX33 N057 N056 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX34 N056 N055 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX35 N055 N054 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX36 N054 N036 pvcell_jasolar params: f_cov=0.6265 tau_I=0.71
+XX37 N071 N072 pvcell_jasolar params: f_cov=0.6265 tau_I=0.71
+XX38 N072 N073 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX39 N073 N074 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX40 N074 N075 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX41 N075 N076 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX42 N076 N077 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX43 N077 N078 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX44 N078 N079 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX45 N079 N062 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX46 N097 N096 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX47 N096 N095 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX48 N095 N094 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX49 N094 N093 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX50 N093 N092 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX51 N092 N091 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX52 N091 N090 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX53 N090 N089 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX54 N089 N071 pvcell_jasolar params: f_cov=0.6265 tau_I=0.71
+XX73 N053 N052 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX74 N052 N051 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX75 N051 N050 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX76 N050 N049 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX77 N049 N048 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX78 N048 N047 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX79 N047 N046 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX80 N046 N045 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX81 N045 N027 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX82 N062 N063 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX83 N063 N064 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX84 N064 N065 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX85 N065 N066 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX86 N066 N067 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX87 N067 N068 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX88 N068 N069 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX89 N069 N070 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX90 N070 N053 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX91 N088 N087 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX92 N087 N086 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX93 N086 N085 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX94 N085 N084 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX95 N084 N083 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX96 N083 N082 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX97 N082 N081 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX98 N081 N080 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX99 N080 N062 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX100 N098 N099 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX101 N099 N100 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX102 N100 N101 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX103 N101 N102 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX104 N102 N103 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX105 N103 N104 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX106 N104 N105 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX107 N105 N088 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+XX108 N097 N098 pvcell_jasolar params: f_cov=0.0000 tau_I=0.71
+
+* block symbol definitions
+.subckt pvcell_jasolar + -
+I1 - N001 {I1*(1 - f_cov*(1 - tau_I))}
+D1 N001 - D1
+R1 N001 - {rp}
+R2 N001 + {rs}
+.model D1 D(IS={IS1} N={n1} TNOM={t})
+.param IS1  = 1.007337e-11    ; A / demi-cellule
+.param Isc  = 6.559548        ; A / demi-cellule
+.param kc   = 0.0004          ; current temp coef
+.param t=25.0
+.param kv   = -0.0026         ; voltage temp coef
+.param n1   = 1.05706
+.param Vi=400
+.param rp   =  12.639089
+.param rs   = 0.003872        ; ohm / demi-cellule
+.param q    = 1.6e-19
+.param k    = 1.3806e-23      ; constante de Boltzmann
+.param I1   = (Isc+Isc*kc*(t-25))*(Vi/1000)
+.param f_cov=0
+.param tau_I=1
+.ends pvcell_jasolar
+
+.model D D
+.lib "C:\Users\naux\AppData\Local\LTspice\lib\cmp\standard.dio"
+.dc V1 0 47.16 0.02
+.backanno
+.temp 25
+.save I(V1) I(D1) I(D2) I(D3) V(N097) V(N027) V(N062)
+.end

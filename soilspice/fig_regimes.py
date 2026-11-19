@@ -50,8 +50,8 @@ def _regime_key(ax, states):
             np.testing.assert_array_equal(line.get_ydata(), y)
             points += len(sub)
     ax.set(xlim=(x0, x1), ylim=(y0, y1),
-           xlabel=r"$\Delta V_{\mathrm{mp}}/V_{\mathrm{mp,clean}}$ [%]",
-           ylabel=r"$\Delta I_{\mathrm{mp}}/I_{\mathrm{mp,clean}}$ [%]")
+           xlabel=r"Voltage loss $\Delta V_{\mathrm{mp}}/V_{\mathrm{mp,clean}}$ [%]",
+           ylabel=r"Current loss $\Delta I_{\mathrm{mp}}/I_{\mathrm{mp,clean}}$ [%]")
     ax.set_xticks([-20, 0, 20, 40, 60])
     ax.set_yticks([0, 20, 40, 60, 80, 100])
     ax.tick_params(pad=2, labelsize=6.3, length=2.5)
@@ -83,7 +83,7 @@ def _definitions(fig):
 def _contour_key(fig, centre_x):
     """Centre the line and its complete label together beneath the atlas."""
     fig.legend(handles=[Line2D([], [], color="0.15", lw=1.1)],
-               labels=[r"Contours: $\Delta P_{\mathrm{mp}}/P_{\mathrm{mp,clean}}$ [%]"],
+               labels=[r"Contours: Power loss $\Delta P_{\mathrm{mp}}/P_{\mathrm{mp,clean}}$ [%]"],
                loc="center", bbox_to_anchor=(centre_x / WIDTH_MM, 1 - 166.5 / HEIGHT_MM),
                bbox_transform=fig.transFigure, fontsize=7, frameon=False,
                borderpad=0, borderaxespad=0, handlelength=2.4, handletextpad=.7)

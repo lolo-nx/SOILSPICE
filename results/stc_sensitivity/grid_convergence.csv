@@ -1,0 +1,4 @@
+module,shape,orientation,band_height_mm,tau_I,irradiance_W_m2,Delta_L_002V_pp,Delta_L_001V_pp,refinement_difference_pp,pass_grid_convergence
+SUNPOWER,triangle,portrait,80.0,0.0,200,-10.44459986355779,-10.444611911998347,-1.20484405563559e-05,True
+YINGLI,rectangle,landscape,60.0,0.44,200,0.7809226050752951,0.780803005531439,-0.00011959954385609706,True
+SUNPOWER,triangle,landscape,80.0,0.0,200,-5.513536529333475,-5.513533905299816,2.624033658804592e-06,True
